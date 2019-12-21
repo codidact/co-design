@@ -152,3 +152,34 @@
     padding: $padding-unit*2.5 $padding-unit*5;
   }
 }
+
+
+
+.button-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.is-without-gaps .button {
+    border-radius: 0;
+    margin: 0;
+    position: relative;
+    margin-right: -1px;
+    z-index: 0;
+
+    &:first-of-type {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      left: 0;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      margin-right: 0;
+    }
+
+    &:hover, &:active {
+      z-index: 2;
+    }
+  }
+}
