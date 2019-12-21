@@ -61,3 +61,9 @@ $secondary-colors: (
   "green": #2ECC71
 );
 $tertiary-color: #78909C;
+
+
+/* Buttons */
+$button-primary-color: $primary-color;
+$button-danger-color: map-get($secondary-colors, "red");
+$button-muted-color: $tertiary-color;

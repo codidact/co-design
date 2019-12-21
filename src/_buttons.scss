@@ -1,0 +1,131 @@
+.button {
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  display: inline-block;
+
+  background-color: lighten($button-primary-color, 32.5%);
+
+  color: darken($button-primary-color, 30%);
+  padding: $padding-unit*0.75 $padding-unit*1.5;
+  font-weight: 500;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: all .3s ease;
+  margin: $margin-unit * 0.25;
+
+  &:hover {
+    background-color: lighten($button-primary-color, 30%)
+  }
+
+  &:active {
+    background-color: lighten($button-primary-color, 25%)
+  }
+
+  &.is-outlined {
+    background-color: #ffffff;
+    border-color: darken($button-primary-color, 20%);
+
+    &:hover {
+      background-color: lighten($button-primary-color, 32.5%)
+    }
+
+    &:active {
+      background-color: lighten($button-primary-color, 30%)
+    }
+  }
+
+  &.is-filled {
+    background-color: darken($button-primary-color, 15%);
+    color: white;
+
+    &:hover {
+      background-color: darken($button-primary-color, 25%);
+    }
+
+    &:active {
+      background-color: darken($button-primary-color, 35%);
+    }
+  }
+
+
+  &.is-danger {
+    background-color: lighten($button-danger-color, 32.5%);
+    color: darken($button-danger-color, 30%);
+
+    &:hover {
+      background-color: lighten($button-danger-color, 30%)
+    }
+
+    &:active {
+      background-color: lighten($button-danger-color, 25%)
+    }
+
+    &.is-outlined {
+      background-color: transparent;
+      border-color: darken($button-danger-color, 20%);
+
+      &:hover {
+        background-color: lighten($button-danger-color, 32.5%)
+      }
+
+      &:active {
+        background-color: lighten($button-danger-color, 30%)
+      }
+    }
+
+    &.is-filled {
+      background-color: darken($button-danger-color, 15%);
+      color: white;
+
+      &:hover {
+        background-color: darken($button-danger-color, 25%);
+      }
+
+      &:active {
+        background-color: darken($button-danger-color, 35%);
+      }
+    }
+  }
+
+
+  &.is-muted {
+    background-color: lighten($button-muted-color, 35%);
+    color: darken($button-muted-color, 30%);
+
+    &:hover {
+      background-color: lighten($button-muted-color, 32.5%)
+    }
+
+    &:active {
+      background-color: lighten($button-muted-color, 27.5%)
+    }
+
+    &.is-outlined {
+      background-color: transparent;
+      border-color: darken($button-muted-color, 20%);
+
+      &:hover {
+        background-color: lighten($button-muted-color, 35%)
+      }
+
+      &:active {
+        background-color: lighten($button-muted-color, 30%)
+      }
+    }
+
+    &.is-filled {
+      background-color: darken($button-muted-color, 10%);
+      color: white;
+
+      &:hover {
+        background-color: darken($button-muted-color, 20%);
+      }
+
+      &:active {
+        background-color: darken($button-muted-color, 30%);
+      }
+    }
+  }
+}
