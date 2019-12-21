@@ -17,11 +17,13 @@
   margin: $margin-unit * 0.5;
 
   &:hover {
-    background-color: lighten($button-primary-color, 30%)
+    background-color: lighten($button-primary-color, 30%);
+    color: darken($button-primary-color, 30%);
   }
 
   &:active, &.is-active {
-    background-color: lighten($button-primary-color, 25%)
+    background-color: lighten($button-primary-color, 25%);
+    color: darken($button-primary-color, 30%);
   }
 
   &.is-outlined {
@@ -45,10 +47,12 @@
 
     &:hover {
       background-color: darken($button-primary-color, 25%);
+      color: white;
     }
 
     &:active, &.is-active {
       background-color: darken($button-primary-color, 35%);
+      color: white;
     }
   }
 
@@ -58,11 +62,13 @@
     color: darken($button-danger-color, 30%);
 
     &:hover {
-      background-color: lighten($button-danger-color, 30%)
+      background-color: lighten($button-danger-color, 30%);
+      color: darken($button-danger-color, 30%);
     }
 
     &:active, &.is-active {
-      background-color: lighten($button-danger-color, 25%)
+      background-color: lighten($button-danger-color, 25%);
+      color: darken($button-danger-color, 30%);
     }
 
     &.is-outlined {
@@ -86,10 +92,12 @@
 
       &:hover {
         background-color: darken($button-danger-color, 25%);
+        color: white;
       }
 
       &:active, &.is-active {
         background-color: darken($button-danger-color, 35%);
+        color: white;
       }
     }
   }
@@ -100,11 +108,13 @@
     color: darken($button-muted-color, 30%);
 
     &:hover {
-      background-color: lighten($button-muted-color, 32.5%)
+      background-color: lighten($button-muted-color, 32.5%);
+      color: darken($button-muted-color, 30%);
     }
 
     &:active, &.is-active {
-      background-color: lighten($button-muted-color, 27.5%)
+      background-color: lighten($button-muted-color, 27.5%);
+      color: darken($button-muted-color, 30%);
     }
 
     &.is-outlined {
@@ -128,10 +138,12 @@
 
       &:hover {
         background-color: darken($button-muted-color, 20%);
+        color: white;
       }
 
       &:active, &.is-active {
         background-color: darken($button-muted-color, 30%);
+        color: white;
       }
     }
   }
