@@ -26,14 +26,16 @@
 
   &.is-outlined {
     background-color: #ffffff;
-    border-color: darken($button-primary-color, 20%);
+    border-color: darken($button-primary-color, 5%);
 
     &:hover {
-      background-color: lighten($button-primary-color, 32.5%)
+      background-color: lighten($button-primary-color, 32.5%);
+      border-color: darken($button-primary-color, 15%);
     }
 
     &:active {
-      background-color: lighten($button-primary-color, 30%)
+      background-color: lighten($button-primary-color, 30%);
+      border-color: darken($button-primary-color, 25%);
     }
   }
 
@@ -65,14 +67,16 @@
 
     &.is-outlined {
       background-color: transparent;
-      border-color: darken($button-danger-color, 20%);
+      border-color: darken($button-danger-color, 5%);
 
       &:hover {
-        background-color: lighten($button-danger-color, 32.5%)
+        background-color: lighten($button-danger-color, 32.5%);
+        border-color: darken($button-danger-color, 15%);
       }
 
       &:active {
-        background-color: lighten($button-danger-color, 30%)
+        background-color: lighten($button-danger-color, 30%);
+        border-color: darken($button-danger-color, 25%);
       }
     }
 
@@ -105,14 +109,16 @@
 
     &.is-outlined {
       background-color: transparent;
-      border-color: darken($button-muted-color, 20%);
+      border-color: darken($button-muted-color, 5%);
 
       &:hover {
-        background-color: lighten($button-muted-color, 35%)
+        background-color: lighten($button-muted-color, 35%);
+        border-color: darken($button-muted-color, 15%);
       }
 
       &:active {
-        background-color: lighten($button-muted-color, 30%)
+        background-color: lighten($button-muted-color, 30%);
+        border-color: darken($button-muted-color, 25%);
       }
     }
 
