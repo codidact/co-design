@@ -20,20 +20,20 @@
     background-color: lighten($button-primary-color, 30%)
   }
 
-  &:active {
+  &:active, &.is-active {
     background-color: lighten($button-primary-color, 25%)
   }
 
   &.is-outlined {
     background-color: #ffffff;
-    border-color: darken($button-primary-color, 5%);
+    border-color: lighten($button-primary-color, 5%);
 
     &:hover {
       background-color: lighten($button-primary-color, 32.5%);
       border-color: darken($button-primary-color, 15%);
     }
 
-    &:active {
+    &:active, &.is-active {
       background-color: lighten($button-primary-color, 30%);
       border-color: darken($button-primary-color, 25%);
     }
@@ -47,7 +47,7 @@
       background-color: darken($button-primary-color, 25%);
     }
 
-    &:active {
+    &:active, &.is-active {
       background-color: darken($button-primary-color, 35%);
     }
   }
@@ -61,20 +61,20 @@
       background-color: lighten($button-danger-color, 30%)
     }
 
-    &:active {
+    &:active, &.is-active {
       background-color: lighten($button-danger-color, 25%)
     }
 
     &.is-outlined {
       background-color: transparent;
-      border-color: darken($button-danger-color, 5%);
+      border-color: lighten($button-danger-color, 5%);
 
       &:hover {
         background-color: lighten($button-danger-color, 32.5%);
         border-color: darken($button-danger-color, 15%);
       }
 
-      &:active {
+      &:active, &.is-active {
         background-color: lighten($button-danger-color, 30%);
         border-color: darken($button-danger-color, 25%);
       }
@@ -88,7 +88,7 @@
         background-color: darken($button-danger-color, 25%);
       }
 
-      &:active {
+      &:active, &.is-active {
         background-color: darken($button-danger-color, 35%);
       }
     }
@@ -103,21 +103,21 @@
       background-color: lighten($button-muted-color, 32.5%)
     }
 
-    &:active {
+    &:active, &.is-active {
       background-color: lighten($button-muted-color, 27.5%)
     }
 
     &.is-outlined {
       background-color: transparent;
-      border-color: darken($button-muted-color, 5%);
+      border-color: lighten($button-muted-color, 5%);
 
       &:hover {
-        background-color: lighten($button-muted-color, 35%);
+        background-color: lighten($button-muted-color, 37.5%);
         border-color: darken($button-muted-color, 15%);
       }
 
-      &:active {
-        background-color: lighten($button-muted-color, 30%);
+      &:active, &.is-active {
+        background-color: lighten($button-muted-color, 32.5%);
         border-color: darken($button-muted-color, 25%);
       }
     }
@@ -130,7 +130,7 @@
         background-color: darken($button-muted-color, 20%);
       }
 
-      &:active {
+      &:active, &.is-active {
         background-color: darken($button-muted-color, 30%);
       }
     }
@@ -184,7 +184,7 @@
       margin-right: 0;
     }
 
-    &:hover, &:active {
+    &:hover, &:active, &.is-active {
       z-index: 2;
     }
   }
