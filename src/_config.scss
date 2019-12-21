@@ -3,13 +3,24 @@
 $font-stack-primary: "Red Hat Display", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $font-stack-code: "Consolas", "Courier New", monospace;
 
-$font-size-h1: 2.25em;
-$font-size-h2: 1.75em;
-$font-size-h3: 1.375em;
-$font-size-h4: 1em;
-$font-size-h5: 0.9em;
-$font-size-h6: 0.8em;
+$font-size-gradient: (
+  "small": 10px,
+  "caption": 13px,
+  "base": 16px,
+  "larger": 19px,
+  "subheading": 22px,
+  "heading": 25px,
+  "subtitle": 28px,
+  "title": 31px,
+  "display": 34px,
+);
 
+$font-size-h1: map-get($font-size-gradient, title);
+$font-size-h2: map-get($font-size-gradient, heading);
+$font-size-h3: map-get($font-size-gradient, larger);
+$font-size-h4: map-get($font-size-gradient, base);
+$font-size-h5: map-get($font-size-gradient, caption);
+$font-size-h6: map-get($font-size-gradient, small);
 
 /* Layout */
 

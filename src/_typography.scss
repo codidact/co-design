@@ -5,36 +5,44 @@ html {
 
 h1 {
   font-size: $font-size-h1;
-  font-weight: normal;
+  font-weight: bold;
   margin: $margin-h1;
 }
 h2 {
   font-size: $font-size-h2;
-  font-weight: normal;
+  font-weight: bold;
   margin: $margin-h2;
 }
 h3 {
   font-size: $font-size-h3;
-  font-weight: normal;
+  font-weight: bold;
   margin: $margin-h3;
 }
 h4 {
   font-size: $font-size-h4;
-  font-weight: normal;
+  font-weight: bold;
   margin: $margin-h4;
 }
 h5 {
   font-size: $font-size-h5;
-  font-weight: normal;
+  font-weight: bold;
   margin: $margin-h5;
 }
 h6 {
   font-size: $font-size-h6;
-  font-weight: normal;
+  font-weight: bold;
   margin: $margin-h6;
 }
 
 p {
   line-height: 1.5;
   margin: $margin-p;
+}
+
+
+
+@each $key, $value in $font-size-gradient {
+  .has-font-size-#{$key} {
+    font-size: $value;
+  }
 }
