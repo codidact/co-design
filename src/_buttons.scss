@@ -1,4 +1,5 @@
 .button {
+  font-size: 0.9em;
   font-family: inherit;
   text-align: center;
   text-decoration: none !important;
@@ -127,5 +128,27 @@
         background-color: darken($button-muted-color, 30%);
       }
     }
+  }
+
+
+  &.is-small {
+    font-size: 0.8em;
+    padding: $padding-unit*1 $padding-unit*2;
+  }
+  &.is-medium {
+    font-size: 1.0em;
+    padding: $padding-unit*1.75 $padding-unit*3.5;
+  }
+  &.is-large {
+    font-size: 1.1em;
+    padding: $padding-unit*2 $padding-unit*4;
+  }
+  &.is-very-large {
+    font-size: 1.2em;
+    padding: $padding-unit*2.25 $padding-unit*4.5;
+  }
+  &.is-extremely-large {
+    font-size: 1.4em;
+    padding: $padding-unit*2.5 $padding-unit*5;
   }
 }
