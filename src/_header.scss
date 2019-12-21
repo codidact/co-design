@@ -1,0 +1,117 @@
+.header {
+  padding: $padding-unit * 2;
+  margin-bottom: $margin-unit * 1;
+
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0 3px 2px 0 #ddd;
+
+  font-weight: bold;
+
+  a {
+    color: inherit;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    transition: all .3s ease;
+
+    &:hover {
+      color: inherit;
+      box-shadow: 0 2px 4px 1px #dddddd;
+    }
+  }
+
+  .header--container {
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .header--brand {
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .header--instance-name {
+      font-size: 1rem;
+    }
+
+    .header--site-name {
+      font-size: 2.5rem;
+    }
+  }
+
+  .header--menu {
+    margin-left: 3 * $margin-unit;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 50px;
+    flex-wrap: wrap;
+
+    .header--separator { flex-grow: 1; }
+
+    .header--item {
+      padding: 0.5 * $margin-unit $margin-unit;
+      margin: 0 0.5 * $margin-unit;
+      cursor: pointer;
+      font: inherit;
+      color: #aaaaaa;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      transition: all .3s ease;
+      position: relative;
+      text-decoration: none;
+
+      &:hover, &.is-active {
+        color: #333333;
+      }
+
+      .header--alert {
+        background-color: $primary-color;
+        color: #ffffff;
+        font-size: 13px;
+        min-width: 1.5em;
+        height: 1.5em;
+        padding: 0.125em;
+        display: inline-block;
+        border-radius: 30px;
+        text-align: center;
+        margin: 0 5px;
+      }
+
+      &.is-complex .header--alert {
+        position: absolute;
+        top: -2px;
+        left: -5px;
+      }
+
+      .header--trust-level {
+        color: #ffffff;
+        font-size: 30px;
+        opacity: 0.8;
+        min-width: 1.5em;
+        height: 1.5em;
+        padding: 0.25 * $padding-unit;
+        display: inline-block;
+        border-radius: 30px;
+        text-align: center;
+        margin: 0 0.5 * $margin-unit;
+        position: absolute;
+        bottom: -2px;
+        right: -7px;
+      }
+
+      .header--item-icon,
+      .header--item-image {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+}
