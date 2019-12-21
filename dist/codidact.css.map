@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"codidact.css"}
+{"version":3,"sourceRoot":"","sources":["../src/_typography.scss","../src/_config.scss"],"names":[],"mappings":"AAAA,KACE,YCCmB","file":"codidact.css"}
