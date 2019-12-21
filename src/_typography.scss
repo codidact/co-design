@@ -37,6 +37,10 @@ h6 {
 p {
   line-height: 1.5;
   margin: $margin-p;
+
+  &.is-lead {
+    font-size: 1.2em;
+  }
 }
 
 
