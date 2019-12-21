@@ -8,12 +8,12 @@
   background-color: lighten($button-primary-color, 32.5%);
 
   color: darken($button-primary-color, 30%);
-  padding: $padding-unit*0.75 $padding-unit*1.5;
+  padding: $padding-unit*1.5 $padding-unit*3;
   font-weight: 500;
   border-radius: 3px;
   border: 1px solid transparent;
   transition: all .3s ease;
-  margin: $margin-unit * 0.25;
+  margin: $margin-unit * 0.5;
 
   &:hover {
     background-color: lighten($button-primary-color, 30%)

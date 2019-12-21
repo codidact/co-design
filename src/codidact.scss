@@ -26,6 +26,7 @@
 @import "_buttons.scss";
 
 /* Then include atomic design definitions */
+@import "_box.scss";
 @import "_colors.scss";
 
 /* At last run child override */

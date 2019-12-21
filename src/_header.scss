@@ -1,6 +1,6 @@
 .header {
-  padding: $padding-unit * 2;
-  margin-bottom: $margin-unit * 2;
+  padding: $padding-unit * 4;
+  margin-bottom: $margin-unit * 4;
 
   background-color: #ffffff;
   color: #333333;
@@ -44,7 +44,7 @@
   }
 
   .header--menu {
-    margin-left: 3 * $margin-unit;
+    margin-left: 6 * $margin-unit;
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
@@ -55,8 +55,8 @@
     .header--separator { flex-grow: 1; }
 
     .header--item {
-      padding: 0.5 * $margin-unit $margin-unit;
-      margin: 0 0.5 * $margin-unit;
+      padding: $margin-unit $margin-unit * 2;
+      margin: 0 $margin-unit;
       cursor: pointer;
       font: inherit;
       color: #aaaaaa;
@@ -97,11 +97,11 @@
         opacity: 0.8;
         min-width: 1.5em;
         height: 1.5em;
-        padding: 0.25 * $padding-unit;
+        padding: 0.5 * $padding-unit;
         display: inline-block;
         border-radius: 30px;
         text-align: center;
-        margin: 0 0.5 * $margin-unit;
+        margin: 0 $margin-unit;
         position: absolute;
         bottom: -2px;
         right: -7px;

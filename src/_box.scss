@@ -1,0 +1,34 @@
+@each $i in (0, 1, 2, 4, 6, 8, 12, 16, 18, 24, 32, 36) {
+  .has-padding-#{$i} { padding: $i * $padding-unit;}
+
+  .has-padding-top-#{$i} { padding-top: $i * $padding-unit; }
+  .has-padding-right-#{$i} { padding-right: $i * $padding-unit; }
+  .has-padding-bottom-#{$i} { padding-bottom: $i * $padding-unit; }
+  .has-padding-left-#{$i} { padding-left: $i * $padding-unit; }
+
+  .has-padding-vertical-#{$i} {
+    padding-top: $i * $padding-unit;
+    padding-bottom: $i * $padding-unit;
+  }
+  .has-padding-horizontal-#{$i} {
+    padding-right: $i * $padding-unit;
+    padding-left: $i * $padding-unit;
+  }
+
+
+  .has-margin-#{$i} { margin: $i * $margin-unit;}
+
+  .has-margin-top-#{$i} { margin-top: $i * $margin-unit; }
+  .has-margin-right-#{$i} { margin-right: $i * $margin-unit; }
+  .has-margin-bottom-#{$i} { margin-bottom: $i * $margin-unit; }
+  .has-margin-left-#{$i} { margin-left: $i * $margin-unit; }
+
+  .has-margin-vertical-#{$i} {
+    margin-top: $i * $margin-unit;
+    margin-bottom: $i * $margin-unit;
+  }
+  .has-margin-horizontal-#{$i} {
+    margin-right: $i * $margin-unit;
+    margin-left: $i * $margin-unit;
+  }
+}
