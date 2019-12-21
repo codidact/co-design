@@ -98,3 +98,31 @@ a, .link {
 
 .has-font-style-normal { font-style: normal; }
 .has-font-style-italic { font-style: italic; }
+
+
+code {
+  display: inline;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 0.5 * $padding-unit $padding-unit;
+
+  font-family: $font-stack-code;
+  font-size: 0.95em;
+}
+
+pre {
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 2 * $padding-unit;
+
+  font-family: $font-stack-code;
+  font-size: 0.95em;
+
+  code {
+    display: block;
+    border: none;
+    padding: 0;
+    font-size: 1em;
+  }
+}
