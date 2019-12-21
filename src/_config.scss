@@ -23,3 +23,27 @@ $margin-h5: 6px 0;
 $margin-h6: 3px 0;
 
 $margin-p: 9px 0;
+
+
+/* Color */
+
+$color-gradient-stops: (
+  "050": 30%,
+  "100": 25%,
+  "200": 15%,
+  "300": 5%,
+  "400": 0%,
+  "500": -5%,
+  "600": -15%,
+  "700": -25%,
+  "800": -35%
+);
+
+$primary-color: #4B68FF;
+$secondary-colors: (
+  "red": #FF4343,
+  "teal": #4DB6AC,
+  "yellow": #FDD835,
+  "green": #2ECC71
+);
+$tertiary-color: #78909C;

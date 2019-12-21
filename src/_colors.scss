@@ -1,0 +1,18 @@
+@each $name, $value in map-merge($secondary-colors, (primary: $primary-color, tertiary: $tertiary-color)) {
+  .has-color-#{$name} { color: $value; }
+  .has-background-color-#{$name} { background-color: $value; }
+  .has-border-color-#{$name} { border-color: $value; }
+
+  @each $gk, $gp in $color-gradient-stops {
+    @if $gp < 0 {
+      .has-color-#{$name}-#{$gk} { color: darken($value, -$gp); }
+      .has-background-color-#{$name}-#{$gk} { background-color: darken($value, -$gp); }
+      .has-border-color-#{$name}-#{$gk} { border-color: darken($value, -$gp); }
+    } @else {
+      .has-color-#{$name}-#{$gk} { color: lighten($value, $gp); }
+      .has-background-color-#{$name}-#{$gk} { background-color: lighten($value, $gp); }
+      .has-border-color-#{$name}-#{$gk} { border-color: lighten($value, $gp); }
+    }
+  }
+
+}
