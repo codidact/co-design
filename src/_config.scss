@@ -77,3 +77,8 @@ $link-color: #2980B9;
 $button-primary-color: $primary-color;
 $button-danger-color: map-get($secondary-colors, "red");
 $button-muted-color: $tertiary-color;
+
+
+/* Forms */
+$form-color: $tertiary-color;
+$form-danger-color: map-get($secondary-colors, "red");

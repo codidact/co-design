@@ -1,0 +1,72 @@
+label.form-element {
+  cursor: pointer;
+
+  display: block;
+  margin: $margin-unit 0;
+
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #444444;
+}
+
+input.form-element {
+  font: inherit;
+  font-weight: 500;
+
+  padding: 2*$padding-unit;
+  margin: $padding-unit 0;
+
+  border: 2px solid transparent;
+  background-color: lighten($form-color, 40%);
+  border-radius: 3px;
+
+  display: block;
+  width: 100%;
+
+  &:focus {
+    border-color: lighten($form-color, 30%);
+  }
+
+  &.is-with-danger {
+    border-color: lighten($form-danger-color, 20%);
+    background-color: lighten($form-danger-color, 35%);
+  }
+}
+
+textarea.form-element {
+  font: inherit;
+  font-weight: 500;
+
+  padding: 2*$padding-unit;
+  margin: $padding-unit 0;
+
+  border: 2px solid transparent;
+  background-color: lighten($form-color, 40%);
+  border-radius: 3px;
+
+  resize: none;
+
+  display: block;
+  width: 100%;
+  min-height: 8em;
+
+  &:focus {
+    border-color: lighten($form-color, 30%);
+  }
+
+  &.is-with-danger {
+    border-color: lighten($form-danger-color, 20%);
+    background-color: lighten($form-danger-color, 35%);
+  }
+
+  &.is-small { min-height: 4em; }
+  &.is-large { min-height: 16em; }
+}
+
+
+input[type="radio"].form-radio-element,
+input[type="checkbox"].form-checkbox-element {
+  margin: $padding-unit;
+  display: inline-block;
+  cursor: pointer;
+}
