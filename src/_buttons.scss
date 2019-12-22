@@ -104,16 +104,16 @@
 
 
   &.is-muted {
-    background-color: lighten($button-muted-color, 35%);
+    background-color: lighten($button-muted-color, 40%);
     color: darken($button-muted-color, 30%);
 
     &:hover {
-      background-color: lighten($button-muted-color, 32.5%);
+      background-color: lighten($button-muted-color, 37.5%);
       color: darken($button-muted-color, 30%);
     }
 
     &:active, &.is-active {
-      background-color: lighten($button-muted-color, 27.5%);
+      background-color: lighten($button-muted-color, 32.5%);
       color: darken($button-muted-color, 30%);
     }
 
@@ -122,12 +122,12 @@
       border-color: lighten($button-muted-color, 5%);
 
       &:hover {
-        background-color: lighten($button-muted-color, 37.5%);
+        background-color: lighten($button-muted-color, 40%);
         border-color: darken($button-muted-color, 15%);
       }
 
       &:active, &.is-active {
-        background-color: lighten($button-muted-color, 32.5%);
+        background-color: lighten($button-muted-color, 35%);
         border-color: darken($button-muted-color, 25%);
       }
     }
