@@ -126,3 +126,41 @@ pre {
     font-size: 1em;
   }
 }
+
+
+table.table {
+  border-collapse: collapse;
+  padding: $padding-unit;
+  max-width: 100%;
+
+  &.is-full-width {
+    width: 100%;
+  }
+
+  th {
+    border-bottom: 3px solid #cccccc;
+    padding: 1.5 * $padding-unit 2.5 * $padding-unit;
+    font-weight: bold;
+    text-align: left;
+  }
+  td {
+    border-bottom: 1px solid #cccccc;
+    padding: 1.5 * $padding-unit 2.5 * $padding-unit;
+    text-align: left;
+  }
+  th, td { &:not(:last-child) {
+    border-right: 1px solid #cccccc;
+  }}
+
+  &.is-compact { th, td {
+    padding: 0.5 * $padding-unit 1.5 * $padding-unit;
+  }}
+
+  &.is-striped tr:nth-of-type(2n+1) td {
+    background-color: #f6f6f6;
+  }
+
+  &.is-with-hover tr:hover td {
+    background-color: #eeeeee;
+  }
+}
