@@ -58,10 +58,11 @@ ul li, ol li {
 
 
 
-a, .link {
+a:link, .link {
   color: $link-color;
   text-decoration: none;
   transition: all .3s ease;
+  cursor: pointer;
 
   &:hover {
     color: darken($link-color, 20%);
