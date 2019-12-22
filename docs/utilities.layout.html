@@ -33,6 +33,43 @@
 
       <h1>Layout utilities</h1>
       <p class="is-lead">There are different layout utilities, that allow you to change everything that relates to the layout and position of elements.</p>
+
+      <h2>Flexbox grid</h2>
+      <p>Co-Design provides a flexible and powerful CSS flexbox grid. It must be in a <code>.grid</code> container and each item (cell) must have the class <code>.grid--cell</code>.</p>
+
+      <p>Then you can add any of the classes <code>.is-X</code> with X between one and twelve (or any other number if you override it in the "_child.scss"). Furthermore we have responsive grid classes with <code>.is-X-sm</code>, <code>.is-X-md</code> and <code>.is-X-lg</code>, being effective only, when the viewport size is under 32rem, between 32rem and 64rem or above 64rem, respectively.</p>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="grid"&gt;
+  &lt;div class="grid--cell is-5 is-12-sm"&gt;
+    &lt;div class="has-padding-4 has-background-color-red"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="grid--cell is-7 is-12-sm"&gt;
+    &lt;div class="has-padding-4 has-background-color-green"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="grid--cell is-3 is-12-md"&gt;
+    &lt;div class="has-padding-4 has-background-color-yellow"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="grid--cell is-9 is-12-md"&gt;
+    &lt;div class="has-padding-4 has-background-color-teal"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <div class="grid">
+          <div class="grid--cell is-5 is-12-sm">
+            <div class="has-padding-4 has-background-color-red">&nbsp;</div>
+          </div>
+          <div class="grid--cell is-7 is-12-sm">
+            <div class="has-padding-4 has-background-color-green">&nbsp;</div>
+          </div>
+          <div class="grid--cell is-3 is-12-md">
+            <div class="has-padding-4 has-background-color-yellow">&nbsp;</div>
+          </div>
+          <div class="grid--cell is-9 is-12-md">
+            <div class="has-padding-4 has-background-color-teal">&nbsp;</div>
+          </div>
+        </div>
+        <p><span class="has-color-tertiary-600 has-font-size-caption has-font-style-italic">Resize the browser window to see the responsive classes in effect.</span></p>
+      </div>
     </main>
   </body>
 </html>
