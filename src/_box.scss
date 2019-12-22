@@ -32,3 +32,30 @@
     margin-left: $i * $margin-unit;
   }
 }
+
+@each $i in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) {
+  .has-border-width-#{$i} { border-width: #{$i}px }
+
+  .has-border-top-width-#{$i} { border-top-width: #{$i}px; }
+  .has-border-right-width-#{$i} { border-right-width: #{$i}px; }
+  .has-border-bottom-width-#{$i} { border-bottom-width: #{$i}px; }
+  .has-border-left-width-#{$i} { border-left-width: #{$i}px; }
+}
+
+@each $i in (solid, none, dotted, dashed, double) {
+  .has-border-style-#{$i} { border-style: #{$i}; }
+
+  .has-border-top-style-#{$i} { border-top-style: #{$i}; }
+  .has-border-right-style-#{$i} { border-right-style: #{$i}; }
+  .has-border-bottom-style-#{$i} { border-bottom-style: #{$i}; }
+  .has-border-left-style-#{$i} { border-left-style: #{$i}; }
+}
+
+@each $i in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) {
+  .has-border-radius-#{$i} { border-radius: #{$i}px }
+
+  .has-border-top-left-radius-#{$i} { border-top-left-radius: #{$i}px; }
+  .has-border-top-right-radius-#{$i} { border-top-right-radius: #{$i}px; }
+  .has-border-bottom-left-radius-#{$i} { border-bottom-left-radius: #{$i}px; }
+  .has-border-bottom-right-radius-#{$i} { border-bottom-right-radius: #{$i}px; }
+}
