@@ -104,6 +104,33 @@
         <div class="has-font-size-display">3 questions</div>
         <div class="has-font-size-larger">matched your query</div>
       </div>
+
+
+      <h2>Font family</h2>
+      <p>You can set the <code>font-family</code> to either "primary" (the default sans serif font) or "code" (the monospace font). Unless you override it in the "_child.scss", each option uses this font stack:</p>
+      <table class="table is-compact">
+        <tr>
+          <th>option</th>
+          <th>fonts</th>
+        </tr>
+        <tr>
+          <td>primary</td>
+          <td><span class="has-font-family-code">"Red Hat Display", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif</span></td>
+        </tr>
+        <tr>
+          <td>code</td>
+          <td><span class="has-font-family-code">"Consolas", "Courier New", monospace</span></td>
+        </tr>
+      </table>
+
+      <p>To set the font family, you need to give the element the class <code>has-font-family-X</code>, where X is replaced with the font stack name.</p>
+
+      <h5>Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>This is &lt;span class="has-font-family-code"&gt; code with some &lt;span class="has-font-family-primary"&gt;default text&lt;/span&gt; followed by some code&lt;/span&gt; again.</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        This is <span class="has-font-family-code"> code with some <span class="has-font-family-primary">default text</span> followed by some code</span> again.
+      </div>
     </main>
   </body>
 </html>
