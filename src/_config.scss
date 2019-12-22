@@ -39,6 +39,14 @@ $margin-unit: 4px;
 $padding-unit: 4px;
 
 
+/* Grid */
+$grid-column-count: 12;
+$grid-column-gap: 10px;
+
+$grid-small-to-medium-breakpoint: 32rem;
+$grid-medium-to-large-breakpoint: 64rem;
+
+
 /* Color */
 
 $color-gradient-stops: (

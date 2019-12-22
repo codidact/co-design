@@ -9,3 +9,52 @@ html, body {
   max-width: $layout-container-width;
   margin: 0 auto;
 }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $grid-column-gap / -2;
+
+  .grid--item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: $grid-column-gap / 2;
+
+    &.is-flexible {
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+
+    @for $i from 1 through $grid-column-count {
+      &.is-#{$i} {
+        width: 100% * $i / $grid-column-count;
+      }
+    }
+
+
+    @media all and (max-width: $grid-small-to-medium-breakpoint) {
+      @for $i from 1 through $grid-column-count {
+        &.is-#{$i}-sm {
+          width: 100% * $i / $grid-column-count;
+        }
+      }
+    }
+
+    @media all and (min-width: $grid-small-to-medium-breakpoint) and (max-width: $grid-medium-to-large-breakpoint) {
+      @for $i from 1 through $grid-column-count {
+        &.is-#{$i}-md {
+          width: 100% * $i / $grid-column-count;
+        }
+      }
+    }
+
+    @media all and (min-width: $grid-medium-to-large-breakpoint) {
+      @for $i from 1 through $grid-column-count {
+        &.is-#{$i}-lg {
+          width: 100% * $i / $grid-column-count;
+        }
+      }
+    }
+
+  }
+}
