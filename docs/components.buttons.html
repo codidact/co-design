@@ -92,7 +92,7 @@
       <h2 id="sizes">Button sizes</h2>
       <p>It's possible to modify the size of buttons. We have five sizes, besides the default one: small, (default), medium, large, very large, extemely large</p>
 
-      <h5 id="muted-example">Example</h5>
+      <h5 id="sizes-example">Example</h5>
 
       <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;button class="button is-small"&gt;small button&lt;/button&gt;
 &lt;button class="button"&gt;default button&lt;/button&gt;
@@ -112,6 +112,48 @@
       <h2 id="active">Active buttons</h2>
 
       <p>It's possible to mark buttons as active (i.e. pressed), by adding the class <code>.is-active</code>.</p>
+
+      <h2 id="lists">Button lists</h2>
+      <p>Co-Design also provides you with button lists, which allow you to group or collapse related buttons. Button lists can also be used for filters, where only one option can be enabled at a time.</p>
+
+      <p>Create a button list, by wrapping your buttons into a container with the class <code>.button-list</code>. If you want to collapse them (no space between them), you need to give the container the class <code>.is-without-gaps</code>.</p>
+
+      <p>All buttons in one button list should have the same form (primary, danger, muted) and size. All buttons in one collapsed button list should have the same style (default, outlined, filled), too.</p>
+
+      <h5 id="lists-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="button-list"&gt;
+  &lt;button class="button is-muted is-active"&gt;all actions&lt;/button&gt;
+  &lt;button class="button is-muted"&gt;PII access&lt;/button&gt;
+  &lt;button class="button is-muted"&gt;formal warnings&lt;/button&gt;
+  &lt;button class="button is-muted"&gt;suspensions&lt;/button&gt;
+  &lt;button class="button is-muted"&gt;privilege revokations&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="button-list is-without-gaps"&gt;
+  &lt;button class="button is-muted is-active"&gt;all actions&lt;/button&gt;
+  &lt;button class="button is-muted"&gt;PII access&lt;/button&gt;
+  &lt;button class="button is-muted"&gt;formal warnings&lt;/button&gt;
+  &lt;button class="button is-muted"&gt;suspensions&lt;/button&gt;
+  &lt;button class="button is-muted"&gt;privilege revokations&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <div class="button-list">
+          <button class="button is-muted is-active">all actions</button>
+          <button class="button is-muted">PII access</button>
+          <button class="button is-muted">formal warnings</button>
+          <button class="button is-muted">suspensions</button>
+          <button class="button is-muted">privilege revokations</button>
+        </div>
+        <br>
+        <div class="button-list is-without-gaps">
+          <button class="button is-muted is-active">all actions</button>
+          <button class="button is-muted">PII access</button>
+          <button class="button is-muted">formal warnings</button>
+          <button class="button is-muted">suspensions</button>
+          <button class="button is-muted">privilege revokations</button>
+        </div>
+      </div>
 
     </main>
   </body>
