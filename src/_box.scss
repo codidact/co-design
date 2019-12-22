@@ -1,6 +1,9 @@
 @each $i in (0, 1, 2, 4, 6, 8, 12, 16, 18, 24, 32, 36) {
   .has-padding-#{$i} { padding: $i * $padding-unit;}
+  .has-margin-#{$i} { margin: $i * $margin-unit;}
+}
 
+@each $i in (0, 1, 2, 4, 6, 8, 12, 16, 18, 24, 32, 36) {
   .has-padding-top-#{$i} { padding-top: $i * $padding-unit; }
   .has-padding-right-#{$i} { padding-right: $i * $padding-unit; }
   .has-padding-bottom-#{$i} { padding-bottom: $i * $padding-unit; }
@@ -14,9 +17,6 @@
     padding-right: $i * $padding-unit;
     padding-left: $i * $padding-unit;
   }
-
-
-  .has-margin-#{$i} { margin: $i * $margin-unit;}
 
   .has-margin-top-#{$i} { margin-top: $i * $margin-unit; }
   .has-margin-right-#{$i} { margin-right: $i * $margin-unit; }
@@ -35,7 +35,8 @@
 
 @each $i in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) {
   .has-border-width-#{$i} { border-width: #{$i}px }
-
+}
+@each $i in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) {
   .has-border-top-width-#{$i} { border-top-width: #{$i}px; }
   .has-border-right-width-#{$i} { border-right-width: #{$i}px; }
   .has-border-bottom-width-#{$i} { border-bottom-width: #{$i}px; }
@@ -44,7 +45,9 @@
 
 @each $i in (solid, none, dotted, dashed, double) {
   .has-border-style-#{$i} { border-style: #{$i}; }
+}
 
+@each $i in (solid, none, dotted, dashed, double) {
   .has-border-top-style-#{$i} { border-top-style: #{$i}; }
   .has-border-right-style-#{$i} { border-right-style: #{$i}; }
   .has-border-bottom-style-#{$i} { border-bottom-style: #{$i}; }
@@ -53,7 +56,9 @@
 
 @each $i in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) {
   .has-border-radius-#{$i} { border-radius: #{$i}px }
+}
 
+@each $i in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) {
   .has-border-top-left-radius-#{$i} { border-top-left-radius: #{$i}px; }
   .has-border-top-right-radius-#{$i} { border-top-right-radius: #{$i}px; }
   .has-border-bottom-left-radius-#{$i} { border-bottom-left-radius: #{$i}px; }
