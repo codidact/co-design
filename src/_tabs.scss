@@ -1,0 +1,24 @@
+.tabs {
+  border-bottom: 2px solid darken($primary-color, 30%);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  .tabs--item {
+    display: block;
+    font-weight: bold;
+    color: #999999;
+    text-decoration: none;
+    padding: 1.5*$padding-unit 2.5*$padding-unit;
+    margin: 0 1.5*$padding-unit;
+
+    &:hover {
+      color: #666666;
+    }
+
+    &.is-active {
+      background-color: darken($primary-color, 30%);
+      color: white;
+    }
+  }
+}

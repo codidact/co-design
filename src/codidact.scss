@@ -16,18 +16,19 @@
 /* Then apply overrides */
 @import "_child.scss";
 
-/* Then include basic design elements */
-@import "_fontface.scss";
-@import "_typography.scss";
-@import "_layout.scss";
-
 /* Then include components */
 @import "_header.scss";
 @import "_buttons.scss";
+@import "_tabs.scss";
 
 /* Then include atomic design definitions */
 @import "_box.scss";
 @import "_colors.scss";
+
+/* Then include basic design elements */
+@import "_fontface.scss";
+@import "_typography.scss";
+@import "_layout.scss";
 
 /* At last run child override */
 
