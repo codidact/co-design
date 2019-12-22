@@ -8,14 +8,14 @@
 
   font-weight: bold;
 
-  a {
+  a:link, a:visited {
     color: inherit;
     display: inline-block;
     padding: 0.25rem 0.5rem;
     text-decoration: none;
     transition: all .3s ease;
 
-    &:hover {
+    &:hover, &:active {
       color: inherit;
       box-shadow: 0 2px 4px 1px #dddddd;
       text-decoration: none;
