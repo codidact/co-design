@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Co-Design - Box style utilities</title>
+    <link rel="stylesheet" href="dist/codidact.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="index.html">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <a class="header--item" href="getting-started.html">Getting Started</a>
+          <a class="header--item is-active" href="utilities.html">Utilities</a>
+          <a class="header--item" href="components.html">Components</a>
+
+          <div class="header--separator"></div>
+
+          <a class="header--item" href="https://github.com/luap42/codisign">on GitHub</a>
+        </div>
+      </div>
+    </header>
+    <main class="container has-padding-2">
+      <div class="tabs">
+        <a href="utilities.html" class="tabs--item">Overview</a>
+        <a href="utilities.typography.html" class="tabs--item">Typography</a>
+        <a href="utilities.layout.html" class="tabs--item">Layout</a>
+        <a href="utilities.box.html" class="tabs--item is-active">Box styles</a>
+        <a href="utilities.colors.html" class="tabs--item">Colors</a>
+      </div>
+
+      <h1>Utilities to style box elements</h1>
+      <p class="is-lead">Besides the text, you can also style the box elements.</p>
+
+      <h2>Margin and pading</h2>
+      <p>Padding is blank space between the border of an element and its content. Margin is a blank space outside the border of an element, where no other elements can be. <strong>In Co-Design, the utilities work identically for margins and paddings, therefore, we only explain everything once for paddings.</strong></p>
+      <p>You are able to override the padding to a multiple of the padding unit. The padding unit can be modified in the "_child.scss" and defaults to 4px.</p>
+      <p>We support the following multiples:</p>
+      <table class="table is-compact">
+        <tr>
+          <th>class</th>
+          <th>resulting padding</th>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-0</td>
+          <td>0px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-1</td>
+          <td>4px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-2</td>
+          <td>8px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-4</td>
+          <td>16px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-6</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-8</td>
+          <td>32px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-12</td>
+          <td>48px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-16</td>
+          <td>64px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-18</td>
+          <td>72px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-24</td>
+          <td>96px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-32</td>
+          <td>128px</td>
+        </tr>
+        <tr>
+          <td class="has-font-family-code">.has-padding-36</td>
+          <td>144px</td>
+        </tr>
+      </table>
+
+      <p>The prefix <code>.has-padding-</code> can also be replaced with any of the following prefixes, which only target some of the sides:</p>
+
+      <ul>
+        <li><code>.has-padding-top-</code> for only the top padding</li>
+        <li><code>.has-padding-right-</code> for only the right padding</li>
+        <li><code>.has-padding-bottom-</code> for only the bottom padding</li>
+        <li><code>.has-padding-left-</code> for only the left padding</li>
+        <li><code>.has-padding-horizontal-</code> for only the left and right padding</li>
+        <li><code>.has-padding-vertical-</code> for only the top and bottom padding</li>
+      </ul>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="has-padding-4 has-background-color-red-600 has-color-white"&gt;
+  padding: 4
+&lt;/div&gt;
+&lt;div class="has-padding-vertical-2 has-margin-vertical-2 has-background-color-green-600 has-color-white"&gt;
+  padding: 2 vertical, margin 2 vertical
+&lt;/div&gt;
+&lt;div class="has-padding-horizontal-16 has-margin-vertical-32 has-background-color-yellow-600 has-color-white"&gt;
+  padding: 16 horizontal, margin: 32 vertical
+&lt;/div&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <div class="has-padding-4 has-background-color-red-600 has-color-white">
+          padding: 4
+        </div>
+        <div class="has-padding-vertical-2 has-margin-vertical-2 has-background-color-green-600 has-color-white">
+          padding: 2 vertical, margin 2 vertical
+        </div>
+        <div class="has-padding-horizontal-16 has-margin-vertical-32 has-background-color-yellow-600 has-color-white">
+          padding: 16 horizontal, margin: 32 vertical
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
