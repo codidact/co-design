@@ -12,7 +12,7 @@
     color: inherit;
     display: inline-block;
     padding: 0.25rem 0.5rem;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: all .3s ease;
 
     &:hover, &:active {
@@ -70,7 +70,7 @@
       align-items: center;
       transition: all .3s ease;
       position: relative;
-      text-decoration: none;
+      text-decoration: none !important;
 
       &:hover, &.is-active {
         color: #333333;
