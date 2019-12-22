@@ -131,6 +131,7 @@
 
       <h2 id="border">Border</h2>
       <p>An element's border can have different styles and widths and can be <a href="utilities.color.html#border-color">colored</a>. These properties can be overridden by utilities.</p>
+
       <h3 id="border-width">Border width</h3>
       <p>You can set the border width to any integer value between 0 (no border) and 10. The number is converted to pixels. You can set the border for all sides, or for any of the four sides top, right, bottom or left:</p>
       <ul>
@@ -143,19 +144,70 @@
 
       <h5 id="border-width-example">Example</h5>
 
-      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="has-padding-4 has-background-color-red-600 has-color-white"&gt;
-  padding: 4
-&lt;/div&gt;
-&lt;div class="has-padding-vertical-2 has-margin-vertical-2 has-background-color-green-600 has-color-white"&gt;
-  padding: 2 vertical, margin 2 vertical
-&lt;/div&gt;
-&lt;div class="has-padding-horizontal-16 has-margin-vertical-32 has-background-color-yellow-600 has-color-white"&gt;
-  padding: 16 horizontal, margin: 32 vertical
-&lt;/div&gt;</code></pre>
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;span class="has-padding-2 has-border-width-3 has-border-style-solid has-border-top-width-6 has-border-right-width-1"&gt;
+  box with different border widths
+&lt;/span&gt;</code></pre>
       <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
         <p><span class="has-padding-2 has-border-width-3 has-border-style-solid has-border-top-width-6 has-border-right-width-1">
-          box with borders
+          box with different border widths
         </span></p>
+      </div>
+
+      <h3 id="border-style">Border style</h3>
+      <p>You can set the border style to any of "solid", "none", "dotted", "dashed", "double". You can set the border for all sides, or for any of the four sides top, right, bottom or left:</p>
+      <ul>
+        <li><code>.has-border-style-X</code> for all four border styles</li>
+        <li><code>.has-border-top-style-X</code> for only the top border style</li>
+        <li><code>.has-border-right-style-X</code> for only the right border style</li>
+        <li><code>.has-border-bottom-style-X</code> for only the bottom border style</li>
+        <li><code>.has-border-left-style-X</code> for only the left border style</li>
+      </ul>
+
+      <h5 id="border-style-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;span class="has-padding-2 has-border-width-4 has-border-style-dotted has-border-top-style-double has-border-right-style-dashed has-border-left-style-solid"&gt;
+  box with different border styles
+&lt;/span&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <p><span class="has-padding-2 has-border-width-4 has-border-style-dotted has-border-top-style-double has-border-right-style-dashed has-border-left-style-solid">
+          box with different border styles
+        </span></p>
+      </div>
+
+      <h3 id="border-color">Border color</h3>
+
+      <p>For information on setting the border color, please see <a href="utilities.color.html">here</a>.</p>
+
+
+      <h3 id="border-radius">Border radius</h3>
+      <p>You can set the border radius to any integer value between 0 (no border radius) and 10. The number is converted to pixels. You can set the border for all corners, or for any of the four corners top-left, top-right, bottom-left or bottom-right:</p>
+      <ul>
+        <li><code>.has-border-radius-X</code> for all four border radii</li>
+        <li><code>.has-border-top-left-style-X</code> for only the top-left corner border radius</li>
+        <li><code>.has-border-top-right-style-X</code> for only the top-right corner border radius</li>
+        <li><code>.has-border-bottom-left-style-X</code> for only the bottom-left corner border radius</li>
+        <li><code>.has-border-bottom-right-style-X</code> for only the bottom-right corner border radius</li>
+      </ul>
+
+      <h5 id="border-ra`dius-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="has-margin-2 has-padding-2 has-border-radius-0 has-border-width-5 has-border-style-solid has-border-color-red"&gt;
+  r0
+&lt;/div&gt;
+&lt;div class="has-margin-2 has-padding-2 has-border-radius-3 has-border-width-5 has-border-style-solid has-border-color-green"&gt;
+  r3
+&lt;/div&gt;
+&lt;div class="has-margin-2 has-padding-2 has-border-radius-6 has-border-width-5 has-border-style-solid has-border-color-teal"&gt;
+  r6
+&lt;/div&gt;
+&lt;div class="has-margin-2 has-padding-2 has-border-radius-9 has-border-width-5 has-border-style-solid has-border-color-yellow"&gt;
+  r9
+&lt;/div&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <div class="has-margin-2 has-padding-2 has-border-radius-0 has-border-width-5 has-border-style-solid has-border-color-red">r0</div>
+        <div class="has-margin-2 has-padding-2 has-border-radius-3 has-border-width-5 has-border-style-solid has-border-color-green">r3</div>
+        <div class="has-margin-2 has-padding-2 has-border-radius-6 has-border-width-5 has-border-style-solid has-border-color-teal">r6</div>
+        <div class="has-margin-2 has-padding-2 has-border-radius-9 has-border-width-5 has-border-style-solid has-border-color-yellow">r9</div>
       </div>
 
     </main>
