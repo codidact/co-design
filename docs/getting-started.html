@@ -24,12 +24,12 @@
       </div>
     </header>
     <main class="container has-padding-2">
-      <h1>Getting started with the Codidact design</h1>
+      <h1>Getting started with Co-Design</h1>
       <p>You can use this design framework for your own project. You should use it for any Codidact project.</p>
       <p>The software is licensed under the terms of the <a href="https://choosealicense.com/licenses/mit/">MIT</a> license, which you must follow, if you want to use it for an external project.</p>
       <p>To include this framework in your project, you'll need to include its CSS files into your HTML files.</p>
 
-      <h2>Obtaining a copy of this framework</h2>
+      <h2>1. Obtaining a copy of this framework</h2>
 
       <p>There two different ways to obtain a copy of this framework: You can build it from source from GitHub or you can get a pre-built version.</p>
 
@@ -46,6 +46,44 @@
       <p>You can find a pre-built version <a href="https://raw.githubusercontent.com/luap42/codisign/master/dist/codidact.css">here</a>.</p>
 
       <a href="https://raw.githubusercontent.com/luap42/codisign/master/dist/codidact.css" class="button is-muted">Download the pre-built CSS</a>
+
+
+      <h2>2. Minimal HTML template</h2>
+      <p>When you want to use Co-Design for a Codidact project, it should already be included and have a correct template. If you need assistance, you can always ping <em>luap42</em> in Discord.</p>
+      <p>When you want to use Co-Design for an external project, we recommend you to use the following HTML template:</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang="en" dir="ltr"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Your Co-Design page&lt;/title&gt;
+    &lt;link rel="stylesheet" href="path/to/dist/codidact.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header class="header"&gt;
+      &lt;div class="header--container container"&gt;
+        &lt;div class="header--brand"&gt;
+          &lt;a href="..." class="header--site-name"&gt;Brand&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class="header--menu"&gt;
+          &lt;a href="..." class="header--item"&gt;Menu item 1&lt;/a&gt;
+          &lt;a href="..." class="header--item"&gt;Menu item 2&lt;/a&gt;
+
+          &lt;div class="header--separator"&gt;&lt;/div&gt;
+
+          &lt;a href="..." class="header--item"&gt;Menu item 3&lt;/a&gt;
+          &lt;a href="..." class="header--item"&gt;Menu item 4&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class="container has-padding-2"&gt;
+      &lt;!-- Add page content here --&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
     </main>
   </body>
 </html>
