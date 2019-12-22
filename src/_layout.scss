@@ -15,7 +15,7 @@ html, body {
   flex-wrap: wrap;
   margin: $grid-column-gap / -2;
 
-  .grid--item {
+  .grid--cell {
     flex-grow: 0;
     flex-shrink: 0;
     padding: $grid-column-gap / 2;
