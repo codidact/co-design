@@ -58,13 +58,13 @@ ul li, ol li {
 
 
 
-a:link, .link {
+a:link, a:visited, .link {
   color: $link-color;
   text-decoration: none;
   transition: all .3s ease;
   cursor: pointer;
 
-  &:hover {
+  &:hover, &:active {
     color: darken($link-color, 20%);
     text-decoration: underline;
   }
@@ -73,7 +73,7 @@ a:link, .link {
     &.is-#{$key} {
       color: darken($value, 15%);
 
-      &:hover {
+      &:hover, &:active {
         color: darken($value, 30%);
       }
     }
