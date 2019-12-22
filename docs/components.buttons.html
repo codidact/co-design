@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Co-Design - Buttons</title>
+    <link rel="stylesheet" href="dist/codidact.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="index.html">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <a class="header--item" href="getting-started.html">Getting Started</a>
+          <a class="header--item" href="utilities.html">Utilities</a>
+          <a class="header--item is-active" href="components.html">Components</a>
+
+          <div class="header--separator"></div>
+
+          <a class="header--item" href="https://github.com/luap42/codisign">on GitHub</a>
+        </div>
+      </div>
+    </header>
+    <main class="container has-padding-2">
+      <div class="tabs">
+        <a href="components.html" class="tabs--item">Overview</a>
+        <a href="components.tables.html" class="tabs--item">Tables</a>
+        <a href="components.links.html" class="tabs--item">Links</a>
+        <a href="components.buttons.html" class="tabs--item is-active">Buttons</a>
+        <a href="components.inputs.html" class="tabs--item">Inputs</a>
+        <a href="components.header.html" class="tabs--item">Header</a>
+        <a href="components.tabs.html" class="tabs--item">Tabs</a>
+        <a href="components.widgets.html" class="tabs--item">Widgets</a>
+        <a href="components.modals.html" class="tabs--item">Modals</a>
+        <a href="components.itemlists.html" class="tabs--item">Item Lists</a>
+      </div>
+
+      <h1>Buttons</h1>
+      <p class="is-lead">Links provide actions, and not navigation, unless this is required after doing the action. If you want to provide navigaton, you should use <a href="components.links.html">links</a>.</p>
+
+      <p>To mark an element as a button, it needs to have the <code>.button</code> class.</p>
+
+      <h2 id="primary">Primary buttons</h2>
+      <p>Buttons come in three forms: primary, danger and muted. The one you'll need most, though, is primary. Therefore all buttons are considered primary, unless you specify something different.</p>
+
+      <p>Primary buttons can have different levels of importance. There are default buttons, which have the least priority, then outlined and then filled buttons. You should only have one filled primary button in a view, as it is considered for the most important action.</p>
+
+      <h5 id="basic-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;button class="button"&gt;default primary button&lt;/button&gt;
+&lt;button class="button is-outlined"&gt;outlined primary button&lt;/button&gt;
+&lt;button class="button is-filled"&gt;filled primary button&lt;/button&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <button class="button">default primary button</button>
+        <button class="button is-outlined">outlined primary button</button>
+        <button class="button is-filled">filled primary button</button>
+      </div>
+
+      <h2 id="danger">Danger buttons</h2>
+      <p>Not everything is nice and happy, though. In these cases, you should use a danger button, to denote, that an action might be dangerous, unintended, destructive or irreversible.</p>
+
+      <p>As primary buttons, danger buttons can have different levels of importance. There are default buttons, which have the least priority, then outlined and then filled buttons. You should only have one filled danger button in a view, as it is considered for the most important action.</p>
+
+      <h5 id="danger-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;button class="button is-danger"&gt;default danger button&lt;/button&gt;
+&lt;button class="button is-danger is-outlined"&gt;outlined danger button&lt;/button&gt;
+&lt;button class="button is-danger is-filled"&gt;filled danger button&lt;/button&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <button class="button is-danger">default danger button</button>
+        <button class="button is-danger is-outlined">outlined danger button</button>
+        <button class="button is-danger is-filled">filled danger button</button>
+      </div>
+
+      <h2 id="muted">Muted buttons</h2>
+      <p>Sometimes actions are not available or should only be considered secondary to others. For these cases, it's possible to use muted buttons.</p>
+
+      <p>As primary and danger buttons, muted buttons can have different levels of importance. There are default buttons, which have the least priority, then outlined and then filled buttons.</p>
+
+      <h5 id="muted-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;button class="button is-muted"&gt;default muted button&lt;/button&gt;
+&lt;button class="button is-muted is-outlined"&gt;outlined muted button&lt;/button&gt;
+&lt;button class="button is-muted is-filled"&gt;filled muted button&lt;/button&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <button class="button is-muted">default muted button</button>
+        <button class="button is-muted is-outlined">outlined muted button</button>
+        <button class="button is-muted is-filled">filled muted button</button>
+      </div>
+
+      <h2 id="sizes">Button sizes</h2>
+      <p>It's possible to modify the size of buttons. We have five sizes, besides the default one: small, (default), medium, large, very large, extemely large</p>
+
+      <h5 id="muted-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;button class="button is-small"&gt;small button&lt;/button&gt;
+&lt;button class="button"&gt;default button&lt;/button&gt;
+&lt;button class="button is-medium"&gt;medium button&lt;/button&gt;
+&lt;button class="button is-large"&gt;large button&lt;/button&gt;
+&lt;button class="button is-very-large"&gt;very large button&lt;/button&gt;
+&lt;button class="button is-extremely-large"&gt;extremely large button&lt;/button&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <button class="button is-small">small button</button>
+        <button class="button">default button</button>
+        <button class="button is-medium">medium button</button>
+        <button class="button is-large">large button</button>
+        <button class="button is-very-large">very large button</button>
+        <button class="button is-extremely-large">extremely large button</button>
+      </div>
+
+      <h2 id="active">Active buttons</h2>
+
+      <p>It's possible to mark buttons as active (i.e. pressed), by adding the class <code>.is-active</code>.</p>
+
+    </main>
+  </body>
+</html>
