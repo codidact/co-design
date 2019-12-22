@@ -126,6 +126,38 @@
           padding: 16 horizontal, margin: 32 vertical
         </div>
       </div>
+
+
+
+      <h2 id="border">Border</h2>
+      <p>An element's border can have different styles and widths and can be <a href="utilities.color.html#border-color">colored</a>. These properties can be overridden by utilities.</p>
+      <h3 id="border-width">Border width</h3>
+      <p>You can set the border width to any integer value between 0 (no border) and 10. The number is converted to pixels. You can set the border for all sides, or for any of the four sides top, right, bottom or left:</p>
+      <ul>
+        <li><code>.has-border-width-X</code> for all four border widths</li>
+        <li><code>.has-border-top-width-X</code> for only the top border width</li>
+        <li><code>.has-border-right-width-X</code> for only the right border width</li>
+        <li><code>.has-border-bottom-width-X</code> for only the bottom border width</li>
+        <li><code>.has-border-left-width-X</code> for only the left border width</li>
+      </ul>
+
+      <h5 id="border-width-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="has-padding-4 has-background-color-red-600 has-color-white"&gt;
+  padding: 4
+&lt;/div&gt;
+&lt;div class="has-padding-vertical-2 has-margin-vertical-2 has-background-color-green-600 has-color-white"&gt;
+  padding: 2 vertical, margin 2 vertical
+&lt;/div&gt;
+&lt;div class="has-padding-horizontal-16 has-margin-vertical-32 has-background-color-yellow-600 has-color-white"&gt;
+  padding: 16 horizontal, margin: 32 vertical
+&lt;/div&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <p><span class="has-padding-2 has-border-width-3 has-border-style-solid has-border-top-width-6 has-border-right-width-1">
+          box with borders
+        </span></p>
+      </div>
+
     </main>
   </body>
 </html>
