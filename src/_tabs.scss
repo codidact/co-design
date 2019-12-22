@@ -1,5 +1,4 @@
 .tabs {
-  border-bottom: 2px solid darken($primary-color, 30%);
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -10,14 +9,15 @@
     color: #999999;
     text-decoration: none;
     padding: 1.5*$padding-unit 2.5*$padding-unit;
-    margin: 0 1.5*$padding-unit;
+    margin: 0.5*$padding-unit;
 
     &:hover {
-      color: #666666;
+      background-color: lighten($primary-color, 30%);
+      color: darken($primary-color, 35%);
     }
 
     &.is-active {
-      background-color: darken($primary-color, 30%);
+      background-color: darken($primary-color, 20%);
       color: white;
     }
   }
