@@ -34,10 +34,12 @@
       <h1>Layout utilities</h1>
       <p class="is-lead">There are different layout utilities, that allow you to change everything that relates to the layout and position of elements.</p>
 
-      <h2>Flexbox grid</h2>
+      <h2 id="grid">Flexbox grid</h2>
       <p>Co-Design provides a flexible and powerful CSS flexbox grid. It must be in a <code>.grid</code> container and each item (cell) must have the class <code>.grid--cell</code>.</p>
 
       <p>Then you can add any of the classes <code>.is-X</code> with X between one and twelve (or any other number if you override it in the "_child.scss"). Furthermore we have responsive grid classes with <code>.is-X-sm</code>, <code>.is-X-md</code> and <code>.is-X-lg</code>, being effective only, when the viewport size is under 32rem, between 32rem and 64rem or above 64rem, respectively.</p>
+
+      <h5 id="grid-example">Example</h5>
 
       <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="grid"&gt;
   &lt;div class="grid--cell is-5 is-12-sm"&gt;
