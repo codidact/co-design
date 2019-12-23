@@ -82,3 +82,6 @@ $button-muted-color: $tertiary-color;
 /* Forms */
 $form-color: $tertiary-color;
 $form-danger-color: map-get($secondary-colors, "red");
+
+/* Modals */
+$modal-width: 64rem;

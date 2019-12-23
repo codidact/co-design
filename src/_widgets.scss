@@ -3,6 +3,7 @@
   border-radius: 2px;
   box-shadow: 0 3px 5px -2px #eeeeee;
   margin: 2*$margin-unit 0;
+  background-color: white;
 
   .widget--header {
     padding: 3 * $padding-unit;
@@ -17,6 +18,12 @@
       float: right;
       font-size: 0.8em;
       padding: $padding-unit*0.75 $padding-unit;
+    }
+    .widget--header-button {
+      float: right;
+      font-size: 0.8em;
+      position: relative;
+      top: -1.66666667*$padding-unit;
     }
   }
 
