@@ -77,30 +77,51 @@
 
       <h5 id="example">Example</h5>
 
-      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="notice is-banner is-warning"&gt;
-  &lt;div class="container"&gt;
-    Warning banner
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;header class="header"&gt;
+  &lt;div class="container header--container"&gt;
+    &lt;div class="header--brand"&gt;
+      &lt;a class="header--instance-name" href="..."&gt;Codidact&lt;/a&gt;
+      &lt;a class="header--site-name" href="..."&gt;Gibberish&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="header--menu"&gt;
+      &lt;a class="header--item" href="..."&gt;question&lt;/a&gt;
+      &lt;a class="header--item is-active" href="..."&gt;tags&lt;/a&gt;
+      &lt;a class="header--item" href="..."&gt;users&lt;/a&gt;
+
+      &lt;div class="header--separator"&gt;&lt;/div&gt;
+
+      &lt;a class="header--item" href="..."&gt;&lt;span class="header--alert"&gt;1&lt;/span&gt;mod&lt;/a&gt;
+      &lt;a class="header--item" href="..."&gt;help&lt;/a&gt;
+      &lt;a class="header--item" href="..."&gt;discussions&lt;/a&gt;
+      &lt;a class="header--item is-complex" href="..."&gt;
+        &lt;img src="..." class="header--item-image" alt="..." /&gt;
+        &lt;span class="header--alert"&gt;1&lt;/span&gt;
+        &lt;span class="header--trust-level"&gt;5&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/header&gt;</code></pre>
       <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
         <header class="header">
           <div class="container header--container">
             <div class="header--brand">
-              <a class="header--instance-name" href="#!">Your network</a>
-              <a class="header--site-name" href="#!">Your site</a>
+              <a class="header--instance-name" href="#!">Codidact</a>
+              <a class="header--site-name" href="#!">Gibberish</a>
             </div>
             <div class="header--menu">
-              <a class="header--item" href="#!">Link</a>
-              <a class="header--item is-active" href="#!">Active link</a>
-              <a class="header--item" href="#!"><span class="header--alert">1</span>Link with alert</a>
+              <a class="header--item" href="#!">question</a>
+              <a class="header--item is-active" href="#!">tags</a>
+              <a class="header--item" href="#!">users</a>
 
               <div class="header--separator"></div>
 
-              <a class="header--item" href="#!">Link</a>
+              <a class="header--item" href="#!"><span class="header--alert">1</span>mod</a>
+              <a class="header--item" href="#!">help</a>
+              <a class="header--item" href="#!">discussions</a>
               <a class="header--item is-complex" href="#!">
                 <img src="https://placekitten.com/100/100" class="header--item-image" alt="..." />
                 <span class="header--alert">1</span>
-                <span class="header--trust-level">8</span>
+                <span class="header--trust-level">5</span>
               </a>
             </div>
           </div>
