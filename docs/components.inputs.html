@@ -38,7 +38,83 @@
         <a href="components.itemlists.html" class="tabs--item">Item Lists</a>
       </div>
 
-      <h1>Inputs</h1>
+      <h1>Form Inputs</h1>
+
+      <h2 id="inputs">Inputs (Text boxes)</h2>
+      <p>Input elements are for single-value or single-line contents. They are created by the <code>&lt;input /&gt;</code> HTML tag in combination with the <code>.form-element</code> CSS class.</p>
+      <p>When you have form validation that failed for this input, you can mark it as such with the <code>.is-with-danger</code> modifier class.</p>
+
+      <h5 id="inputs-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;input class="form-element"&gt;
+&lt;input class="form-element" type="datetime"&gt;
+&lt;input class="form-element is-with-danger"&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <p>Normal form input:</p>
+        <input class="form-element">
+        <p>Date input:</p>
+        <input class="form-element" type="date">
+        <p>Form input with failed validation:</p>
+        <input class="form-element is-with-danger">
+      </div>
+
+
+      <h2 id="textarea">Text areas</h2>
+      <p>Text areas are multiline inputs. They are created by the <code>&lt;textarea&gt;</code> HTML tag in combination with the <code>.form-element</code> CSS class.</p>
+
+      <p>When you have form validation that failed for this text area, you can mark it as such with the <code>.is-with-danger</code> modifier class.</p>
+
+      <p>It's also possible to change the size of the text area. There are two modifiers for this: <code>.is-large</code> and <code>.is-small</code></p>
+
+      <h5 id="textarea-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;textarea class="form-element"&gt;&lt;/textarea&gt;
+&lt;textarea class="form-element is-small"&gt;&lt;/textarea&gt;
+&lt;textarea class="form-element is-large"&gt;&lt;/textarea&gt;
+&lt;textarea class="form-element is-with-danger"&gt;&lt;/textarea&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <p>Normal text area:</p>
+        <textarea class="form-element"></textarea>
+        <p>Small textarea:</p>
+        <textarea class="form-element is-small"></textarea>
+        <p>Large textarea:</p>
+        <textarea class="form-element is-large"></textarea>
+        <p>Text area with failed validation:</p>
+        <textarea class="form-element is-with-danger"></textarea>
+      </div>
+
+
+      <h2 id="labels">Labels</h2>
+      <p>Labels are important for accessibility. They should describe the form element in a way, that allows everyone to understand, what should be written into it, regardless of any limitations.</p>
+
+      <p>They are created by the <code>&lt;label&gt;</code> HTML tag in combination with the <code>.form-element</code> CSS class.</p>
+
+      <h5 id="labels-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;label for="labels-example--input" class="form-element"&gt;Label for an input&lt;/label&gt;
+&lt;input class="form-element" id="labels-example--input"&gt;
+
+&lt;label for="labels-example--textarea" class="form-element"&gt;Label for an textarea&lt;/label&gt;
+&lt;textarea class="form-element" id="labels-example--textarea"&gt;&lt;/textarea&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <label for="labels-example--input" class="form-element">Label for an input</label>
+        <input class="form-element" id="labels-example--input">
+        <label for="labels-example--textarea" class="form-element">Label for an textarea</label>
+        <textarea class="form-element" id="labels-example--textarea"></textarea>
+      </div>
+
+
+      <h2 id="radio-checkbox">Radio buttons and Checkboxes</h2>
+      <p>Radio buttons and checkboxes are special types of inputs. However the normal input presentation would not be appropriate for them. Therefore you need to give them the class <code>.form-radio-element</code> or <code>.form-checkbox-element</code> for radio buttons or checkboxes, respectively.</p>
+
+      <h5 id="labels-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;input type="radio" class="form-radio-element"&gt;
+&lt;input type="checkbox" class="form-checkbox-element"&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <input type="radio" class="form-radio-element">
+        <input type="checkbox" class="form-checkbox-element">
+      </div>
 
 
     </main>
