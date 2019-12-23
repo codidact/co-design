@@ -2,7 +2,7 @@
   margin: $margin-unit 0;
   padding: 4 * $padding-unit;
   border-radius: 3px;
-  border: 1px solid lighten($tertiary-color, 30%);
+  border: 1px solid lighten($tertiary-color, 20%);
   background-color: lighten($tertiary-color, 40%);
 
   &.is-filled {
