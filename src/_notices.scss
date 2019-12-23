@@ -1,0 +1,40 @@
+.notice {
+  margin: $margin-unit 0;
+  padding: 4 * $padding-unit;
+  border-radius: 3px;
+  border: 1px solid lighten($tertiary-color, 30%);
+  background-color: lighten($tertiary-color, 40%);
+
+  &.is-filled {
+    border-color: transparent;
+    color: white;
+    background-color: darken($tertiary-color, 40%);
+  }
+
+  @each $name, $color in (
+    "warning": map-get($secondary-colors, "yellow"),
+    "danger": darken(map-get($secondary-colors, "red"), 2.5%),
+    "success": lighten(map-get($secondary-colors, "green"), 7.5%),
+    "info": lighten(map-get($secondary-colors, "teal"), 5%),
+  ) {
+    &.is-#{$name} {
+      border-color: lighten($color, 15%);
+      background-color: lighten($color, 35%);
+    }
+    &.is-#{$name}.is-filled {
+      background-color: darken($color, 15%);
+    }
+  }
+
+  &.is-banner {
+    border-left: none;
+    border-right: none;
+    margin: 0;
+    border-radius: none;
+  }
+}
+
+.header + .notice.is-banner {
+  margin-top: $margin-unit * -4;
+  margin-bottom: $margin-unit * 4;
+}
