@@ -1,0 +1,76 @@
+.modal {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  padding: 3em;
+
+  &.is-with-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .modal--container {
+      box-shadow: 0 3px 5px -1.5px #666666;
+    }
+  }
+
+  .modal--container {
+    margin: 0 auto;
+    max-width: $modal-width;
+
+    background-color: white;
+    box-shadow: 0 3px 5px -1.5px #aaaaaa;
+    border: 1px solid lighten($tertiary-color, 20%);
+
+    display: flex;
+    flex-direction: column;
+
+
+    .modal--header {
+      padding: 3 * $padding-unit;
+      font-size: 1.4em;
+      border-bottom: 1px solid lighten($tertiary-color, 30%);
+      font-weight: bold;
+
+      .modal--header-link {
+        float: right;
+        font-size: 0.8rem;
+        padding: $padding-unit*0.75 $padding-unit;
+      }
+      .modal--header-button {
+        float: right;
+        font-size: 0.8rem;
+        margin: 0;
+      }
+    }
+
+    .modal--body {
+      padding: 4 * $padding-unit;
+      max-height: 0.666666667 * $modal-width;
+      overflow-y: auto;
+    }
+
+    .modal--footer {
+      padding: 3 * $padding-unit;
+      border-top: 1px solid lighten($tertiary-color, 30%);
+    }
+  }
+}
+
+@media all and (max-width: $grid-small-to-medium-breakpoint) {
+  .modal {
+    padding: 0;
+
+    .modal--container {
+      height: 100vh;
+    }
+    .modal--header,
+    .modal--foter {
+      flex-shrink: 0;
+    }
+    .modal--body {
+      flex-grow: 1;
+      overflow: auto;
+    }
+  }
+}
