@@ -6,9 +6,13 @@
   left: 0;
   padding: 3em;
 
+  pointer-events: none;
+
   &.is-with-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
+
+    pointer-events: all;
 
     .modal--container {
       box-shadow: 0 3px 5px -1.5px #666666;
@@ -19,6 +23,8 @@
     margin: 0 auto;
     max-width: $modal-width;
     width: 100%;
+
+    pointer-events: all;
 
     background-color: white;
     box-shadow: 0 3px 5px -3px #666666;
