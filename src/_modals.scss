@@ -18,6 +18,7 @@
   .modal--container {
     margin: 0 auto;
     max-width: $modal-width;
+    width: 100%;
 
     background-color: white;
     box-shadow: 0 3px 5px -3px #666666;
@@ -57,6 +58,22 @@
     }
   }
 
+  &.is-large .modal--container {
+    max-width: $modal-width * 1.5;
+
+    .modal--body {
+      max-height: 1 * $modal-width;
+    }
+  }
+
+  &.is-small .modal--container {
+    max-width: $modal-width * 0.5;
+
+    .modal--body {
+      max-height: 0.3333333333 * $modal-width;
+    }
+  }
+
   &.is-dangerous {
     .modal--header,
     .modal--container,
@@ -74,6 +91,7 @@
 @media all and (max-width: $grid-small-to-medium-breakpoint) {
   .modal {
     padding: 0;
+    position: fixed;
 
     .modal--container {
       height: 100vh;
