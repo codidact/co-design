@@ -169,6 +169,30 @@
     font-size: 1.4em;
     padding: $padding-unit*2.5 $padding-unit*5;
   }
+
+  &.is-close-button {
+    background-color: transparent;
+    color: #aaaaaa;
+    font-size: 25px !important;
+    padding: $padding-unit*0.5 2*$padding-unit;
+    line-height: 1;
+    margin-top: -$padding-unit;
+
+    &:hover {
+      color: #333333;
+
+      &:active {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+}
+
+.modal--header-button,
+.widget--header-button {
+  .button.is-close-button {
+    margin-top: 0;
+  }
 }
 
 
