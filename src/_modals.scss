@@ -8,6 +8,7 @@
 
   &.is-with-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
 
     .modal--container {
       box-shadow: 0 3px 5px -1.5px #666666;
@@ -19,7 +20,7 @@
     max-width: $modal-width;
 
     background-color: white;
-    box-shadow: 0 3px 5px -1.5px #aaaaaa;
+    box-shadow: 0 3px 5px -3px #666666;
     border: 1px solid lighten($tertiary-color, 20%);
 
     display: flex;
@@ -53,6 +54,19 @@
     .modal--footer {
       padding: 3 * $padding-unit;
       border-top: 1px solid lighten($tertiary-color, 30%);
+    }
+  }
+
+  &.is-dangerous {
+    .modal--header,
+    .modal--container,
+    .modal--footer {
+      border-color: lighten(map-get($secondary-colors, "red"), 15%);
+    }
+
+    .modal--header {
+      color: darken(map-get($secondary-colors, "red"), 25%);
+      background-color: lighten(map-get($secondary-colors, "red"), 35%);
     }
   }
 }
