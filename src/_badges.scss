@@ -7,19 +7,19 @@
   background-color: lighten($primary-color, 30%);
   border-radius: 3px;
 
-  &:hover {
-    text-decoration: none;
-    background-color: lighten($primary-color, 25%);
-  }
-
   &.is-master-tag {
     color: #ffffff;
     background-color: darken($primary-color, 30%);
+  }
+}
 
-    &:hover {
-      color: #ffffff;
-      background-color: darken($primary-color, 35%);
-    }
+a.badge:hover {
+  text-decoration: none !important;
+  background-color: lighten($primary-color, 25%);
+
+  &.is-master-tag {
+    color: #ffffff;
+    background-color: darken($primary-color, 35%);
   }
 }
 
@@ -67,8 +67,10 @@
 .badge.is-user-trust-level {
   display: inline-block;
   font-size: 14px;
+  min-width: 20px;
+  text-align: center;
   padding: $padding-unit*0.25 $padding-unit*1.5;
-  border-radius: 50%;
+  border-radius: 20px;
   background-color: darken($primary-color, 20%);
   color: white;
   font-weight: bold;
