@@ -64,6 +64,12 @@ a:link, a:visited, .link {
   transition: all .3s ease;
   cursor: pointer;
 
+  font: inherit;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+
   &:hover, &:active {
     color: darken($link-color, 20%);
     text-decoration: underline;
