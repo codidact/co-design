@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Co-Design - Badges</title>
+    <link rel="stylesheet" href="dist/codidact.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="index.html">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <a class="header--item" href="getting-started.html">Getting Started</a>
+          <a class="header--item" href="utilities.html">Utilities</a>
+          <a class="header--item is-active" href="components.html">Components</a>
+
+          <div class="header--separator"></div>
+
+          <a class="header--item" href="https://github.com/luap42/codisign">on GitHub</a>
+        </div>
+      </div>
+    </header>
+    <main class="container has-padding-2">
+      <div class="tabs">
+        <a href="components.html" class="tabs--item">Overview</a>
+        <a href="components.tables.html" class="tabs--item">Tables</a>
+        <a href="components.links.html" class="tabs--item">Links</a>
+        <a href="components.buttons.html" class="tabs--item">Buttons</a>
+        <a href="components.inputs.html" class="tabs--item">Inputs</a>
+        <a href="components.badges.html" class="tabs--item is-active">Badges</a>
+        <a href="components.notices.html" class="tabs--item">Notices</a>
+        <a href="components.header.html" class="tabs--item">Header</a>
+        <a href="components.tabs.html" class="tabs--item">Tabs</a>
+        <a href="components.widgets.html" class="tabs--item">Widgets</a>
+        <a href="components.modals.html" class="tabs--item">Modals</a>
+        <a href="components.itemlists.html" class="tabs--item">Item Lists</a>
+      </div>
+
+      <h1>Badges</h1>
+      <p class="is-lead">Badges are a collection of small, graphic and distinct elements that have in common, that they label something or express properties of something.</p>
+
+      <p>All badges have the CSS class <code>.badge</code>, and at least one other class in the form <code>.is-X</code>, where X describes the type of the badge.</p>
+
+      <h2 id="tags">Tags</h2>
+
+      <p>Tags are badges that allow classification of content. Often, tags are entered by your users. Tags are created with the CSS classes <code>.badge.is-tag</code>.</p>
+      <p>There are two types of tags: normal tags and master tags. Master tags are for example tags, where on of them is required. Or master tags could be categories. Master tags have additionally the class <code>.is-master-tag</code>.</p>
+
+      <h5 id="tags-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;span class="badge is-tag"&gt;codidact&lt;/span&gt;
+&lt;a href="..." class="badge is-tag"&gt;design&lt;/a&gt;
+&lt;a href="..." class="badge is-tag is-master-tag"&gt;co-design&lt;/a&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <span class="badge is-tag">codidact</span>
+        <a href="#!" class="badge is-tag">design</a>
+        <a href="#!" class="badge is-tag is-master-tag">co-design</a>
+      </div>
+
+
+      <h2 id="awards">Awards</h2>
+
+      <p>Awards are badges that are given to users for doing good things. Often they are awarded automatically. Awards are created with the CSS classes <code>.badge.is-award</code>.</p>
+      <p>It's also possible and recommended to add an icon in front of the award label.</p>
+      <p>There are three types of awards: bronze, silver and gold. They can be created with the additional classes <code>.is-bronze</code>, <code>.is-silver</code> and <code>.is-gold</code>, respectively.</p>
+
+      <h5 id="awards-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;span class="badge is-award is-bronze"&gt;&lt;span class="badge--icon"&gt;...&lt;/span&gt;First Upvote&lt;/span&gt;
+&lt;span class="badge is-award is-silver"&gt;&lt;span class="badge--icon"&gt;...&lt;/span&gt;Second Upvote&lt;/span&gt;
+&lt;span class="badge is-award is-gold"&gt;&lt;span class="badge--icon"&gt;...&lt;/span&gt;Third Upvote&lt;/span&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <span class="badge is-award is-bronze"><span class="badge--icon">&#x2764;</span>First Upvote</span>
+        <span class="badge is-award is-silver"><span class="badge--icon">&#x2764;</span>Second Upvote</span>
+        <span class="badge is-award is-gold"><span class="badge--icon">&#x2764;</span>Third Upvote</span>
+      </div>
+
+
+      <h2 id="user-roles">User roles</h2>
+
+      <p>It's also possible to use badges to show someone's user role (for example: moderator status). These badges are created with the CSS classes <code>.badge.is-user-role</code>.</p>
+      <h5 id="user-roles-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;span class="badge is-user-role"&gt;mod&lt;/span&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <span class="badge is-user-role">mod</span>
+      </div>
+
+
+      <h2 id="user-tl">User trust levels</h2>
+
+      <p>It's also possible to use badges to show someone's user "trust level", which is a number expressing a user's trust and privilege. These badges are created with the CSS classes <code>.badge.is-user-trust-level</code>.</p>
+      <h5 id="user-tl-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;span class="badge is-user-trust-level"&gt;1&lt;/span&gt;
+&lt;span class="badge is-user-trust-level"&gt;1383&lt;/span&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <span class="badge is-user-trust-level">1</span>
+        <span class="badge is-user-trust-level">1383</span>
+      </div>
+
+
+    </main>
+  </body>
+</html>
