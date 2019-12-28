@@ -225,3 +225,55 @@
     }
   }
 }
+
+
+.button.is-icon-only-button {
+  background-color: transparent;
+  color: lighten($button-icon-only-default-color, 10.5%);
+  padding: $padding-unit 3*$padding-unit;
+
+  &:hover {
+    background-color: lighten($button-primary-color, 30%);
+    color: darken($button-primary-color, 5%);
+  }
+
+  &:active,
+  &.is-active {
+    color: darken($button-primary-color, 20%);
+  }
+
+  &.is-danger {
+    color: lighten($button-danger-color, 15%);
+
+
+    &:hover {
+      background-color: lighten($button-danger-color, 32.5%);
+      color: darken($button-danger-color, 5%);
+    }
+
+    &:active,
+    &.is-active {
+      color: darken($button-danger-color, 20%);
+    }
+  }
+
+  &.is-muted {
+    color: lighten($button-muted-color, 17.5%);
+
+
+    &:hover {
+      background-color: lighten($button-muted-color, 40%);
+      color: darken($button-muted-color, 5%);
+    }
+
+    &:active,
+    &.is-active {
+      color: darken($button-muted-color, 20%);
+    }
+  }
+
+  &:active:not(:hover),
+  &.is-active:not(:hover) {
+    background: transparent;
+  }
+}
