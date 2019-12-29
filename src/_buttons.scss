@@ -230,7 +230,30 @@
 .button.is-icon-only-button {
   background-color: transparent;
   color: lighten($button-icon-only-default-color, 10.5%);
-  padding: $padding-unit 3*$padding-unit;
+  padding: 0.5em 0.25em;
+
+  line-height: 1;
+
+  font-size: 1em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+
+  &.is-small {
+    font-size: 0.9em;
+  }
+  &.is-medium {
+    font-size: 1.1em;
+  }
+  &.is-large {
+    font-size: 1.2em;
+  }
+  &.is-very-large {
+    font-size: 1.4em;
+  }
+  &.is-extremely-large {
+    font-size: 1.6em;
+  }
 
   &:hover {
     background-color: lighten($button-primary-color, 30%);
