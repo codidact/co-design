@@ -8,26 +8,31 @@ h1 {
   font-weight: bold;
   margin: $margin-h1;
 }
+
 h2 {
   font-size: $font-size-h2;
   font-weight: bold;
   margin: $margin-h2;
 }
+
 h3 {
   font-size: $font-size-h3;
   font-weight: bold;
   margin: $margin-h3;
 }
+
 h4 {
   font-size: $font-size-h4;
   font-weight: bold;
   margin: $margin-h4;
 }
+
 h5 {
   font-size: $font-size-h5;
   font-weight: bold;
   margin: $margin-h5;
 }
+
 h6 {
   font-size: $font-size-h6;
   font-weight: bold;
@@ -48,15 +53,11 @@ ul li, ol li {
   line-height: 1.5;
 }
 
-
-
 @each $key, $value in $font-size-gradient {
   .has-font-size-#{$key} {
     font-size: $value;
   }
 }
-
-
 
 a:link, a:visited, .link {
   color: $link-color;
@@ -93,11 +94,11 @@ a:link, a:visited, .link {
     }
   }
 
-  &.is-without-underline:hover {
+  &.is-not-underlined:hover {
     text-decoration: none;
   }
 
-  &.is-with-underline {
+  &.is-underlined {
     text-decoration: underline;
   }
 }
@@ -112,7 +113,6 @@ a:link, a:visited, .link {
 
 .has-font-style-normal { font-style: normal; }
 .has-font-style-italic { font-style: italic; }
-
 
 code {
   display: inline;
@@ -179,18 +179,24 @@ table.table {
     font-weight: bold;
     text-align: left;
   }
+
   td {
     border-bottom: 1px solid #cccccc;
     padding: 1.5 * $padding-unit 2.5 * $padding-unit;
     text-align: left;
   }
-  th, td { &:not(:last-child) {
-    border-right: 1px solid #cccccc;
-  }}
 
-  &.is-compact { th, td {
-    padding: 0.5 * $padding-unit 1.5 * $padding-unit;
-  }}
+  th, td {
+    &:not(:last-child) {
+      border-right: 1px solid #cccccc;
+    }
+  }
+
+  &.is-compact {
+    th, td {
+      padding: 0.5 * $padding-unit 1.5 * $padding-unit;
+    }
+  }
 
   &.is-striped tr:nth-of-type(2n+1) td {
     background-color: #f6f6f6;

@@ -5,9 +5,7 @@
   text-decoration: none !important;
   cursor: pointer;
   display: inline-block;
-
   background-color: lighten($button-primary-color, 32.5%);
-
   color: darken($button-primary-color, 30%);
   padding: $padding-unit*1.5 $padding-unit*3;
   font-weight: 500;
@@ -148,23 +146,26 @@
     }
   }
 
-
   &.is-small {
     font-size: 0.8em;
     padding: $padding-unit*1 $padding-unit*2;
   }
+
   &.is-medium {
     font-size: 1.0em;
     padding: $padding-unit*1.75 $padding-unit*3.5;
   }
+
   &.is-large {
     font-size: 1.1em;
     padding: $padding-unit*2 $padding-unit*4;
   }
+
   &.is-very-large {
     font-size: 1.2em;
     padding: $padding-unit*2.25 $padding-unit*4.5;
   }
+
   &.is-extremely-large {
     font-size: 1.4em;
     padding: $padding-unit*2.5 $padding-unit*5;
@@ -201,7 +202,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  &.is-without-gaps .button {
+  &.is-gutterless .button {
     border-radius: 0;
     margin: 0;
     position: relative;

@@ -27,7 +27,7 @@ input.form-element {
     border-color: lighten($form-color, 30%);
   }
 
-  &.is-with-danger {
+  &.is-danger {
     border-color: lighten($form-danger-color, 20%);
     background-color: lighten($form-danger-color, 35%);
   }
@@ -54,7 +54,7 @@ textarea.form-element {
     border-color: lighten($form-color, 30%);
   }
 
-  &.is-with-danger {
+  &.is-danger {
     border-color: lighten($form-danger-color, 20%);
     background-color: lighten($form-danger-color, 35%);
   }
