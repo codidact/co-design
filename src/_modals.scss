@@ -45,6 +45,7 @@
         font-size: 0.8rem;
         padding: $padding-unit*0.75 $padding-unit;
       }
+
       .modal--header-button {
         float: right;
         font-size: 0.8rem;
@@ -80,7 +81,7 @@
     }
   }
 
-  &.is-dangerous {
+  &.is-danger {
     .modal--header,
     .modal--container,
     .modal--footer {
