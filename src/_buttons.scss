@@ -226,3 +226,78 @@
     }
   }
 }
+
+
+.button.is-icon-only-button {
+  background-color: transparent;
+  color: lighten($button-icon-only-default-color, 10%);
+  padding: 0.5em 0.25em;
+
+  line-height: 1;
+
+  font-size: 1em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+
+  &.is-small {
+    font-size: 0.9em;
+  }
+  &.is-medium {
+    font-size: 1.1em;
+  }
+  &.is-large {
+    font-size: 1.2em;
+  }
+  &.is-very-large {
+    font-size: 1.4em;
+  }
+  &.is-extremely-large {
+    font-size: 1.6em;
+  }
+
+  &:hover {
+    background-color: lighten($button-primary-color, 30%);
+    color: darken($button-primary-color, 5%);
+  }
+
+  &:active,
+  &.is-active {
+    color: darken($button-primary-color, 20%);
+  }
+
+  &.is-danger {
+    color: lighten($button-danger-color, 15%);
+
+
+    &:hover {
+      background-color: lighten($button-danger-color, 32.5%);
+      color: darken($button-danger-color, 5%);
+    }
+
+    &:active,
+    &.is-active {
+      color: darken($button-danger-color, 20%);
+    }
+  }
+
+  &.is-muted {
+    color: lighten($button-muted-color, 17.5%);
+
+
+    &:hover {
+      background-color: lighten($button-muted-color, 40%);
+      color: darken($button-muted-color, 5%);
+    }
+
+    &:active,
+    &.is-active {
+      color: darken($button-muted-color, 20%);
+    }
+  }
+
+  &:active:not(:hover),
+  &.is-active:not(:hover) {
+    background: transparent;
+  }
+}
