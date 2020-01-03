@@ -58,6 +58,11 @@
                   <ul>
                     <li>Any count of menu links. (<code>a.header--item</code>)</li>
                     <li>Up to one header separator, which pushes everything behind it to the right side. (<code>.header--separator</code>)</li>
+                    <li>One header menu bars (<code>a.header--item.is-complex.is-mobile-menu</code>), with
+                      <ul>
+                        <li>a bar container (<code>.header--menu-bars</code>), with exactly three, empty <code>&lt;span&gt;</code> elements</li>
+                      </ul>
+                    </li>
                     <li>Any count of menu items (<code>a.header--item.is-complex</code>), with either
                       <ul>
                         <li>an image (<code>.header--item-image</code>), or</li>
@@ -74,7 +79,9 @@
 
       <p>Furthermore any header item can have one <code>.header--alert</code> notification with one number in it. All header items with images can have one <code>.header--trust-level</code> to indicate a "trust level" or other level/permission of the currently logged in user.</p>
 
-      <p>Header items that link to the currently shown page should be highlighted with the class <code>.is-active</code></p>
+      <p>Header items that link to the currently shown page should be highlighted with the class <code>.is-active</code>.</p>
+
+      <p>By default, all header menu items, except for the mobile bars menu, disappear at small screen sizes. You can "save" them, by adding the class <code>.is-visible-on-mobile</code>.</p>
 
       <h5 id="example">Example</h5>
 
@@ -94,7 +101,14 @@
       &lt;a class="header--item" href="..."&gt;&lt;span class="header--alert"&gt;1&lt;/span&gt;mod&lt;/a&gt;
       &lt;a class="header--item" href="..."&gt;help&lt;/a&gt;
       &lt;a class="header--item" href="..."&gt;discussions&lt;/a&gt;
-      &lt;a class="header--item is-complex" href="..."&gt;
+      &lt;a class="header--item is-mobile-menu is-complex" href="#"&gt;
+        &lt;span class="header--menu-bars"&gt;
+          &lt;span&gt;&lt;/span&gt;
+          &lt;span&gt;&lt;/span&gt;
+          &lt;span&gt;&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/a&gt;
+      &lt;a class="header--item is-visible-on-mobile is-complex" href="..."&gt;
         &lt;img src="..." class="header--item-image" alt="..." /&gt;
         &lt;span class="header--alert"&gt;1&lt;/span&gt;
         &lt;span class="header--trust-level"&gt;5&lt;/span&gt;
@@ -119,7 +133,14 @@
               <a class="header--item" href="#!"><span class="header--alert">1</span>mod</a>
               <a class="header--item" href="#!">help</a>
               <a class="header--item" href="#!">discussions</a>
-              <a class="header--item is-complex" href="#!">
+              <a class="header--item is-mobile-menu is-complex" href="#!">
+                <span class="header--menu-bars">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </a>
+              <a class="header--item is-visible-on-mobile is-complex" href="#!">
                 <img src="https://placekitten.com/100/100" class="header--item-image" alt="..." />
                 <span class="header--alert">1</span>
                 <span class="header--trust-level">5</span>
