@@ -76,6 +76,8 @@
         color: #333333;
       }
 
+      &.is-mobile-menu { display: none; }
+
       .header--alert {
         background-color: $primary-color;
         color: #ffffff;
@@ -116,6 +118,43 @@
       .header--item-image {
         height: 40px;
         width: 40px;
+      }
+
+      .header--menu-bars {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          position: relative;
+          width: 2em;
+          height: 0.333333333em;
+          margin: 0.166666667em 0;
+          background-color: #dddddd;
+          transition: all .3s ease;
+        }
+
+      }
+      &:hover, &.is-active {
+        .header--menu-bars span { background-color: #666666; }
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: $grid-small-to-medium-breakpoint) {
+  .header {
+    .header--brand {
+      .header--site-name {
+        font-size: 2em;
+      }
+    }
+    .header--menu .header--item {
+      display: none;
+
+      &.is-mobile-menu,
+      &.is-visible-on-mobile {
+        display: block;
       }
     }
   }
