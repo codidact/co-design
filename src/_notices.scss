@@ -22,6 +22,7 @@
       background-color: lighten($color, 35%);
     }
     &.is-#{$name}.is-filled {
+      border-color: transparent;
       background-color: darken($color, 15%);
     }
   }
