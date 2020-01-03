@@ -129,6 +129,23 @@
         <button class="button is-icon-only-button is-muted">&#x2764;</button>
       </div>
 
+      <h2 id="close">Close buttons</h2>
+      <p>Co-Design has "close buttons", which should be used, whenever a notice, modal, widget, etc. can be dismissed by the user. It should not trigger any action, besides those neccessary to close the modal. A close button is positioned automatically and cannot be styled with any of the other <code>.is-X</code> classes, besides <code>.is-active</code>.</p>
+      <p>A close button has the class <code>.is-close-button</code>, and the HTML entity <code>&amp;times</code> (&times;) as only content.</p>
+
+      <h5 id="close-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="notice"&gt;
+  &lt;button class="button is-close-button"&gt;&amp;times;&lt;/button&gt;
+  ...
+&lt;/div&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <div class="notice">
+          <button class="button is-close-button">&times;</button>
+          Something important happened!
+        </div>
+      </div>
+
       <h2 id="active">Active buttons</h2>
 
       <p>It's possible to mark buttons as active (i.e. pressed), by adding the class <code>.is-active</code>.</p>
