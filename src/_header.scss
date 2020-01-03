@@ -123,9 +123,12 @@
       .header--menu-bars {
         display: flex;
         flex-direction: column;
+        height: 40px;
+        width: 40px;
+        justify-content: center;
+        align-items: center;
 
         span {
-          position: relative;
           width: 2em;
           height: 0.333333333em;
           margin: 0.166666667em 0;
