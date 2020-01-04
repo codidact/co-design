@@ -8,6 +8,10 @@
 
   pointer-events: none;
 
+  display: none;
+
+  &.is-active { display: block; }
+
   &.is-with-backdrop {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
