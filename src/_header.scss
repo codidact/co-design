@@ -206,9 +206,22 @@
       box-shadow: 0 1.5px 4px 0px #dddddd;
       text-decoration: none;
     }
+
+    .header-slide--alert {
+      background-color: $primary-color;
+      color: #ffffff;
+      font-size: 13px;
+      min-width: 1.5em;
+      height: 1.5em;
+      padding: 0.125em;
+      display: inline-block;
+      border-radius: 30px;
+      text-align: center;
+      margin-right: 5px;
+    }
   }
 
-  .header--separator {
+  .header-slide--separator {
     border-bottom: 1px solid #dddddd;
     margin: $margin-unit 0;
   }
