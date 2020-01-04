@@ -42,6 +42,12 @@
       <h1>Header</h1>
       <p class="is-lead">The header is the primary navigation of your page.</p>
 
+      <div class="notice is-warning">
+        <p><strong>Only CSS!</strong> Co-Design is a CSS-only framework and therefore doesn't come with the JavaScript neccessary to toggle header slides. You'll need to write JavaScript on your own or use an existing library, in order to be able to effectively use headers.</p>
+      </div>
+
+      <h2 id="basic">Basic structure</h2>
+
       <p>A header consists of the following elements:</p>
       <ul>
         <li>An element with the class <code>.header</code> as container for everything. This should be a <code>&lt;header&gt;</code> element for semantic reasons.
@@ -83,7 +89,7 @@
 
       <p>By default, all header menu items, except for the mobile bars menu, disappear at small screen sizes. You can "save" them, by adding the class <code>.is-visible-on-mobile</code>.</p>
 
-      <h5 id="example">Example</h5>
+      <h5 id="basic-example">Example</h5>
 
       <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;header class="header"&gt;
   &lt;div class="container header--container"&gt;
@@ -149,6 +155,60 @@
           </div>
         </header>
       </div>
+
+      <h2 id="slides">Header slides</h2>
+      <p>Header slides are a supplementary component to headers. They allow for drop down and mobile menus.</p>
+      <p>Header slides have the <code>.header-slide</code> class and its items have either the class <code>.header-slide--item</code> for items or <code>.header-slide--separator</code> for line separators. Header items can be active, use the class <code>.is-active</code> for that.</p>
+      <p>Header slides will probably need JavaScript, because you need to explicitely show them, by giving them the class <code>.is-active</code>. Furthermore, you'll need to position it, by setting its <code>top: X</code> and <code>right: X</code> properties appropriately.</p>
+
+      <p>If you plan to use a header slide as mobile menu, you should add all header items to it, that are removed from normal view.</p>
+
+      <h5 id="slides-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="header-slide"&gt;
+  &lt;a class="header-slide--item" href="..."&gt;question&lt;/a&gt;
+  &lt;a class="header-slide--item is-active" href="..."&gt;tags&lt;/a&gt;
+  &lt;a class="header-slide--item" href="..."&gt;users&lt;/a&gt;
+
+  &lt;div class="header-slide--separator"&gt;&lt;/div&gt;
+
+  &lt;a class="header-slide--item" href="..."&gt;&lt;span class="header-slide--alert"&gt;1&lt;/span&gt;mod&lt;/a&gt;
+  &lt;a class="header-slide--item" href="..."&gt;help&lt;/a&gt;
+  &lt;a class="header-slide--item" href="..."&gt;discussions&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <div class="header-slide is-active" style="position: static;">
+          <a class="header-slide--item" href="#!">question</a>
+          <a class="header-slide--item is-active" href="#!">tags</a>
+          <a class="header-slide--item" href="#!">users</a>
+
+          <div class="header-slide--separator"></div>
+
+          <a class="header-slide--item" href="#!"><span class="header-slide--alert">1</span>mod</a>
+          <a class="header-slide--item" href="#!">help</a>
+          <a class="header-slide--item" href="#!">discussions</a>
+        </div>
+      </div>
+
+      <p>As we said above, Co-Design does not contain any JavaScript to toggle header slides. This documentation uses the following snippet, which may or may not be appropriate for you:</p>
+
+      <pre><code>hs_triggers = document.querySelectorAll("[data-trigger-header-slide]");
+
+for(var i=0; i < hs_triggers.length; i++) {
+  hs_triggers[i].addEventListener("click", function(e) {
+    hs = document.querySelector(this.getAttribute("data-trigger-header-slide"));
+
+    hs.classList.toggle("is-active");
+    this.classList.toggle("is-active");
+
+    rect = this.getBoundingClientRect();
+
+    hs.style.top = (rect.top + rect.height) + "px";
+    hs.style.right = (document.body.clientWidth - rect.right) + "px";
+
+    e.preventDefault();
+  });
+}</code></pre>
 
     </main>
   </body>
