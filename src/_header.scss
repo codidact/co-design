@@ -207,6 +207,8 @@
       text-decoration: none;
     }
 
+    &.is-active { color: #333333; }
+
     .header-slide--alert {
       background-color: $primary-color;
       color: #ffffff;
