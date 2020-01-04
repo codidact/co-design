@@ -212,4 +212,11 @@
     border-bottom: 1px solid #dddddd;
     margin: $margin-unit 0;
   }
+
+  @media all and (max-width: 320px) {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100%;
+    max-width: 100%;
+  }
 }
