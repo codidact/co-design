@@ -70,6 +70,8 @@
 
       <p>The modal body and footer can be filled with any HTML content, however the footer is fixed to the bottom on mobile and should therefore be used only for few elements with few height.</p>
 
+      <p>You need to give a modal the class <code>.is-active</code>, in order for it to be shown.</p>
+
       <h5 id="basic-example">Example</h5>
 
       <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;div class="modal"&gt;
@@ -88,7 +90,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
-        <div class="modal" style="position: static;">
+        <div class="modal is-active" style="position: static;">
           <div class="modal--container">
             <div class="modal--header">
               <button class="button is-close-button modal--header-button">&times;</button>
@@ -134,7 +136,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
-        <div class="modal is-with-backdrop" style="position: static;">
+        <div class="modal is-active is-with-backdrop" style="position: static;">
           <div class="modal--container">
             <div class="modal--header">
               <button class="button is-close-button modal--header-button">&times;</button>
@@ -182,7 +184,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
-        <div class="modal is-danger" style="position: static;">
+        <div class="modal is-active is-danger" style="position: static;">
           <div class="modal--container">
             <div class="modal--header">
               <button class="button is-close-button modal--header-button">&times;</button>
@@ -228,7 +230,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
-        <div class="modal is-large" style="position: static;">
+        <div class="modal is-active is-large" style="position: static;">
           <div class="modal--container">
             <div class="modal--header">
               <button class="button is-close-button modal--header-button">&times;</button>
@@ -270,7 +272,7 @@
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
       <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
-        <div class="modal is-small" style="position: static;">
+        <div class="modal is-active is-small" style="position: static;">
           <div class="modal--container">
             <div class="modal--header">
               <button class="button is-close-button modal--header-button">&times;</button>
