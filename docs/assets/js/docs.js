@@ -1,8 +1,8 @@
 /* Modals */
 const modalTriggers = document.querySelectorAll("[data-trigger-modal]");
 
-for (const i = 0; i < modalTriggers.length; i++) {
-  const modalTrigger = modalTriggers[i];
+for (let i = 0; i < modalTriggers.length; i++) {
+  let modalTrigger = modalTriggers[i];
 
   modalTrigger.addEventListener("click", function (e) {
     const modal = document.querySelector(this.getAttribute("data-trigger-modal"));
