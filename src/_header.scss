@@ -76,6 +76,8 @@
         color: #333333;
       }
 
+      &.is-mobile-menu { display: none; }
+
       .header--alert {
         background-color: $primary-color;
         color: #ffffff;
@@ -117,6 +119,119 @@
         height: 40px;
         width: 40px;
       }
+
+      .header--menu-bars {
+        display: flex;
+        flex-direction: column;
+        height: 40px;
+        width: 40px;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          width: 2em;
+          height: 0.333333333em;
+          margin: 0.166666667em 0;
+          background-color: #dddddd;
+          transition: all .3s ease;
+        }
+
+      }
+      &:hover, &.is-active {
+        .header--menu-bars span { background-color: #666666; }
+      }
     }
+  }
+}
+
+
+@media all and (max-width: $grid-medium-to-large-breakpoint) {
+  .header {
+    .header--brand {
+      .header--site-name {
+        font-size: 2em;
+      }
+    }
+    .header--menu .header--item {
+      display: none;
+
+      &.is-mobile-menu,
+      &.is-visible-on-mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+
+.header-slide {
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  width: 100%;
+  max-width: 300px;
+  background-color: white;
+
+  padding: 3 * $padding-unit;
+
+  font-weight: bold;
+
+  border: 1px solid #eeeeee;
+  box-shadow: 0 3px 2px -2px #ddd;
+
+  display: none;
+
+  &.is-active { display: block; }
+
+  a:link, a:visited {
+    margin: $margin-unit 0;
+    padding: 0.5rem 1rem;
+
+    cursor: pointer;
+    font: inherit;
+    color: #888888;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    transition: all .3s ease;
+    position: relative;
+    text-decoration: none !important;
+
+    display: block;
+    width: 100%;
+
+    &:hover,
+    &:active {
+      color: #333333;
+      box-shadow: 0 1.5px 4px 0px #dddddd;
+      text-decoration: none;
+    }
+
+    &.is-active { color: #333333; }
+
+    .header-slide--alert {
+      background-color: $primary-color;
+      color: #ffffff;
+      font-size: 13px;
+      min-width: 1.5em;
+      height: 1.5em;
+      padding: 0.125em;
+      display: inline-block;
+      border-radius: 30px;
+      text-align: center;
+      margin-right: 5px;
+    }
+  }
+
+  .header-slide--separator {
+    border-bottom: 1px solid #dddddd;
+    margin: $margin-unit 0;
+  }
+
+  @media all and (max-width: 320px) {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100%;
+    max-width: 100%;
   }
 }
