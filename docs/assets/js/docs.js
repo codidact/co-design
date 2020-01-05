@@ -2,9 +2,7 @@
 const modalTriggers = document.querySelectorAll("[data-trigger-modal]");
 
 for (let i = 0; i < modalTriggers.length; i++) {
-  let modalTrigger = modalTriggers[i];
-
-  modalTrigger.addEventListener("click", function (e) {
+  modalTriggers[i].addEventListener("click", function (e) {
     const modal = document.querySelector(this.getAttribute("data-trigger-modal"));
 
     // Set appropriate on-screen position for modals,
