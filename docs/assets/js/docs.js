@@ -7,7 +7,7 @@
 /* Header slides */
 const headerSlideTriggers = document.querySelectorAll("[data-trigger-header-slide]");
 
-for (const i = 0; i < headerSlideTriggers.length; i++) {
+for (let i = 0; i < headerSlideTriggers.length; i++) {
   headerSlideTriggers[i].addEventListener("click", function (e) {
     const headerSlide = document.querySelector(this.getAttribute("data-trigger-header-slide"));
 
