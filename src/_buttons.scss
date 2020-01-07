@@ -177,7 +177,7 @@
     font-size: 25px !important;
     padding: $padding-unit*0.5 2*$padding-unit;
     line-height: 1;
-    margin-top: -$padding-unit;
+    margin-top: -$padding-unit !important;
 
     &:hover {
       color: #333333;
