@@ -38,6 +38,16 @@
     margin-top: 0;
   }
 
+  // Don't remove the margin for close buttons as first element
+  .is-close-button:first-child {
+    margin-top: -$margin-unit;
+
+    // Remove margin then for second element
+    & + * {
+      margin-top: 0;
+    }
+  }
+
   :last-child {
     margin-bottom: 0;
   }
