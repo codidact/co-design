@@ -114,6 +114,11 @@ a:link, a:visited, .link {
 .has-font-style-normal { font-style: normal; }
 .has-font-style-italic { font-style: italic; }
 
+.has-text-align-left { text-align: left; }
+.has-text-align-center { text-align: center; }
+.has-text-align-right { text-align: right; }
+.has-text-align-justify { text-align: justify; }
+
 code {
   display: inline;
   border: 1px solid #ddd;
