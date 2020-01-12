@@ -64,3 +64,9 @@
   .has-border-bottom-left-radius-#{$i} { border-bottom-left-radius: #{$i}px; }
   .has-border-bottom-right-radius-#{$i} { border-bottom-right-radius: #{$i}px; }
 }
+
+@each $i in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) {
+  .has-shadow-#{$i} {
+    box-shadow: 0 #{1.5*$i}px #{2*$i}px -#{$i}px #cccccc;
+  }
+}
