@@ -15,6 +15,10 @@ html, body {
   flex-wrap: wrap;
   margin: $grid-column-gap / -2;
 
+  &.is-nowrap {
+    flex-wrap: nowrap;
+  }
+
   .grid--cell {
     flex-grow: 0;
     flex-shrink: 0;
