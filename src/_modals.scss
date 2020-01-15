@@ -106,6 +106,7 @@
   .modal {
     padding: 0;
     position: fixed;
+    top: 0 !important;
 
     .modal--container {
       height: 100vh;
