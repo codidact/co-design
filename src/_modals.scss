@@ -16,10 +16,13 @@
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
 
+    height: 100%;
+
     pointer-events: all;
 
     .modal--container {
       box-shadow: 0 3px 5px -1.5px #666666;
+      max-height: 100%;
     }
   }
 
