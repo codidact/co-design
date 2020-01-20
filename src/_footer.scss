@@ -1,5 +1,7 @@
 .footer {
-  padding: $padding-unit 2*$padding-unit;
+  padding: 4*$padding-unit;
   border-top: 1px solid #dddddd;
   color: #666666;
+
+  margin-top: 2 * $margin-unit;
 }
