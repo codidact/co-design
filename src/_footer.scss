@@ -4,4 +4,9 @@
   color: #666666;
 
   margin-top: 2 * $margin-unit;
+
+  &.is-inverted {
+    border-top: none;
+    background-color: #f6f6f6;
+  }
 }
