@@ -92,6 +92,23 @@ $badge-award-border-radius: 3px;
    $badge-award-silver-color: #ccc;
    $badge-award-bronze-color: #c73;
 
+$badge-role-font-size: 0.75em;
+$badge-role-padding-x: 1.5; // in padding units
+$badge-role-padding-y: 0.75; // in padding units
+$badge-role-font-weight: 700;
+$badge-role-background-color: darken($primary-color, 20%);
+$badge-role-color: white;
+$badge-role-border-radius: 2px;
+
+$badge-tl-font-size: 14px;
+$badge-tl-min-width: 20px;
+$badge-tl-padding-x: 1.5; // in padding units
+$badge-tl-padding-y: 0.25; // in padding units
+$badge-tl-font-weight: 700;
+$badge-tl-border-radius: 20px;
+$badge-tl-background-color: darken($primary-color, 20%);
+$badge-tl-color: white;
+
 /* Buttons */
 $button-primary-color: $primary-color;
 $button-danger-color: map-get($secondary-colors, "red");

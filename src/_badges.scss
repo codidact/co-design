@@ -57,22 +57,22 @@ a.badge.is-tag:hover {
 
 .badge.is-user-role {
   display: inline-block;
-  font-size: 12px;
-  padding: $padding-unit*0.75 $padding-unit*1.5;
-  border-radius: 2px;
-  background-color: darken($primary-color, 20%);
-  color: white;
-  font-weight: bold;
+  font-size: $badge-role-font-size;
+  padding: $badge-role-padding-y*$padding-unit $badge-role-padding-x*$padding-unit;
+  border-radius: $badge-role-border-radius;
+  background-color: $badge-role-background-color;
+  color: $badge-role-color;
+  font-weight: $badge-role-font-weight;
 }
 
 .badge.is-user-trust-level {
   display: inline-block;
-  font-size: 14px;
-  min-width: 20px;
+  font-size: $badge-tl-font-size;
+  min-width: $badge-tl-min-width;
   text-align: center;
-  padding: $padding-unit*0.25 $padding-unit*1.5;
-  border-radius: 20px;
-  background-color: darken($primary-color, 20%);
-  color: white;
-  font-weight: bold;
+  padding: $badge-tl-padding-y*$padding-unit $badge-tl-padding-x*$padding-unit;
+  border-radius: $badge-tl-border-radius;
+  background-color: $badge-tl-background-color;
+  color: $badge-tl-color;
+  font-weight: $badge-tl-font-weight;
 }
