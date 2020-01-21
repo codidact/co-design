@@ -1,0 +1,12 @@
+.footer {
+  padding: $footer-padding * $padding-unit;
+  border-top: $footer-top-border-width solid $footer-border-color;
+  color: $footer-color;
+
+  margin-top: $footer-top-margin * $margin-unit;
+
+  &.is-inverted {
+    border-top: none;
+    background-color: $footer-background-color;
+  }
+}
