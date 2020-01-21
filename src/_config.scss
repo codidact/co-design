@@ -68,6 +68,17 @@ $tertiary-color: #78909C;
 $link-color: #2980B9;
 $quote-color: #7f8C8D;
 
+/* Badges */
+
+$badge-tag-font-size: 14px;
+$badge-tag-padding-x: 2; // in padding units
+$badge-tag-padding-y: 1; // in padding units
+$badge-tag-font-weight: 500;
+$badge-tag-color: darken($primary-color, 35%);
+$badge-tag-background-color:lighten($primary-color, 30%);
+$badge-tag-master-background-color: darken($primary-color, 30%);
+$badge-tag-border-radius: 3px;
+
 /* Buttons */
 $button-primary-color: $primary-color;
 $button-danger-color: map-get($secondary-colors, "red");

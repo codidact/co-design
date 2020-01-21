@@ -1,25 +1,25 @@
 .badge.is-tag {
   display: inline-block;
-  font-size: 14px;
-  padding: $padding-unit 2*$padding-unit;
-  font-weight: 500;
-  color: darken($primary-color, 35%);
-  background-color: lighten($primary-color, 30%);
-  border-radius: 3px;
+  font-size: $badge-tag-font-size;
+  padding: $badge-tag-padding-y*$padding-unit $badge-tag-padding-x*$padding-unit;
+  font-weight: $badge-tag-font-weight;
+  color: $badge-tag-color;
+  background-color: $badge-tag-background-color;
+  border-radius: $badge-tag-border-radius;
 
   &.is-master-tag {
     color: #ffffff;
-    background-color: darken($primary-color, 30%);
+    background-color: $badge-tag-master-background-color;
   }
 }
 
 a.badge:hover {
   text-decoration: none !important;
-  background-color: lighten($primary-color, 25%);
+  background-color: darken($badge-tag-background-color, 5%);
 
   &.is-master-tag {
     color: #ffffff;
-    background-color: darken($primary-color, 35%);
+    background-color: darken($badge-tag-master-background-color, 5%);
   }
 }
 
