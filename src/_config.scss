@@ -81,3 +81,13 @@ $form-danger-color: map-get($secondary-colors, "red");
 
 /* Modals */
 $modal-width: 48rem;
+
+/* Footer */
+$footer-padding: 4; // in padding units
+$footer-top-margin: 2; // in margin units
+
+$footer-top-border-width: 1px;
+
+$footer-color: #666666;
+$footer-border-color: #dddddd;
+$footer-background-color: #f6f6f6;

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Co-Design - Footer</title>
+    <link rel="stylesheet" href="dist/codidact.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="index.html">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <a class="header--item" href="getting-started.html">Getting Started</a>
+          <a class="header--item" href="utilities.html">Utilities</a>
+          <a class="header--item is-active" href="components.html">Components</a>
+
+          <div class="header--separator"></div>
+
+          <a class="header--item" href="https://github.com/codidact/co-design">on GitHub</a>
+          <a class="header--item is-mobile-menu is-complex" data-trigger-header-slide="#js-hms" href="#!">
+            <span class="header--menu-bars">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <aside class="header-slide" id="js-hms">
+      <a class="header-slide--item" href="getting-started.html">Getting Started</a>
+      <a class="header-slide--item" href="utilities.html">Utilities</a>
+      <a class="header-slide--item is-active" href="components.html">Components</a>
+
+      <div class="header-slide--separator"></div>
+
+      <a class="header-slide--item" href="https://github.com/codidact/co-design">on GitHub</a>
+    </aside>
+    <main class="container has-padding-2">
+      <div class="tabs">
+        <a href="components.html" class="tabs--item">Overview</a>
+        <a href="components.tables.html" class="tabs--item">Tables</a>
+        <a href="components.links.html" class="tabs--item">Links</a>
+        <a href="components.buttons.html" class="tabs--item">Buttons</a>
+        <a href="components.inputs.html" class="tabs--item">Inputs</a>
+        <a href="components.badges.html" class="tabs--item">Badges</a>
+        <a href="components.notices.html" class="tabs--item">Notices</a>
+        <a href="components.header.html" class="tabs--item">Header</a>
+        <a href="components.footer.html" class="tabs--item is-active">Footer</a>
+        <a href="components.tabs.html" class="tabs--item">Tabs</a>
+        <a href="components.widgets.html" class="tabs--item">Widgets</a>
+        <a href="components.modals.html" class="tabs--item">Modals</a>
+        <a href="components.itemlists.html" class="tabs--item">Item Lists</a>
+      </div>
+
+      <h1>Footer</h1>
+      <p class="is-lead">The footer is shown below every page and contains important links and legal information.</p>
+
+      <h2 id="basic">Basic</h2>
+
+      <p>The footer component is very flexible. You can do both simple and complex footers with Co-Design. Every footer is within a <code>.footer</code> element. This should be a <code>&lt;footer&gt;</code> for semantic reasons.</p>
+      <p>The footer element must contain a <code>.footer--container</code> element, which contains all the content.</p>
+      <p>You should consider applying layout container (max width and centered) formatting to the container by giving it the class <code>.container</code></p>
+
+      <h5 id="basic-example">Simple Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;footer class="footer"&gt;
+  &lt;div class="footer--container container"&gt;
+    &lt;p&gt;&amp;copy; 2020 Your fancy page&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <footer class="footer">
+          <div class="footer--container container">
+            <p>&copy; 2020 Your fancy page</p>
+          </div>
+        </footer>
+      </div>
+
+      <h5 id="complex-example">Complex Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;footer class="footer"&gt;
+  &lt;div class="footer--container container"&gt;
+    &lt;div class="grid"&gt;
+      &lt;div class="grid--cell is-6 is-12-md is-12-sm"&gt;
+        &lt;h3&gt;Gibberish Community&lt;/h3&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="..."&gt;Home page&lt;/a&gt;&lt;/li&gt;
+          ...
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="grid--cell is-6 is-12-md is-12-sm"&gt;
+        &lt;h3&gt;The Codidact Project&lt;/h3&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="..."&gt;About us&lt;/a&gt;&lt;/li&gt;
+          ...
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <footer class="footer">
+          <div class="footer--container container">
+            <div class="grid">
+              <div class="grid--cell is-6 is-12-md is-12-sm">
+                <h3>Gibberish Community</h3>
+                <ul>
+                  <li><a href="#!">Home page</a></li>
+                  <li><a href="#!">Main questions</a></li>
+                  <li><a href="#!">Main tags</a></li>
+                  <li><a href="#!">Meta questions</a></li>
+                  <li><a href="#!">Users</a></li>
+                  <li><a href="#!">Help</a></li>
+                </ul>
+              </div>
+              <div class="grid--cell is-6 is-12-md is-12-sm">
+                <h3>The Codidact Project</h3>
+                <ul>
+                  <li><a href="#!">About us</a></li>
+                  <li><a href="#!">Contact us</a></li>
+                  <li><a href="#!">Legal</a></li>
+                  <li><a href="#!">See us on GitHub</a></li>
+                  <li><a href="#!">See us on Discord</a></li>
+                </ul>
+              </div>
+            </div>
+            <p>All content copyrighted under the Creative Commons BY SA 4.0 license. Software and design framework are <a href="#!">available</a> under open-source licenses.</p>
+            <p>Version 42.0.0</p>
+          </div>
+        </footer>
+      </div>
+
+      <h2 id="inverted">Inverted style</h2>
+      <p>It's also possible to invert the style of a footer, giving it a background instead of a border. This may be a better choice for some designs. To do so, give the footer the class <code>.is-inverted</code>.</p>
+
+      <h5 id="inverted-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;footer class="footer is-inverted"&gt;
+  &lt;div class="footer--container container"&gt;
+    &lt;p&gt;&amp;copy; 2020 Your fancy page&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <footer class="footer is-inverted">
+          <div class="footer--container container">
+            <p>&copy; 2020 Your fancy page</p>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <script src="assets/js/docs.js" async></script>
+  </body>
+</html>
