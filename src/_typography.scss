@@ -65,7 +65,8 @@ a:link, a:visited, .link {
   transition: all .3s ease;
   cursor: pointer;
 
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
   border: none;
   background-color: transparent;
   margin: 0;
