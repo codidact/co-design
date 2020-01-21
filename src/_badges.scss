@@ -13,7 +13,7 @@
   }
 }
 
-a.badge:hover {
+a.badge.is-tag:hover {
   text-decoration: none !important;
   background-color: darken($badge-tag-background-color, 5%);
 
