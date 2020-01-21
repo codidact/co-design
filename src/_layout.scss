@@ -13,7 +13,7 @@ html, body {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin: $grid-column-gap / -2;
+  margin: 0 $grid-column-gap / -2;
 
   &.is-nowrap {
     flex-wrap: nowrap;
