@@ -25,27 +25,28 @@ a.badge.is-tag:hover {
 
 .badge.is-award {
   display: inline-block;
-  padding: $padding-unit 2*$padding-unit;
-  font-weight: 500;
-  color: darken($tertiary-color, 25%);
-  background-color: lighten($tertiary-color, 40%);
-  border: 1px solid lighten($tertiary-color, 35%);
-  border-radius: 3px;
+  padding: $badge-award-padding-y*$padding-unit $badge-award-padding-x*$padding-unit;
+  font-weight: $badge-award-font-weight;
+  font-size: $badge-award-font-size;
+  color: $badge-award-color;
+  background-color: $badge-award-background-color;
+  border: $badge-award-border-width solid $badge-award-border-color;
+  border-radius: $badge-award-border-radius;
 
   .badge--icon {
     margin-right: $margin-unit;
   }
 
   &.is-gold .badge--icon {
-    color: #cc0;
+    color: $badge-award-gold-color;
   }
 
   &.is-silver .badge--icon {
-    color: #ccc;
+    color: $badge-award-silver-color;
   }
 
   &.is-bronze .badge--icon {
-    color: #c73;
+    color: $badge-award-bronze-color;
   }
 
   &:hover {

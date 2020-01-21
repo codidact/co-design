@@ -75,9 +75,22 @@ $badge-tag-padding-x: 2; // in padding units
 $badge-tag-padding-y: 1; // in padding units
 $badge-tag-font-weight: 500;
 $badge-tag-color: darken($primary-color, 35%);
-$badge-tag-background-color:lighten($primary-color, 30%);
+$badge-tag-background-color: lighten($primary-color, 30%);
 $badge-tag-master-background-color: darken($primary-color, 30%);
 $badge-tag-border-radius: 3px;
+
+$badge-award-font-size: 16px;
+$badge-award-padding-x: 2; // in padding units
+$badge-award-padding-y: 1; // in padding units
+$badge-award-font-weight: 500;
+$badge-award-color: darken($tertiary-color, 25%);
+$badge-award-background-color: lighten($tertiary-color, 40%);
+$badge-award-border-color: lighten($tertiary-color, 35%);
+$badge-award-border-width: 1px;
+$badge-award-border-radius: 3px;
+   $badge-award-gold-color: #cc0;
+   $badge-award-silver-color: #ccc;
+   $badge-award-bronze-color: #c73;
 
 /* Buttons */
 $button-primary-color: $primary-color;
