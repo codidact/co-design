@@ -70,3 +70,9 @@
     box-shadow: 0 #{1.5*$i}px #{2*$i}px -#{$i}px $box-shadow-color;
   }
 }
+
+
+.has-float-left { float: left; }
+.has-float-right { float: right; }
+.has-float-none { float: none; }
+.has-clear-clear { clear: both; }
