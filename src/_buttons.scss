@@ -220,7 +220,7 @@
 .button.is-icon-only-button {
   background-color: transparent !important;
   color: lighten($button-icon-only-default-color, 10%);
-  padding: 3px;
+  padding: $icon-button-padding;
 
   line-height: 1;
 
@@ -229,20 +229,10 @@
   min-height: 1.5em;
   text-align: center;
 
-  &.is-small {
-    font-size: 0.9em;
-  }
-  &.is-medium {
-    font-size: 1.1em;
-  }
-  &.is-large {
-    font-size: 1.2em;
-  }
-  &.is-very-large {
-    font-size: 1.4em;
-  }
-  &.is-extremely-large {
-    font-size: 1.6em;
+  @each $size, $size-def in $button-sizes {
+    &.is-#{$size} {
+      font-size: map-get($size-def, fs);
+    }
   }
 
   &:hover {
