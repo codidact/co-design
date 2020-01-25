@@ -193,7 +193,7 @@
     background-color: $header-slide-item-background-color;
     border: none;
     align-items: center;
-    transition: all .3s ease;
+    transition: $default-transition;
     position: relative;
     text-decoration: none !important;
 

@@ -62,7 +62,7 @@ ul li, ol li {
 a:link, a:visited, .link {
   color: $link-color;
   text-decoration: none;
-  transition: all .3s ease;
+  transition: $default-transition;
   cursor: pointer;
 
   font-family: inherit;
