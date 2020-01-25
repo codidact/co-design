@@ -153,6 +153,30 @@ $icon-button-padding: 3px;
 $form-color: $tertiary-color;
 $form-danger-color: map-get($secondary-colors, "red");
 
+
+$label-margin-y: 1;
+$label-margin-x: 0;
+$label-color: #444444;
+$label-font-size: 1.0em;
+$label-font-weight: 500;
+
+$input-margin-y: 1;
+$input-margin-x: 0;
+$input-padding: 2;
+$input-font-weight: 500;
+$input-border-width: 2px;
+$input-border-color: transparent;
+$input-active-border-color: lighten($form-color, 30%);
+$input-background-color: lighten($form-color, 40%);
+$input-border-radius: 3px;
+$input-danger-border-color: lighten($form-danger-color, 20%);
+$input-danger-background-color: lighten($form-danger-color, 35%);
+
+$textarea-resize: none;
+$textarea-min-height: 8em;
+$textarea-small-min-height: 4em;
+$textarea-large-min-height: 16em;
+
 /* Modals */
 $modal-width: 48rem;
 

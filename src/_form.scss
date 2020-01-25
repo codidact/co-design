@@ -2,65 +2,65 @@ label.form-element {
   cursor: pointer;
 
   display: block;
-  margin: $margin-unit 0;
+  margin: $label-margin-y*$margin-unit $label-margin-x*$margin-unit;
 
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #444444;
+  font-size: $label-font-size;
+  font-weight: $label-font-weight;
+  color: $label-color;
 }
 
 input.form-element {
   font: inherit;
-  font-weight: 500;
+  font-weight: $input-font-weight;
 
-  padding: 2*$padding-unit;
-  margin: $padding-unit 0;
+  padding: $input-padding*$padding-unit;
+  margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
 
-  border: 2px solid transparent;
-  background-color: lighten($form-color, 40%);
-  border-radius: 3px;
+  border: $input-border-width solid $input-border-color;
+  background-color: $input-background-color;
+  border-radius: $input-border-radius;
 
   display: block;
   width: 100%;
 
   &:focus {
-    border-color: lighten($form-color, 30%);
+    border-color: $input-active-border-color;
   }
 
   &.is-danger {
-    border-color: lighten($form-danger-color, 20%);
-    background-color: lighten($form-danger-color, 35%);
+    border-color: $input-danger-border-color;
+    background-color: $input-danger-background-color;
   }
 }
 
 textarea.form-element {
   font: inherit;
-  font-weight: 500;
+  font-weight: $input-font-weight;
 
-  padding: 2*$padding-unit;
-  margin: $padding-unit 0;
+  padding: $input-padding*$padding-unit;
+  margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
 
-  border: 2px solid transparent;
-  background-color: lighten($form-color, 40%);
-  border-radius: 3px;
+  border: $input-border-width solid $input-border-color;
+  background-color: $input-background-color;
+  border-radius: $input-border-radius;
 
-  resize: none;
+  resize: $textarea-resize;
 
   display: block;
   width: 100%;
-  min-height: 8em;
+  min-height: $textarea-min-height;
 
   &:focus {
-    border-color: lighten($form-color, 30%);
+    border-color: $input-active-border-color;
   }
 
   &.is-danger {
-    border-color: lighten($form-danger-color, 20%);
-    background-color: lighten($form-danger-color, 35%);
+    border-color: $input-danger-border-color;
+    background-color: $input-danger-background-color;
   }
 
-  &.is-small { min-height: 4em; }
-  &.is-large { min-height: 16em; }
+  &.is-small { min-height: $textarea-small-min-height; }
+  &.is-large { min-height: $textarea-large-min-height; }
 }
 
 
