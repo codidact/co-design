@@ -354,3 +354,18 @@ $notice-border-radius: 3px;
 $notice-default-border-color: lighten($tertiary-color, 20%);
 $notice-default-background-color: lighten($tertiary-color, 40%);
 $notice-default-filled-background-color: darken($tertiary-color, 40%);
+
+
+/* Tabs */
+$tabs-padding: 0;
+$tabs-font-weight: 600;
+
+$tabs-color: #999999;
+$tabs-hover-color: darken($primary-color, 35%);
+$tabs-hover-background-color: lighten($primary-color, 30%);
+$tabs-active-color: #ffffff;
+$tabs-active-background-color: darken($primary-color, 20%);
+
+$tabs-item-padding-y: 1.5;
+$tabs-item-padding-x: 2.5;
+$tabs-item-margin: 0.5;

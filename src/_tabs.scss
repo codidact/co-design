@@ -1,24 +1,24 @@
 .tabs {
-  padding: 0;
+  padding: $tabs-padding*$padding-unit;
   display: flex;
   flex-wrap: wrap;
 
   .tabs--item {
     display: block;
-    font-weight: bold;
-    color: #999999;
+    font-weight: $tabs-font-weight;
+    color: $tabs-color;
     text-decoration: none !important;
-    padding: 1.5*$padding-unit 2.5*$padding-unit;
-    margin: 0.5*$padding-unit;
+    padding: $tabs-item-padding-y*$padding-unit $tabs-item-padding-x*$padding-unit;
+    margin: $tabs-item-margin*$padding-unit;
 
     &:hover {
-      background-color: lighten($primary-color, 30%);
-      color: darken($primary-color, 35%);
+      background-color: $tabs-hover-background-color;
+      color: $tabs-hover-color;
     }
 
     &.is-active {
-      background-color: darken($primary-color, 20%);
-      color: white;
+      background-color: $tabs-active-background-color;
+      color: $tabs-active-color;
     }
   }
 }
