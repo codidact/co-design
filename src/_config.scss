@@ -179,6 +179,38 @@ $textarea-large-min-height: 16em;
 
 /* Modals */
 $modal-width: 48rem;
+$modal-large-width: 72em;
+$modal-small-width: 24em;
+
+$modal-outer-padding: 12;
+$modal-shadow: 0 3px 5px -3px #666666;
+$modal-background-color: #ffffff;
+$modal-border-width: 1px;
+$modal-border-color: lighten($tertiary-color, 20%);
+$modal-inner-border-color: lighten($tertiary-color, 30%);
+
+$modal-backdrop-background: rgba(0, 0, 0, 0.5);
+$modal-backdrop-shadow: 0 3px 5px -1.5px #666666;
+
+$modal-header-font-size: 1.4em;
+$modal-header-padding: 3;
+$modal-header-font-weight: 600;
+
+$modal-header-link-font-size: 0.8rem;
+$modal-header-link-padding-y: 0.75;
+$modal-header-link-padding-x: 1;
+$modal-header-button-font-size: 0.8rem;
+
+$modal-body-padding: 4;
+$modal-body-overflow-height: 32rem;
+$modal-large-body-overflow-height: 48rem;
+$modal-small-body-overflow-height: 16rem;
+
+$modal-footer-padding: 3;
+
+$modal-danger-border-color: lighten(map-get($secondary-colors, "red"), 15%);
+$modal-danger-header-color: darken(map-get($secondary-colors, "red"), 25%);
+$modal-danger-background-color: lighten(map-get($secondary-colors, "red"), 35%);
 
 /* Header */
 $header-padding: 4;

@@ -4,7 +4,7 @@
   min-height: 100%;
   top: 0;
   left: 0;
-  padding: 3em;
+  padding: $modal-outer-padding*$padding-unit;
 
   pointer-events: none;
 
@@ -13,7 +13,7 @@
   &.is-active { display: block; }
 
   &.is-with-backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $modal-backdrop-background;
     position: fixed;
 
     height: 100%;
@@ -21,7 +21,7 @@
     pointer-events: all;
 
     .modal--container {
-      box-shadow: 0 3px 5px -1.5px #666666;
+      box-shadow: $modal-shadow;
       max-height: 100%;
     }
   }
@@ -33,58 +33,58 @@
 
     pointer-events: all;
 
-    background-color: white;
-    box-shadow: 0 3px 5px -3px #666666;
-    border: 1px solid lighten($tertiary-color, 20%);
+    background-color: $modal-background-color;
+    box-shadow: $modal-shadow;
+    border: $modal-border-width solid $modal-border-color;
 
     display: flex;
     flex-direction: column;
 
 
     .modal--header {
-      padding: 3 * $padding-unit;
-      font-size: 1.4em;
-      border-bottom: 1px solid lighten($tertiary-color, 30%);
-      font-weight: bold;
+      padding: $modal-header-padding * $padding-unit;
+      font-size: $modal-header-font-size;
+      border-bottom: $modal-border-width solid $modal-inner-border-color;
+      font-weight: $modal-header-font-weight;
 
       .modal--header-link {
         float: right;
-        font-size: 0.8rem;
-        padding: $padding-unit*0.75 $padding-unit;
+        font-size: $modal-header-link-font-size;
+        padding: $padding-unit*$modal-header-link-padding-y $padding-unit*$modal-header-link-padding-x;
       }
 
       .modal--header-button {
         float: right;
-        font-size: 0.8rem;
+        font-size: $modal-header-button-font-size;
         margin: 0;
       }
     }
 
     .modal--body {
-      padding: 4 * $padding-unit;
-      max-height: 0.666666667 * $modal-width;
+      padding: $modal-body-padding * $padding-unit;
+      max-height: $modal-body-overflow-height;
       overflow-y: auto;
     }
 
     .modal--footer {
-      padding: 3 * $padding-unit;
-      border-top: 1px solid lighten($tertiary-color, 30%);
+      padding: $modal-footer-padding * $padding-unit;
+      border-top: $modal-border-width solid $modal-inner-border-color;
     }
   }
 
   &.is-large .modal--container {
-    max-width: $modal-width * 1.5;
+    max-width: $modal-large-width;
 
     .modal--body {
-      max-height: 1 * $modal-width;
+      max-height: $modal-large-body-overflow-height;
     }
   }
 
   &.is-small .modal--container {
-    max-width: $modal-width * 0.5;
+    max-width: $modal-small-width;
 
     .modal--body {
-      max-height: 0.3333333333 * $modal-width;
+      max-height: $modal-small-body-overflow-height;
     }
   }
 
@@ -92,12 +92,12 @@
     .modal--header,
     .modal--container,
     .modal--footer {
-      border-color: lighten(map-get($secondary-colors, "red"), 15%);
+      border-color: $modal-danger-border-color;
     }
 
     .modal--header {
-      color: darken(map-get($secondary-colors, "red"), 25%);
-      background-color: lighten(map-get($secondary-colors, "red"), 35%);
+      color: $modal-danger-header-color;
+      background-color: $modal-danger-background-color;
     }
   }
 }
