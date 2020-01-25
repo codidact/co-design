@@ -118,6 +118,17 @@ $button-muted-color: $tertiary-color;
 
 $button-icon-only-default-color: $tertiary-color;
 
+// (font-size, padding-y)
+// paddinx-y = 2*padding-y
+$button-sizes: (
+  small: (fs: 0.8em, py: 1),
+  medium: (fs: 1.0em, py: 1.75),
+  large: (fs: 1.1em, py: 2),
+  very-large: (fs: 1.2em, py: 2.25),
+  extremely-large: (fs: 1.4em, py: 2.5)
+);
+$button-default-size: (fs: 0.9em, py: 1.5);
+
 /* Forms */
 $form-color: $tertiary-color;
 $form-danger-color: map-get($secondary-colors, "red");

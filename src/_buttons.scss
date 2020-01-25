@@ -1,5 +1,5 @@
 .button, a.button:link, a.button:visited {
-  font-size: 0.9em;
+  font-size: map-get($button-default-size, fs);
   font-family: inherit;
   text-align: center;
   text-decoration: none !important;
@@ -7,7 +7,7 @@
   display: inline-block;
   background-color: lighten($button-primary-color, 32.5%);
   color: darken($button-primary-color, 30%);
-  padding: $padding-unit*1.5 $padding-unit*3;
+  padding: $padding-unit*map-get($button-default-size, py) $padding-unit*2*map-get($button-default-size, py);
   font-weight: 500;
   border-radius: 3px;
   border: 1px solid transparent;
@@ -146,30 +146,14 @@
     }
   }
 
-  &.is-small {
-    font-size: 0.8em;
-    padding: $padding-unit*1 $padding-unit*2;
+
+  @each $size, $size-def in $button-sizes {
+    &.is-#{$size} {
+      font-size: map-get($size-def, fs);
+      padding: $padding-unit*map-get($size-def, py) $padding-unit*2*map-get($size-def, py);
+    }
   }
 
-  &.is-medium {
-    font-size: 1.0em;
-    padding: $padding-unit*1.75 $padding-unit*3.5;
-  }
-
-  &.is-large {
-    font-size: 1.1em;
-    padding: $padding-unit*2 $padding-unit*4;
-  }
-
-  &.is-very-large {
-    font-size: 1.2em;
-    padding: $padding-unit*2.25 $padding-unit*4.5;
-  }
-
-  &.is-extremely-large {
-    font-size: 1.4em;
-    padding: $padding-unit*2.5 $padding-unit*5;
-  }
 
   &.is-close-button {
     background-color: transparent;
