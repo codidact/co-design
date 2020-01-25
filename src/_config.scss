@@ -409,3 +409,25 @@ $tabs-active-background-color: darken($primary-color, 20%);
 $tabs-item-padding-y: 1.5;
 $tabs-item-padding-x: 2.5;
 $tabs-item-margin: 0.5;
+
+/* Widgets */
+$widget-shadow: 0 3px 5px -2px #eeeeee;
+$widget-margin-y: 2;
+$widget-margin-x: 0;
+$widget-background-color: #ffffff;
+$widget-border-width: 1px;
+$widget-border-color: lighten($tertiary-color, 30%);
+$widet-border-radius: 3px;
+
+$widget-header-font-size: 1.2em;
+$widget-header-padding: 3;
+$widget-header-font-weight: 400;
+
+$widget-header-link-font-size: 0.8em;
+$widget-header-link-padding-y: 0.75;
+$widget-header-link-padding-x: 1;
+$widget-header-button-font-size: 0.8em;
+
+$widget-body-padding: 3;
+
+$widget-footer-padding: 3;

@@ -1,14 +1,15 @@
 .widget {
-  border: 1px solid lighten($tertiary-color, 30%);
-  border-radius: 2px;
-  box-shadow: 0 3px 5px -2px #eeeeee;
-  margin: 2*$margin-unit 0;
-  background-color: white;
+  border: $widget-border-width solid $widget-border-color;
+  border-radius: $widet-border-radius;
+  box-shadow: $widget-shadow;
+  margin: $widget-margin-y*$margin-unit $widget-margin-x*$margin-unit;
+  background-color: $widget-background-color;
 
   .widget--header {
-    padding: 3 * $padding-unit;
-    font-size: 1.2em;
-    border-bottom: 1px solid lighten($tertiary-color, 30%);
+    padding: $widget-header-padding * $padding-unit;
+    font-size: $widget-header-font-size;
+    font-weight: $widget-header-font-weight;
+    border-bottom: $widget-border-width solid $widget-border-color;
 
     &.is-complex {
       font-size: 1em;
@@ -16,27 +17,27 @@
 
     .widget--header-link {
       float: right;
-      font-size: 0.8em;
-      padding: $padding-unit*0.75 $padding-unit;
+      font-size: $widget-header-link-font-size;
+      padding: $padding-unit*$widget-header-link-padding-y $padding-unit*$widget-header-link-padding-x;
     }
     .widget--header-button {
       float: right;
-      font-size: 0.8em;
+      font-size: $widget-header-button-font-size;
       position: relative;
-      top: -1.66666667*$padding-unit;
+      top: -$widget-header-padding/1.8*$padding-unit;
     }
   }
 
   .widget--body {
-    padding: 3 * $padding-unit;
+    padding: $widget-body-padding * $padding-unit;
 
     & + .widget--body {
-      border-top: 1px solid lighten($tertiary-color, 30%);
+      border-top: $widget-border-width solid $widget-border-color;
     }
   }
 
   .widget--footer {
-    padding: 3 * $padding-unit;
-    border-top: 1px solid lighten($tertiary-color, 30%);
+    padding: $widget-footer-padding * $padding-unit;
+    border-top: $widget-border-width solid $widget-border-color;
   }
 }
