@@ -342,3 +342,15 @@ $item-list-not-primary-small-margin-x: 2;
 
 $item-list-not-primary-image-small-margin-y: 2;
 $item-list-not-primary-image-small-margin-x: 1;
+
+
+/* Notices */
+$notice-margin-y: 1;
+$notice-margin-x: 0;
+$notice-padding: 4;
+$notice-border-width: 1px;
+$notice-border-radius: 3px;
+
+$notice-default-border-color: lighten($tertiary-color, 20%);
+$notice-default-background-color: lighten($tertiary-color, 40%);
+$notice-default-filled-background-color: darken($tertiary-color, 40%);
