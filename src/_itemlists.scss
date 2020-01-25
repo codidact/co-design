@@ -8,18 +8,18 @@
   .item-list--item {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid lighten($tertiary-color, 30%);
+    border-bottom: $item-list-separator-width solid $item-list-separator-color;
 
     &.is-highlighted {
-      background-color: lighten($primary-color, 32.5%);
+      background-color: $item-list-highlight;
     }
 
     .item-list--number-value {
-      padding: $padding-unit;
-      margin: $margin-unit;
+      padding: $item-list-number-padding*$padding-unit;
+      margin: $item-list-number-margin*$margin-unit;
 
-      height: 20*$padding-unit;
-      width: 30*$padding-unit;
+      height: $item-list-value-height;
+      width: $item-list-number-width;
 
       display: flex;
       flex-direction: column;
@@ -27,33 +27,34 @@
       justify-content: center;
 
       .item-list--number {
-        font-size: 25px;
-        color: #222222;
+        font-size: $item-list-number-font-size;
+        color: $item-list-number-font-color;
       }
 
       .item-list--number-label {
-        font-size: 14px;
-        color: #666666;
+        font-size: $item-list-number-label-font-size;
+        color: $item-list-number-label-color;
       }
     }
 
     .item-list--text-value {
-      padding: 2 * $padding-unit;
-      margin: 2 * $margin-unit;
+      padding: $item-list-text-padding*$padding-unit;
+      margin: $item-list-text-margin*$margin-unit;
 
-      height: 20*$padding-unit;
-      width: 50*$padding-unit;
+      min-height: $item-list-value-height;
+      width: $item-list-text-width;
 
       align-self: stretch;
     }
 
     .item-list--image-value {
-      margin: $margin-unit;
+      padding: $item-list-image-padding*$padding-unit;
+      margin: $item-list-image-margin*$margin-unit;
 
-      width: 10*$padding-unit;
-      height: 10*$padding-unit;
+      height: $item-list-image-height;
+      width: $item-list-image-width;
 
-      img { border-radius: 50%; }
+      img { border-radius: $item-list-image-border-radius; }
 
     }
 
@@ -72,15 +73,15 @@
     &>.is-primary {
       width: 100%;
       height: auto;
-      margin: 0 2*$margin-unit;
+      margin: $item-list-primary-small-margin-y*$margin-unit $item-list-primary-small-margin-x*$margin-unit;
     }
 
     &>:not(.is-primary) {
-      font-size: 0.9em;
-      margin: $margin-unit 2*$margin-unit;
+      font-size: $item-list-not-primary-small-font-size;
+      margin: $item-list-not-primary-small-margin-y*$margin-unit $item-list-not-primary-small-margin-x*$margin-unit;
 
       &.item-list--image-value {
-        margin: 2*$margin-unit $margin-unit;
+        margin: $item-list-not-primary-image-small-margin-y*$margin-unit $item-list-not-primary-image-small-margin-x*$margin-unit;
       }
 
       &.item-list--text-value {
@@ -95,8 +96,8 @@
 
 
         .item-list--number {
-          font-size: 1.1em;
-          margin: 0 $margin-unit;
+          font-size: $item-list-number-small-font-size;
+          margin: $item-list-number-small-margin-y*$margin-unit $item-list-number-small-margin-x*$margin-unit;
         }
       }
     }

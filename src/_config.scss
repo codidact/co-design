@@ -272,3 +272,41 @@ $footer-top-border-width: 1px;
 $footer-color: #666666;
 $footer-border-color: #dddddd;
 $footer-background-color: #f6f6f6;
+
+/* Item lists */
+$item-list-separator-width: 1px;
+$item-list-separator-color: lighten($tertiary-color, 30%);
+$item-list-highlight: lighten($primary-color, 32.5%);
+
+$item-list-number-padding: 1;
+$item-list-number-margin: 1;
+$item-list-number-width: 120px;
+$item-list-number-font-size: 25px;
+$item-list-number-font-color: #222222;
+$item-list-number-small-font-size: 18px;
+$item-list-number-small-margin-y: 0;
+$item-list-number-small-margin-x: 1;
+$item-list-number-label-font-size: 14px;
+$item-list-number-label-color: #666666;
+
+$item-list-text-padding: 2;
+$item-list-text-margin: 2;
+$item-list-text-width: 200px;
+
+$item-list-image-padding: 0;
+$item-list-image-margin: 1;
+$item-list-image-height: 40px;
+$item-list-image-width: 40px;
+$item-list-image-border-radius: 50%;
+
+$item-list-value-height: 80px;
+
+$item-list-primary-small-margin-y: 0;
+$item-list-primary-small-margin-x: 2;
+
+$item-list-not-primary-small-font-size: 0.9em;
+$item-list-not-primary-small-margin-y: 1;
+$item-list-not-primary-small-margin-x: 2;
+
+$item-list-not-primary-image-small-margin-y: 2;
+$item-list-not-primary-image-small-margin-x: 1;
