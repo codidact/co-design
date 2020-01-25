@@ -8,11 +8,11 @@
   background-color: lighten($button-primary-color, 32.5%);
   color: darken($button-primary-color, 30%);
   padding: $padding-unit*map-get($button-default-size, py) $padding-unit*2*map-get($button-default-size, py);
-  font-weight: 500;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  transition: all .3s ease;
-  margin: $margin-unit * 0.5;
+  font-weight: $button-font-weight;
+  border-radius: $button-border-radius;
+  border: $button-border-width $button-border-style transparent;
+  transition: $default-transition;
+  margin: $margin-unit * $button-margin;
 
   &:hover {
     background-color: lighten($button-primary-color, 30%);

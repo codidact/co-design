@@ -21,6 +21,8 @@ $font-size-h4: map-get($font-size-gradient, base);
 $font-size-h5: map-get($font-size-gradient, caption);
 $font-size-h6: map-get($font-size-gradient, small);
 
+$default-transition: all .3s ease;
+
 /* Layout */
 $layout-container-width: 72rem;
 
@@ -117,6 +119,12 @@ $button-danger-color: map-get($secondary-colors, "red");
 $button-muted-color: $tertiary-color;
 
 $button-icon-only-default-color: $tertiary-color;
+
+$button-font-weight: 500;
+$button-border-radius: 3px;
+$button-border-width: 1px;
+$button-border-style: solid;
+$button-margin: 0.5;
 
 // (font-size, padding-y)
 // paddinx-y = 2*padding-y
