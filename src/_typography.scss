@@ -1,6 +1,6 @@
 html {
   font-family: $font-stack-primary;
-  font-size: 16px;
+  font-size: $font-size;
 }
 
 h1 {
@@ -44,8 +44,8 @@ p {
   margin: $margin-p;
 
   &.is-lead {
-    font-size: 1.2em;
-    color: #666666;
+    font-size: $p-lead-font-size;
+    color: $p-lead-color;
   }
 }
 
@@ -122,22 +122,23 @@ a:link, a:visited, .link {
 
 code {
   display: inline;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 0.5 * $padding-unit $padding-unit;
+  border: $code-border-width solid $code-border-color;
+  border-radius: $code-border-radius;
+  padding: $code-padding-y*$padding-unit $code-padding-x*$padding-unit;
 
   font-family: $font-stack-code;
-  font-size: 0.95em;
+  font-size: $code-font-size;
 }
 
 pre {
   display: block;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 2 * $padding-unit;
+  border: $code-border-width solid $code-border-color;
+  border-radius: $code-border-radius;
+  padding: $code-block-padding * $padding-unit;
 
   font-family: $font-stack-code;
-  font-size: 0.95em;
+  font-size: $code-font-size;
+  max-height: $code-block-max-height;
   overflow: auto;
 
   line-height: 1.5;
@@ -151,12 +152,12 @@ pre {
 }
 
 blockquote {
-  margin: $margin-unit 0;
-  padding: 2*$padding-unit 3*$padding-unit;
-  background-color: lighten($quote-color, 45%);
-  border: 2px solid lighten($quote-color, 35%);
+  margin: $quote-margin-y*$margin-unit $quote-margin-x*$margin-unit;
+  padding: $quote-padding-y*$padding-unit $quote-padding-x*$padding-unit;
+  background-color: $quote-background-color;
+  border: $quote-border-width solid $quote-border-color;
 
-  border-radius: 12px;
+  border-radius: $quote-border-radius;
   border-bottom-left-radius: 0;
 
   h1, h2, h3, h4, h5, h6, p {

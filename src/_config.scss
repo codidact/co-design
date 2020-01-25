@@ -2,6 +2,11 @@
 $font-stack-primary: "Red Hat Display", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $font-stack-code: "Consolas", "Courier New", monospace;
 
+$font-size: 16px;
+
+$p-lead-font-size: 1.2em;
+$p-lead-color: #666666;
+
 $font-size-gradient: (
   "small": 10px,
   "caption": 13px,
@@ -21,6 +26,7 @@ $font-size-h4: map-get($font-size-gradient, base);
 $font-size-h5: map-get($font-size-gradient, caption);
 $font-size-h6: map-get($font-size-gradient, small);
 
+/* Animation */
 $default-transition: all .3s ease;
 
 /* Layout */
@@ -72,8 +78,27 @@ $quote-color: #7f8C8D;
 
 $box-shadow-color: #cccccc;
 
-/* Badges */
+/* Standard HTML elements */
+$code-font-size: 0.95em;
+$code-border-width: 1px;
+$code-border-radius: 3px;
+$code-border-color: #dddddd;
+$code-padding-y: 0.5;
+$code-padding-x: 1;
 
+$code-block-padding: 2;
+$code-block-max-height: 20em;
+
+$quote-margin-y: 1;
+$quote-margin-x: 0;
+$quote-padding-y: 2;
+$quote-padding-x: 3;
+$quote-background-color: lighten($quote-color, 45%);
+$quote-border-width: 2px;
+$quote-border-color: lighten($quote-color, 35%);
+$quote-border-radius: 12px;
+
+/* Badges */
 $badge-tag-font-size: 14px;
 $badge-tag-padding-x: 2; // in padding units
 $badge-tag-padding-y: 1; // in padding units
