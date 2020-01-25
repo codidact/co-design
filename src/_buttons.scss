@@ -196,23 +196,22 @@
     border-radius: 0;
     margin: 0;
     position: relative;
-    margin-right: -1px;
+    margin-right: -$button-border-width;
     z-index: 0;
 
     &:first-of-type {
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
-      left: 0;
+      border-top-left-radius: $button-border-radius;
+      border-bottom-left-radius: $button-border-radius;
     }
 
     &:last-of-type {
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-top-right-radius: $button-border-radius;
+      border-bottom-right-radius: $button-border-radius;
       margin-right: 0;
     }
 
     &:hover, &:active, &.is-active {
-      z-index: 2;
+      z-index: $button-list-elevated-z-index;
     }
   }
 }

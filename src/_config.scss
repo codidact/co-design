@@ -145,6 +145,8 @@ $close-button-font-size: 25px;
 $close-button-padding-y: 0.5;
 $close-button-padding-x: 2;
 
+$button-list-elevated-z-index: 2;
+
 /* Forms */
 $form-color: $tertiary-color;
 $form-danger-color: map-get($secondary-colors, "red");
