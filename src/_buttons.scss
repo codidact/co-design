@@ -157,18 +157,20 @@
 
   &.is-close-button {
     background-color: transparent;
-    color: #aaaaaa;
-    font-size: 25px !important;
-    padding: $padding-unit*0.5 2*$padding-unit;
+    color: $close-button-color;
+    font-size: $close-button-font-size !important;
+    padding: $padding-unit*$close-button-padding-y $padding-unit*$close-button-padding-x;
     line-height: 1;
     margin-top: -$padding-unit;
 
-    &:hover {
-      color: #333333;
+    &:hover,
+    &:active,
+    &.is-active {
+      color: $close-button-hover-color;
     }
 
     &:active, &.is-active {
-      background-color: rgba(0, 0, 0, 0.05);
+      background-color: $close-button-active-background-color;
     }
   }
 }

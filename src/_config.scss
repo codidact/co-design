@@ -137,6 +137,14 @@ $button-sizes: (
 );
 $button-default-size: (fs: 0.9em, py: 1.5);
 
+
+$close-button-color: #aaaaaa;
+$close-button-hover-color: #333333;
+$close-button-active-background-color: rgba(0, 0, 0, 0.05);
+$close-button-font-size: 25px;
+$close-button-padding-y: 0.5;
+$close-button-padding-x: 2;
+
 /* Forms */
 $form-color: $tertiary-color;
 $form-danger-color: map-get($secondary-colors, "red");
