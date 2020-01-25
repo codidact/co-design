@@ -241,7 +241,27 @@ $header-bars-color: #dddddd;
 $header-bars-active-color: #666666;
 
 
+$header-slide-default-top: 65px;
+$header-slide-default-right: 20px;
+$header-slide-max-width: 300px;
+$header-slide-background-color: white;
+$header-slide-padding: 3;
+$header-slide-border: 1px solid #eeeeee;
+$header-slide-shadow: 0 3px 2px -2px #ddd;
 
+$header-slide-link-margin-y: 1;
+$header-slide-link-margin-x: 0;
+$header-slide-link-padding-y: 2;
+$header-slide-link-padding-x: 4;
+
+$header-slide-item-color: #888888;
+$header-slide-item-background-color: transparent;
+$header-slide-item-active-color: #333333;
+$header-slide-item-active-background-color: transparent;
+$header-slide-item-active-shadow: 0 1.5px 4px 0px #dddddd;
+
+$header-slide-separator-width: 1px;
+$header-slide-separator-color: #dddddd;
 
 /* Footer */
 $footer-padding: 4; // in padding units
