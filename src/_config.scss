@@ -98,6 +98,21 @@ $quote-border-width: 2px;
 $quote-border-color: lighten($quote-color, 35%);
 $quote-border-radius: 12px;
 
+/* Tables */
+$table-border-color: #cccccc;
+$table-padding-y: 1.5;
+$table-padding-x: 2.5;
+$table-compact-padding-y: 0.5;
+$table-compact-padding-x: 1.5;
+
+$table-th-border-width: 3px;
+$table-th-font-weight: 600;
+
+$table-td-border-width: 1px;
+
+$table-stripe-background-color: #f6f6f6;
+$table-hover-background-color: #eeeeee;
+
 /* Badges */
 $badge-tag-font-size: 14px;
 $badge-tag-padding-x: 2; // in padding units

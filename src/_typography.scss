@@ -181,36 +181,36 @@ table.table {
   }
 
   th {
-    border-bottom: 3px solid #cccccc;
-    padding: 1.5 * $padding-unit 2.5 * $padding-unit;
-    font-weight: bold;
+    border-bottom: $table-th-border-width solid $table-border-color;
+    padding: $table-padding-y*$padding-unit $table-padding-x*$padding-unit;
+    font-weight: $table-th-font-weight;
     text-align: left;
   }
 
   td {
-    border-bottom: 1px solid #cccccc;
-    padding: 1.5 * $padding-unit 2.5 * $padding-unit;
+    border-bottom: $table-td-border-width solid $table-border-color;
+    padding: $table-padding-y*$padding-unit $table-padding-x*$padding-unit;
     text-align: left;
   }
 
   th, td {
     &:not(:last-child) {
-      border-right: 1px solid #cccccc;
+      border-right: $table-td-border-width solid $table-border-color;
     }
   }
 
   &.is-compact {
     th, td {
-      padding: 0.5 * $padding-unit 1.5 * $padding-unit;
+      padding: $table-compact-padding-y*$padding-unit $table-compact-padding-x*$padding-unit;
     }
   }
 
   &.is-striped tr:nth-of-type(2n+1) td {
-    background-color: #f6f6f6;
+    background-color: $table-stripe-background-color;
   }
 
   &.is-with-hover tr:hover td {
-    background-color: #eeeeee;
+    background-color: $table-hover-background-color;
   }
 }
 
