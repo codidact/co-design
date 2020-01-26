@@ -1,11 +1,11 @@
 /* Typography */
-$font-stack-primary: "Red Hat Display", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$font-stack-code: "Consolas", "Courier New", monospace;
+$font-stack-primary: "Red Hat Display", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$font-stack-code: "Consolas", "Courier New", monospace !default;
 
-$font-size: 16px;
+$font-size: 16px !default;
 
-$p-lead-font-size: 1.2em;
-$p-lead-color: #666666;
+$p-lead-font-size: 1.2em !default;
+$p-lead-color: #666666 !default;
 
 $font-size-gradient: (
   "small": 10px,
@@ -17,39 +17,39 @@ $font-size-gradient: (
   "subtitle": 28px,
   "title": 31px,
   "display": 34px,
-);
+) !default;
 
-$font-size-h1: map-get($font-size-gradient, ltitle);
-$font-size-h2: map-get($font-size-gradient, heading);
-$font-size-h3: map-get($font-size-gradient, larger);
-$font-size-h4: map-get($font-size-gradient, base);
-$font-size-h5: map-get($font-size-gradient, caption);
-$font-size-h6: map-get($font-size-gradient, small);
+$font-size-h1: map-get($font-size-gradient, ltitle) !default;
+$font-size-h2: map-get($font-size-gradient, heading) !default;
+$font-size-h3: map-get($font-size-gradient, larger) !default;
+$font-size-h4: map-get($font-size-gradient, base) !default;
+$font-size-h5: map-get($font-size-gradient, caption) !default;
+$font-size-h6: map-get($font-size-gradient, small) !default;
 
 /* Animation */
-$default-transition: all .3s ease;
+$default-transition: all .3s ease !default;
 
 /* Layout */
-$layout-container-width: 72rem;
+$layout-container-width: 72rem !default;
 
-$margin-h1: 18px 0;
-$margin-h2: 15px 0;
-$margin-h3: 12px 0;
-$margin-h4: 9px 0;
-$margin-h5: 6px 0;
-$margin-h6: 3px 0;
+$margin-h1: 18px 0 !default;
+$margin-h2: 15px 0 !default;
+$margin-h3: 12px 0 !default;
+$margin-h4: 9px 0 !default;
+$margin-h5: 6px 0 !default;
+$margin-h6: 3px 0 !default;
 
-$margin-p: 9px 0;
+$margin-p: 9px 0 !default;
 
-$margin-unit: 4px;
-$padding-unit: 4px;
+$margin-unit: 4px !default;
+$padding-unit: 4px !default;
 
 /* Grid */
-$grid-column-count: 12;
-$grid-column-gap: 10px;
+$grid-column-count: 12 !default;
+$grid-column-gap: 10px !default;
 
-$grid-small-to-medium-breakpoint: 32rem;
-$grid-medium-to-large-breakpoint: 64rem;
+$grid-small-to-medium-breakpoint: 32rem !default;
+$grid-medium-to-large-breakpoint: 64rem !default;
 
 /* Color */
 $color-gradient-stops: (
@@ -62,109 +62,109 @@ $color-gradient-stops: (
   "600": -15%,
   "700": -25%,
   "800": -35%
-);
+) !default;
 
-$primary-color: #4B68FF;
+$primary-color: #4B68FF !default;
 $secondary-colors: (
   "red": #FF4343,
   "teal": #4DB6AC,
   "yellow": #FDD835,
   "green": #2ECC71
-);
-$tertiary-color: #78909C;
+) !default;
+$tertiary-color: #78909C !default;
 
-$link-color: #2980B9;
-$quote-color: #7f8C8D;
+$link-color: #2980B9 !default;
+$quote-color: #7f8C8D !default;
 
-$box-shadow-color: #cccccc;
+$box-shadow-color: #cccccc !default;
 
 /* Standard HTML elements */
-$code-font-size: 0.95em;
-$code-border-width: 1px;
-$code-border-radius: 3px;
-$code-border-color: #dddddd;
-$code-padding-y: 0.5;
-$code-padding-x: 1;
+$code-font-size: 0.95em !default;
+$code-border-width: 1px !default;
+$code-border-radius: 3px !default;
+$code-border-color: #dddddd !default;
+$code-padding-y: 0.5 !default;
+$code-padding-x: 1 !default;
 
-$code-block-padding: 2;
-$code-block-max-height: 20em;
+$code-block-padding: 2 !default;
+$code-block-max-height: 20em !default;
 
-$quote-margin-y: 1;
-$quote-margin-x: 0;
-$quote-padding-y: 2;
-$quote-padding-x: 3;
-$quote-background-color: lighten($quote-color, 45%);
-$quote-border-width: 2px;
-$quote-border-color: lighten($quote-color, 35%);
-$quote-border-radius: 12px;
+$quote-margin-y: 1 !default;
+$quote-margin-x: 0 !default;
+$quote-padding-y: 2 !default;
+$quote-padding-x: 3 !default;
+$quote-background-color: lighten($quote-color, 45%) !default;
+$quote-border-width: 2px !default;
+$quote-border-color: lighten($quote-color, 35%) !default;
+$quote-border-radius: 12px !default;
 
 /* Tables */
-$table-border-color: #cccccc;
-$table-padding-y: 1.5;
-$table-padding-x: 2.5;
-$table-compact-padding-y: 0.5;
-$table-compact-padding-x: 1.5;
+$table-border-color: #cccccc !default;
+$table-padding-y: 1.5 !default;
+$table-padding-x: 2.5 !default;
+$table-compact-padding-y: 0.5 !default;
+$table-compact-padding-x: 1.5 !default;
 
-$table-th-border-width: 3px;
-$table-th-font-weight: 600;
+$table-th-border-width: 3px !default;
+$table-th-font-weight: 600 !default;
 
-$table-td-border-width: 1px;
+$table-td-border-width: 1px !default;
 
-$table-stripe-background-color: #f6f6f6;
-$table-hover-background-color: #eeeeee;
+$table-stripe-background-color: #f6f6f6 !default;
+$table-hover-background-color: #eeeeee !default;
 
 /* Badges */
-$badge-tag-font-size: 14px;
-$badge-tag-padding-x: 2; // in padding units
-$badge-tag-padding-y: 1; // in padding units
-$badge-tag-font-weight: 500;
-$badge-tag-color: darken($primary-color, 35%);
-$badge-tag-background-color: lighten($primary-color, 30%);
-$badge-tag-master-background-color: darken($primary-color, 30%);
-$badge-tag-border-radius: 3px;
+$badge-tag-font-size: 14px !default;
+$badge-tag-padding-x: 2 !default; // in padding units
+$badge-tag-padding-y: 1 !default; // in padding units
+$badge-tag-font-weight: 500 !default;
+$badge-tag-color: darken($primary-color, 35%) !default;
+$badge-tag-background-color: lighten($primary-color, 30%) !default;
+$badge-tag-master-background-color: darken($primary-color, 30%) !default;
+$badge-tag-border-radius: 3px !default;
 
-$badge-award-font-size: 16px;
-$badge-award-padding-x: 2; // in padding units
-$badge-award-padding-y: 1; // in padding units
-$badge-award-font-weight: 500;
-$badge-award-color: darken($tertiary-color, 25%);
-$badge-award-background-color: lighten($tertiary-color, 40%);
-$badge-award-border-color: lighten($tertiary-color, 35%);
-$badge-award-border-width: 1px;
-$badge-award-border-radius: 3px;
-   $badge-award-gold-color: #cc0;
-   $badge-award-silver-color: #ccc;
-   $badge-award-bronze-color: #c73;
+$badge-award-font-size: 16px !default;
+$badge-award-padding-x: 2 !default; // in padding units
+$badge-award-padding-y: 1 !default; // in padding units
+$badge-award-font-weight: 500 !default;
+$badge-award-color: darken($tertiary-color, 25%) !default;
+$badge-award-background-color: lighten($tertiary-color, 40%) !default;
+$badge-award-border-color: lighten($tertiary-color, 35%) !default;
+$badge-award-border-width: 1px !default;
+$badge-award-border-radius: 3px !default;
+   $badge-award-gold-color: #cc0 !default;
+   $badge-award-silver-color: #ccc !default;
+   $badge-award-bronze-color: #c73 !default;
 
-$badge-role-font-size: 0.75em;
-$badge-role-padding-x: 1.5; // in padding units
-$badge-role-padding-y: 0.75; // in padding units
-$badge-role-font-weight: 700;
-$badge-role-background-color: darken($primary-color, 20%);
-$badge-role-color: white;
-$badge-role-border-radius: 2px;
+$badge-role-font-size: 0.75em !default;
+$badge-role-padding-x: 1.5 !default; // in padding units
+$badge-role-padding-y: 0.75 !default; // in padding units
+$badge-role-font-weight: 700 !default;
+$badge-role-background-color: darken($primary-color, 20%) !default;
+$badge-role-color: white !default;
+$badge-role-border-radius: 2px !default;
 
-$badge-tl-font-size: 14px;
-$badge-tl-min-width: 20px;
-$badge-tl-padding-x: 1.5; // in padding units
-$badge-tl-padding-y: 0.25; // in padding units
-$badge-tl-font-weight: 700;
-$badge-tl-border-radius: 20px;
-$badge-tl-background-color: darken($primary-color, 20%);
-$badge-tl-color: white;
+$badge-tl-font-size: 14px !default;
+$badge-tl-min-width: 20px !default;
+$badge-tl-padding-x: 1.5 !default; // in padding units
+$badge-tl-padding-y: 0.25 !default; // in padding units
+$badge-tl-font-weight: 700 !default;
+$badge-tl-border-radius: 20px !default;
+$badge-tl-background-color: darken($primary-color, 20%) !default;
+$badge-tl-color: white !default;
 
 /* Buttons */
-$button-primary-color: $primary-color;
-$button-danger-color: map-get($secondary-colors, "red");
-$button-muted-color: $tertiary-color;
+$button-primary-color: $primary-color !default;
+$button-danger-color: map-get($secondary-colors, "red") !default;
+$button-muted-color: $tertiary-color !default;
 
-$button-icon-only-default-color: $tertiary-color;
+$button-icon-only-default-color: $tertiary-color !default;
 
-$button-font-weight: 500;
-$button-border-radius: 3px;
-$button-border-width: 1px;
-$button-border-style: solid;
-$button-margin: 0.5;
+$button-font-weight: 500 !default;
+$button-border-radius: 3px !default;
+$button-border-width: 1px !default;
+$button-border-style: solid !default;
+$button-margin: 0.5 !default;
 
 // (font-size, padding-y)
 // paddinx-y = 2*padding-y
@@ -174,260 +174,260 @@ $button-sizes: (
   large: (fs: 1.1em, py: 2),
   very-large: (fs: 1.2em, py: 2.25),
   extremely-large: (fs: 1.4em, py: 2.5)
-);
-$button-default-size: (fs: 0.9em, py: 1.5);
+) !default;
+$button-default-size: (fs: 0.9em, py: 1.5) !default;
 
 
-$close-button-color: #aaaaaa;
-$close-button-hover-color: #333333;
-$close-button-active-background-color: rgba(0, 0, 0, 0.05);
-$close-button-font-size: 25px;
-$close-button-padding-y: 0.5;
-$close-button-padding-x: 2;
+$close-button-color: #aaaaaa !default;
+$close-button-hover-color: #333333 !default;
+$close-button-active-background-color: rgba(0, 0, 0, 0.05) !default;
+$close-button-font-size: 25px !default;
+$close-button-padding-y: 0.5 !default;
+$close-button-padding-x: 2 !default;
 
-$button-list-elevated-z-index: 2;
+$button-list-elevated-z-index: 2 !default;
 
-$icon-button-padding: 3px;
+$icon-button-padding: 3px !default;
 
 /* Forms */
-$form-color: $tertiary-color;
-$form-danger-color: map-get($secondary-colors, "red");
+$form-color: $tertiary-color !default;
+$form-danger-color: map-get($secondary-colors, "red") !default;
 
 
-$label-margin-y: 1;
-$label-margin-x: 0;
-$label-color: #444444;
-$label-font-size: 1.0em;
-$label-font-weight: 500;
+$label-margin-y: 1 !default;
+$label-margin-x: 0 !default;
+$label-color: #444444 !default;
+$label-font-size: 1.0em !default;
+$label-font-weight: 500 !default;
 
-$input-margin-y: 1;
-$input-margin-x: 0;
-$input-padding: 2;
-$input-font-weight: 500;
-$input-border-width: 1px;
-$input-border-color: lighten($form-color, 35%);
-$input-active-border-color: lighten($form-color, 20%);
-$input-background-color: lighten($form-color, 45%);
-$input-border-radius: 3px;
-$input-danger-border-color: lighten($form-danger-color, 20%);
-$input-danger-background-color: lighten($form-danger-color, 35%);
+$input-margin-y: 1 !default;
+$input-margin-x: 0 !default;
+$input-padding: 2 !default;
+$input-font-weight: 500 !default;
+$input-border-width: 1px !default;
+$input-border-color: lighten($form-color, 35%) !default;
+$input-active-border-color: lighten($form-color, 20%) !default;
+$input-background-color: lighten($form-color, 45%) !default;
+$input-border-radius: 3px !default;
+$input-danger-border-color: lighten($form-danger-color, 20%) !default;
+$input-danger-background-color: lighten($form-danger-color, 35%) !default;
 
-$textarea-resize: none;
-$textarea-min-height: 8em;
-$textarea-small-min-height: 4em;
-$textarea-large-min-height: 16em;
+$textarea-resize: none !default;
+$textarea-min-height: 8em !default;
+$textarea-small-min-height: 4em !default;
+$textarea-large-min-height: 16em !default;
 
 /* Modals */
-$modal-width: 48rem;
-$modal-large-width: 72em;
-$modal-small-width: 24em;
+$modal-width: 48rem !default;
+$modal-large-width: 72em !default;
+$modal-small-width: 24em !default;
 
-$modal-outer-padding: 12;
-$modal-shadow: 0 3px 5px -3px #666666;
-$modal-background-color: #ffffff;
-$modal-border-width: 1px;
-$modal-border-color: lighten($tertiary-color, 20%);
-$modal-inner-border-color: lighten($tertiary-color, 30%);
+$modal-outer-padding: 12 !default;
+$modal-shadow: 0 3px 5px -3px #666666 !default;
+$modal-background-color: #ffffff !default;
+$modal-border-width: 1px !default;
+$modal-border-color: lighten($tertiary-color, 20%) !default;
+$modal-inner-border-color: lighten($tertiary-color, 30%) !default;
 
-$modal-backdrop-background: rgba(0, 0, 0, 0.5);
-$modal-backdrop-shadow: 0 3px 5px -1.5px #666666;
+$modal-backdrop-background: rgba(0, 0, 0, 0.5) !default;
+$modal-backdrop-shadow: 0 3px 5px -1.5px #666666 !default;
 
-$modal-header-font-size: 1.4em;
-$modal-header-padding: 3;
-$modal-header-font-weight: 600;
+$modal-header-font-size: 1.4em !default;
+$modal-header-padding: 3 !default;
+$modal-header-font-weight: 600 !default;
 
-$modal-header-link-font-size: 0.8rem;
-$modal-header-link-padding-y: 0.75;
-$modal-header-link-padding-x: 1;
-$modal-header-button-font-size: 0.8rem;
+$modal-header-link-font-size: 0.8rem !default;
+$modal-header-link-padding-y: 0.75 !default;
+$modal-header-link-padding-x: 1 !default;
+$modal-header-button-font-size: 0.8rem !default;
 
-$modal-body-padding: 4;
-$modal-body-overflow-height: 32rem;
-$modal-large-body-overflow-height: 48rem;
-$modal-small-body-overflow-height: 16rem;
+$modal-body-padding: 4 !default;
+$modal-body-overflow-height: 32rem !default;
+$modal-large-body-overflow-height: 48rem !default;
+$modal-small-body-overflow-height: 16rem !default;
 
-$modal-footer-padding: 3;
+$modal-footer-padding: 3 !default;
 
-$modal-danger-border-color: lighten(map-get($secondary-colors, "red"), 15%);
-$modal-danger-header-color: darken(map-get($secondary-colors, "red"), 25%);
-$modal-danger-background-color: lighten(map-get($secondary-colors, "red"), 35%);
+$modal-danger-border-color: lighten(map-get($secondary-colors, "red"), 15%) !default;
+$modal-danger-header-color: darken(map-get($secondary-colors, "red"), 25%) !default;
+$modal-danger-background-color: lighten(map-get($secondary-colors, "red"), 35%) !default;
 
 /* Header */
-$header-padding: 4;
-$header-bottom-margin: 4;
+$header-padding: 4 !default;
+$header-bottom-margin: 4 !default;
 
-$header-background: #ffffff;
-$header-color: #333333;
-$header-shadow: 0 3px 2px 0 #ddd;
-$header-font-weight: 600;
+$header-background: #ffffff !default;
+$header-color: #333333 !default;
+$header-shadow: 0 3px 2px 0 #ddd !default;
+$header-font-weight: 600 !default;
 
-$header-link-padding-y: 1;
-$header-link-padding-x: 2;
-$header-link-hover-shadow: 0 2px 4px 1px #dddddd;
+$header-link-padding-y: 1 !default;
+$header-link-padding-x: 2 !default;
+$header-link-hover-shadow: 0 2px 4px 1px #dddddd !default;
 
-$header-brand-instance-font-size: 1rem;
-$header-brand-site-font-size: 2.5rem;
-$header-brand-site-small-font-size: 2rem;
-$header-brand-menu-inner-margin: 6;
+$header-brand-instance-font-size: 1rem !default;
+$header-brand-site-font-size: 2.5rem !default;
+$header-brand-site-small-font-size: 2rem !default;
+$header-brand-menu-inner-margin: 6 !default;
 
-$header-menu-min-height: 50px;
+$header-menu-min-height: 50px !default;
 
-$header-item-padding-y: 1;
-$header-item-padding-x: 2;
-$header-item-margin-y: 0;
-$header-item-margin-x: 1;
-$header-item-color: #aaaaaa;
-$header-item-active-color: $header-color;
-$header-item-background-color: transparent;
-$header-item-active-background-color: transparent;
+$header-item-padding-y: 1 !default;
+$header-item-padding-x: 2 !default;
+$header-item-margin-y: 0 !default;
+$header-item-margin-x: 1 !default;
+$header-item-color: #aaaaaa !default;
+$header-item-active-color: $header-color !default;
+$header-item-background-color: transparent !default;
+$header-item-active-background-color: transparent !default;
 
-$header-alert-background-color: darken($primary-color, 20%);
-$header-alert-color: #ffffff;
-$header-alert-font-size: 13px;
-$header-alert-padding-y: 0.5;
-$header-alert-padding-x: 1;
-$header-alert-margin-y: 0;
-$header-alert-margin-x: 1;
-$header-alert-border-radius: 30px;
+$header-alert-background-color: darken($primary-color, 20%) !default;
+$header-alert-color: #ffffff !default;
+$header-alert-font-size: 13px !default;
+$header-alert-padding-y: 0.5 !default;
+$header-alert-padding-x: 1 !default;
+$header-alert-margin-y: 0 !default;
+$header-alert-margin-x: 1 !default;
+$header-alert-border-radius: 30px !default;
 
-$header-alert-complex-top: -2px;
-$header-alert-complex-left: -5px;
+$header-alert-complex-top: -2px !default;
+$header-alert-complex-left: -5px !default;
 
-$header-tl-color: #ffffff;
-$header-tl-font-size: 30px;
-$header-tl-opacity: 0.9;
-$header-tl-small-outline-shadow: 0 0 1px #000000;
-$header-tl-padding: 0.5;
-$header-tl-margin-y: 0;
-$header-tl-margin-x: 1;
-$header-tl-bottom: -2px;
-$header-tl-right: -7px;
+$header-tl-color: #ffffff !default;
+$header-tl-font-size: 30px !default;
+$header-tl-opacity: 0.9 !default;
+$header-tl-small-outline-shadow: 0 0 1px #000000 !default;
+$header-tl-padding: 0.5 !default;
+$header-tl-margin-y: 0 !default;
+$header-tl-margin-x: 1 !default;
+$header-tl-bottom: -2px !default;
+$header-tl-right: -7px !default;
 
-$header-icon-or-image-height: 40px;
-$header-icon-or-image-width: 40px;
+$header-icon-or-image-height: 40px !default;
+$header-icon-or-image-width: 40px !default;
 
-$header-bars-width: 2em;
-$header-bars-height: 0.333333333em;
-$header-bars-margin-y-raw: 0.166666667em; // raw; not in margin units!
-$header-bars-color: #dddddd;
-$header-bars-active-color: #666666;
+$header-bars-width: 2em !default;
+$header-bars-height: 0.333333333em !default;
+$header-bars-margin-y-raw: 0.166666667em !default; // raw; not in margin units!
+$header-bars-color: #dddddd !default;
+$header-bars-active-color: #666666 !default;
 
 
-$header-slide-default-top: 65px;
-$header-slide-default-right: 20px;
-$header-slide-max-width: 300px;
-$header-slide-background-color: white;
-$header-slide-padding: 3;
-$header-slide-border: 1px solid #eeeeee;
-$header-slide-shadow: 0 3px 2px -2px #ddd;
+$header-slide-default-top: 65px !default;
+$header-slide-default-right: 20px !default;
+$header-slide-max-width: 300px !default;
+$header-slide-background-color: white !default;
+$header-slide-padding: 3 !default;
+$header-slide-border: 1px solid #eeeeee !default;
+$header-slide-shadow: 0 3px 2px -2px #ddd !default;
 
-$header-slide-link-margin-y: 1;
-$header-slide-link-margin-x: 0;
-$header-slide-link-padding-y: 2;
-$header-slide-link-padding-x: 4;
+$header-slide-link-margin-y: 1 !default;
+$header-slide-link-margin-x: 0 !default;
+$header-slide-link-padding-y: 2 !default;
+$header-slide-link-padding-x: 4 !default;
 
-$header-slide-item-color: #888888;
-$header-slide-item-background-color: transparent;
-$header-slide-item-active-color: #333333;
-$header-slide-item-active-background-color: transparent;
-$header-slide-item-active-shadow: 0 1.5px 4px 0px #dddddd;
+$header-slide-item-color: #888888 !default;
+$header-slide-item-background-color: transparent !default;
+$header-slide-item-active-color: #333333 !default;
+$header-slide-item-active-background-color: transparent !default;
+$header-slide-item-active-shadow: 0 1.5px 4px 0px #dddddd !default;
 
-$header-slide-separator-width: 1px;
-$header-slide-separator-color: #dddddd;
+$header-slide-separator-width: 1px !default;
+$header-slide-separator-color: #dddddd !default;
 
 /* Footer */
-$footer-padding: 4; // in padding units
-$footer-top-margin: 2; // in margin units
+$footer-padding: 4 !default; // in padding units
+$footer-top-margin: 2 !default; // in margin units
 
-$footer-top-border-width: 1px;
+$footer-top-border-width: 1px !default;
 
-$footer-color: #666666;
-$footer-border-color: #dddddd;
-$footer-background-color: #f6f6f6;
+$footer-color: #666666 !default;
+$footer-border-color: #dddddd !default;
+$footer-background-color: #f6f6f6 !default;
 
 /* Item lists */
-$item-list-separator-width: 1px;
-$item-list-separator-color: lighten($tertiary-color, 30%);
-$item-list-highlight: lighten($primary-color, 32.5%);
+$item-list-separator-width: 1px !default;
+$item-list-separator-color: lighten($tertiary-color, 30%) !default;
+$item-list-highlight: lighten($primary-color, 32.5%) !default;
 
-$item-list-number-padding: 1;
-$item-list-number-margin: 1;
-$item-list-number-width: 120px;
-$item-list-number-font-size: 25px;
-$item-list-number-font-color: #222222;
-$item-list-number-small-font-size: 18px;
-$item-list-number-small-margin-y: 0;
-$item-list-number-small-margin-x: 1;
-$item-list-number-label-font-size: 14px;
-$item-list-number-label-color: #666666;
+$item-list-number-padding: 1 !default;
+$item-list-number-margin: 1 !default;
+$item-list-number-width: 120px !default;
+$item-list-number-font-size: 25px !default;
+$item-list-number-font-color: #222222 !default;
+$item-list-number-small-font-size: 18px !default;
+$item-list-number-small-margin-y: 0 !default;
+$item-list-number-small-margin-x: 1 !default;
+$item-list-number-label-font-size: 14px !default;
+$item-list-number-label-color: #666666 !default;
 
-$item-list-text-padding: 2;
-$item-list-text-margin: 2;
-$item-list-text-width: 200px;
+$item-list-text-padding: 2 !default;
+$item-list-text-margin: 2 !default;
+$item-list-text-width: 200px !default;
 
-$item-list-image-padding: 0;
-$item-list-image-margin: 1;
-$item-list-image-height: 40px;
-$item-list-image-width: 40px;
-$item-list-image-border-radius: 50%;
+$item-list-image-padding: 0 !default;
+$item-list-image-margin: 1 !default;
+$item-list-image-height: 40px !default;
+$item-list-image-width: 40px !default;
+$item-list-image-border-radius: 50% !default;
 
-$item-list-value-height: 80px;
+$item-list-value-height: 80px !default;
 
-$item-list-primary-small-margin-y: 0;
-$item-list-primary-small-margin-x: 2;
+$item-list-primary-small-margin-y: 0 !default;
+$item-list-primary-small-margin-x: 2 !default;
 
-$item-list-not-primary-small-font-size: 0.9em;
-$item-list-not-primary-small-margin-y: 1;
-$item-list-not-primary-small-margin-x: 2;
+$item-list-not-primary-small-font-size: 0.9em !default;
+$item-list-not-primary-small-margin-y: 1 !default;
+$item-list-not-primary-small-margin-x: 2 !default;
 
-$item-list-not-primary-image-small-margin-y: 2;
-$item-list-not-primary-image-small-margin-x: 1;
+$item-list-not-primary-image-small-margin-y: 2 !default;
+$item-list-not-primary-image-small-margin-x: 1 !default;
 
 
 /* Notices */
-$notice-margin-y: 1;
-$notice-margin-x: 0;
-$notice-padding: 4;
-$notice-border-width: 1px;
-$notice-border-radius: 3px;
+$notice-margin-y: 1 !default;
+$notice-margin-x: 0 !default;
+$notice-padding: 4 !default;
+$notice-border-width: 1px !default;
+$notice-border-radius: 3px !default;
 
-$notice-default-border-color: lighten($tertiary-color, 20%);
-$notice-default-background-color: lighten($tertiary-color, 40%);
-$notice-default-filled-background-color: darken($tertiary-color, 40%);
+$notice-default-border-color: lighten($tertiary-color, 20%) !default;
+$notice-default-background-color: lighten($tertiary-color, 40%) !default;
+$notice-default-filled-background-color: darken($tertiary-color, 40%) !default;
 
 
 /* Tabs */
-$tabs-padding: 0;
-$tabs-font-weight: 600;
+$tabs-padding: 0 !default;
+$tabs-font-weight: 600 !default;
 
-$tabs-color: #999999;
-$tabs-hover-color: darken($primary-color, 35%);
-$tabs-hover-background-color: lighten($primary-color, 30%);
-$tabs-active-color: #ffffff;
-$tabs-active-background-color: darken($primary-color, 20%);
+$tabs-color: #999999 !default;
+$tabs-hover-color: darken($primary-color, 35%) !default;
+$tabs-hover-background-color: lighten($primary-color, 30%) !default;
+$tabs-active-color: #ffffff !default;
+$tabs-active-background-color: darken($primary-color, 20%) !default;
 
-$tabs-item-padding-y: 1.5;
-$tabs-item-padding-x: 2.5;
-$tabs-item-margin: 0.5;
+$tabs-item-padding-y: 1.5 !default;
+$tabs-item-padding-x: 2.5 !default;
+$tabs-item-margin: 0.5 !default;
 
 /* Widgets */
-$widget-shadow: 0 3px 5px -2px #eeeeee;
-$widget-margin-y: 2;
-$widget-margin-x: 0;
-$widget-background-color: #ffffff;
-$widget-border-width: 1px;
-$widget-border-color: lighten($tertiary-color, 30%);
-$widet-border-radius: 3px;
+$widget-shadow: 0 3px 5px -2px #eeeeee !default;
+$widget-margin-y: 2 !default;
+$widget-margin-x: 0 !default;
+$widget-background-color: #ffffff !default;
+$widget-border-width: 1px !default;
+$widget-border-color: lighten($tertiary-color, 30%) !default;
+$widet-border-radius: 3px !default;
 
-$widget-header-font-size: 1.2em;
-$widget-header-padding: 3;
-$widget-header-font-weight: 400;
+$widget-header-font-size: 1.2em !default;
+$widget-header-padding: 3 !default;
+$widget-header-font-weight: 400 !default;
 
-$widget-header-link-font-size: 0.8em;
-$widget-header-link-padding-y: 0.75;
-$widget-header-link-padding-x: 1;
-$widget-header-button-font-size: 0.8em;
+$widget-header-link-font-size: 0.8em !default;
+$widget-header-link-padding-y: 0.75 !default;
+$widget-header-link-padding-x: 1 !default;
+$widget-header-button-font-size: 0.8em !default;
 
-$widget-body-padding: 3;
+$widget-body-padding: 3 !default;
 
-$widget-footer-padding: 3;
+$widget-footer-padding: 3 !default;

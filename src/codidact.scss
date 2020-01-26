@@ -9,11 +9,11 @@
  *
  */
 
-/* First import configuration stylesheet */
-@import "_config.scss";
-
-/* Then apply overrides */
+/* First apply overrides */
 @import "_child.scss";
+
+/* Then import configuration stylesheet */
+@import "_config.scss";
 
 /* Then include components */
 @import "_header.scss";
