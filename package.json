@@ -1,0 +1,18 @@
+{
+  "name": "@codidact/co-design",
+  "version": "0.4.0",
+  "description": "Co-Design is the design and component framework for Codidact",
+  "author": "luap42",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codidact/co-design.git"
+  },
+  "keywords": [
+    "codidact"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codidact/co-design/issues"
+  },
+  "homepage": "https://github.com/codidact/co-design#readme"
+}
