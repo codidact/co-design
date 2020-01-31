@@ -11,6 +11,6 @@
 
 ###
 
-This is the official framework for the [Codidact](https://codidact.org) Q&A platform/codidact.com.
+This is the official CSS framework for the [Codidact](https://codidact.org) Q&A platform/codidact.com.
 
 For detailed documentation and an overview of the framework features, visit the [**official homepage**](https://codidact.github.io/co-design/).
