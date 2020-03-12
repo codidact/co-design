@@ -1,26 +1,41 @@
 @each $name, $value in map-merge($secondary-colors, (primary: $primary-color, tertiary: $tertiary-color)) {
-  .has-color-#{$name} { color: $value; }
-  .has-background-color-#{$name} { background-color: $value; }
-  .has-border-color-#{$name} { border-color: $value; }
+  .has-color-#{$name},
+  .h-c-#{$name} { color: $value; }
+  .has-background-color-#{$name},
+  .h-bg-#{$name} { background-color: $value; }
+  .has-border-color-#{$name},
+  .h-bc-#{$name} { border-color: $value; }
 
   @each $gk, $gp in $color-gradient-stops {
     @if $gp < 0 {
-      .has-color-#{$name}-#{$gk} { color: darken($value, -$gp); }
-      .has-background-color-#{$name}-#{$gk} { background-color: darken($value, -$gp); }
-      .has-border-color-#{$name}-#{$gk} { border-color: darken($value, -$gp); }
+      .has-color-#{$name}-#{$gk},
+      .h-c-#{$name}-#{$gk} { color: darken($value, -$gp); }
+      .has-background-color-#{$name}-#{$gk},
+      .h-bg-#{$name}-#{$gk} { background-color: darken($value, -$gp); }
+      .has-border-color-#{$name}-#{$gk},
+      .h-bc-#{$name}-#{$gk} { border-color: darken($value, -$gp); }
     } @else {
-      .has-color-#{$name}-#{$gk} { color: lighten($value, $gp); }
-      .has-background-color-#{$name}-#{$gk} { background-color: lighten($value, $gp); }
-      .has-border-color-#{$name}-#{$gk} { border-color: lighten($value, $gp); }
+      .has-color-#{$name}-#{$gk},
+      .h-c-#{$name}-#{$gk} { color: lighten($value, $gp); }
+      .has-background-color-#{$name}-#{$gk},
+      .h-bg-#{$name}-#{$gk} { background-color: lighten($value, $gp); }
+      .has-border-color-#{$name}-#{$gk},
+      .h-bc-#{$name}-#{$gk} { border-color: lighten($value, $gp); }
     }
   }
 
 }
 
-.has-color-white { color: white; }
-.has-background-color-white { background-color: white; }
-.has-border-color-white { border-color: white; }
+.has-color-white,
+.h-c-white { color: white; }
+.has-background-color-white,
+.h-bg-white { background-color: white; }
+.has-border-color-white,
+.h-bc-white { border-color: white; }
 
-.has-color-black { color: black; }
-.has-background-color-black { background-color: black; }
-.has-border-color-black { border-color: black; }
+.has-color-black,
+.h-c-black { color: black; }
+.has-background-color-black,
+.h-bg-black { background-color: black; }
+.has-border-color-black,
+.h-bc-black { border-color: black; }
