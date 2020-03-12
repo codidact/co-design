@@ -257,7 +257,7 @@ $header-padding: 4 !default;
 $header-bottom-margin: 4 !default;
 
 $header-background: #ffffff !default;
-$header-color: #333333 !default;
+$header-color: #111111 !default;
 $header-shadow: 0 3px 2px 0 #ddd !default;
 $header-font-weight: 600 !default;
 
@@ -276,7 +276,7 @@ $header-item-padding-y: 1 !default;
 $header-item-padding-x: 2 !default;
 $header-item-margin-y: 0 !default;
 $header-item-margin-x: 1 !default;
-$header-item-color: #aaaaaa !default;
+$header-item-color: #777777 !default;
 $header-item-active-color: $header-color !default;
 $header-item-background-color: transparent !default;
 $header-item-active-background-color: transparent !default;
@@ -400,7 +400,7 @@ $notice-default-filled-background-color: darken($tertiary-color, 40%) !default;
 $tabs-padding: 0 !default;
 $tabs-font-weight: 600 !default;
 
-$tabs-color: #999999 !default;
+$tabs-color: #666666 !default;
 $tabs-hover-color: darken($primary-color, 35%) !default;
 $tabs-hover-background-color: lighten($primary-color, 30%) !default;
 $tabs-active-color: #ffffff !default;
