@@ -178,6 +178,8 @@
 
   border: $header-slide-border;
   box-shadow: $header-slide-shadow;
+  
+  z-index: 100;
 
   display: none;
 
