@@ -55,7 +55,7 @@ ul li, ol li {
 
 @each $key, $value in $font-size-gradient {
   .has-font-size-#{$key},
-  .h-fs-#{key} {
+  .h-fs-#{$key} {
     font-size: $value;
   }
 }
