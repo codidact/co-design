@@ -14,5 +14,9 @@
   "bugs": {
     "url": "https://github.com/codidact/co-design/issues"
   },
-  "homepage": "https://github.com/codidact/co-design#readme"
+  "homepage": "https://github.com/codidact/co-design#readme",
+  "scripts": {
+    "build": "sass --update src:dist --style=compressed && cp -r assets docs/assets && cp -r dist docs/dist",
+    "watch": "sass --watch src:dist --style=compressed"
+  }
 }
