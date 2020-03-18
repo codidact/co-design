@@ -21,6 +21,13 @@ a.badge.is-tag:hover {
     color: #ffffff;
     background-color: darken($badge-tag-master-background-color, 5%);
   }
+
+  @each $name, $value in $secondary-colors {
+    &.is-#{$name} {
+      background-color: darken($value, 15%);
+      color: white;
+    }
+  }
 }
 
 .badge.is-award {
