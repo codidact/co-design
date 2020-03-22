@@ -7,9 +7,23 @@
   background-color: $badge-tag-background-color;
   border-radius: $badge-tag-border-radius;
 
-  &.is-master-tag {
+  &.is-master-tag, /* DEPRECATED */
+  &.is-filled {
     color: #ffffff;
     background-color: $badge-tag-master-background-color;
+  }
+
+  @each $name, $value in $badge-tag-alternative-colors {
+    &.is-#{$name} {
+      background-color: lighten($value, 25%);
+      color: darken($value, 35%);
+
+      &.is-master-tag, /* DEPRECATED */
+      &.is-filled {
+        background-color: darken($value, 20%);
+        color: white;
+      }
+    }
   }
 }
 
@@ -17,15 +31,21 @@ a.badge.is-tag:hover {
   text-decoration: none !important;
   background-color: darken($badge-tag-background-color, 5%);
 
-  &.is-master-tag {
+  &.is-master-tag, /* DEPRECATED */
+  &.is-filled {
     color: #ffffff;
     background-color: darken($badge-tag-master-background-color, 5%);
   }
 
-  @each $name, $value in $secondary-colors {
+  @each $name, $value in $badge-tag-alternative-colors {
     &.is-#{$name} {
-      background-color: darken($value, 15%);
-      color: white;
+      background-color: lighten($value, 20%);
+
+      &.is-master-tag, /* DEPRECATED */
+      &.is-filled {
+        background-color: darken($value, 25%);
+        color: white;
+      }
     }
   }
 }

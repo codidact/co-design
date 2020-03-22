@@ -123,6 +123,8 @@ $badge-tag-background-color: lighten($primary-color, 30%) !default;
 $badge-tag-master-background-color: darken($primary-color, 30%) !default;
 $badge-tag-border-radius: 3px !default;
 
+$badge-tag-alternative-colors: map-merge($secondary-colors, ('muted': $tertiary-color));
+
 $badge-award-font-size: 16px !default;
 $badge-award-padding-x: 2 !default; // in padding units
 $badge-award-padding-y: 1 !default; // in padding units

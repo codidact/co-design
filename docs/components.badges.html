@@ -64,17 +64,47 @@
       <h2 id="tags">Tags</h2>
 
       <p>Tags are badges that allow classification of content. Often, tags are entered by your users. Tags are created with the CSS classes <code>.badge.is-tag</code>.</p>
-      <p>There are two types of tags: normal tags and master tags. Master tags are for example tags, where on of them is required. Or master tags could be categories. Master tags have additionally the class <code>.is-master-tag</code>.</p>
+      <p>There are two types of tags: normal tags and filled tags. Filled tags can be used for example for a group of tags, where on of them is required. Or filled tags could be categories. Filled tags have additionally the class <code>.is-filled</code> (deprecated, but also vald: <code>.is-master-tag</code>).</p>
 
       <h5 id="tags-example">Example</h5>
 
       <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;span class="badge is-tag"&gt;codidact&lt;/span&gt;
 &lt;a href="..." class="badge is-tag"&gt;design&lt;/a&gt;
-&lt;a href="..." class="badge is-tag is-master-tag"&gt;co-design&lt;/a&gt;</code></pre>
+&lt;a href="..." class="badge is-tag is-filled"&gt;co-design&lt;/a&gt;</code></pre>
       <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
         <span class="badge is-tag">codidact</span>
         <a href="#!" class="badge is-tag">design</a>
-        <a href="#!" class="badge is-tag is-master-tag">co-design</a>
+        <a href="#!" class="badge is-tag is-filled">co-design</a>
+      </div>
+
+      <p>It's also possible to color tags, by giving them one of these classes <code>.is-red</code>, <code>.is-yellow</code>, <code>.is-green</code>, <code>.is-teal</code> or <code>.is-muted</code>. This can be combined with filled tags.</p>
+
+      <h5 id="tags-colored-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;span class="badge is-tag is-red"&gt;red&lt;/span&gt;
+&lt;span class="badge is-tag is-yellow"&gt;yellow&lt;/span&gt;
+&lt;span class="badge is-tag is-green"&gt;green&lt;/span&gt;
+&lt;span class="badge is-tag is-teal"&gt;teal&lt;/span&gt;
+&lt;span class="badge is-tag is-muted"&gt;muted&lt;/span&gt;
+
+&lt;span class="badge is-tag is-filled is-red"&gt;red&lt;/span&gt;
+&lt;span class="badge is-tag is-filled is-yellow"&gt;yellow&lt;/span&gt;
+&lt;span class="badge is-tag is-filled is-green"&gt;green&lt;/span&gt;
+&lt;span class="badge is-tag is-filled is-teal"&gt;teal&lt;/span&gt;
+&lt;span class="badge is-tag is-filled is-muted"&gt;muted&lt;/span&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <p>Default styles</p>
+        <span class="badge is-tag is-red">red</span>
+        <span class="badge is-tag is-yellow">yellow</span>
+        <span class="badge is-tag is-green">green</span>
+        <span class="badge is-tag is-teal">teal</span>
+        <span class="badge is-tag is-muted">muted</span>
+        <p>Filled styles</p>
+        <span class="badge is-tag is-filled is-red">red</span>
+        <span class="badge is-tag is-filled is-yellow">yellow</span>
+        <span class="badge is-tag is-filled is-green">green</span>
+        <span class="badge is-tag is-filled is-teal">teal</span>
+        <span class="badge is-tag is-filled is-muted">muted</span>
       </div>
 
 
