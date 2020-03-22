@@ -90,6 +90,11 @@ a.badge.is-tag:hover {
   background-color: $badge-role-background-color;
   color: $badge-role-color;
   font-weight: $badge-role-font-weight;
+
+  &.is-muted {
+    background-color: $badge-role-muted-background-color;
+    color: $badge-role-muted-color;
+  }
 }
 
 .badge.is-user-trust-level {
@@ -102,4 +107,9 @@ a.badge.is-tag:hover {
   background-color: $badge-tl-background-color;
   color: $badge-tl-color;
   font-weight: $badge-tl-font-weight;
+
+  &.is-muted {
+    background-color: $badge-tl-muted-background-color;
+    color: $badge-tl-muted-color;
+  }
 }

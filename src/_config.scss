@@ -146,6 +146,9 @@ $badge-role-background-color: darken($primary-color, 20%) !default;
 $badge-role-color: white !default;
 $badge-role-border-radius: 2px !default;
 
+$badge-role-muted-background-color: lighten($tertiary-color, 30%) !default;
+$badge-role-muted-color:darken($tertiary-color, 30%) !default;
+
 $badge-tl-font-size: 14px !default;
 $badge-tl-min-width: 20px !default;
 $badge-tl-padding-x: 1.5 !default; // in padding units
@@ -154,6 +157,9 @@ $badge-tl-font-weight: 700 !default;
 $badge-tl-border-radius: 20px !default;
 $badge-tl-background-color: darken($primary-color, 20%) !default;
 $badge-tl-color: white !default;
+
+$badge-tl-muted-background-color: lighten($tertiary-color, 30%) !default;
+$badge-tl-muted-color:darken($tertiary-color, 30%) !default;
 
 /* Buttons */
 $button-primary-color: $primary-color !default;
