@@ -3,4 +3,3 @@ build.bat
 watch.bat
 local.build.bat
 local.watch.bat
-.sass-cache
