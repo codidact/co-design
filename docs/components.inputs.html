@@ -107,15 +107,19 @@
 
       <p>They are created by the <code>&lt;label&gt;</code> HTML tag in combination with the <code>.form-element</code> CSS class.</p>
 
+      <p>You can add a <code>.form-caption</code> directly below it for small explanations.</p>
+
       <h5 id="labels-example">Example</h5>
 
       <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;label for="labels-example--input" class="form-element"&gt;Label for an input&lt;/label&gt;
+&lt;div class="form-caption"&gt;Label for an input&lt;/div&gt;
 &lt;input class="form-element" id="labels-example--input"&gt;
 
 &lt;label for="labels-example--textarea" class="form-element"&gt;Label for an textarea&lt;/label&gt;
 &lt;textarea class="form-element" id="labels-example--textarea"&gt;&lt;/textarea&gt;</code></pre>
       <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
         <label for="labels-example--input" class="form-element">Label for an input</label>
+        <div class="form-caption">with an explanatory caption</div>
         <input class="form-element" id="labels-example--input">
         <label for="labels-example--textarea" class="form-element">Label for an textarea</label>
         <textarea class="form-element" id="labels-example--textarea"></textarea>

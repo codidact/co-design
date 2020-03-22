@@ -9,6 +9,13 @@ label.form-element {
   color: $label-color;
 }
 
+.form-caption {
+  color: $form-caption-color;
+  font-size: $form-caption-font-size;
+  margin-top: $form-caption-margin-top*$margin-unit;
+  margin-bottom: $form-caption-margin-bottom*$margin-unit;
+}
+
 input.form-element {
   font: inherit;
   font-weight: $input-font-weight;

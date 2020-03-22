@@ -200,6 +200,11 @@ $label-color: #444444 !default;
 $label-font-size: 1.0em !default;
 $label-font-weight: 500 !default;
 
+$form-caption-font-size: map-get($font-size-gradient, "caption");
+$form-caption-color: darken($tertiary-color, 5%);
+$form-caption-margin-top: -1;
+$form-caption-margin-bottom: 2;
+
 $input-margin-y: 1 !default;
 $input-margin-x: 0 !default;
 $input-padding: 2 !default;
