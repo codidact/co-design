@@ -144,7 +144,7 @@
 }
 
 
-@media all and (max-width: $grid-medium-to-large-breakpoint) {
+@media all and (max-width: $header-breakpoint) {
   .header {
     .header--brand {
       .header--site-name {

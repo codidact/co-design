@@ -48,8 +48,8 @@ $padding-unit: 4px !default;
 $grid-column-count: 12 !default;
 $grid-column-gap: 10px !default;
 
-$grid-small-to-medium-breakpoint: 32rem !default;
-$grid-medium-to-large-breakpoint: 48rem !default;
+$grid-small-to-medium-breakpoint: 512px !default;
+$grid-medium-to-large-breakpoint: 768px !default;
 
 /* Color */
 $color-gradient-stops: (
@@ -334,6 +334,8 @@ $header-slide-item-active-shadow: 0 1.5px 4px 0px #dddddd !default;
 
 $header-slide-separator-width: 1px !default;
 $header-slide-separator-color: #dddddd !default;
+
+$header-breakpoint: 850px;
 
 /* Footer */
 $footer-padding: 4 !default; // in padding units
