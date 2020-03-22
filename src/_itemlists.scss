@@ -45,6 +45,15 @@
       width: $item-list-text-width;
 
       align-self: stretch;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &.is-primary {
+        align-items: flex-start;
+      }
     }
 
     .item-list--image-value {
@@ -55,7 +64,6 @@
       width: $item-list-image-width;
 
       img { border-radius: $item-list-image-border-radius; }
-
     }
 
     .is-primary {
