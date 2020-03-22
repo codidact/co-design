@@ -1,2 +1,1 @@
-local.build.bat
-local.watch.bat
+node_modules/*

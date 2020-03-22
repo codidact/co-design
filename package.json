@@ -14,5 +14,13 @@
   "bugs": {
     "url": "https://github.com/codidact/co-design/issues"
   },
-  "homepage": "https://github.com/codidact/co-design#readme"
+  "homepage": "https://github.com/codidact/co-design#readme",
+  "scripts": {
+    "build_sass": "sass src:dist --style=compressed",
+    "copy_sass": "cp -r assets docs/ && cp -r dist docs/",
+    "build": "npm run -s build_sass && npm run -s copy_sass"
+  },
+  "dependencies": {
+    "sass": "^1.26.3"
+  }
 }
