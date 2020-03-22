@@ -257,7 +257,7 @@ $header-padding: 4 !default;
 $header-bottom-margin: 4 !default;
 
 $header-background: #ffffff !default;
-$header-color: #111111 !default;
+$header-color: #000000 !default;
 $header-shadow: 0 3px 2px 0 #ddd !default;
 $header-font-weight: 600 !default;
 
@@ -326,9 +326,9 @@ $header-slide-link-margin-x: 0 !default;
 $header-slide-link-padding-y: 2 !default;
 $header-slide-link-padding-x: 4 !default;
 
-$header-slide-item-color: #888888 !default;
+$header-slide-item-color: #595959 !default;
 $header-slide-item-background-color: transparent !default;
-$header-slide-item-active-color: #333333 !default;
+$header-slide-item-active-color: #000000 !default;
 $header-slide-item-active-background-color: transparent !default;
 $header-slide-item-active-shadow: 0 1.5px 4px 0px #dddddd !default;
 
