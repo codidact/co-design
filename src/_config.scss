@@ -118,7 +118,7 @@ $table-hover-background-color: #eeeeee !default;
 $badge-tag-font-size: 14px !default;
 $badge-tag-padding-x: 2 !default; // in padding units
 $badge-tag-padding-y: 1 !default; // in padding units
-$badge-tag-font-weight: 500 !default;
+$badge-tag-font-weight: 400 !default;
 $badge-tag-color: darken($primary-color, 35%) !default;
 $badge-tag-background-color: lighten($primary-color, 30%) !default;
 $badge-tag-master-background-color: darken($primary-color, 30%) !default;
@@ -142,7 +142,7 @@ $badge-award-border-radius: 3px !default;
 $badge-role-font-size: 0.75em !default;
 $badge-role-padding-x: 1.5 !default; // in padding units
 $badge-role-padding-y: 0.75 !default; // in padding units
-$badge-role-font-weight: 700 !default;
+$badge-role-font-weight: 500 !default;
 $badge-role-background-color: darken($primary-color, 20%) !default;
 $badge-role-color: white !default;
 $badge-role-border-radius: 2px !default;
@@ -154,7 +154,7 @@ $badge-tl-font-size: 14px !default;
 $badge-tl-min-width: 20px !default;
 $badge-tl-padding-x: 1.5 !default; // in padding units
 $badge-tl-padding-y: 0.25 !default; // in padding units
-$badge-tl-font-weight: 700 !default;
+$badge-tl-font-weight: 500 !default;
 $badge-tl-border-radius: 20px !default;
 $badge-tl-background-color: darken($primary-color, 20%) !default;
 $badge-tl-color: white !default;
@@ -207,7 +207,7 @@ $label-margin-y: 1 !default;
 $label-margin-x: 0 !default;
 $label-color: #444444 !default;
 $label-font-size: 1.0em !default;
-$label-font-weight: 500 !default;
+$label-font-weight: 700 !default;
 
 $form-caption-font-size: map-get($font-size-gradient, "caption");
 $form-caption-color: darken($tertiary-color, 5%);
