@@ -7,6 +7,7 @@
   box-shadow: $header-shadow;
 
   font-weight: $header-font-weight;
+  font-family: $font-stack-brand;
 
   a:link, a:visited {
     color: inherit;
@@ -178,6 +179,8 @@
 
   border: $header-slide-border;
   box-shadow: $header-slide-shadow;
+
+  font-family: $font-stack-brand;
   
   z-index: 100;
 

@@ -2,6 +2,7 @@
   padding: $tabs-padding*$padding-unit;
   display: flex;
   flex-wrap: wrap;
+  font-family: $font-stack-brand;
 
   .tabs--item {
     display: block;

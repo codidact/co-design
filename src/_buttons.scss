@@ -13,6 +13,7 @@
   border: $button-border-width $button-border-style transparent;
   transition: $default-transition;
   margin: $margin-unit * $button-margin;
+  font-family: $font-stack-brand;
 
   &:hover {
     background-color: lighten($button-primary-color, 30%);
