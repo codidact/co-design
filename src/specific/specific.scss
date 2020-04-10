@@ -12,3 +12,6 @@
 
 /* First import configuration stylesheet */
 @import "_config.scss";
+
+/* Then the components */
+@import "_category-header.scss";

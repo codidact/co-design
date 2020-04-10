@@ -1,1 +1,52 @@
 @import "../common/_config.scss";
+
+$application-colors: (
+  "turqoise": #1abc9c,
+  "green": #2ecc71,
+  "blue": #3498db,
+  "purple": #9b59b6,
+  "gray": lighten(#34495e, 25%),
+  "yellow": darken(#f1c40f, 15%),
+  "orange": #e67e22,
+  "pink": #e74c3c,
+  "red": #c0392b
+) !default;
+
+/* Category header */
+$ch-tabs-lighter: 30%;
+$ch-tabs-lighter-hover: 20%;
+$ch-tab-padding-y: 3;
+$ch-tab-padding-x: 4;
+$ch-tab-color: #000;
+$ch-tab-font-size: 1.125rem;
+$ch-tab-font-weight: 500;
+
+$ch-container-lighter: 10%;
+$ch-container-color: white;
+$ch-container-padding-y: 3;
+$ch-container-padding-x: 2;
+
+$ch-category-name-font-size: 2rem;
+$ch-category-name-font-weight: 700;
+
+$ch-nav-padding-y: 2;
+$ch-nav-padding-x: 4;
+
+$ch-nav-item-padding-y: 1;
+$ch-nav-item-padding-x: 2;
+$ch-nav-item-margin-y: 0;
+$ch-nav-item-margin-x: 1.5;
+$ch-nav-item-lighter-hover: 5%;
+$ch-nav-item-lighter-active: 0;
+$ch-nav-item-font-size: 1.1rem;
+$ch-nav-item-font-weight: 500;
+$ch-nav-item-border-radius: 3px;
+
+
+$ch-nav-button-darken: 5%;
+$ch-nav-button-padding-y: 1.5;
+$ch-nav-button-padding-x: 2.5;
+$ch-nav-button-darken-hover: 10%;
+$ch-nav-button-darken-active: 20%;
+
+$ch-mobile-breakpoint: 850px;
