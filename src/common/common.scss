@@ -1,0 +1,35 @@
+/*
+ * Codidact Design (Co-Design)
+ * ===========================
+ * Module: COMMON
+ *
+ * This code is licensed under the terms of the MIT
+ * license. You should have obtained a copy of it
+ * with this source code. You should find it in the
+ * file named "LICENSE" in the topmost folder.
+ *
+ */
+
+/* First import configuration stylesheet */
+@import "_config.scss";
+
+/* Then include components */
+@import "_header.scss";
+@import "_buttons.scss";
+@import "_tabs.scss";
+@import "_form.scss";
+@import "_notices.scss";
+@import "_widgets.scss";
+@import "_modals.scss";
+@import "_itemlists.scss";
+@import "_badges.scss";
+@import "_footer.scss";
+
+/* Then include atomic design definitions */
+@import "_box.scss";
+@import "_colors.scss";
+
+/* Then include basic design elements */
+@import "_fontface.scss";
+@import "_typography.scss";
+@import "_layout.scss";
