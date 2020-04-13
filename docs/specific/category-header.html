@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Co-Design - Codidact Components - Category Header</title>
+    <link rel="stylesheet" href="../dist/codidact.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--instance-name" href="index.html">Codidact Specific</a>
+          <a class="header--site-name" href="../index.html">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-visible-on-mobile" href="https://github.com/codidact/co-design">on GitHub</a>
+        </div>
+      </div>
+    </header>
+    <main class="container has-padding-2">
+      <div class="tabs">
+        <a href="index.html" class="tabs--item">Overview</a>
+        <a href="category-header.html" class="tabs--item is-active">Category Header</a>
+      </div>
+
+
+      <h1>Category Header</h1>
+      <p class="is-lead">The category header is the secondary navigation within Codidact, which shall be used for large-scope tabs (within categories). The names and colors of these are configurable by the application users.</p>
+
+      <p>A category header consists of the following elements:</p>
+      <ul>
+        <li>An element with the class <code>.category-header</code> as container for everything. This should be a <code>&lt;header&gt;</code> element for semantic reasons.
+          <ul>
+            <li>A tabs element with the class <code>.category-header--tabs</code> with
+              <ul>
+                <li>A tabs container with the class <code>.category-header--tabs-container</code> (probably centered with <code>.container</code>) with
+                  <ul>
+                    <li>Any count of tab links with the class <code>a.category-header--tab</code> and for up to one of them with the class <code>.is-active</code>. The tab label is written into these nodes.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>(optionally) A current categorys element with the class <code>.category-header--container</code>. It should be centered with <code>.container</code>. It contains
+              <ul>
+                <li>A category name <code>.category-header--name</code></li>
+                <li>A category navigation <code>.category-header--nav</code> which can contain
+                  <ul>
+                    <li>Navigation items (<code>a.category-header--nav-item</code></li>
+                    <li>Up to one navigation separator, which pushes everything behind it to the right side (<code>.category-header--nav-separator</code></li>
+                    <li>navigation buttons (<code>.category-header--nav-item.is-button</code></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>A category header <b>must</b> have exactly one color code added to it. You can choose from <code>.is-turqoise</code>, <code>.is-green</code>, <code>.is-blue</code>, <code>.is-purple</code>, <code>.is-gray</code>, <code>.is-yello</code>, <code>.is-orange</code>, <code>.is-pink</code> and <code>.is-red</code>. This is often user-selectable and depends on the chosen category.</p>
+
+      <p>By default the category namefrom the current category navigation hides on mobile, to save place as it can be seen on the tabination too.</p>
+
+      <h5 id="example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;header class="category-header is-orange"&gt;
+  &lt;div class="category-header--tabs"&gt;
+    &lt;div class="container category-header--tabs-container"&gt;
+      &lt;a href="..." class="category-header--tab is-active"&gt;Q&amp;amp;A&lt;/a&gt;
+      &lt;a href="..." class="category-header--tab"&gt;Wiki&lt;/a&gt;
+      &lt;a href="..." class="category-header--tab"&gt;Blog&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="container category-header--container"&gt;
+      &lt;div class="category-header--name"&gt;Q&amp;amp;A&lt;/div&gt;
+      &lt;div class="category-header--nav"&gt;
+      &lt;a href="..." class="category-header--nav-item is-active"&gt;Questions&lt;/a&gt;
+      &lt;a href="..." class="category-header--nav-item"&gt;Tags&lt;/a&gt;
+      &lt;a href="..." class="category-header--nav-item"&gt;Search&lt;/a&gt;
+
+      &lt;div class="category-header--nav-separator"&gt;&lt;/div&gt;
+
+      &lt;a href="..." class="category-header--nav-item is-button"&gt;Ask Question&lt;/a&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <header class="category-header is-orange">
+          <div class="category-header--tabs">
+            <div class="container category-header--tabs-container">
+              <a href="#!" class="category-header--tab is-active">Q&amp;A</a>
+              <a href="#!" class="category-header--tab">Wiki</a>
+              <a href="#!" class="category-header--tab">Blog</a>
+            </div>
+          </div>
+        <div class="container category-header--container">
+          <div class="category-header--name">Q&amp;A</div>
+          <div class="category-header--nav">
+            <a href="#!" class="category-header--nav-item is-active">Questions</a>
+            <a href="#!" class="category-header--nav-item">Tags</a>
+            <a href="#!" class="category-header--nav-item">Search</a>
+  
+            <div class="category-header--nav-separator"></div>
+  
+            <a href="#!" class="category-header--nav-item is-button">Ask Question</a>
+          </div>
+        </div>
+      </header>
+      </div>
+
+    </main>
+
+    <script src="assets/js/docs.js" async></script>
+  </body>
+</html>

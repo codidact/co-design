@@ -1,6 +1,7 @@
 /*
  * Codidact Design (Co-Design)
  * ===========================
+ * Module: SPECIFIC
  *
  * This code is licensed under the terms of the MIT
  * license. You should have obtained a copy of it
@@ -9,13 +10,8 @@
  *
  */
 
-/* First apply overrides */
-@import "_child.scss";
+/* First import configuration stylesheet */
+@import "_config.scss";
 
-/* Then import common styles */
-@import "common/common.scss";
-
-/* Then import specific styles */
-@import "specific/specific.scss";
-
-@include childOverrides();
+/* Then the components */
+@import "_category-header.scss";
