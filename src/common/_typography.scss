@@ -80,19 +80,19 @@ a:link, a:visited, .link {
 
   @each $key, $value in $secondary-colors {
     &.is-#{$key} {
-      color: darken($value, 15%);
+      color: darken($value, 25%);
 
       &:hover, &:active {
-        color: darken($value, 30%);
+        color: darken($value, 40%);
       }
     }
   }
 
   &.is-muted {
-    color: lighten($tertiary-color, 10%);
+    color: darken($tertiary-color, 5%);
 
     &:hover {
-      color: darken($tertiary-color, 10%);
+      color: darken($tertiary-color, 25%);
     }
   }
 
