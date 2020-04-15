@@ -77,3 +77,67 @@ input[type="checkbox"].form-checkbox-element {
   display: inline-block;
   cursor: pointer;
 }
+
+
+select.form-element {
+  font: inherit;
+  font-weight: $input-font-weight;
+
+  padding: $input-padding*$padding-unit;
+  margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
+
+  cursor: pointer;
+
+  border: $input-border-width solid $input-border-color;
+  background-color: $input-background-color;
+  border-radius: $input-border-radius;
+
+  display: block;
+  width: 100%;
+
+  option {
+    font: inherit;
+  }
+
+  &:focus {
+    border-color: $input-active-border-color;
+  }
+
+  &.is-danger {
+    border-color: $input-danger-border-color;
+    background-color: $input-danger-background-color;
+  }
+}
+
+select.form-element[multiple] {
+  font: inherit;
+  font-weight: $input-font-weight;
+
+  padding: $input-padding*$padding-unit*0.5;
+  margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
+
+  cursor: inherit;
+
+  border: $input-border-width solid $input-border-color;
+  background-color: $input-background-color;
+  border-radius: $input-border-radius;
+
+  display: block;
+  width: 100%;
+
+  option {
+    font: inherit;
+    padding: $input-padding*$padding-unit*0.5;
+    cursor: pointer;
+    border-radius: $input-border-radius;
+  }
+
+  &:focus {
+    border-color: $input-active-border-color;
+  }
+
+  &.is-danger {
+    border-color: $input-danger-border-color;
+    background-color: $input-danger-background-color;
+  }
+}

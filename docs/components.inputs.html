@@ -138,6 +138,51 @@
         <input type="checkbox" class="form-checkbox-element">
       </div>
 
+      <h2 id="selects">Select elements</h2>
+      <p>Select elements allow the user to choose one or many from a set of options. They are created by the <code>&lt;select&gt;</code> HTML tag in combination with the <code>.form-element</code> CSS class (with the options using the <code>&lt;option&gt;</code> tag).</p>
+
+      <p>When you have form validation that failed for this select, you can mark it as such with the <code>.is-danger</code> modifier class.</p>
+
+      <h5 id="selects-example">Example</h5>
+
+      <pre class="has-margin-0 has-border-width-0 has-border-radius-0 has-background-color-black has-color-white"><code>&lt;select class="form-element"&gt;
+    &lt;option&gt;Yes&lt;/option&gt;
+    &lt;option&gt;No&lt;/option&gt;
+    &lt;option&gt;Maybe&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select class="form-element" multiple&gt;
+    &lt;option&gt;Yes&lt;/option&gt;
+    &lt;option&gt;No&lt;/option&gt;
+    &lt;option&gt;Maybe&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select class="form-element is-danger"&gt;
+    &lt;option&gt;Yes&lt;/option&gt;
+    &lt;option&gt;No&lt;/option&gt;
+    &lt;option&gt;Maybe&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+      <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
+        <p>Normal select:</p>
+        <select class="form-element">
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
+        </select>
+        <p>Select with [multiple]:</p>
+        <select class="form-element" multiple>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
+        </select>
+        <p>Select with failed validation:</p>
+        <select class="form-element is-danger">
+            <option>Yes</option>
+            <option>No</option>
+            <option>Maybe</option>
+        </select>
+      </div>
+
 
     </main>
 
