@@ -22,5 +22,8 @@
   },
   "dependencies": {
     "sass": "^1.26.3"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
   }
 }

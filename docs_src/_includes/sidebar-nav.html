@@ -1,0 +1,20 @@
+<nav>
+    {% for section in navigation.sections %}
+    <div class="widget">
+        {% if section.url %}
+            <div class="widget--header {% if page.url == section.url %}docs-is-active{% endif %}">
+                <a href="{{ section.url }}">{{ section.title }}</a>
+            </div>
+        {% else %}
+            <div class="widget--header">
+                {{ section.title }}
+            </div>
+        {% endif %}
+        {% for link in section.links %}
+        <div class="widget--body {% if page.url == link.url %}docs-is-active{% endif %}">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</nav>
