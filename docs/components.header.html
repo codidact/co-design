@@ -221,8 +221,8 @@ for (let i = 0; i < headerSlideTriggers.length; i++) {
     // Position header slide appropriately relative to
     // trigger.
     const rect = this.getBoundingClientRect();
-    hs.style.top = (rect.top + rect.height) + "px";
-    hs.style.right = (document.body.clientWidth - rect.right) + "px";
+    headerSlide.style.top = (rect.top + rect.height) + "px";
+    headerSlide.style.right = (document.body.clientWidth - rect.right) + "px";
 
     // Prevent navigation
     e.preventDefault();
