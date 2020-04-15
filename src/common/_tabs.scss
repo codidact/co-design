@@ -21,4 +21,12 @@
       color: $tabs-active-color;
     }
   }
+
+  &.is-classic-tabs {
+    border-bottom: $tabs-classic-border-width solid $tabs-classic-border-color;
+
+    .tabs--item {
+      margin-bottom: 0;
+    }
+  }
 }

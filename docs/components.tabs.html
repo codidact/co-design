@@ -59,7 +59,9 @@
       <h1>Tabs</h1>
       <p class="is-lead">Tabs are secondary navigation, which should not switch the context (e.g. going from a user page to a question page).</p>
 
-      <p>To create a tab list, you need to create a wrapper with the class <code>.tabs</code>, and then put all the items in it as <code>a.tabs--item</code>. The active tab should be marked with the clas <code>.is-active</code>.</p>
+      <p>To create a tab list, you need to create a wrapper with the class <code>.tabs</code>, and then put all the items in it as <code>a.tabs--item</code>. The active tab should be marked with the class <code>.is-active</code>.</p>
+
+      <p>It's also possible to have more classical tabs with a bottom border, by gibing the wrapper the class <code>.is-classic-tabs</code>.</p>
 
       <h5 id="example">Example</h5>
 
@@ -68,9 +70,25 @@
   &lt;a class="tabs--item is-active" href="..."&gt;Activity&lt;/a&gt;
   &lt;a class="tabs--item" href="..."&gt;Edit Account&lt;/a&gt;
   &lt;a class="tabs--item" href="..."&gt;Mod&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div class="tabs is-classic-tab"&gt;
+  &lt;a class="tabs--item" href="..."&gt;Profile&lt;/a&gt;
+  &lt;a class="tabs--item is-active" href="..."&gt;Activity&lt;/a&gt;
+  &lt;a class="tabs--item" href="..."&gt;Edit Account&lt;/a&gt;
+  &lt;a class="tabs--item" href="..."&gt;Mod&lt;/a&gt;
 &lt;/div&gt;</code></pre>
       <div class="has-border-width-1 has-border-style-solid has-padding-4 has-border-color-tertiary-050">
         <div class="tabs">
+          <a class="tabs--item" href="#!">Profile</a>
+          <a class="tabs--item is-active" href="#!">Activity</a>
+          <a class="tabs--item" href="#!">Edit Account</a>
+          <a class="tabs--item" href="#!">Mod</a>
+        </div>
+
+        <p>Classic tabs</p>
+
+        <div class="tabs is-classic-tabs">
           <a class="tabs--item" href="#!">Profile</a>
           <a class="tabs--item is-active" href="#!">Activity</a>
           <a class="tabs--item" href="#!">Edit Account</a>

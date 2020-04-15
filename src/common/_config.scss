@@ -425,6 +425,9 @@ $tabs-item-padding-y: 1.5 !default;
 $tabs-item-padding-x: 2.5 !default;
 $tabs-item-margin: 0.5 !default;
 
+$tabs-classic-border-width: 3px;
+$tabs-classic-border-color: darken($primary-color, 20%) !default;
+
 /* Widgets */
 $widget-shadow: 0 3px 5px -2px #eeeeee !default;
 $widget-margin-y: 2 !default;
