@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Item lists - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body docs-is-active">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Item lists</h1>
+                <p class="is-lead">Item lists are a flexible component that allows you to display complex data in a understandable and skimable way.</p>
+                
+                
+                
+                <p>To build an item list, you need:</p>
+<ul>
+<li>A container for the whole list (<code>.item-list</code>), which contains any count of:
+<ul>
+<li>Items (<code>.item-list--item</code>), which all contain any count of these, whereas the structure is constant in one list:
+<ul>
+<li>Number values (<code>.item-list--number-value</code>), which contain one or both of these in any order:
+<ul>
+<li>A number (<code>.item-list--number</code>), and/or</li>
+<li>A number label (<code>.item-list--number-label</code>)</li>
+</ul>
+</li>
+<li>Text values (<code>.item-list--text-value</code>), and/or</li>
+<li>Image values (<code>.item-list--text-value</code>), which contain exactly one image, possibly in a link</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Furthermore, one of these item values is &quot;primary&quot; (<code>.is-primary</code>), which is the one, that should identify the item (e.g. post name).</p>
+<p>It is also possible to highlight items, for example if they match a query, by giving them the <code>.is-highlighted</code> class.</p>
+<h5 id="example-undefined">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;item-list&quot;&gt;
+    &lt;div class=&quot;item-list--item&quot;&gt;
+        &lt;div class=&quot;item-list--number-value&quot;&gt;
+            &lt;div class=&quot;item-list--number&quot;&gt;23&lt;/div&gt;
+            &lt;div class=&quot;item-list--number-label&quot;&gt;answers&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;item-list--number-value&quot;&gt;
+            &lt;div class=&quot;item-list--number&quot;&gt;120&lt;/div&gt;
+            &lt;div class=&quot;item-list--number-label&quot;&gt;votes&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;item-list--text-value is-primary&quot;&gt;
+            &lt;div class=&quot;margin-bottom-2&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;has-font-size-larger&quot;&gt;What is Codidact?&lt;/a&gt;&lt;/div&gt;
+            &lt;div class=&quot;has-padding-1&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;badge is-tag is-master-tag&quot;&gt;meta&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;badge is-tag&quot;&gt;support&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;badge is-tag&quot;&gt;codidact&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;item-list--image-value&quot;&gt;
+            &lt;a href=&quot;#!&quot;&gt;&lt;img src=&quot;https://placekitten.com/100/100&quot; alt=&quot;placeholder image&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;item-list--number-value&quot;&gt;
+            &lt;div class=&quot;item-list--number-label&quot;&gt;last active&lt;/div&gt;
+            &lt;div class=&quot;item-list--number&quot;&gt;1d&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item-list--item is-highlighted&quot;&gt;
+        &lt;div class=&quot;item-list--number-value&quot;&gt;
+            &lt;div class=&quot;item-list--number&quot;&gt;23&lt;/div&gt;
+            &lt;div class=&quot;item-list--number-label&quot;&gt;answers&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;item-list--number-value&quot;&gt;
+            &lt;div class=&quot;item-list--number&quot;&gt;120&lt;/div&gt;
+            &lt;div class=&quot;item-list--number-label&quot;&gt;votes&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;item-list--text-value is-primary&quot;&gt;
+            &lt;div class=&quot;margin-bottom-2&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;has-font-size-larger&quot;&gt;Welcome to Codidact&lt;/a&gt;&lt;/div&gt;
+            &lt;div class=&quot;has-padding-1&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;badge is-tag is-master-tag&quot;&gt;meta&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;badge is-tag&quot;&gt;announcement&lt;/a&gt;
+                &lt;a href=&quot;#&quot; class=&quot;badge is-tag&quot;&gt;codidact&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;item-list--image-value&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://placekitten.com/101/101&quot; alt=&quot;placeholder image&quot;&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;item-list--number-value&quot;&gt;
+            &lt;div class=&quot;item-list--number-label&quot;&gt;last active&lt;/div&gt;
+            &lt;div class=&quot;item-list--number&quot;&gt;Dec &#039;18&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="item-list">
+    <div class="item-list--item">
+        <div class="item-list--number-value">
+            <div class="item-list--number">23</div>
+            <div class="item-list--number-label">answers</div>
+        </div>
+        <div class="item-list--number-value">
+            <div class="item-list--number">120</div>
+            <div class="item-list--number-label">votes</div>
+        </div>
+        <div class="item-list--text-value is-primary">
+            <div class="margin-bottom-2"><a href="#" class="has-font-size-larger">What is Codidact?</a></div>
+            <div class="has-padding-1">
+                <a href="#" class="badge is-tag is-master-tag">meta</a>
+                <a href="#" class="badge is-tag">support</a>
+                <a href="#" class="badge is-tag">codidact</a>
+            </div>
+        </div>
+        <div class="item-list--image-value">
+            <a href="#!"><img src="https://placekitten.com/100/100" alt="placeholder image"></a>
+        </div>
+        <div class="item-list--number-value">
+            <div class="item-list--number-label">last active</div>
+            <div class="item-list--number">1d</div>
+        </div>
+    </div>
+    <div class="item-list--item is-highlighted">
+        <div class="item-list--number-value">
+            <div class="item-list--number">23</div>
+            <div class="item-list--number-label">answers</div>
+        </div>
+        <div class="item-list--number-value">
+            <div class="item-list--number">120</div>
+            <div class="item-list--number-label">votes</div>
+        </div>
+        <div class="item-list--text-value is-primary">
+            <div class="margin-bottom-2"><a href="#" class="has-font-size-larger">Welcome to Codidact</a></div>
+            <div class="has-padding-1">
+                <a href="#" class="badge is-tag is-master-tag">meta</a>
+                <a href="#" class="badge is-tag">announcement</a>
+                <a href="#" class="badge is-tag">codidact</a>
+            </div>
+        </div>
+        <div class="item-list--image-value">
+            <a href="#"><img src="https://placekitten.com/101/101" alt="placeholder image"></a>
+        </div>
+        <div class="item-list--number-value">
+            <div class="item-list--number-label">last active</div>
+            <div class="item-list--number">Dec '18</div>
+        </div>
+    </div>
+</div></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>
