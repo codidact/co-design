@@ -4,23 +4,24 @@
 
 <body class="home">
     <div class="grid">
-        <div class="grid--cell is-8 is-12-sm has-background-color-primary-500 has-color-white">
+        <div class="grid--cell is-8-lg is-12 has-background-color-primary-500 has-color-white">
 
             <div class="has-padding-24 home-left">
                 <h1>Co-Design</h1>
                 <p class="is-lead">Welcome to the official homepage of the Co-Design framework, the CSS framework for <a href="#!">Codidact</a>.</p>
                 <div class="button-list has-margin-vertical-6">
-                    <a href="getting-started.html" class="button is-primary is-outlined is-extremely-large">Get Started</a>
+                    <a href="/setup/installation" class="button is-primary is-outlined is-extremely-large">Get Started</a>
                 </div>
                 <div class="spacer"></div>
                 <div class="vinfo">
-                    <div class="entry">version: 0.6.0</div>
+                    <div class="entry">version: {{ release.version }}</div>
                     <div class="entry">hosted: <a href="https://github.com/Codidact/Co-Design">on Github</a></div>
+                    <div class="entry">open-source: <a href="https://choosealicense.com/licenses/mit/">MIT license</a></div>
                 </div>
             </div>
 
         </div>
-        <div class="grid--cell is-4 is-12-sm">
+        <div class="grid--cell is-4-lg is-12">
             <div class="has-padding-8 has-ta-center home-right">
                 <h2>Documentation</h2>
                 {% for section in navigation.sections %}
