@@ -104,3 +104,7 @@ html {
 .grid.container {
     margin: 0 auto;
 }
+
+.d-example .header-slide {
+    position: static !important;
+}
