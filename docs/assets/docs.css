@@ -66,7 +66,37 @@ html {
 }
 
 .docs-is-active {
-    border-right-width: 3px;
-    outline: 4px solid rgba(0,0,0,0.1);
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.075);
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.1);
+}
+
+.docs-nav .widget .widget--header {
+    font-weight: bold;
+}
+.docs-nav .widget .widget--header a {
+    color: inherit;
+}
+
+.d-example {
+    padding: 4px;
+}
+
+.d-example pre.d-example-code {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background-color: black;
+    color: white;
+}
+
+.d-example .d-example-preview {
+    border: 1px solid #ddd;
+    padding: 16px;
+}
+.d-example .d-example-preview.d-more-padding {
+    padding: 32px;
+}
+
+.grid.container {
+    margin: 0 auto;
 }

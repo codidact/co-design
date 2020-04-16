@@ -5,17 +5,17 @@
 <body>
     {% include header.html %}
     <div class="grid container">
-        <div class="grid--cell is-4 is-12-sm">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
 
-            <div class="has-padding-4 has-ta-center home-right">
+            <div class="has-padding-4">
 
                 {% include sidebar-nav.html %}
 
             </div>
 
         </div>
-        <div class="grid--cell is-8 is-12-sm">
-            <div class="has-padding-8 has-ta-center home-right">
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
                 <h1>{{ title }}</h1>
                 <p class="is-lead">{{ description |safe }}</p>
                 {{ content |safe }}

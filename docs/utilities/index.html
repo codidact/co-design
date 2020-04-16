@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Releasing Co-Design - Co-Design</title>
+    <title>Utilities - Co-Design</title>
 
     <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
     <link rel="stylesheet" type="text/css" href="/assets/docs.css">
@@ -48,7 +48,7 @@
             <a href="/setup/improving/">Improving Co-Design</a>
         </div>
         
-        <div class="widget--body docs-is-active">
+        <div class="widget--body ">
             <a href="/setup/releasing/">Releasing Co-Design</a>
         </div>
         
@@ -56,7 +56,7 @@
     
     <div class="widget">
         
-            <div class="widget--header ">
+            <div class="widget--header docs-is-active">
                 <a href="/utilities/">Utilities</a>
             </div>
         
@@ -160,30 +160,12 @@
         </div>
         <div class="grid--cell is-12 is-8-lg">
             <div class="has-padding-8">
-                <h1>Releasing Co-Design</h1>
-                <p class="is-lead">This instructions will guide you how to release a new version Co-Design.</p>
-                <p>Follow this guide to release a new version of Co-Design:</p>
-<ol>
-<li>
-<p>Open the repository in your terminal and <a href="/setup/improving">build both the css and the documentation</a>. There shouldn't be any changes in the most cases, but if there are any, commit them.</p>
-</li>
-<li>
-<p>Now run <code>npm version x.y.z</code>. This will update the package json files and create a new commit with that version name.</p>
-<p>Choose x, y and z based on our current release version and on the amount of changes this release introduces. As a general rule, you'll probably never increment x, you'll increment y if new components are introduced or other major changes are done and you'll increment z in all other cases. When changing y, set z to 0.</p>
-</li>
-<li>
-<p>Update the version numbers in <code>docs_src/_data/release.json</code> and rebuild the documentation. Amend the release commit with the changes.</p>
-</li>
-<li>
-<p>Push the commits to GitHub. Create a new release tag there and add a changelog.</p>
-</li>
-<li>
-<p>Run <code>npm publish</code> to publish the release to NPM. You'll probably need to sign into NPM, when you haven't done so already.</p>
-</li>
-<li>
-<p>Merge <code>develop</code> into <code>master</code>. This will deploy the documentation.</p>
-</li>
-</ol>
+                <h1>Utilities</h1>
+                <p class="is-lead"></p>
+                <p>Co-Design uses &quot;atomic classes&quot; to allow you to specifically modify the presentation of individual elements.</p>
+<p>You should be able to create most layouts with these utilities, however some patterns are often repeated. For these, we offer <a href="/components">components</a>. You can, though, override the components with these atomic classes.</p>
+<p>Click on any of the tabs above, in order to show the utilities for that design area.</p>
+<p>Utilities commonly follow the pattern of <code>.has-[property]-[value]</code>. In these cases, there's always a short form, which is following the pattern <code>.h-[property-abbreviation]-[value]</code>.</p>
 
             </div>
         </div>

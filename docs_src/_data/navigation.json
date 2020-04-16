@@ -20,7 +20,7 @@
         },
         {
             "title": "Utilities",
-            "url": "/utilities",
+            "url": "/utilities/",
             "links": [
                 {
                     "title": "Basic HTML",
@@ -46,7 +46,7 @@
         },
         {
             "title": "Components",
-            "url": "/components",
+            "url": "/components/",
             "links": [
                 {
                     "title": "Tables",
@@ -100,7 +100,7 @@
         },
         {
             "title": "Codidact-specific Components",
-            "url": "/specific",
+            "url": "/specific/",
             "links": [
                 {
                     "title": "Category Header",
