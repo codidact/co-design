@@ -9,7 +9,7 @@ js: true
 
 A header consists of the following elements:
 
-- An element with the class `.header` as container for everything. This should be a `&lt;header&gt;` element for semantic reasons.
+- An element with the class `.header` as container for everything. This should be a `<header>` element for semantic reasons.
     - A header container `.header--container` that is either centered or not (with or without `.container`). This contains all header items, in this order:
         - A header brand (`.header--brand`), which contains the brand name and information for the current site, in this order:
             - Any count of small captions/links for the network/ownership of the site. (`a.header--instance-name`)
@@ -18,7 +18,7 @@ A header consists of the following elements:
             - Any count of menu links. (`a.header--item`)
             - Up to one header separator, which pushes everything behind it to the right side. (`.header--separator`)
             - One header menu bars (`a.header--item.is-complex.is-mobile-menu`), with
-                - a bar container (`.header--menu-bars`), with exactly three, empty `&lt;span&gt;` elements
+                - a bar container (`.header--menu-bars`), with exactly three, empty `<span>` elements
             - Any count of menu items (`a.header--item.is-complex`), with either
                 - an image (`.header--item-image`), or
                 - an icon (`.header--item-icon`)

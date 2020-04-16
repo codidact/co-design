@@ -6,7 +6,7 @@ description: The footer is shown below every page and contains important links a
 
 ## Basic
 
-The footer component is very flexible. You can do both simple and complex footers with Co-Design. Every footer is within a `.footer` element. This should be a `&lt;footer&gt;` for semantic reasons.
+The footer component is very flexible. You can do both simple and complex footers with Co-Design. Every footer is within a `.footer` element. This should be a `<footer>` for semantic reasons.
 
 The footer element must contain a `.footer--container` element, which contains all the content.
 
