@@ -6,11 +6,11 @@ description: The footer is shown below every page and contains important links a
 
 ## Basic
 
-The footer component is very flexible. You can do both simple and complex footers with Co-Design. Every footer is within a <code>.footer</code> element. This should be a <code>&lt;footer&gt;</code> for semantic reasons.
+The footer component is very flexible. You can do both simple and complex footers with Co-Design. Every footer is within a `.footer` element. This should be a `&lt;footer&gt;` for semantic reasons.
 
-The footer element must contain a <code>.footer--container</code> element, which contains all the content.
+The footer element must contain a `.footer--container` element, which contains all the content.
 
-You should consider applying layout container (max width and centered) formatting to the container by giving it the class <code>.container</code>
+You should consider applying layout container (max width and centered) formatting to the container by giving it the class `.container`
 
 {% example "basic" %}
 <footer class="footer">
@@ -57,7 +57,7 @@ Or take a look at this more complex example, which can be made by adding a grid 
 
 ## Inverted style
 
-It's also possible to invert the style of a footer, giving it a background instead of a border. This may be a better choice for some designs. To do so, give the footer the class <code>.is-inverted</code>.
+It's also possible to invert the style of a footer, giving it a background instead of a border. This may be a better choice for some designs. To do so, give the footer the class `.is-inverted`.
 
 {% example "inverted" %}
 <footer class="footer is-inverted">
