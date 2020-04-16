@@ -105,6 +105,7 @@ html {
     margin: 0 auto;
 }
 
-.d-example .header-slide {
+.d-example .header-slide,
+.d-example .modal {
     position: static !important;
 }

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Modals - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body docs-is-active">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Modals</h1>
+                <p class="is-lead">Modals are popup views that interrupt the normal user flow to maximize their attention.</p>
+                
+                
+                
+                    <div class="notice">
+                        <h3>Only CSS!</h3>
+                        <p>Co-Design is a CSS-only framework and therefore doesn't come with the JavaScript neccessary to control this component. You'll need to write JavaScript on your own or use an existing library, in order to be able to effectively use it.</p>
+                    </div>
+                
+                <h2>Basic structure</h2>
+<p>A basic modal consists of the following:</p>
+<ul>
+<li>A modal wrapper (<code>.modal</code>), with
+<ul>
+<li>A modal container (<code>.modal--container</code>), that contains, in this order:
+<ul>
+<li>A modal header (<code>.modal--header</code>), that contains, in this order:
+<ul>
+<li>A modal close button (<code>.button.is-close-button.modal--header-button</code>)</li></li>
+<li>A (text) title for the modal</li></li>
+</ul>
+</li>
+<li>A modal body (<code>.modal--body</code>)</li></li>
+<li>A modal footer (<code>.modal--footer</code>; optional)</li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The modal body and footer can be filled with any HTML content, however the footer is fixed to the bottom on mobile and should therefore be used only for few elements with few height.</p>
+<p>You need to give a modal the class <code>.is-active</code>, in order for it to be shown.</p>
+<h5 id="example-basic">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;modal is-active&quot;&gt;
+    &lt;div class=&quot;modal--container&quot;&gt;
+        &lt;div class=&quot;modal--header&quot;&gt;
+            &lt;button class=&quot;button is-close-button modal--header-button&quot;&gt;&amp;times;&lt;/button&gt;
+            An example modal
+        &lt;/div&gt;
+        &lt;div class=&quot;modal--body&quot;&gt;
+            &lt;p&gt;Any content can go here&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal--footer&quot;&gt;
+            &lt;button class=&quot;button is-filled&quot;&gt;Approve&lt;/button&gt;
+            &lt;button class=&quot;button&quot;&gt;Reject&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="modal is-active">
+    <div class="modal--container">
+        <div class="modal--header">
+            <button class="button is-close-button modal--header-button">&times;</button>
+            An example modal
+        </div>
+        <div class="modal--body">
+            <p>Any content can go here</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal--footer">
+            <button class="button is-filled">Approve</button>
+            <button class="button">Reject</button>
+        </div>
+    </div>
+</div></div></div>
+<p><button class="button is-outlined is-muted" data-trigger-modal="#js-basic-example-modal">Launch example basic modal</button></p>
+<div class="modal" id="js-basic-example-modal">
+    <div class="modal--container">
+        <div class="modal--header">
+            <button class="button is-close-button modal--header-button" data-trigger-modal="#js-basic-example-modal">×</button>
+            An example modal
+        </div>
+        <div class="modal--body">
+            <p>Any content can go here</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal--footer">
+            <button class="button is-filled">Approve</button>
+            <button class="button">Reject</button>
+        </div>
+    </div>
+</div>
+<h2>Modal with backdrop</h2>
+<p>When a modal needs your full attention, so that nothing else may be done while it is active, it's possible to add a &quot;backdrop&quot;, by giving the <code>.modal</code> the class <code>.is-with-backdrop</code>.</p>
+<h5 id="example-backdrop">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;modal is-active is-with-backdrop&quot;&gt;
+    &lt;div class=&quot;modal--container&quot;&gt;
+        &lt;div class=&quot;modal--header&quot;&gt;
+            &lt;button class=&quot;button is-close-button modal--header-button&quot;&gt;&amp;times;&lt;/button&gt;
+            An example modal
+        &lt;/div&gt;
+        &lt;div class=&quot;modal--body&quot;&gt;
+            &lt;p&gt;Any content can go here&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal--footer&quot;&gt;
+            &lt;button class=&quot;button is-filled&quot;&gt;Approve&lt;/button&gt;
+            &lt;button class=&quot;button&quot;&gt;Reject&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="modal is-active is-with-backdrop">
+    <div class="modal--container">
+        <div class="modal--header">
+            <button class="button is-close-button modal--header-button">&times;</button>
+            An example modal
+        </div>
+        <div class="modal--body">
+            <p>Any content can go here</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal--footer">
+            <button class="button is-filled">Approve</button>
+            <button class="button">Reject</button>
+        </div>
+    </div>
+</div></div></div>
+<p><button class="button is-outlined is-muted" data-trigger-modal="#js-backdrop-example-modal">Launch example modal with backdrop</button></p>
+<div class="modal is-with-backdrop" id="js-backdrop-example-modal">
+    <div class="modal--container">
+        <div class="modal--header">
+            <button class="button is-close-button modal--header-button" data-trigger-modal="#js-backdrop-example-modal">×</button>
+            An example modal
+        </div>
+        <div class="modal--body">
+            <p>Any content can go here</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal--footer">
+            <button class="button is-filled">Approve</button>
+            <button class="button">Reject</button>
+        </div>
+    </div>
+</div>
+<h2>Danger modal</h2>
+<p>Sometimes a modal shows dangerous things, or dangerous things might happen if you confirm the main action. In these cases, it's appropriate to give the <code>.modal</code> the class <code>.is-danger</code>.</p>
+<p>Of course the actions are probably dangerous, too, so you should also add the class <code>.is-danger</code> to buttons inside the modal</p></p>
+<h5 id="example-danger">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;modal is-active is-danger&quot;&gt;
+    &lt;div class=&quot;modal--container&quot;&gt;
+        &lt;div class=&quot;modal--header&quot;&gt;
+            &lt;button class=&quot;button is-close-button modal--header-button&quot;&gt;&amp;times;&lt;/button&gt;
+            An example modal
+        &lt;/div&gt;
+        &lt;div class=&quot;modal--body&quot;&gt;
+            &lt;p&gt;Any content can go here&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal--footer&quot;&gt;
+            &lt;button class=&quot;button is-danger is-filled&quot;&gt;Approve&lt;/button&gt;
+            &lt;button class=&quot;button is-danger&quot;&gt;Reject&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="modal is-active is-danger">
+    <div class="modal--container">
+        <div class="modal--header">
+            <button class="button is-close-button modal--header-button">&times;</button>
+            An example modal
+        </div>
+        <div class="modal--body">
+            <p>Any content can go here</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal--footer">
+            <button class="button is-danger is-filled">Approve</button>
+            <button class="button is-danger">Reject</button>
+        </div>
+    </div>
+</div></div></div>
+<p><button class="button is-outlined is-muted" data-trigger-modal="#js-danger-example-modal">Launch example danger modal</button></p>
+<div class="modal is-danger" id="js-danger-example-modal">
+    <div class="modal--container">
+        <div class="modal--header">
+            <button class="button is-close-button modal--header-button" data-trigger-modal="#js-danger-example-modal">×</button>
+            An example modal
+        </div>
+        <div class="modal--body">
+            <p>Any content can go here</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal--footer">
+            <button class="button is-danger is-filled">Approve</button>
+            <button class="button is-danger">Reject</button>
+        </div>
+    </div>
+</div>
+<h2>Modal sizes</h2>
+<p>It's also possible to change the size of the modal, by giving it either <code>.is-large</code> or <code>.is-small</code> to make it larger or smaller, respectively.</p>
+<h3>Large modal</h3>
+<h5 id="example-sizes-large">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;modal is-active is-large&quot;&gt;
+    &lt;div class=&quot;modal--container&quot;&gt;
+        &lt;div class=&quot;modal--header&quot;&gt;
+            &lt;button class=&quot;button is-close-button modal--header-button&quot;&gt;&amp;times;&lt;/button&gt;
+            An example modal
+        &lt;/div&gt;
+        &lt;div class=&quot;modal--body&quot;&gt;
+            &lt;p&gt;Any content can go here&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal--footer&quot;&gt;
+            &lt;button class=&quot;button is-filled&quot;&gt;Approve&lt;/button&gt;
+            &lt;button class=&quot;button&quot;&gt;Reject&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="modal is-active is-large">
+    <div class="modal--container">
+        <div class="modal--header">
+            <button class="button is-close-button modal--header-button">&times;</button>
+            An example modal
+        </div>
+        <div class="modal--body">
+            <p>Any content can go here</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal--footer">
+            <button class="button is-filled">Approve</button>
+            <button class="button">Reject</button>
+        </div>
+    </div>
+</div></div></div>
+<p><button class="button is-outlined is-muted" data-trigger-modal="#js-large-example-modal">Launch example large modal</button></p>
+<div class="modal is-large" id="js-large-example-modal">
+    <div class="modal--container">
+        <div class="modal--header">
+            <button class="button is-close-button modal--header-button" data-trigger-modal="#js-large-example-modal">×</button>
+            An example modal
+        </div>
+        <div class="modal--body">
+            <p>Any content can go here</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal--footer">
+            <button class="button is-filled">Approve</button>
+            <button class="button">Reject</button>
+        </div>
+    </div>
+</div>
+<h3>Small modal</h3>
+<h5 id="example-sizes-small">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;modal is-active is-small&quot;&gt;
+    &lt;div class=&quot;modal--container&quot;&gt;
+        &lt;div class=&quot;modal--header&quot;&gt;
+            &lt;button class=&quot;button is-close-button modal--header-button&quot;&gt;&amp;times;&lt;/button&gt;
+            An example modal
+        &lt;/div&gt;
+        &lt;div class=&quot;modal--body&quot;&gt;
+            &lt;p&gt;Any content can go here&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal--footer&quot;&gt;
+            &lt;button class=&quot;button is-filled&quot;&gt;Approve&lt;/button&gt;
+            &lt;button class=&quot;button&quot;&gt;Reject&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="modal is-active is-small">
+    <div class="modal--container">
+        <div class="modal--header">
+            <button class="button is-close-button modal--header-button">&times;</button>
+            An example modal
+        </div>
+        <div class="modal--body">
+            <p>Any content can go here</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal--footer">
+            <button class="button is-filled">Approve</button>
+            <button class="button">Reject</button>
+        </div>
+    </div>
+</div></div></div>
+<p><button class="button is-outlined is-muted" data-trigger-modal="#js-small-example-modal">Launch example small modal</button></p>
+<div class="modal is-small" id="js-small-example-modal">
+    <div class="modal--container">
+        <div class="modal--header">
+            <button class="button is-close-button modal--header-button" data-trigger-modal="#js-small-example-modal">×</button>
+            An example modal
+        </div>
+        <div class="modal--body">
+            <p>Any content can go here</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="modal--footer">
+            <button class="button is-filled">Approve</button>
+            <button class="button">Reject</button>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>
