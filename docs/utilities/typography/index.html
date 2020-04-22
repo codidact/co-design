@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Typographic utilities - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body docs-is-active">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Typographic utilities</h1>
+                <p class="is-lead">There are different typographic utilities, that allow you to change font-related properties of elements.</p>
+                
+                
+                
+                <h2>Font size</h2>
+<p>You can set the <code>font-size</code> to any of a list of &quot;named&quot; values. This is called a &quot;gradient&quot; in our framework. Unless you override it in the &quot;_child.scss&quot;, you can use the following values:</p>
+<table class="table is-compact">
+<tr>
+    <th>name</th>
+    <th>value</th>
+    <th>default for</th>
+</tr>
+<tr>
+    <td>small</td>
+    <td>12px</td>
+    <td>h6</td>
+</tr>
+<tr>
+    <td>caption</td>
+    <td>14px</td>
+    <td>h5</td>
+</tr>
+<tr>
+    <td>base</td>
+    <td>16px</td>
+    <td>any text and h4</td>
+</tr>
+<tr>
+    <td>larger</td>
+    <td>19px</td>
+    <td>h3</td>
+</tr>
+<tr>
+    <td>subheading</td>
+    <td>22px</td>
+    <td></td>
+</tr>
+<tr>
+    <td>heading</td>
+    <td>25px</td>
+    <td>h2</td>
+</tr>
+<tr>
+    <td>subtitle</td>
+    <td>28px</td>
+    <td></td>
+</tr>
+<tr>
+    <td>title</td>
+    <td>31px</td>
+    <td>h1</td>
+</tr>
+<tr>
+    <td>subdisplay</td>
+    <td>34px</td>
+    <td></td>
+</tr>
+<tr>
+    <td>display</td>
+    <td>37px</td>
+    <td></td>
+</tr>
+</table>
+<p>To set the font size, you need to give the element the class <code>has-font-size-X</code>, where X is replaced with the font-size name.</p>
+<h5 id="example-font-size">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;has-font-size-display&quot;&gt;3 questions&lt;/div&gt;
+&lt;div class=&quot;has-font-size-larger&quot;&gt;matched your query&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="has-font-size-display">3 questions</div>
+<div class="has-font-size-larger">matched your query</div></div></div>
+<h2>Font family</h2>
+<p>You can set the <code>font-family</code> to either &quot;primary&quot; (the default sans serif font) or &quot;code&quot; (the monospace font). Unless you override it in the &quot;_child.scss&quot;, each option uses this font stack:</p>
+<table class="table is-compact">
+    <tr>
+        <th>option</th>
+        <th>fonts</th>
+    </tr>
+    <tr>
+        <td>primary</td>
+        <td><span class="has-font-family-code">"Red Hat Display", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif</span></td>
+    </tr>
+    <tr>
+        <td>code</td>
+        <td><span class="has-font-family-code">"Consolas", "Courier New", monospace</span></td>
+    </tr>
+</table>
+<p>To set the font family, you need to give the element the class <code>has-font-family-X</code>, where X is replaced with the font stack name.</p>
+<h5 id="example-font-family">Example</h5><div class="d-example"><pre class="d-example-code"><code>This is &lt;span class=&quot;has-font-family-code&quot;&gt; code with some &lt;span class=&quot;has-font-family-primary&quot;&gt;default text&lt;/span&gt; followed by some code&lt;/span&gt; again.</code></pre><div class="d-example-preview undefined">This is <span class="has-font-family-code"> code with some <span class="has-font-family-primary">default text</span> followed by some code</span> again.</div></div>
+<h2>Font decoration</h2>
+<p>It is possible to override the font weight and whether it is italic for an element.</p>
+<p>You have the classes <code>has-font-weight-normal</code>, <code>has-font-weight-medium</code>, <code>has-font-weight-bold</code> and <code>has-font-weight-black</code> for font-weight and <code>has-font-style-normal</code> and <code>has-font-weight-italic</code> for italic style or not.</p>
+<h5 id="example-font-decoration">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p class=&quot;has-font-weight-normal&quot;&gt;This is normal&lt;/p&gt;
+&lt;p class=&quot;has-font-weight-medium&quot;&gt;This is medium&lt;/p&gt;
+&lt;p class=&quot;has-font-weight-bold&quot;&gt;This is bold&lt;/p&gt;
+&lt;p class=&quot;has-font-weight-black&quot;&gt;This is black&lt;/p&gt;
+<p>&lt;p class=&quot;has-font-style-italic&quot;&gt;This is italic&lt;/p&gt;
+&lt;p class=&quot;has-font-weight-black has-font-style-italic&quot;&gt;This is black and italic&lt;/p&gt;</code></pre><div class="d-example-preview undefined"><p class="has-font-weight-normal">This is normal</p></p>
+<p class="has-font-weight-medium">This is medium</p>
+<p class="has-font-weight-bold">This is bold</p>
+<p class="has-font-weight-black">This is black</p>
+<br>
+<p class="has-font-style-italic">This is italic</p>
+<p class="has-font-weight-black has-font-style-italic">This is black and italic</p></div></div>
+<h2>Text align</h2>
+<p>It is possible to override the text alignment for an element.</p>
+<p>You have the classes <code>has-text-align-left</code>, <code>has-text-align-center</code>, <code>has-text-align-right</code> and <code>has-text-align-justify</code>, which determine, whether the text in an element is on the left, centered, on the right or justified, respectively. Justification should not be used in the most cases, though.</p>
+<h5 id="example-text-align">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p class=&quot;has-text-align-left&quot;&gt;&lt;strong&gt;Left aligned.&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut&lt;/p&gt;
+&lt;p class=&quot;has-text-align-center&quot;&gt;&lt;strong&gt;Centered.&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.&lt;/p&gt;
+&lt;p class=&quot;has-text-align-right&quot;&gt;&lt;strong&gt;Right aligned.&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut&lt;/p&gt;
+&lt;p class=&quot;has-text-align-justify&quot;&gt;&lt;strong&gt;Justified.&lt;/strong&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut&lt;/p&gt;</code></pre><div class="d-example-preview undefined"><p class="has-text-align-left"><strong>Left aligned.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+<p class="has-text-align-center"><strong>Centered.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+<p class="has-text-align-right"><strong>Right aligned.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+<p class="has-text-align-justify"><strong>Justified.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

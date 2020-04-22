@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Notices - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body docs-is-active">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Notices</h1>
+                <p class="is-lead">Notices are messages that either inform you about the result of an action or the state of something.</p>
+                
+                
+                
+                <h2>Basic structure</h2>
+<p>An element can be turned into a notice, by giving it the class <code>.notice</code>. There are five types of notices, though:</p>
+<table class="table is-compact">
+    <tr>
+        <th>type of notice</th>
+        <th>which class to apply</th>
+        <th>use for ...</th>
+    </tr>
+    <tr>
+        <td>Muted (default)</td>
+        <td>&mdash;</td>
+        <td>... all notices, where no other type applies or which should have low visibility.</td>
+    </tr>
+    <tr>
+        <td>Danger</td>
+        <td><code>.is-danger</code></td>
+        <td>... notices, that denote a dangerous, negative or deleted state or indicate that an action failed.</td>
+    </tr>
+    <tr>
+        <td>Warning</td>
+        <td><code>.is-warning</code></td>
+        <td>... notices, that denote a critical or possibly dangerous state in need of your attention, or indicate an action with possibly unexpected outcome.</td>
+    </tr>
+    <tr>
+        <td>Success</td>
+        <td><code>.is-success</code></td>
+        <td>... notices, that denote a positive state or indicate that an action succeeded.</td>
+    </tr>
+    <tr>
+        <td>Info</td>
+        <td><code>.is-info</code></td>
+        <td>... notices, that inform neutrally about a state or the result of an action.</td>
+    </tr>
+</table>
+<h5 id="example-basic">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;notice&quot;&gt;Muted notice&lt;/div&gt;
+&lt;div class=&quot;notice is-danger&quot;&gt;Danger notice&lt;/div&gt;
+&lt;div class=&quot;notice is-warning&quot;&gt;Warning notice&lt;/div&gt;
+&lt;div class=&quot;notice is-success&quot;&gt;Success notice&lt;/div&gt;
+&lt;div class=&quot;notice is-info&quot;&gt;Info notice&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="notice">Muted notice</div>
+<div class="notice is-danger">Danger notice</div>
+<div class="notice is-warning">Warning notice</div>
+<div class="notice is-success">Success notice</div>
+<div class="notice is-info">Info notice</div></div></div>
+<h2>Filled notices</h2>
+<p>Sometimes a notice needs additional weight, possibly, because an action is critical. In these cases, it is in order, to apply the class <code>.is-filled</code>, to make the notices even more noticeable.</p>
+<h5 id="example-filled">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;notice is-filled&quot;&gt;Muted notice&lt;/div&gt;
+&lt;div class=&quot;notice is-filled is-danger&quot;&gt;Danger notice&lt;/div&gt;
+&lt;div class=&quot;notice is-filled is-warning&quot;&gt;Warning notice&lt;/div&gt;
+&lt;div class=&quot;notice is-filled is-success&quot;&gt;Success notice&lt;/div&gt;
+&lt;div class=&quot;notice is-filled is-info&quot;&gt;Info notice&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="notice is-filled">Muted notice</div>
+<div class="notice is-filled is-danger">Danger notice</div>
+<div class="notice is-filled is-warning">Warning notice</div>
+<div class="notice is-filled is-success">Success notice</div>
+<div class="notice is-filled is-info">Info notice</div></div></div>
+<h2>Notices as banner</h2>
+<p>Sometimes the notice applies to the whole page/site/instance. In these cases, the notice should be put either directly above or below the header. Also you should give it the class <code>.is-banner</code> which changes some styles to make it better fit into the position. And don't forget, to center the content in a wrapper with the <code>.container</code> class.</p>
+<h5 id="example-banner">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;header class=&quot;header&quot;&gt;
+    &lt;div class=&quot;container header--container&quot;&gt;
+    &lt;div class=&quot;header--brand&quot;&gt;
+        &lt;a class=&quot;header--site-name&quot; href=&quot;#!&quot;&gt;Your site&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;header--menu&quot;&gt;
+        &lt;a class=&quot;header--item&quot; href=&quot;#!&quot;&gt;Link&lt;/a&gt;
+        &lt;a class=&quot;header--item&quot; href=&quot;#!&quot;&gt;Link&lt;/a&gt;
+        &lt;div class=&quot;header--separator&quot;&gt;&lt;/div&gt;
+        &lt;a class=&quot;header--item&quot; href=&quot;#!&quot;&gt;Link&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+&lt;div class=&quot;notice is-banner is-warning&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        Warning banner
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview has-background-color-tertiary-050"><header class="header">
+    <div class="container header--container">
+    <div class="header--brand">
+        <a class="header--site-name" href="#!">Your site</a>
+    </div>
+    <div class="header--menu">
+        <a class="header--item" href="#!">Link</a>
+        <a class="header--item" href="#!">Link</a>
+        <div class="header--separator"></div>
+        <a class="header--item" href="#!">Link</a>
+    </div>
+    </div>
+</header>
+<div class="notice is-banner is-warning">
+    <div class="container">
+        Warning banner
+    </div>
+</div></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

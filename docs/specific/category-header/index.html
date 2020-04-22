@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Specific Co-Design - Co-Design</title>
+    <title>Category Header - Co-Design</title>
 
     <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
     <link rel="stylesheet" type="text/css" href="/assets/docs.css">
@@ -142,12 +142,12 @@
     
     <div class="widget">
         
-            <div class="widget--header docs-is-active">
+            <div class="widget--header ">
                 <a href="/specific/">Codidact-specific Components</a>
             </div>
         
         
-        <div class="widget--body ">
+        <div class="widget--body docs-is-active">
             <a href="/specific/category-header/">Category Header</a>
         </div>
         
@@ -160,14 +160,78 @@
         </div>
         <div class="grid--cell is-12 is-8-lg">
             <div class="has-padding-8">
-                <h1>Specific Co-Design</h1>
-                <p class="is-lead"></p>
+                <h1>Category Header</h1>
+                <p class="is-lead">The category header is the secondary navigation within Codidact, which shall be used for large-scope tabs (within categories). The names and colors of these are configurable by the application users.</p>
                 
                 
                 
-                <p>Specific Co-Design contains components, which aren't used in most websites, which might be interested in using Co-Design, but which are designed specifically for <a href="https://codidact.org">Codidact</a>.</p>
-<p>In a Codidact project, Co-Design (and specific Co-Design) should already be included and have a correct template. If you need assistance, you can always ping <em>luap42</em> in Discord.</p>
-
+                <p>A category header consists of the following elements:</p>
+<ul>
+<li>An element with the class <code>.category-header</code> as container for everything. This should be a <code>&lt;header&gt;</code> element for semantic reasons.
+<ul>
+<li>A tabs element with the class <code>.category-header--tabs</code> with
+<ul>
+<li>A tabs container with the class <code>.category-header--tabs-container</code> (probably centered with <code>.container</code>) with
+<ul>
+<li>Any count of tab links with the class <code>a.category-header--tab</code> and for up to one of them with the class <code>.is-active</code>. The tab label is written into these nodes.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>(optionally) A current categorys element with the class <code>.category-header--container</code>. It should be centered with <code>.container</code>. It contains
+<ul>
+<li>A category name <code>.category-header--name</code></li>
+<li>A category navigation <code>.category-header--nav</code> which can contain
+<ul>
+<li>Navigation items (<code>a.category-header--nav-item</code></li>
+<li>Up to one navigation separator, which pushes everything behind it to the right side (<code>.category-header--nav-separator</code></li>
+<li>navigation buttons (<code>.category-header--nav-item.is-button</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>A category header <strong>must</strong> have exactly one color code added to it. You can choose from <code>.is-turqoise</code>, <code>.is-green</code>, <code>.is-blue</code>, <code>.is-purple</code>, <code>.is-gray</code>, <code>.is-yello</code>, <code>.is-orange</code>, <code>.is-pink</code> and <code>.is-red</code>. This is often user-selectable and depends on the chosen category.</p>
+<p>By default the category namefrom the current category navigation hides on mobile, to save place as it can be seen on the tabination too.</p>
+<h5 id="example-undefined">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;header class=&quot;category-header is-orange&quot;&gt;
+    &lt;div class=&quot;category-header--tabs&quot;&gt;
+        &lt;div class=&quot;container category-header--tabs-container&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;category-header--tab is-active&quot;&gt;Q&amp;amp;A&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;category-header--tab&quot;&gt;Wiki&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;category-header--tab&quot;&gt;Blog&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container category-header--container&quot;&gt;
+        &lt;div class=&quot;category-header--name&quot;&gt;Q&amp;amp;A&lt;/div&gt;
+        &lt;div class=&quot;category-header--nav&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;category-header--nav-item is-active&quot;&gt;Questions&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;category-header--nav-item&quot;&gt;Tags&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;category-header--nav-item&quot;&gt;Search&lt;/a&gt;
+        &lt;div class=&quot;category-header--nav-separator&quot;&gt;&lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;category-header--nav-item is-button&quot;&gt;Ask Question&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</code></pre><div class="d-example-preview undefined"><header class="category-header is-orange">
+    <div class="category-header--tabs">
+        <div class="container category-header--tabs-container">
+            <a href="#" class="category-header--tab is-active">Q&amp;A</a>
+            <a href="#" class="category-header--tab">Wiki</a>
+            <a href="#" class="category-header--tab">Blog</a>
+        </div>
+    </div>
+    <div class="container category-header--container">
+        <div class="category-header--name">Q&amp;A</div>
+        <div class="category-header--nav">
+        <a href="#" class="category-header--nav-item is-active">Questions</a>
+        <a href="#" class="category-header--nav-item">Tags</a>
+        <a href="#" class="category-header--nav-item">Search</a>
+        <div class="category-header--nav-separator"></div>
+        <a href="#" class="category-header--nav-item is-button">Ask Question</a>
+        </div>
+    </div>
+</header></div></div>
             </div>
         </div>
     </div>

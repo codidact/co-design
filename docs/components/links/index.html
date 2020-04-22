@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Specific Co-Design - Co-Design</title>
+    <title>Links - Co-Design</title>
 
     <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
     <link rel="stylesheet" type="text/css" href="/assets/docs.css">
@@ -94,7 +94,7 @@
             <a href="/components/tables/">Tables</a>
         </div>
         
-        <div class="widget--body ">
+        <div class="widget--body docs-is-active">
             <a href="/components/links/">Links</a>
         </div>
         
@@ -142,7 +142,7 @@
     
     <div class="widget">
         
-            <div class="widget--header docs-is-active">
+            <div class="widget--header ">
                 <a href="/specific/">Codidact-specific Components</a>
             </div>
         
@@ -160,14 +160,51 @@
         </div>
         <div class="grid--cell is-12 is-8-lg">
             <div class="has-padding-8">
-                <h1>Specific Co-Design</h1>
-                <p class="is-lead"></p>
+                <h1>Links</h1>
+                <p class="is-lead">Links provide navigation between pages, not action. If you want to provide action, you should use a <a href="components.buttons.html">button</a>.</p>
                 
                 
                 
-                <p>Specific Co-Design contains components, which aren't used in most websites, which might be interested in using Co-Design, but which are designed specifically for <a href="https://codidact.org">Codidact</a>.</p>
-<p>In a Codidact project, Co-Design (and specific Co-Design) should already be included and have a correct template. If you need assistance, you can always ping <em>luap42</em> in Discord.</p>
-
+                <h2>Basic structure</h2>
+<p>You can mark an element as a link, by either using an <code>&lt;a&gt;</code> element with a source (&quot;href&quot; attribute), or by adding the <code>.link</code> class.</p>
+<p>This results in a blue-ish color (which can be modified in the &quot;_child.scss&quot;) and an underline on hover.</p>
+<h5 id="example-basic">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;a href=&quot;#&quot;&gt;Link (a)&lt;/a&gt;,
+&lt;span class=&quot;link&quot;&gt;Link (.link)&lt;/span&gt;,
+&lt;button class=&quot;link&quot;&gt;Link (button.link)&lt;/button&gt;</code></pre><div class="d-example-preview undefined"><a href="#">Link (a)</a>,
+<span class="link">Link (.link)</span>,
+<button class="link">Link (button.link)</button></div></div>
+<h2>Colored links</h2>
+<p>It's also possible to give links any of the <a href="/utilities/colors">secondary colors</a> and to &quot;mute&quot; them (gray out).</p>
+<p>To do so, you have to use any of these classes:</p>
+<ul>
+<li><code>.is-red</code> for dangerous links/links to removed targets</li>
+<li><code>.is-success</code> for successful links</li>
+<li><code>.is-yellow</code> for potentially dangerous links</li>
+<li><code>.is-teal</code> for links in neutral-informative contexts (using no modifier is here the best option in most cases, however)</li>
+<li><code>.is-muted</code> for secondary/inactive links</li>
+</ul>
+<h5 id="example-colored">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;a href=&quot;#&quot;&gt;normal&lt;/a&gt;,
+&lt;a href=&quot;#&quot; class=&quot;is-red&quot;&gt;is-red&lt;/a&gt;,
+&lt;a href=&quot;#&quot; class=&quot;is-green&quot;&gt;is-green&lt;/a&gt;,
+&lt;a href=&quot;#&quot; class=&quot;is-yellow&quot;&gt;is-yellow&lt;/a&gt;,
+&lt;a href=&quot;#&quot; class=&quot;is-teal&quot;&gt;is-teal&lt;/a&gt;,
+&lt;a href=&quot;#&quot; class=&quot;is-muted&quot;&gt;is-muted&lt;/a&gt;</code></pre><div class="d-example-preview undefined"><a href="#">normal</a>,
+<a href="#" class="is-red">is-red</a>,
+<a href="#" class="is-green">is-green</a>,
+<a href="#" class="is-yellow">is-yellow</a>,
+<a href="#" class="is-teal">is-teal</a>,
+<a href="#" class="is-muted">is-muted</a></div></div>
+<h2>Links with/without underline</h2>
+<p>By default, all links are underlined, if and only if they are hovered. However it is possible to either prevent all underlines or to force them to always exist. Use these classes for this:</p>
+<ul>
+<li><code>.is-underlined</code> to force an underline to always exist</li>
+<li><code>.is-not-underlined</code> to prevent underlines from ever appearing</li>
+</ul>
+<h5 id="example-underline">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;a href=&quot;#&quot;&gt;normal&lt;/a&gt;,
+&lt;a href=&quot;#&quot; class=&quot;is-underlined&quot;&gt;with underline&lt;/a&gt;,
+&lt;a href=&quot;#&quot; class=&quot;is-not-underlined&quot;&gt;without underline&lt;/a&gt;</code></pre><div class="d-example-preview undefined"><a href="#">normal</a>,
+<a href="#" class="is-underlined">with underline</a>,
+<a href="#" class="is-not-underlined">without underline</a></div></div>
             </div>
         </div>
     </div>

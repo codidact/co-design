@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Widgets - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body docs-is-active">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Widgets</h1>
+                <p class="is-lead">Widgets group multiple view elements into one larger component. It's often called a "card" and also often used in sidebars.</p>
+                
+                
+                
+                <p>You create a widget by creating a wrapper element with the CSS class <code>.widget</code></p>
+<h2>Minimal widget</h2>
+<p>A minimal widget consists only of a body (<code>.widget--body</code>).</p>
+<h5 id="example-minimal">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;widget&quot;&gt;
+    &lt;div class=&quot;widget--body&quot;&gt;
+        &lt;p&gt;&lt;strong&gt;Hello!&lt;/strong&gt; Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. &lt;em&gt;Contact a lawyer if you need (immediate) help, rather than posting in an online forum.&lt;/em&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="widget">
+    <div class="widget--body">
+        <p><strong>Hello!</strong> Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. <em>Contact a lawyer if you need (immediate) help, rather than posting in an online forum.</em></p>
+    </div>
+</div></div></div>
+<h2>Widget with header</h2>
+<p>Besides a body, a widget can also contain a header (<code>.widget--header</code>). The header is either &quot;simple&quot; (like a heading), or more &quot;complex&quot; (for example, when it needs more information than just one name). In the latter case, you should add the <code>.is-complex</code> class, to prevent font size issues.</p>
+<p>A header can also have a link, which allows for some action. This is one of the very few exceptions, where a link may provide action rather than navigation. This link must be given the class <code>.widget--header-link</code>.</p>
+<h5 id="example-header">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;widget&quot;&gt;
+    &lt;div class=&quot;widget--header&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;widget--header-link&quot;&gt;edit&lt;/a&gt;
+        Welcome to Codidact Law
+    &lt;/div&gt;
+    &lt;div class=&quot;widget--body&quot;&gt;
+        &lt;p&gt;&lt;strong&gt;Hello!&lt;/strong&gt; Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. &lt;em&gt;Contact a lawyer if you need (immediate) help, rather than posting in an online forum.&lt;/em&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="widget">
+    <div class="widget--header">
+        <a href="#" class="widget--header-link">edit</a>
+        Welcome to Codidact Law
+    </div>
+    <div class="widget--body">
+        <p><strong>Hello!</strong> Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. <em>Contact a lawyer if you need (immediate) help, rather than posting in an online forum.</em></p>
+    </div>
+</div></div></div>
+<h2>Widget with footer</h2>
+<p>Besides a body and a header, a widget can also contain a footer (<code>.widget--footer</code>). This often contains actions (buttons).</p>
+<h5 id="example-header">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;widget&quot;&gt;
+    &lt;div class=&quot;widget--header&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;widget--header-link&quot;&gt;edit&lt;/a&gt;
+        Welcome to Codidact Law
+    &lt;/div&gt;
+    &lt;div class=&quot;widget--body&quot;&gt;
+        &lt;p&gt;&lt;strong&gt;Hello!&lt;/strong&gt; Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. &lt;em&gt;Contact a lawyer if you need (immediate) help, rather than posting in an online forum.&lt;/em&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;widget--footer&quot;&gt;
+        &lt;a href=&quot;#!&quot; class=&quot;button is-filled&quot;&gt;More information...&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="widget">
+    <div class="widget--header">
+        <a href="#" class="widget--header-link">edit</a>
+        Welcome to Codidact Law
+    </div>
+    <div class="widget--body">
+        <p><strong>Hello!</strong> Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. <em>Contact a lawyer if you need (immediate) help, rather than posting in an online forum.</em></p>
+    </div>
+    <div class="widget--footer">
+        <a href="#!" class="button is-filled">More information...</a>
+    </div>
+</div></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Buttons - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body docs-is-active">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Buttons</h1>
+                <p class="is-lead">Links provide actions, and not navigation, unless this is required after doing the action. If you want to provide navigaton, you should use <a href="components.links.html">links</a>.</p>
+                
+                
+                
+                <p>To mark an element as a button, it needs to have the <code>.button</code> class.</p>
+<h2>Primary buttons</h2>
+<p>Buttons come in three forms: primary, danger and muted. The one you'll need most, though, is primary. Therefore all buttons are considered primary, unless you specify something different.</p>
+<p>Primary buttons can have different levels of importance. There are default buttons, which have the least priority, then outlined and then filled buttons. You should only have one filled primary button in a view, as it is considered for the most important action.</p>
+<h5 id="example-basic">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button&quot;&gt;default primary button&lt;/button&gt;
+&lt;button class=&quot;button is-outlined&quot;&gt;outlined primary button&lt;/button&gt;
+&lt;button class=&quot;button is-filled&quot;&gt;filled primary button&lt;/button&gt;</code></pre><div class="d-example-preview undefined"><button class="button">default primary button</button>
+<button class="button is-outlined">outlined primary button</button>
+<button class="button is-filled">filled primary button</button></div></div>
+<h2>Danger buttons</h2>
+<p>Not everything is nice and happy, though. In these cases, you should use a danger button, to denote, that an action might be dangerous, unintended, destructive or irreversible.</p>
+<p>As primary buttons, danger buttons can have different levels of importance. There are default buttons, which have the least priority, then outlined and then filled buttons. You should only have one filled danger button in a view, as it is considered for the most important action.</p>
+<h5 id="example-danger">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-danger&quot;&gt;default danger button&lt;/button&gt;
+&lt;button class=&quot;button is-danger is-outlined&quot;&gt;outlined danger button&lt;/button&gt;
+&lt;button class=&quot;button is-danger is-filled&quot;&gt;filled danger button&lt;/button&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-danger">default danger button</button>
+<button class="button is-danger is-outlined">outlined danger button</button>
+<button class="button is-danger is-filled">filled danger button</button></div></div>
+<h2>Muted buttons</h2>
+<p>Sometimes actions are not available or should only be considered secondary to others. For these cases, it's possible to use muted buttons.</p>
+<p>As primary and danger buttons, muted buttons can have different levels of importance. There are default buttons, which have the least priority, then outlined and then filled buttons.</p>
+<h5 id="example-muted">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-muted&quot;&gt;default muted button&lt;/button&gt;
+&lt;button class=&quot;button is-muted is-outlined&quot;&gt;outlined muted button&lt;/button&gt;
+&lt;button class=&quot;button is-muted is-filled&quot;&gt;filled muted button&lt;/button&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-muted">default muted button</button>
+<button class="button is-muted is-outlined">outlined muted button</button>
+<button class="button is-muted is-filled">filled muted button</button></div></div>
+<h2>Button sizes</h2>
+<p>It's possible to modify the size of buttons. We have five sizes, besides the default one: small, (default), medium, large, very large, extemely large</p>
+<h5 id="example-sizes">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-small&quot;&gt;small button&lt;/button&gt;
+&lt;button class=&quot;button&quot;&gt;default button&lt;/button&gt;
+&lt;button class=&quot;button is-medium&quot;&gt;medium button&lt;/button&gt;
+&lt;button class=&quot;button is-large&quot;&gt;large button&lt;/button&gt;
+&lt;button class=&quot;button is-very-large&quot;&gt;very large button&lt;/button&gt;
+&lt;button class=&quot;button is-extremely-large&quot;&gt;extremely large button&lt;/button&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-small">small button</button>
+<button class="button">default button</button>
+<button class="button is-medium">medium button</button>
+<button class="button is-large">large button</button>
+<button class="button is-very-large">very large button</button>
+<button class="button is-extremely-large">extremely large button</button></div></div>
+<h2>Icon only buttons</h2>
+<p>Sometimes you have buttons, which consist <em>only</em> of an icon. These are often used for vote buttons. You can mark a button as icon only, by giving it the class <code>.is-icon-only</code>. As normal buttons, they appear as primary/danger/muted buttons and they, too, have different sizes.</p>
+<p>Icon only buttons should have a descriptive <code>title=&quot;...&quot;</code> attribute for accessibility reasons</p>
+<h5 id="example-icon-only">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-icon-only-button&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;button is-icon-only-button is-extremely-large&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;button is-icon-only-button is-danger&quot;&gt;&lt;i class=&quot;fa fa-eye&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;button class=&quot;button is-icon-only-button is-muted&quot;&gt;&lt;i class=&quot;fa fa-gear&quot;&gt;&lt;/i&gt;&lt;/button&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-icon-only-button"><i class="fa fa-envelope"></i></button>
+<button class="button is-icon-only-button is-extremely-large"><i class="fa fa-heart"></i></button>
+<button class="button is-icon-only-button is-danger"><i class="fa fa-eye"></i></button>
+<button class="button is-icon-only-button is-muted"><i class="fa fa-gear"></i></button></div></div>
+<h2>Close buttons</h2>
+<p>Co-Design has &quot;close buttons&quot;, which should be used, whenever a notice, modal, widget, etc. can be dismissed by the user. It should not trigger any action, besides those neccessary to close the modal. A close button is positioned automatically and cannot be styled with any of the other <code>.is-X</code> classes, besides <code>.is-active</code>.</p>
+<p>A close button has the class <code>.is-close-button</code>, and the HTML entity <code>&amp;amp;times</code> (×) as only content.</p>
+<h5 id="example-close">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;notice is-danger&quot;&gt;
+    &lt;button class=&quot;button is-close-button&quot;&gt;&amp;times;&lt;/button&gt;
+    Something important happened!
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="notice is-danger">
+    <button class="button is-close-button">&times;</button>
+    Something important happened!
+</div></div></div>
+<h2>Active buttons</h2>
+<p>It's possible to mark buttons as active (i.e. pressed), by adding the class <code>.is-active</code>.</p>
+<h2>Button lists</h2>
+<p>Co-Design also provides you with button lists, which allow you to group or collapse related buttons. Button lists can also be used for filters, where only one option can be enabled at a time.</p>
+<p>Create a button list, by wrapping your buttons into a container with the class <code>.button-list</code>. If you want to collapse them (no space between them), you need to give the container the class <code>.is-gutterless</code>.</p>
+<p>All buttons in one button list should have the same form (primary, danger, muted) and size. All buttons in one collapsed button list should have the same style (default, outlined, filled), too.</p>
+<h5 id="example-lists">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;button-list&quot;&gt;
+    &lt;button class=&quot;button is-outlined is-active&quot;&gt;all actions&lt;/button&gt;
+    &lt;button class=&quot;button is-outlined&quot;&gt;PII access&lt;/button&gt;
+    &lt;button class=&quot;button is-outlined&quot;&gt;formal warnings&lt;/button&gt;
+    &lt;button class=&quot;button is-outlined&quot;&gt;suspensions&lt;/button&gt;
+    &lt;button class=&quot;button is-outlined&quot;&gt;privilege revokations&lt;/button&gt;
+&lt;/div&gt;
+<p>&lt;div class=&quot;button-list is-gutterless&quot;&gt;
+&lt;button class=&quot;button is-muted is-outlined is-active&quot;&gt;all actions&lt;/button&gt;
+&lt;button class=&quot;button is-muted is-outlined&quot;&gt;PII access&lt;/button&gt;
+&lt;button class=&quot;button is-muted is-outlined&quot;&gt;formal warnings&lt;/button&gt;
+&lt;button class=&quot;button is-muted is-outlined&quot;&gt;suspensions&lt;/button&gt;
+&lt;button class=&quot;button is-muted is-outlined&quot;&gt;privilege revokations&lt;/button&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="button-list">
+<button class="button is-outlined is-active">all actions</button>
+<button class="button is-outlined">PII access</button>
+<button class="button is-outlined">formal warnings</button>
+<button class="button is-outlined">suspensions</button>
+<button class="button is-outlined">privilege revokations</button></p>
+</div>
+<br>
+<div class="button-list is-gutterless">
+    <button class="button is-muted is-outlined is-active">all actions</button>
+    <button class="button is-muted is-outlined">PII access</button>
+    <button class="button is-muted is-outlined">formal warnings</button>
+    <button class="button is-muted is-outlined">suspensions</button>
+    <button class="button is-muted is-outlined">privilege revokations</button>
+</div></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

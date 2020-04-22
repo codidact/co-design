@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Specific Co-Design - Co-Design</title>
+    <title>Tabs - Co-Design</title>
 
     <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
     <link rel="stylesheet" type="text/css" href="/assets/docs.css">
@@ -122,7 +122,7 @@
             <a href="/components/footer/">Footer</a>
         </div>
         
-        <div class="widget--body ">
+        <div class="widget--body docs-is-active">
             <a href="/components/tabs/">Tabs</a>
         </div>
         
@@ -142,7 +142,7 @@
     
     <div class="widget">
         
-            <div class="widget--header docs-is-active">
+            <div class="widget--header ">
                 <a href="/specific/">Codidact-specific Components</a>
             </div>
         
@@ -160,14 +160,38 @@
         </div>
         <div class="grid--cell is-12 is-8-lg">
             <div class="has-padding-8">
-                <h1>Specific Co-Design</h1>
-                <p class="is-lead"></p>
+                <h1>Tabs</h1>
+                <p class="is-lead">Tabs are secondary navigation, which should not switch the context (i.e. not going from a user page to a question page).</p>
                 
                 
                 
-                <p>Specific Co-Design contains components, which aren't used in most websites, which might be interested in using Co-Design, but which are designed specifically for <a href="https://codidact.org">Codidact</a>.</p>
-<p>In a Codidact project, Co-Design (and specific Co-Design) should already be included and have a correct template. If you need assistance, you can always ping <em>luap42</em> in Discord.</p>
-
+                <p>To create a tab list, you need to create a wrapper with the class <code>.tabs</code>, and then put all the items in it as <code>a.tabs--item</code>. The active tab should be marked with the class <code>.is-active</code>.</p>
+<p>It's also possible to have more classical tabs with a bottom border, by gibing the wrapper the class <code>.is-classic-tabs</code>.</p>
+<h5 id="example-undefined">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;tabs&quot;&gt;
+    &lt;a class=&quot;tabs--item&quot; href=&quot;#!&quot;&gt;Profile&lt;/a&gt;
+    &lt;a class=&quot;tabs--item is-active&quot; href=&quot;#!&quot;&gt;Activity&lt;/a&gt;
+    &lt;a class=&quot;tabs--item&quot; href=&quot;#!&quot;&gt;Edit Account&lt;/a&gt;
+    &lt;a class=&quot;tabs--item&quot; href=&quot;#!&quot;&gt;Mod&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Classic tabs&lt;/p&gt;
+&lt;div class=&quot;tabs is-classic-tabs&quot;&gt;
+    &lt;a class=&quot;tabs--item&quot; href=&quot;#!&quot;&gt;Profile&lt;/a&gt;
+    &lt;a class=&quot;tabs--item is-active&quot; href=&quot;#!&quot;&gt;Activity&lt;/a&gt;
+    &lt;a class=&quot;tabs--item&quot; href=&quot;#!&quot;&gt;Edit Account&lt;/a&gt;
+    &lt;a class=&quot;tabs--item&quot; href=&quot;#!&quot;&gt;Mod&lt;/a&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="tabs">
+    <a class="tabs--item" href="#!">Profile</a>
+    <a class="tabs--item is-active" href="#!">Activity</a>
+    <a class="tabs--item" href="#!">Edit Account</a>
+    <a class="tabs--item" href="#!">Mod</a>
+</div>
+<p>Classic tabs</p>
+<div class="tabs is-classic-tabs">
+    <a class="tabs--item" href="#!">Profile</a>
+    <a class="tabs--item is-active" href="#!">Activity</a>
+    <a class="tabs--item" href="#!">Edit Account</a>
+    <a class="tabs--item" href="#!">Mod</a>
+</div></div></div>
             </div>
         </div>
     </div>

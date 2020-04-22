@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+{% include head.html %}
+
+<body>
+    {% include header.html %}
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                {% include sidebar-nav.html %}
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>{{ title }}</h1>
+                <p class="is-lead">{{ description |safe }}</p>
+                {% if beta %}
+                    <div class="notice">This component is still in <strong>beta</strong> and cannot be considered stable.</div>
+                {% endif %}
+                {% if deprecated %}
+                    <div class="notice">This component is <strong>deprecated</strong> and will be removed in a future release. Do not use it for new views and remove it from old.</div>
+                {% endif %}
+                {% if js %}
+                    <div class="notice">
+                        <h3>Only CSS!</h3>
+                        <p>Co-Design is a CSS-only framework and therefore doesn't come with the JavaScript neccessary to control this component. You'll need to write JavaScript on your own or use an existing library, in order to be able to effectively use it.</p>
+                    </div>
+                {% endif %}
+                {{ content |safe }}
+            </div>
+        </div>
+    </div>
+    {% include scripts.html %}
+</body>
+</html>

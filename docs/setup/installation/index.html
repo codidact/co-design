@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Specific Co-Design - Co-Design</title>
+    <title>Installing Co-Design - Co-Design</title>
 
     <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
     <link rel="stylesheet" type="text/css" href="/assets/docs.css">
@@ -40,7 +40,7 @@
             </div>
         
         
-        <div class="widget--body ">
+        <div class="widget--body docs-is-active">
             <a href="/setup/installation/">Installing Co-Design</a>
         </div>
         
@@ -142,7 +142,7 @@
     
     <div class="widget">
         
-            <div class="widget--header docs-is-active">
+            <div class="widget--header ">
                 <a href="/specific/">Codidact-specific Components</a>
             </div>
         
@@ -160,13 +160,66 @@
         </div>
         <div class="grid--cell is-12 is-8-lg">
             <div class="has-padding-8">
-                <h1>Specific Co-Design</h1>
-                <p class="is-lead"></p>
+                <h1>Installing Co-Design</h1>
+                <p class="is-lead">This instructions will guide you through the installation of Co-Design.</p>
                 
                 
                 
-                <p>Specific Co-Design contains components, which aren't used in most websites, which might be interested in using Co-Design, but which are designed specifically for <a href="https://codidact.org">Codidact</a>.</p>
-<p>In a Codidact project, Co-Design (and specific Co-Design) should already be included and have a correct template. If you need assistance, you can always ping <em>luap42</em> in Discord.</p>
+                <p>You can use this design framework for your own project. You should use it for any Codidact project.</p>
+<p>The software is licensed under the terms of the <a href="https://choosealicense.com/licenses/mit/">MIT</a> license, which you must follow, if you want to use it for an external project.</p>
+<p>To include this framework in your project, you'll need to include its CSS files into your HTML files.</p>
+<h2>1. Obtaining a copy of this framework</h2>
+<p>There two different ways to obtain a copy of this framework: You can build it from source from GitHub or you can get a pre-built version.</p>
+<h3>Building from source (GitHub)</h3>
+<p>To build our framework from source, you'll first need to download it from <a href="https://github.com/Codidact/Co-Design">GitHub</a>. Then you can run the build processes, by running the this on the command line:</p>
+<pre><code>~/co-design $ npm install
+~/co-design $ npm run build
+</code></pre>
+<p>Your build will then be in <code>/dist</code>.</p>
+<p>You can modify the configuration, by overriding the variables in the child theme file. That one is located at <code>src/_child.scss</code> in the repository.</p>
+<p><a href="https://github.com/codidact/co-design" class="button">Go to the GitHub repository</a></p>
+<h3>Using a pre-built version</h3>
+<p>You can also use a pre-built version. However, you won't be able to change variables (such as: font, color, ...), if you choose to do so.</p>
+<p>You can find a pre-built version <a href="https://unpkg.com/@codidact/co-design@latest/dist/codidact.css">here</a>. You can link to that CDN directly in your code:</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/@codidact/co-design@latest/dist/codidact.css&quot;&gt;
+</code></pre>
+<p><a href="https://unpkg.com/@codidact/co-design@latest/dist/codidact.css" class="button" download="codidact.css">Download the pre-built CSS</a></p>
+<h2>2. Minimal HTML template</h2>
+<p>When you want to use Co-Design for a Codidact project, it should already be included and have a correct template. If you need assistance, you can always ping <em>luap42</em> in Discord.</p>
+<p>When you want to use Co-Design for an external project, we recommend you to use the following HTML template:</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;Your Co-Design page&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/dist/codidact.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header class=&quot;header&quot;&gt;
+      &lt;div class=&quot;header--container container&quot;&gt;
+        &lt;div class=&quot;header--brand&quot;&gt;
+          &lt;a href=&quot;...&quot; class=&quot;header--site-name&quot;&gt;Brand&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;header--menu&quot;&gt;
+          &lt;a href=&quot;...&quot; class=&quot;header--item&quot;&gt;Menu item 1&lt;/a&gt;
+          &lt;a href=&quot;...&quot; class=&quot;header--item&quot;&gt;Menu item 2&lt;/a&gt;
+
+          &lt;div class=&quot;header--separator&quot;&gt;&lt;/div&gt;
+
+          &lt;a href=&quot;...&quot; class=&quot;header--item&quot;&gt;Menu item 3&lt;/a&gt;
+          &lt;a href=&quot;...&quot; class=&quot;header--item&quot;&gt;Menu item 4&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class=&quot;container has-padding-2&quot;&gt;
+      &lt;!-- Add page content here --&gt;
+    &lt;/main&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
             </div>
         </div>

@@ -1,59 +1,163 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en-us">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Co-Design</title>
-    <link rel="stylesheet" href="dist/codidact.css">
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header--container">
-        <div class="header--brand">
-          <a class="header--site-name" href="index.html">Co-Design</a>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body class="home">
+    <div class="grid">
+        <div class="grid--cell is-8-lg is-12 has-background-color-primary-500 has-color-white">
+
+            <div class="has-padding-24 home-left">
+                <h1>Co-Design</h1>
+                <p class="is-lead">Welcome to the official homepage of the Co-Design framework, the CSS framework for <a href="#!">Codidact</a>.</p>
+                <div class="button-list has-margin-vertical-6">
+                    <a href="/setup/installation" class="button is-primary is-outlined is-extremely-large">Get Started</a>
+                </div>
+                <div class="spacer"></div>
+                <div class="vinfo">
+                    <div class="entry">version: 0.6.0</div>
+                    <div class="entry">hosted: <a href="https://github.com/Codidact/Co-Design">on Github</a></div>
+                    <div class="entry">open-source: <a href="https://choosealicense.com/licenses/mit/">MIT license</a></div>
+                </div>
+            </div>
+
         </div>
-        <div class="header--menu">
-          <a class="header--item" href="getting-started.html">Getting Started</a>
-          <a class="header--item" href="utilities.html">Utilities</a>
-          <a class="header--item" href="components.html">Components</a>
-
-          <div class="header--separator"></div>
-
-          <a class="header--item" href="https://github.com/codidact/co-design">on GitHub</a>
-
-          <a class="header--item is-mobile-menu is-complex" data-trigger-header-slide="#js-hms" href="#!">
-            <span class="header--menu-bars">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </a>
+        <div class="grid--cell is-4-lg is-12">
+            <div class="has-padding-8 has-ta-center home-right">
+                <h2>Documentation</h2>
+                
+                <div class="widget">
+                    <div class="widget--header">
+                        
+                            Getting Started
+                        
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/setup/installation/">Installing Co-Design</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/setup/improving/">Improving Co-Design</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/setup/releasing/">Releasing Co-Design</a>
+                    </div>
+                    
+                </div>
+                
+                <div class="widget">
+                    <div class="widget--header">
+                        
+                            <a href="/utilities/">Utilities</a>
+                        
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/utilities/basic-html/">Basic HTML</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/utilities/typography/">Typography</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/utilities/layout/">Layout</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/utilities/box/">Box Styles</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/utilities/colors/">Colors</a>
+                    </div>
+                    
+                </div>
+                
+                <div class="widget">
+                    <div class="widget--header">
+                        
+                            <a href="/components/">Components</a>
+                        
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/tables/">Tables</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/links/">Links</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/buttons/">Buttons</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/inputs/">Inputs</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/badges/">Badges</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/notices/">Notices</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/header/">Header</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/footer/">Footer</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/tabs/">Tabs</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/widgets/">Widgets</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/modals/">Modals</a>
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/components/item-lists/">Item Lists</a>
+                    </div>
+                    
+                </div>
+                
+                <div class="widget">
+                    <div class="widget--header">
+                        
+                            <a href="/specific/">Codidact-specific Components</a>
+                        
+                    </div>
+                    
+                    <div class="widget--body">
+                        <a href="/specific/category-header/">Category Header</a>
+                    </div>
+                    
+                </div>
+                
+            </div>
         </div>
-      </div>
-    </header>
-    <aside class="header-slide" id="js-hms">
-      <a class="header-slide--item" href="getting-started.html">Getting Started</a>
-      <a class="header-slide--item" href="utilities.html">Utilities</a>
-      <a class="header-slide--item" href="components.html">Components</a>
-
-      <div class="header-slide--separator"></div>
-
-      <a class="header-slide--item" href="https://github.com/codidact/co-design">on GitHub</a>
-    </aside>
-    <div class="has-padding-16">
-      <main class="container">
-        <h1 style="font-size: 60px;">Co-Design</h1>
-        <p class="is-lead" style="font-size: 25px;">Welcome to the official homepage of the Co-Design framework, the CSS framework for <a href="https://codidact.org" class="is-muted is-not-underlined">Codidact</a>.</p>
-        
-        <div class="button-list has-padding-2 has-margin-vertical-2">
-          <a href="getting-started.html" class="button is-primary is-filled is-extremely-large">Get started</a>
-          <a href="https://github.com/Codidact/Co-Design" class="button is-primary is-extremely-large">See on GitHub</a>
-        </div>
-        <p>Co-Design's latest version is <span class="badge is-tag">v0.6.0</span>.</p>
-        <p>This is the documentation for the common Co-Design utilities and components, which should be enough for most use cases. Some components, which are specific to Codidact are documented <a href="specific/index.html">in an extra document</a>.</p>
-      </main>
     </div>
-
-    <script src="assets/js/docs.js" async></script>
-  </body>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
 </html>

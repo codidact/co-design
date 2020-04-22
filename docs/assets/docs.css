@@ -1,0 +1,111 @@
+html {
+    min-height: 100vh;
+}
+.home {
+    height: 100%;
+}
+.home .grid {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.home .grid .grid--cell {
+    padding: 0;
+    margin: 0;
+}
+.home h1 {
+    font-size: 75px;
+}
+.home p.is-lead {
+    font-size: 20px;
+    color: inherit;
+}
+
+.home .home-left a:not(.button) {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.home .home-left {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-image: url(https://codidact.org/assets/img/hero-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.home .home-left .spacer {
+    flex-grow: 1;
+}
+
+.home .home-left .vinfo {
+    display: flex;
+    opacity: 0.6;
+}
+
+.home .home-left .vinfo .entry {
+    margin: 0 5px;
+}
+
+.home h2 {
+    font-size: 40px;
+}
+.home .home-right .widget .widget--header {
+    font-weight: bold;
+}
+.home .home-right .widget .widget--header a {
+    color: inherit;
+}
+.home .home-right {
+    max-height: 100vh;
+    overflow: auto;
+}
+
+@media all and (max-width: 768px) {
+    .home .home-right {
+        max-height: none;
+    }
+}
+
+.docs-is-active {
+    background-color: rgba(0,0,0,0.075);
+    box-shadow: 0 0 0 5px rgba(0,0,0,0.1);
+}
+
+.docs-nav .widget .widget--header {
+    font-weight: bold;
+}
+.docs-nav .widget .widget--header a {
+    color: inherit;
+}
+
+.d-example {
+    padding: 4px;
+}
+
+.d-example pre.d-example-code {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background-color: black;
+    color: white;
+}
+
+.d-example .d-example-preview {
+    border: 1px solid #ddd;
+    padding: 16px;
+}
+.d-example .d-example-preview.d-more-padding {
+    padding: 32px;
+}
+
+.grid.container {
+    margin: 0 auto;
+}
+
+.d-example .header-slide,
+.d-example .modal {
+    position: static !important;
+}

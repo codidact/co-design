@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Form Inputs - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body docs-is-active">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Form Inputs</h1>
+                <p class="is-lead"></p>
+                
+                
+                
+                <h2>Inputs (Text boxes)</h2>
+<p>Input elements are for single-value or single-line contents. They are created by the <code>&lt;input&gt;</code> HTML tag in combination with the <code>.form-element</code> CSS class.</p>
+<p>When you have form validation that failed for this input, you can mark it as such with the <code>.is-danger</code> modifier class.</p>
+<h5 id="example-inputs">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p&gt;Normal form input:&lt;/p&gt;
+&lt;input class=&quot;form-element&quot;&gt;
+<p>&lt;p&gt;Date input:&lt;/p&gt;
+&lt;input class=&quot;form-element&quot; type=&quot;date&quot;&gt;</p>
+<p>&lt;p&gt;Form input with failed validation:&lt;/p&gt;
+&lt;input class=&quot;form-element is-danger&quot;&gt;</code></pre><div class="d-example-preview undefined"><p>Normal form input:</p>
+<input class="form-element"></p>
+<p>Date input:</p>
+<input class="form-element" type="date">
+<p>Form input with failed validation:</p>
+<input class="form-element is-danger"></div></div>
+<h2>Text areas</h2>
+<p>Text areas are multiline inputs. They are created by the <code>textarea</code> HTML tag in combination with the <code>.form-element</code> CSS class.</p>
+<p>When you have form validation that failed for this text area, you can mark it as such with the <code>.is-danger</code> modifier class.</p>
+<p>It's also possible to change the size of the text area. There are two modifiers for this: <code>.is-large</code> and <code>.is-small</code>.</p>
+<h5 id="example-textarea">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p&gt;Normal text area:&lt;/p&gt;
+&lt;textarea class=&quot;form-element&quot;&gt;&lt;/textarea&gt;
+<p>&lt;p&gt;Small textarea:&lt;/p&gt;
+&lt;textarea class=&quot;form-element is-small&quot;&gt;&lt;/textarea&gt;</p>
+<p>&lt;p&gt;Large textarea:&lt;/p&gt;
+&lt;textarea class=&quot;form-element is-large&quot;&gt;&lt;/textarea&gt;</p>
+<p>&lt;p&gt;Text area with failed validation:&lt;/p&gt;
+&lt;textarea class=&quot;form-element is-danger&quot;&gt;&lt;/textarea&gt;</code></pre><div class="d-example-preview undefined"><p>Normal text area:</p>
+<textarea class="form-element"></textarea></p>
+<p>Small textarea:</p>
+<textarea class="form-element is-small"></textarea>
+<p>Large textarea:</p>
+<textarea class="form-element is-large"></textarea>
+<p>Text area with failed validation:</p>
+<textarea class="form-element is-danger"></textarea></div></div>
+<h2>Labels</h2>
+<p>Labels are important for accessibility. They should describe the form element in a way, that allows everyone to understand, what should be written into it, regardless of any limitations.</p>
+<p>They are created by the <code>label</code> HTML tag in combination with the <code>.form-element</code> CSS class.</p>
+<p>You can add a <code>.form-caption</code> directly below it for small explanations.</p>
+<h5 id="example-labels">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;label for=&quot;labels-example--input&quot; class=&quot;form-element&quot;&gt;Label for an input&lt;/label&gt;
+&lt;div class=&quot;form-caption&quot;&gt;with an explanatory caption&lt;/div&gt;
+&lt;input class=&quot;form-element&quot; id=&quot;labels-example--input&quot;&gt;
+<p>&lt;label for=&quot;labels-example--textarea&quot; class=&quot;form-element&quot;&gt;Label for an textarea&lt;/label&gt;
+&lt;textarea class=&quot;form-element&quot; id=&quot;labels-example--textarea&quot;&gt;&lt;/textarea&gt;</code></pre><div class="d-example-preview undefined"><label for="labels-example--input" class="form-element">Label for an input</label></p>
+<div class="form-caption">with an explanatory caption</div>
+<input class="form-element" id="labels-example--input">
+<p><label for="labels-example--textarea" class="form-element">Label for an textarea</label>
+<textarea class="form-element" id="labels-example--textarea"></textarea></div></div></p>
+<h2>Radio buttons and Checkboxes</h2>
+<p>Radio buttons and checkboxes are special types of inputs. However the normal input presentation would not be appropriate for them. Therefore you need to give them the class <code>.form-radio-element</code> or <code>.form-checkbox-element</code> for radio buttons or checkboxes, respectively.</p>
+<h5 id="example-radio-checkbox">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;input type=&quot;radio&quot; class=&quot;form-radio-element&quot;&gt;
+&lt;input type=&quot;checkbox&quot; class=&quot;form-checkbox-element&quot;&gt;</code></pre><div class="d-example-preview undefined"><input type="radio" class="form-radio-element">
+<input type="checkbox" class="form-checkbox-element"></div></div>
+<h2>Select elements</h2>
+<p>Select elements allow the user to choose one or many from a set of options. They are created by the <code>&lt;select&gt;</code> HTML tag in combination with the <code>.form-element</code> CSS class (with the options using the <code>&lt;option&gt;</code> tag).</p>
+<p>When you have form validation that failed for this select, you can mark it as such with the <code>.is-danger</code> modifier class.</p>
+<h5 id="example-selects">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p&gt;Normal select:&lt;/p&gt;
+&lt;select class=&quot;form-element&quot;&gt;
+    &lt;option&gt;Yes&lt;/option&gt;
+    &lt;option&gt;No&lt;/option&gt;
+    &lt;option&gt;Maybe&lt;/option&gt;
+&lt;/select&gt;
+&lt;p&gt;Select with [multiple]:&lt;/p&gt;
+&lt;select class=&quot;form-element&quot; multiple&gt;
+    &lt;option&gt;Yes&lt;/option&gt;
+    &lt;option&gt;No&lt;/option&gt;
+    &lt;option&gt;Maybe&lt;/option&gt;
+&lt;/select&gt;
+&lt;p&gt;Select with failed validation:&lt;/p&gt;
+&lt;select class=&quot;form-element is-danger&quot;&gt;
+    &lt;option&gt;Yes&lt;/option&gt;
+    &lt;option&gt;No&lt;/option&gt;
+    &lt;option&gt;Maybe&lt;/option&gt;
+&lt;/select&gt;</code></pre><div class="d-example-preview undefined"><p>Normal select:</p>
+<select class="form-element">
+    <option>Yes</option>
+    <option>No</option>
+    <option>Maybe</option>
+</select>
+<p>Select with [multiple]:</p>
+<select class="form-element" multiple>
+    <option>Yes</option>
+    <option>No</option>
+    <option>Maybe</option>
+</select>
+<p>Select with failed validation:</p>
+<select class="form-element is-danger">
+    <option>Yes</option>
+    <option>No</option>
+    <option>Maybe</option>
+</select></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

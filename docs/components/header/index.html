@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Header - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body docs-is-active">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Header</h1>
+                <p class="is-lead">The header is the primary navigation of your page.</p>
+                
+                
+                
+                    <div class="notice">
+                        <h3>Only CSS!</h3>
+                        <p>Co-Design is a CSS-only framework and therefore doesn't come with the JavaScript neccessary to control this component. You'll need to write JavaScript on your own or use an existing library, in order to be able to effectively use it.</p>
+                    </div>
+                
+                <h2>Basic structure</h2>
+<p>A header consists of the following elements:</p>
+<ul>
+<li>An element with the class <code>.header</code> as container for everything. This should be a <code>&lt;header&gt;</code> element for semantic reasons.
+<ul>
+<li>A header container <code>.header--container</code> that is either centered or not (with or without <code>.container</code>). This contains all header items, in this order:
+<ul>
+<li>A header brand (<code>.header--brand</code>), which contains the brand name and information for the current site, in this order:
+<ul>
+<li>Any count of small captions/links for the network/ownership of the site. (<code>a.header--instance-name</code>)</li>
+<li>Exactly one large site primary title. (<code>a.header--site-name</code>)</li>
+</ul>
+</li>
+<li>A header menu (<code>.header--menu</code>), which contains the menu items of the header:
+<ul>
+<li>Any count of menu links. (<code>a.header--item</code>)</li>
+<li>Up to one header separator, which pushes everything behind it to the right side. (<code>.header--separator</code>)</li>
+<li>One header menu bars (<code>a.header--item.is-complex.is-mobile-menu</code>), with
+<ul>
+<li>a bar container (<code>.header--menu-bars</code>), with exactly three, empty <code>&lt;span&gt;</code> elements</li>
+</ul>
+</li>
+<li>Any count of menu items (<code>a.header--item.is-complex</code>), with either
+<ul>
+<li>an image (<code>.header--item-image</code>), or</li>
+<li>an icon (<code>.header--item-icon</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Furthermore any header item can have one <code>.header--alert</code> notification with one number in it. All header items with images can have one <code>.header--trust-level</code> to indicate a &quot;trust level&quot; or other level/permission of the currently logged in user.</p>
+<p>Header items that link to the currently shown page should be highlighted with the class <code>.is-active</code>.</p>
+<p>By default, all header menu items, except for the mobile bars menu, disappear at small screen sizes. You can &quot;save&quot; them, by adding the class <code>.is-visible-on-mobile</code>.</p>
+<h5 id="example-basic">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;header class=&quot;header&quot;&gt;
+    &lt;div class=&quot;container header--container&quot;&gt;
+    &lt;div class=&quot;header--brand&quot;&gt;
+        &lt;a class=&quot;header--instance-name&quot; href=&quot;#&quot;&gt;Codidact&lt;/a&gt;
+        &lt;a class=&quot;header--site-name&quot; href=&quot;#&quot;&gt;Gibberish&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;header--menu&quot;&gt;
+        &lt;a class=&quot;header--item&quot; href=&quot;#&quot;&gt;question&lt;/a&gt;
+        &lt;a class=&quot;header--item is-active&quot; href=&quot;#&quot;&gt;tags&lt;/a&gt;
+        &lt;a class=&quot;header--item&quot; href=&quot;#&quot;&gt;users&lt;/a&gt;
+        &lt;div class=&quot;header--separator&quot;&gt;&lt;/div&gt;
+        &lt;a class=&quot;header--item&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;header--alert&quot;&gt;1&lt;/span&gt;mod&lt;/a&gt;
+        &lt;a class=&quot;header--item&quot; href=&quot;#&quot;&gt;help&lt;/a&gt;
+        &lt;a class=&quot;header--item&quot; href=&quot;#&quot;&gt;discussions&lt;/a&gt;
+        &lt;a class=&quot;header--item is-mobile-menu is-complex&quot; href=&quot;#!&quot;&gt;
+        &lt;span class=&quot;header--menu-bars&quot;&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+        &lt;/span&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;header--item is-visible-on-mobile is-complex&quot; href=&quot;#&quot;&gt;
+            &lt;img src=&quot;https://placekitten.com/100/100&quot; class=&quot;header--item-image&quot; alt=&quot;...&quot; /&gt;
+            &lt;span class=&quot;header--alert&quot;&gt;1&lt;/span&gt;
+            &lt;span class=&quot;header--trust-level&quot;&gt;5&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</code></pre><div class="d-example-preview undefined"><header class="header">
+    <div class="container header--container">
+    <div class="header--brand">
+        <a class="header--instance-name" href="#">Codidact</a>
+        <a class="header--site-name" href="#">Gibberish</a>
+    </div>
+    <div class="header--menu">
+        <a class="header--item" href="#">question</a>
+        <a class="header--item is-active" href="#">tags</a>
+        <a class="header--item" href="#">users</a>
+        <div class="header--separator"></div>
+        <a class="header--item" href="#"><span class="header--alert">1</span>mod</a>
+        <a class="header--item" href="#">help</a>
+        <a class="header--item" href="#">discussions</a>
+        <a class="header--item is-mobile-menu is-complex" href="#!">
+        <span class="header--menu-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        </a>
+        <a class="header--item is-visible-on-mobile is-complex" href="#">
+            <img src="https://placekitten.com/100/100" class="header--item-image" alt="..." />
+            <span class="header--alert">1</span>
+            <span class="header--trust-level">5</span>
+        </a>
+    </div>
+    </div>
+</header></div></div>
+<h2>Header slides</h2>
+<p>Header slides are a supplementary component to headers. They allow for drop down and mobile menus.</p>
+<p>Header slides have the <code>.header-slide</code> class and its items have either the class <code>.header-slide--item</code> for items or <code>.header-slide--separator</code> for line separators. Header items can be active, use the class <code>.is-active</code> for that.</p>
+<p>Header slides will probably need JavaScript, because you need to explicitely show them, by giving them the class <code>.is-active</code>. Furthermore, you'll need to position it, by setting its <code>top: X</code> and <code>right: X</code> properties appropriately.</p>
+<p>If you plan to use a header slide as mobile menu, you should add all header items to it, that are removed from normal view.</p></p>
+<h5 id="example-slides">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;header-slide is-active&quot;&gt;
+    &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;question&lt;/a&gt;
+    &lt;a class=&quot;header-slide--item is-active&quot; href=&quot;#&quot;&gt;tags&lt;/a&gt;
+    &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;users&lt;/a&gt;
+    &lt;div class=&quot;header-slide--separator&quot;&gt;&lt;/div&gt;
+    &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;header-slide--alert&quot;&gt;1&lt;/span&gt;mod&lt;/a&gt;
+    &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;help&lt;/a&gt;
+    &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;discussions&lt;/a&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="header-slide is-active">
+    <a class="header-slide--item" href="#">question</a>
+    <a class="header-slide--item is-active" href="#">tags</a>
+    <a class="header-slide--item" href="#">users</a>
+    <div class="header-slide--separator"></div>
+    <a class="header-slide--item" href="#"><span class="header-slide--alert">1</span>mod</a>
+    <a class="header-slide--item" href="#">help</a>
+    <a class="header-slide--item" href="#">discussions</a>
+</div></div></div>
+<p>As we said above, Co-Design does not contain any JavaScript to toggle header slides. This documentation uses the following snippet, which may or may not be appropriate for you:</p>
+<pre><code>const headerSlideTriggers = document.querySelectorAll(&quot;[data-trigger-header-slide]&quot;);
+
+for (let i = 0; i &lt; headerSlideTriggers.length; i++) {
+  headerSlideTriggers[i].addEventListener(&quot;click&quot;, function (e) {
+    const headerSlide = document.querySelector(this.getAttribute(&quot;data-trigger-header-slide&quot;));
+
+    headerSlide.classList.toggle(&quot;is-active&quot;);
+    this.classList.toggle(&quot;is-active&quot;);
+
+    // Position header slide appropriately relative to
+    // trigger.
+    const rect = this.getBoundingClientRect();
+    headerSlide.style.top = (rect.top + rect.height) + &quot;px&quot;;
+    headerSlide.style.right = (document.body.clientWidth - rect.right) + &quot;px&quot;;
+
+    // Prevent navigation
+    e.preventDefault();
+  });
+}
+</code></pre>
+
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

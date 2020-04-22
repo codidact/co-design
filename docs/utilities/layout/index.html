@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Specific Co-Design - Co-Design</title>
+    <title>Layout utilities - Co-Design</title>
 
     <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
     <link rel="stylesheet" type="text/css" href="/assets/docs.css">
@@ -69,7 +69,7 @@
             <a href="/utilities/typography/">Typography</a>
         </div>
         
-        <div class="widget--body ">
+        <div class="widget--body docs-is-active">
             <a href="/utilities/layout/">Layout</a>
         </div>
         
@@ -142,7 +142,7 @@
     
     <div class="widget">
         
-            <div class="widget--header docs-is-active">
+            <div class="widget--header ">
                 <a href="/specific/">Codidact-specific Components</a>
             </div>
         
@@ -160,14 +160,47 @@
         </div>
         <div class="grid--cell is-12 is-8-lg">
             <div class="has-padding-8">
-                <h1>Specific Co-Design</h1>
-                <p class="is-lead"></p>
+                <h1>Layout utilities</h1>
+                <p class="is-lead">There are different layout utilities, that allow you to change everything that relates to the layout and position of elements.</p>
                 
                 
                 
-                <p>Specific Co-Design contains components, which aren't used in most websites, which might be interested in using Co-Design, but which are designed specifically for <a href="https://codidact.org">Codidact</a>.</p>
-<p>In a Codidact project, Co-Design (and specific Co-Design) should already be included and have a correct template. If you need assistance, you can always ping <em>luap42</em> in Discord.</p>
-
+                <h2>Layout container</h2>
+<p>It is recommended for readability not to have full-width containers with content, but instead to give them a maximum width and to center them. You can look at the header and this content area to see the effect.</p>
+<p>To do so, you need to add the <code>.container</code> class. By default, the width of it is 72rem, however you can override that in your &quot;_child.scss&quot;.</p>
+<h2>Element float</h2>
+<p>You can make elements float to the left or to the right, by giving them the classes <code>.has-float-left</code> or <code>.has-float-right</code>, respectively. You can remove the float from an element with <code>.has-float-none</code> and clear the float around an element with <code>.has-float-clear</code>.</p>
+<h2>Flexbox grid</h2>
+<p>Co-Design provides a flexible and powerful CSS flexbox grid. It must be in a <code>.grid</code> container and each item (cell) must have the class <code>.grid--cell</code>.</p>
+<p>Then you can add any of the classes <code>.is-X</code> with X between one and twelve (or any other number if you override it in the &quot;_child.scss&quot;). Furthermore we have responsive grid classes with <code>.is-X-sm</code>, <code>.is-X-md</code> and <code>.is-X-lg</code>, being effective only, when the viewport size is under 32rem, between 32rem and 64rem or above 64rem, respectively.</p>
+<p>By default, the elements of a grid are put on the next line, when there isn't enough space (wrap). However, sometimes that isn't wanted. For these cases, it's possible to add the class <code>.is-nowrap</code> to the grid.</p>
+<h5 id="example-grid">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;grid--cell is-5 is-12-sm&quot;&gt;
+    &lt;div class=&quot;has-padding-4 has-background-color-red&quot;&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid--cell is-7 is-12-sm&quot;&gt;
+    &lt;div class=&quot;has-padding-4 has-background-color-green&quot;&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid--cell is-3 is-12-md&quot;&gt;
+    &lt;div class=&quot;has-padding-4 has-background-color-yellow&quot;&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid--cell is-9 is-12-md&quot;&gt;
+    &lt;div class=&quot;has-padding-4 has-background-color-teal&quot;&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="grid">
+    <div class="grid--cell is-5 is-12-sm">
+    <div class="has-padding-4 has-background-color-red">&nbsp;</div>
+    </div>
+    <div class="grid--cell is-7 is-12-sm">
+    <div class="has-padding-4 has-background-color-green">&nbsp;</div>
+    </div>
+    <div class="grid--cell is-3 is-12-md">
+    <div class="has-padding-4 has-background-color-yellow">&nbsp;</div>
+    </div>
+    <div class="grid--cell is-9 is-12-md">
+    <div class="has-padding-4 has-background-color-teal">&nbsp;</div>
+    </div>
+</div><p><span class="has-color-tertiary-600 has-font-size-caption has-font-style-italic">Resize the browser window to see the responsive classes in effect.</span></p></div></div>
             </div>
         </div>
     </div>

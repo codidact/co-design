@@ -1,0 +1,112 @@
+{
+    "sections": [
+        {
+            "title": "Getting Started",
+            "url": null,
+            "links": [
+                {
+                    "title": "Installing Co-Design",
+                    "url": "/setup/installation/"
+                },
+                {
+                    "title": "Improving Co-Design",
+                    "url": "/setup/improving/"
+                },
+                {
+                    "title": "Releasing Co-Design",
+                    "url": "/setup/releasing/"
+                }
+            ]
+        },
+        {
+            "title": "Utilities",
+            "url": "/utilities/",
+            "links": [
+                {
+                    "title": "Basic HTML",
+                    "url": "/utilities/basic-html/"
+                },
+                {
+                    "title": "Typography",
+                    "url": "/utilities/typography/"
+                },
+                {
+                    "title": "Layout",
+                    "url": "/utilities/layout/"
+                },
+                {
+                    "title": "Box Styles",
+                    "url": "/utilities/box/"
+                },
+                {
+                    "title": "Colors",
+                    "url": "/utilities/colors/"
+                }
+            ]
+        },
+        {
+            "title": "Components",
+            "url": "/components/",
+            "links": [
+                {
+                    "title": "Tables",
+                    "url": "/components/tables/"
+                },
+                {
+                    "title": "Links",
+                    "url": "/components/links/"
+                },
+                {
+                    "title": "Buttons",
+                    "url": "/components/buttons/"
+                },
+                {
+                    "title": "Inputs",
+                    "url": "/components/inputs/"
+                },
+                {
+                    "title": "Badges",
+                    "url": "/components/badges/"
+                },
+                {
+                    "title": "Notices",
+                    "url": "/components/notices/"
+                },
+                {
+                    "title": "Header",
+                    "url": "/components/header/"
+                },
+                {
+                    "title": "Footer",
+                    "url": "/components/footer/"
+                },
+                {
+                    "title": "Tabs",
+                    "url": "/components/tabs/"
+                },
+                {
+                    "title": "Widgets",
+                    "url": "/components/widgets/"
+                },
+                {
+                    "title": "Modals",
+                    "url": "/components/modals/"
+                },
+                {
+                    "title": "Item Lists",
+                    "url": "/components/item-lists/"
+                }
+            ]
+        },
+        {
+            "title": "Codidact-specific Components",
+            "url": "/specific/",
+            "links": [
+                {
+                    "title": "Category Header",
+                    "url": "/specific/category-header/"
+                }
+            ]
+        }
+    ]
+}

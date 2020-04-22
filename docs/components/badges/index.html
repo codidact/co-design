@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Badges - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body docs-is-active">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Badges</h1>
+                <p class="is-lead">Badges are a collection of small, graphic and distinct elements that have in common, that they label something or express properties of something.</p>
+                
+                
+                
+                <p>All badges have the CSS class <code>.badge&lt;/code&gt;, and at least one other class in the form</code>.is-X</code>, where X describes the type of the badge.</p>
+<h2>Tags</h2>
+<p>Tags are badges that allow classification of content. Often, tags are entered by your users. Tags are created with the CSS classes `.badge.is-tag</code>.</p>
+<p>There are two types of tags: normal tags and filled tags. Filled tags can be used for example for a group of tags, where on of them is required. Or filled tags could be categories. Filled tags have additionally the class <code>.is-filled&lt;/code&gt; (deprecated, but also valid:</code>.is-master-tag</code>).</p>
+<h5 id="example-tags">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;span class=&quot;badge is-tag&quot;&gt;codidact&lt;/span&gt;
+&lt;a href=&quot;#&quot; class=&quot;badge is-tag&quot;&gt;design&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;badge is-tag is-filled&quot;&gt;co-design&lt;/a&gt;</code></pre><div class="d-example-preview undefined"><span class="badge is-tag">codidact</span>
+<a href="#" class="badge is-tag">design</a>
+<a href="#" class="badge is-tag is-filled">co-design</a></div></div>
+<p>It's also possible to color tags, by giving them one of these classes <code>.is-red&lt;/code&gt;,</code>.is-yellow</code>, <code>.is-green&lt;/code&gt;,</code>.is-teal</code> or `.is-muted</code>. This can be combined with filled tags.</p>
+<h5 id="example-tags-colored">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p&gt;Default styles&lt;/p&gt;
+&lt;span class=&quot;badge is-tag is-red&quot;&gt;red&lt;/span&gt;
+&lt;span class=&quot;badge is-tag is-yellow&quot;&gt;yellow&lt;/span&gt;
+&lt;span class=&quot;badge is-tag is-green&quot;&gt;green&lt;/span&gt;
+&lt;span class=&quot;badge is-tag is-teal&quot;&gt;teal&lt;/span&gt;
+&lt;span class=&quot;badge is-tag is-muted&quot;&gt;muted&lt;/span&gt;
+&lt;p&gt;Filled styles&lt;/p&gt;
+&lt;span class=&quot;badge is-tag is-filled is-red&quot;&gt;red&lt;/span&gt;
+&lt;span class=&quot;badge is-tag is-filled is-yellow&quot;&gt;yellow&lt;/span&gt;
+&lt;span class=&quot;badge is-tag is-filled is-green&quot;&gt;green&lt;/span&gt;
+&lt;span class=&quot;badge is-tag is-filled is-teal&quot;&gt;teal&lt;/span&gt;
+&lt;span class=&quot;badge is-tag is-filled is-muted&quot;&gt;muted&lt;/span&gt;</code></pre><div class="d-example-preview undefined"><p>Default styles</p>
+<span class="badge is-tag is-red">red</span>
+<span class="badge is-tag is-yellow">yellow</span>
+<span class="badge is-tag is-green">green</span>
+<span class="badge is-tag is-teal">teal</span>
+<span class="badge is-tag is-muted">muted</span>
+<p>Filled styles</p>
+<span class="badge is-tag is-filled is-red">red</span>
+<span class="badge is-tag is-filled is-yellow">yellow</span>
+<span class="badge is-tag is-filled is-green">green</span>
+<span class="badge is-tag is-filled is-teal">teal</span>
+<span class="badge is-tag is-filled is-muted">muted</span></div></div>
+<h2>Awards</h2>
+<p>Awards are badges that are given to users for doing good things. Often they are awarded automatically. Awards are created with the CSS classes `.badge.is-award</code>.</p></p>
+<p>It's also possible and recommended to add an icon in front of the award label.</p>
+<p>There are three types of awards: bronze, silver and gold. They can be created with the additional classes <code>.is-bronze&lt;/code&gt;,</code>.is-silver</code> and `.is-gold</code>, respectively.</p>
+<h5 id="example-awards">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;span class=&quot;badge is-award is-bronze&quot;&gt;&lt;span class=&quot;badge--icon&quot;&gt;&amp;#x2764;&lt;/span&gt;First Upvote&lt;/span&gt;
+&lt;span class=&quot;badge is-award is-silver&quot;&gt;&lt;span class=&quot;badge--icon&quot;&gt;&amp;#x2764;&lt;/span&gt;Second Upvote&lt;/span&gt;
+&lt;span class=&quot;badge is-award is-gold&quot;&gt;&lt;span class=&quot;badge--icon&quot;&gt;&amp;#x2764;&lt;/span&gt;Third Upvote&lt;/span&gt;</code></pre><div class="d-example-preview undefined"><span class="badge is-award is-bronze"><span class="badge--icon">&#x2764;</span>First Upvote</span>
+<span class="badge is-award is-silver"><span class="badge--icon">&#x2764;</span>Second Upvote</span>
+<span class="badge is-award is-gold"><span class="badge--icon">&#x2764;</span>Third Upvote</span></div></div>
+<h2>User roles</h2>
+<p>It's also possible to use badges to show someone's user role (for example: moderator status). These badges are created with the CSS classes <code>.badge.is-user-role&lt;/code&gt;. They can also be muted with the class</code>.is-muted</code>.</p>
+<h5 id="example-user-roles">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;span class=&quot;badge is-user-role&quot;&gt;mod&lt;/span&gt;
+&lt;span class=&quot;badge is-user-role is-muted&quot;&gt;mod&lt;/span&gt;</code></pre><div class="d-example-preview undefined"><span class="badge is-user-role">mod</span>
+<span class="badge is-user-role is-muted">mod</span></div></div>
+<h2>User trust levels</h2>
+<p>It's also possible to use badges to show someone's user &quot;trust level&quot;, which is a number expressing a user's trust and privilege. These badges are created with the CSS classes <code>.badge.is-user-trust-level&lt;/code&gt;. They can also be muted with the class</code>.is-muted</code>.</p>
+<h5 id="example-user-tl">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;span class=&quot;badge is-user-trust-level&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;badge is-user-trust-level&quot;&gt;1382&lt;/span&gt;
+&lt;span class=&quot;badge is-user-trust-level is-muted&quot;&gt;42&lt;/span&gt;</code></pre><div class="d-example-preview undefined"><span class="badge is-user-trust-level">1</span>
+<span class="badge is-user-trust-level">1382</span>
+<span class="badge is-user-trust-level is-muted">42</span></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

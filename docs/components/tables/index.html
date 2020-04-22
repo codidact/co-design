@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tables - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body docs-is-active">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Tables</h1>
+                <p class="is-lead">Tables allow you to display structured data in a meaningful way. Do not use tables to arrange elements in a certain way. Use <a href="utilities.layout.html#grid">the grid system</a> instead.</p>
+                
+                
+                
+                <h2>Basic structure</h2>
+<p>To apply Co-Design's table formatting, you just need to add the <code>.table</code> class to a HTML table. This will automatically add some padding and borders.</p>
+<h5 id="example-basic">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;table class=&quot;table&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;Question&lt;/th&gt;
+        &lt;th&gt;Answer count&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How can I contribute to Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;Why should I choose Co-Design over Bootstrap?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How to style a table in Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;What&#039;s the difference between a table and a button?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;48&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre><div class="d-example-preview undefined"><table class="table">
+    <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Answer count</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><a href="#">How can I contribute to Co-Design?</a></td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><a href="#">Why should I choose Co-Design over Bootstrap?</a></td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">How to style a table in Co-Design?</a></td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">What's the difference between a table and a button?</a></td>
+        <td>48</td>
+    </tr>
+</table></div></div>
+<h2>Full width table</h2>
+<p>By default, tables grow with its content, except that they can't overflow their parent container. However it is possible to fix tables to 100% width, by giving them the <code>.is-full-width</code> class.</p>
+<h5 id="example-full-width">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;table class=&quot;table is-full-width&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;Question&lt;/th&gt;
+        &lt;th&gt;Answer count&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How can I contribute to Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;Why should I choose Co-Design over Bootstrap?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How to style a table in Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;What&#039;s the difference between a table and a button?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;48&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre><div class="d-example-preview undefined"><table class="table is-full-width">
+    <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Answer count</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><a href="#">How can I contribute to Co-Design?</a></td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><a href="#">Why should I choose Co-Design over Bootstrap?</a></td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">How to style a table in Co-Design?</a></td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">What's the difference between a table and a button?</a></td>
+        <td>48</td>
+    </tr>
+</table></div></div>
+<h2>Striped table</h2>
+<p>It is also possible to make the table striped, i.e. highlighting every even row. This is helpful for scanning large tables, because it is now harder to &quot;switch the row&quot; by accident. To do so, you just need to give the column the class <code>.is-striped</code>.</p>
+<h5 id="example-striped">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;table class=&quot;table is-striped&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;Question&lt;/th&gt;
+        &lt;th&gt;Answer count&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How can I contribute to Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;Why should I choose Co-Design over Bootstrap?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How to style a table in Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;What&#039;s the difference between a table and a button?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;48&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre><div class="d-example-preview undefined"><table class="table is-striped">
+    <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Answer count</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><a href="#">How can I contribute to Co-Design?</a></td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><a href="#">Why should I choose Co-Design over Bootstrap?</a></td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">How to style a table in Co-Design?</a></td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">What's the difference between a table and a button?</a></td>
+        <td>48</td>
+    </tr>
+</table></div></div>
+<h2>Hoverable table</h2>
+<p>Furthermore it is possible to highlight hovered columns, i.e. highlighting every even row. This is also helpful for scanning large tables, because it is now harder to &quot;switch the row&quot; by accident. To do so, you just need to give the column the class <code>.is-with-hover</code>.</p>
+<h5 id="example-hoverable">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;table class=&quot;table is-with-hover&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;Question&lt;/th&gt;
+        &lt;th&gt;Answer count&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How can I contribute to Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;Why should I choose Co-Design over Bootstrap?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How to style a table in Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;What&#039;s the difference between a table and a button?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;48&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre><div class="d-example-preview undefined"><table class="table is-with-hover">
+    <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Answer count</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><a href="#">How can I contribute to Co-Design?</a></td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><a href="#">Why should I choose Co-Design over Bootstrap?</a></td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">How to style a table in Co-Design?</a></td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">What's the difference between a table and a button?</a></td>
+        <td>48</td>
+    </tr>
+</table></div></div>
+<h2>Hoverable and striped table</h2>
+<p>It's of course also possible to combine stripes and hover effects.</p>
+<h5 id="example-hoverable-striped">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;table class=&quot;table is-with-hover is-striped&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;Question&lt;/th&gt;
+        &lt;th&gt;Answer count&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How can I contribute to Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;Why should I choose Co-Design over Bootstrap?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How to style a table in Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;What&#039;s the difference between a table and a button?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;48&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre><div class="d-example-preview undefined"><table class="table is-with-hover is-striped">
+    <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Answer count</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><a href="#">How can I contribute to Co-Design?</a></td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><a href="#">Why should I choose Co-Design over Bootstrap?</a></td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">How to style a table in Co-Design?</a></td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">What's the difference between a table and a button?</a></td>
+        <td>48</td>
+    </tr>
+</table></div></div>
+<h2>Compact table</h2>
+<p>Sometimes it's better to have a compact table. These tables have reduced whitespace.</p>
+<p>Of course, compact layout can also be combined with the three other modifiers.</p>
+<h5 id="example-compact">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;table class=&quot;table is-compact&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;Question&lt;/th&gt;
+        &lt;th&gt;Answer count&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How can I contribute to Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;Why should I choose Co-Design over Bootstrap?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;94&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;How to style a table in Co-Design?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;&lt;a href=&quot;#&quot;&gt;What&#039;s the difference between a table and a button?&lt;/a&gt;&lt;/td&gt;
+        &lt;td&gt;48&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre><div class="d-example-preview undefined"><table class="table is-compact">
+    <tr>
+        <th>#</th>
+        <th>Question</th>
+        <th>Answer count</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><a href="#">How can I contribute to Co-Design?</a></td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><a href="#">Why should I choose Co-Design over Bootstrap?</a></td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">How to style a table in Co-Design?</a></td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><a href="#">What's the difference between a table and a button?</a></td>
+        <td>48</td>
+    </tr>
+</table></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

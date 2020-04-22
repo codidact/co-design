@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Footer - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-4-lg docs-nav">
+
+            <div class="has-padding-4">
+
+                <nav>
+    
+    <div class="widget">
+        
+            <div class="widget--header">
+                Getting Started
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/setup/installation/">Installing Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/improving/">Improving Co-Design</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/setup/releasing/">Releasing Co-Design</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/utilities/">Utilities</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/utilities/basic-html/">Basic HTML</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/typography/">Typography</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/layout/">Layout</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/box/">Box Styles</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/utilities/colors/">Colors</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/components/">Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/components/tables/">Tables</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/links/">Links</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/buttons/">Buttons</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/inputs/">Inputs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/badges/">Badges</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/notices/">Notices</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/header/">Header</a>
+        </div>
+        
+        <div class="widget--body docs-is-active">
+            <a href="/components/footer/">Footer</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/tabs/">Tabs</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/widgets/">Widgets</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/modals/">Modals</a>
+        </div>
+        
+        <div class="widget--body ">
+            <a href="/components/item-lists/">Item Lists</a>
+        </div>
+        
+    </div>
+    
+    <div class="widget">
+        
+            <div class="widget--header ">
+                <a href="/specific/">Codidact-specific Components</a>
+            </div>
+        
+        
+        <div class="widget--body ">
+            <a href="/specific/category-header/">Category Header</a>
+        </div>
+        
+    </div>
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-8-lg">
+            <div class="has-padding-8">
+                <h1>Footer</h1>
+                <p class="is-lead">The footer is shown below every page and contains important links and legal information.</p>
+                
+                
+                
+                <h2>Basic</h2>
+<p>The footer component is very flexible. You can do both simple and complex footers with Co-Design. Every footer is within a <code>.footer</code> element. This should be a <code>&lt;footer&gt;</code> for semantic reasons.</p>
+<p>The footer element must contain a <code>.footer--container</code> element, which contains all the content.</p>
+<p>You should consider applying layout container (max width and centered) formatting to the container by giving it the class <code>.container</code></p>
+<h5 id="example-basic">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;footer class=&quot;footer&quot;&gt;
+    &lt;div class=&quot;footer--container container&quot;&gt;
+        &lt;p&gt;&amp;copy; 2020 Your fancy page&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre><div class="d-example-preview undefined"><footer class="footer">
+    <div class="footer--container container">
+        <p>&copy; 2020 Your fancy page</p>
+    </div>
+</footer></div></div>
+<p>Or take a look at this more complex example, which can be made by adding a grid within the footer:</p>
+<h5 id="example-complex">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;footer class=&quot;footer&quot;&gt;
+    &lt;div class=&quot;footer--container container&quot;&gt;
+        &lt;div class=&quot;grid&quot;&gt;
+            &lt;div class=&quot;grid--cell is-6 is-12-md is-12-sm&quot;&gt;
+                &lt;h3&gt;Gibberish Community&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home page&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Main questions&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Main tags&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Meta questions&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Users&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;grid--cell is-6 is-12-md is-12-sm&quot;&gt;
+                &lt;h3&gt;The Codidact Project&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact us&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Legal&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;See us on GitHub&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;See us on Discord&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p&gt;All content copyrighted under the Creative Commons BY SA 4.0 license. Software and design framework are &lt;a href=&quot;#&quot;&gt;available&lt;/a&gt; under open-source licenses.&lt;/p&gt;
+        &lt;p&gt;Version 42.0.0&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre><div class="d-example-preview undefined"><footer class="footer">
+    <div class="footer--container container">
+        <div class="grid">
+            <div class="grid--cell is-6 is-12-md is-12-sm">
+                <h3>Gibberish Community</h3>
+                <ul>
+                    <li><a href="#">Home page</a></li>
+                    <li><a href="#">Main questions</a></li>
+                    <li><a href="#">Main tags</a></li>
+                    <li><a href="#">Meta questions</a></li>
+                    <li><a href="#">Users</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+            <div class="grid--cell is-6 is-12-md is-12-sm">
+                <h3>The Codidact Project</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">See us on GitHub</a></li>
+                    <li><a href="#">See us on Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>All content copyrighted under the Creative Commons BY SA 4.0 license. Software and design framework are <a href="#">available</a> under open-source licenses.</p>
+        <p>Version 42.0.0</p>
+    </div>
+</footer></div></div>
+<h2>Inverted style</h2>
+<p>It's also possible to invert the style of a footer, giving it a background instead of a border. This may be a better choice for some designs. To do so, give the footer the class <code>.is-inverted</code>.</p>
+<h5 id="example-inverted">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;footer class=&quot;footer is-inverted&quot;&gt;
+    &lt;div class=&quot;footer--container container&quot;&gt;
+        &lt;p&gt;&amp;copy; 2020 Your fancy page&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre><div class="d-example-preview undefined"><footer class="footer is-inverted">
+    <div class="footer--container container">
+        <p>&copy; 2020 Your fancy page</p>
+    </div>
+</footer></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

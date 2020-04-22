@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+{% include head.html %}
+
+<body class="home">
+    <div class="grid">
+        <div class="grid--cell is-8-lg is-12 has-background-color-primary-500 has-color-white">
+
+            <div class="has-padding-24 home-left">
+                <h1>Co-Design</h1>
+                <p class="is-lead">Welcome to the official homepage of the Co-Design framework, the CSS framework for <a href="#!">Codidact</a>.</p>
+                <div class="button-list has-margin-vertical-6">
+                    <a href="/setup/installation" class="button is-primary is-outlined is-extremely-large">Get Started</a>
+                </div>
+                <div class="spacer"></div>
+                <div class="vinfo">
+                    <div class="entry">version: {{ release.version }}</div>
+                    <div class="entry">hosted: <a href="https://github.com/Codidact/Co-Design">on Github</a></div>
+                    <div class="entry">open-source: <a href="https://choosealicense.com/licenses/mit/">MIT license</a></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="grid--cell is-4-lg is-12">
+            <div class="has-padding-8 has-ta-center home-right">
+                <h2>Documentation</h2>
+                {% for section in navigation.sections %}
+                <div class="widget">
+                    <div class="widget--header">
+                        {% if section.url %}
+                            <a href="{{ section.url }}">{{ section.title }}</a>
+                        {% else %}
+                            {{ section.title }}
+                        {% endif %}
+                    </div>
+                    {% for link in section.links %}
+                    <div class="widget--body">
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% include scripts.html %}
+</body>
+</html>
