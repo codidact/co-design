@@ -428,6 +428,32 @@ $tabs-item-margin: 0.5 !default;
 $tabs-classic-border-width: 3px;
 $tabs-classic-border-color: darken($primary-color, 20%) !default;
 
+/* Menu */
+$menu-padding: 0 !default;
+$menu-font-weight: 500 !default;
+$menu-font-size: 0.9rem !default;
+
+$menu-color: #666666 !default;
+$menu-hover-color: darken($primary-color, 35%) !default;
+$menu-hover-background-color: lighten($primary-color, 30%) !default;
+$menu-active-color: #ffffff !default;
+$menu-active-background-color: darken($primary-color, 20%) !default;
+
+$menu-heading-font-size: 1rem !default;
+$menu-heading-font-weight: 600 !default;
+$menu-heading-color: #333333 !default;
+$menu-heading-padding-y: 1.5 !default;
+$menu-heading-padding-x: 2.5 !default;
+$menu-heading-margin-y: 1.5 !default;
+$menu-heading-margin-x: 0.5 !default;
+$menu-heading-border-radius: 0.25em !default;
+
+$menu-item-padding-y: 2.5 !default;
+$menu-item-padding-x: 2.5 !default;
+$menu-item-margin-y: 0.5 !default;
+$menu-item-margin-x: 0.5 !default;
+$menu-item-border-radius: 0.25em !default;
+
 /* Widgets */
 $widget-shadow: 0 3px 5px -2px #eeeeee !default;
 $widget-margin-y: 2 !default;
