@@ -109,3 +109,7 @@ html {
 .d-example .modal {
     position: static !important;
 }
+
+.container {
+    max-width: 80rem;
+}
