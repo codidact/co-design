@@ -61,6 +61,76 @@ By default, all header menu items, except for the mobile bars menu, disappear at
 </header>
 {% endexample %}
 
+## Themed
+
+You can also add a background color:
+
+{% example "bg-light" %}
+<header class="header h-bg-yellow-050">
+    <div class="container header--container">
+    <div class="header--brand">
+        <a class="header--instance-name" href="#">Codidact</a>
+        <a class="header--site-name" href="#">Gibberish</a>
+    </div>
+    <div class="header--menu">
+        <a class="header--item" href="#">question</a>
+        <a class="header--item is-active" href="#">tags</a>
+        <a class="header--item" href="#">users</a>
+        <div class="header--separator"></div>
+        <a class="header--item" href="#"><span class="header--alert">1</span>mod</a>
+        <a class="header--item" href="#">help</a>
+        <a class="header--item" href="#">discussions</a>
+        <a class="header--item is-mobile-menu is-complex" href="#!">
+        <span class="header--menu-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        </a>
+        <a class="header--item is-visible-on-mobile is-complex" href="#">
+            <img src="https://placekitten.com/100/100" class="header--item-image" alt="..." />
+            <span class="header--alert">1</span>
+            <span class="header--trust-level">5</span>
+        </a>
+    </div>
+    </div>
+</header>
+{% endexample %}
+
+If you want a darker background, you will also need to add `.is-dark` to the header
+
+{% example "bg-dark" %}
+<header class="header is-dark h-bg-green-700">
+    <div class="container header--container">
+    <div class="header--brand">
+        <a class="header--instance-name" href="#">Codidact</a>
+        <a class="header--site-name" href="#">Gibberish</a>
+    </div>
+    <div class="header--menu">
+        <a class="header--item" href="#">question</a>
+        <a class="header--item is-active" href="#">tags</a>
+        <a class="header--item" href="#">users</a>
+        <div class="header--separator"></div>
+        <a class="header--item" href="#"><span class="header--alert">1</span>mod</a>
+        <a class="header--item" href="#">help</a>
+        <a class="header--item" href="#">discussions</a>
+        <a class="header--item is-mobile-menu is-complex" href="#!">
+        <span class="header--menu-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        </a>
+        <a class="header--item is-visible-on-mobile is-complex" href="#">
+            <img src="https://placekitten.com/100/100" class="header--item-image" alt="..." />
+            <span class="header--alert">1</span>
+            <span class="header--trust-level">5</span>
+        </a>
+    </div>
+    </div>
+</header>
+{% endexample %}
+
 ## Header slides
 
 Header slides are a supplementary component to headers. They allow for drop down and mobile menus.
