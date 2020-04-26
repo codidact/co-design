@@ -131,6 +131,34 @@ If you want a darker background, you will also need to add `.is-dark` to the hea
 </header>
 {% endexample %}
 
+## Small header
+
+If your header has only a brand site name and some simple menu items, you can have a small header by adding `.is-small`. This can be combined with other modifiers
+
+{% example "small" %}
+<header class="header is-small h-bg-tertiary-800 is-dark">
+    <div class="container header--container">
+    <div class="header--brand">
+        <a class="header--site-name" href="#">Gibberish</a>
+    </div>
+    <div class="header--menu">
+        <a class="header--item" href="#">question</a>
+        <a class="header--item is-active" href="#">tags</a>
+        <a class="header--item" href="#">users</a>
+        <div class="header--separator"></div>
+        <a class="header--item" href="#">help</a>
+        <a class="header--item is-mobile-menu is-complex" href="#!">
+        <span class="header--menu-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        </a>
+    </div>
+    </div>
+</header>
+{% endexample %}
+
 ## Header slides
 
 Header slides are a supplementary component to headers. They allow for drop down and mobile menus.
