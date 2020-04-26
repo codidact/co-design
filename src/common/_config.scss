@@ -98,6 +98,14 @@ $quote-border-width: 2px !default;
 $quote-border-color: lighten($quote-color, 35%) !default;
 $quote-border-radius: 12px !default;
 
+$delta-padding-y: 0.25;
+$delta-padding-x: 0.75;
+$delta-margin-y: 0;
+$delta-margin-x: 0.5;
+$delta-border-radius: 3px;
+$delta-ins-background-color: lighten(map-get($secondary-colors, "green"), 35%);
+$delta-del-background-color: lighten(map-get($secondary-colors, "red"), 25%);
+
 /* Tables */
 $table-border-color: #cccccc !default;
 $table-padding-y: 1.5 !default;

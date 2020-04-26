@@ -47,3 +47,11 @@ It is often recommended to wrap code blocks in both a `<code>` and then in a `<p
     <p>This is a quote</p>
 </blockquote>
 {% endexample %}
+
+## Insertion and deletion
+
+Co-Design supports standard styles for `<ins>` and `<del>`, which should be used to mark that something has been changed (for example in a revision history).
+
+{% example "ins-del" %}
+<p>Co-Design is <del>nice</del><ins>awesome</ins>.</p>
+{% endexample %}

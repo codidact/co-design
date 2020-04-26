@@ -183,6 +183,20 @@ blockquote {
   }
 }
 
+ins, del {
+  padding: $delta-padding-y*$padding-unit $delta-padding-x*$padding-unit;
+  margin: $delta-margin-y*$margin-unit $delta-margin-x*$margin-unit;
+  border-radius: $delta-border-radius;
+}
+ins {
+  background-color: $delta-ins-background-color;
+  text-decoration: underline;
+}
+del {
+  background-color: $delta-del-background-color;
+  text-decoration: line-through;
+}
+
 
 table.table {
   border-collapse: collapse;
