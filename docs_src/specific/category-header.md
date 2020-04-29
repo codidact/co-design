@@ -17,9 +17,9 @@ A category header consists of the following elements:
             - Up to one navigation separator, which pushes everything behind it to the right side (`.category-header--nav-separator`
             - navigation buttons (`.category-header--nav-item.is-button`
 
-A category header **must** have exactly one color code added to it. You can choose from `.is-turqoise`, `.is-green`, `.is-blue`, `.is-purple`, `.is-gray`, `.is-yello`, `.is-orange`, `.is-pink` and `.is-red`. This is often user-selectable and depends on the chosen category.
+A category header **must** have exactly one color code added to it. You can choose from `.is-turquoise`, `.is-green`, `.is-blue`, `.is-purple`, `.is-gray`, `.is-yellow`, `.is-orange`, `.is-pink` and `.is-red`. This is often user-selectable and depends on the chosen category.
 
-By default the category namefrom the current category navigation hides on mobile, to save place as it can be seen on the tabination too.
+By default the name of the current category navigation hides on mobile, to save place as it can be seen on the tabination too.
 
 {% example %}
 <header class="category-header is-orange">
