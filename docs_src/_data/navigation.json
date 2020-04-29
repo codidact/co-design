@@ -105,6 +105,10 @@
                 {
                     "title": "Category Header",
                     "url": "/specific/category-header/"
+                },
+                {
+                    "title": "Diff",
+                    "url": "/specific/diff/"
                 }
             ]
         }

@@ -1,0 +1,42 @@
+.diff {
+    .diff-section {
+        display: flex;
+
+        .diff-old,
+        .diff-new,
+        .diff-inline {
+            padding: $diff-padding*$padding-unit;
+            margin: $diff-margin*$margin-unit;
+            border-radius: $diff-element-border-radius;
+            width: 0;
+            flex-grow: 1;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .diff-old.is-changed {
+            background-color: $diff-removed-background-color;
+        }
+
+        .diff-new.is-changed {
+            background-color: $diff-added-background-color;
+        }
+
+        .diff-inline.is-changed {
+            background-color: $diff-changed-background-color;
+        }
+    }
+
+    .diff-load-more-button {
+        display: block;
+        width: 100%;
+        margin: 0;
+        border-radius: $diff-element-border-radius;
+    }
+}

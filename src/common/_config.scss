@@ -103,8 +103,8 @@ $delta-padding-x: 0.75;
 $delta-margin-y: 0;
 $delta-margin-x: 0.5;
 $delta-border-radius: 3px;
-$delta-ins-background-color: lighten(map-get($secondary-colors, "green"), 35%);
-$delta-del-background-color: lighten(map-get($secondary-colors, "red"), 25%);
+$delta-ins-background-color: lighten(map-get($secondary-colors, "green"), 30%);
+$delta-del-background-color: lighten(map-get($secondary-colors, "red"), 20%);
 
 /* Tables */
 $table-border-color: #cccccc !default;

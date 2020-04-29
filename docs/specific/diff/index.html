@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Diff - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header h-bg-tertiary-800 is-dark is-small h-m-b-0">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-3-lg docs-nav h-bw-r-1 h-bs-r-solid h-bc-tertiary-100">
+
+            <div class="has-padding-4">
+
+                <nav class="menu">
+    
+        
+            <div class="menu--heading">
+                Getting Started
+            </div>
+        
+        
+        <a href="/setup/installation/" class="menu--item ">
+            Installing Co-Design
+        </a>
+        
+        <a href="/setup/improving/" class="menu--item ">
+            Improving Co-Design
+        </a>
+        
+        <a href="/setup/releasing/" class="menu--item ">
+            Releasing Co-Design
+        </a>
+        
+    
+        
+            <a href="/utilities/" class="menu--heading ">
+                Utilities
+            </a>
+        
+        
+        <a href="/utilities/basic-html/" class="menu--item ">
+            Basic HTML
+        </a>
+        
+        <a href="/utilities/typography/" class="menu--item ">
+            Typography
+        </a>
+        
+        <a href="/utilities/layout/" class="menu--item ">
+            Layout
+        </a>
+        
+        <a href="/utilities/box/" class="menu--item ">
+            Box Styles
+        </a>
+        
+        <a href="/utilities/colors/" class="menu--item ">
+            Colors
+        </a>
+        
+    
+        
+            <a href="/components/" class="menu--heading ">
+                Components
+            </a>
+        
+        
+        <a href="/components/tables/" class="menu--item ">
+            Tables
+        </a>
+        
+        <a href="/components/links/" class="menu--item ">
+            Links
+        </a>
+        
+        <a href="/components/buttons/" class="menu--item ">
+            Buttons
+        </a>
+        
+        <a href="/components/inputs/" class="menu--item ">
+            Inputs
+        </a>
+        
+        <a href="/components/badges/" class="menu--item ">
+            Badges
+        </a>
+        
+        <a href="/components/notices/" class="menu--item ">
+            Notices
+        </a>
+        
+        <a href="/components/header/" class="menu--item ">
+            Header
+        </a>
+        
+        <a href="/components/footer/" class="menu--item ">
+            Footer
+        </a>
+        
+        <a href="/components/nav/" class="menu--item ">
+            Navigation
+        </a>
+        
+        <a href="/components/widgets/" class="menu--item ">
+            Widgets
+        </a>
+        
+        <a href="/components/modals/" class="menu--item ">
+            Modals
+        </a>
+        
+        <a href="/components/item-lists/" class="menu--item ">
+            Item Lists
+        </a>
+        
+    
+        
+            <a href="/specific/" class="menu--heading ">
+                Codidact-specific Components
+            </a>
+        
+        
+        <a href="/specific/category-header/" class="menu--item ">
+            Category Header
+        </a>
+        
+        <a href="/specific/diff/" class="menu--item is-active">
+            Diff
+        </a>
+        
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-9-lg docs-page is-flexible">
+            <div class="has-padding-8">
+                <h1>Diff</h1>
+                <p class="is-lead">The diff component should be used to indicate, that some text has been changed.</p>
+                
+                
+                
+                <p>There are two views, a diff component might have: split view and inline view. If your application supports more than one view, use gutterless button lists to switch between them.</p>
+<h2>Split view</h2>
+<p>To create a split view diff, you need to have a <code>.diff</code> container, which contains <code>.diff-section</code>s. These group close changes, so that for example one paragraph would be one. This diff section contains exactly two children: one <code>.diff-old</code> and one <code>.diff-new</code>. These may or may not have changes (for example, an addition would only change <code>.diff-new</code>). If they have changes, then they get the class <code>.is-changed</code>. The changes can be denoted inline using <code>&lt;del&gt;</code> and <code>&lt;ins&gt;</code>.</p>
+<p>Often, sections without any changes are not included by default. If you want to have them, you need to add a <code>.diff-load-more-button</code> button, preferably a muted default one.</p>
+<h5 id="example-split">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;diff&quot;&gt;
+    &lt;div class=&quot;diff-section&quot;&gt;
+        &lt;div class=&quot;diff-old is-changed&quot;&gt;
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est &lt;del&gt;Lorem ipsum dolor sit amet&lt;/del&gt;.
+        &lt;/div&gt;
+        &lt;div class=&quot;diff-new is-changed&quot;&gt;
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est &lt;ins&gt;optimus res&lt;/ins&gt;.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;diff-load-more-button button is-muted&quot;&gt;Load more&lt;/button&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="diff">
+    <div class="diff-section">
+        <div class="diff-old is-changed">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est <del>Lorem ipsum dolor sit amet</del>.
+        </div>
+        <div class="diff-new is-changed">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est <ins>optimus res</ins>.
+        </div>
+    </div>
+    <button class="diff-load-more-button button is-muted">Load more</button>
+</div></div></div>
+<h2>Inline view</h2>
+<p>To create an inline view diff, you need to have a <code>.diff</code> container, which contains <code>.diff-section</code>s. These group close changes, so that for example one paragraph would be one. This diff section contains exactly one child: a <code>.diff-inline</code>. This one may or may not have changes. If it has changes, then it gets the class <code>.is-changed</code>. The changes should be denoted inline using <code>&lt;del&gt;</code> and <code>&lt;ins&gt;</code>.</p>
+<p>Often, sections without any changes are not included by default. If you want to have them, you need to add a <code>.diff-load-more-button</code> button, preferably a muted default one.</p>
+<h5 id="example-inline">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;diff&quot;&gt;
+    &lt;div class=&quot;diff-section&quot;&gt;
+        &lt;div class=&quot;diff-inline is-changed&quot;&gt;
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est &lt;del&gt;Lorem ipsum dolor sit amet&lt;/del&gt;&lt;ins&gt;optimus res&lt;/ins&gt;.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;diff-load-more-button button is-muted&quot;&gt;Load more&lt;/button&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="diff">
+    <div class="diff-section">
+        <div class="diff-inline is-changed">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est <del>Lorem ipsum dolor sit amet</del><ins>optimus res</ins>.
+        </div>
+    </div>
+    <button class="diff-load-more-button button is-muted">Load more</button>
+</div></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>
