@@ -20,12 +20,15 @@ Co-Design has support for all six headings from `<h1>` to `<h6>`.
 
 ## Paragraphs
 
-HTML paragraphs (`<p>`) come with default margins and line heights. There are two variants: normal and lead paragraphs. Lead paragraphs are the ones following headings that summarize a page's contents. They have the class `p.is-lead`.</p>
+HTML paragraphs (`<p>`) come with default margins and line heights. There are two variants: normal and lead paragraphs. Lead paragraphs are the ones following headings that summarize a page's contents. They generally have the class `p.is-lead`, but (for user generated content), you can also give the parent of the `<p>` the class `.is-lead`.</p>
 
 {% example "paragraphs" %}
 <p class="is-lead">This is a lead paragraph.</p>
 <p>This is a normal paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="is-lead">
+    <p>User generated content.</p>
+</div>
 {% endexample %}
 
 

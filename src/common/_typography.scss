@@ -42,11 +42,11 @@ h6 {
 p {
   line-height: 1.5;
   margin: $margin-p;
-
-  &.is-lead {
-    font-size: $p-lead-font-size;
-    color: $p-lead-color;
-  }
+}
+p.is-lead,
+.is-lead p {
+  font-size: $p-lead-font-size;
+  color: $p-lead-color;
 }
 
 ul li, ol li {
