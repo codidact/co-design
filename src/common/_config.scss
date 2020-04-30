@@ -504,3 +504,29 @@ $widget-header-button-font-size: 0.8em !default;
 $widget-body-padding: 3 !default;
 
 $widget-footer-padding: 3 !default;
+
+/* Pagination */
+$pagination-margin-y: 1 !default;
+$pagination-margin-x: 0 !default;
+
+$pagination-item-margin-y: 0 !default;
+$pagination-item-margin-x: 0.5 !default;
+$pagination-item-border-width: 1px !default;
+$pagination-item-border-color: lighten($tertiary-color, 30%) !default;
+$pagination-item-background-color: white !default;
+$pagination-item-font-weight: 400 !default;
+$pagination-item-border-radius: 3px !default;
+$pagination-item-box-shadow: 2px 3px 2px -1px lighten($tertiary-color, 30%) !default;
+
+$pagination-item-padding-y: 0.75 !default;
+$pagination-item-padding-x: 2.5 !default;
+
+$pagination-item-hover-background-color: lighten($tertiary-color, 40%) !default;
+
+$pagination-item-active-box-shadow: 2px 3px 2px -2px darken($tertiary-color, 30%) !default;
+$pagination-item-active-background-color: darken($tertiary-color, 25%) !default;
+$pagination-item-active-border-color: darken($tertiary-color, 35%) !default;
+$pagination-item-active-color: white !default;
+$pagination-item-active-font-weight: 600 !default;
+
+$pagination-item-hover-box-shadow: none !default;

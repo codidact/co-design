@@ -81,6 +81,10 @@
                     "url": "/components/footer/"
                 },
                 {
+                    "title": "Pagination",
+                    "url": "/components/pagination/"
+                },
+                {
                     "title": "Navigation",
                     "url": "/components/nav/"
                 },
