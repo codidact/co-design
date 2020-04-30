@@ -54,22 +54,23 @@ $grid-medium-to-large-breakpoint: 768px !default;
 /* Color */
 $color-gradient-stops: (
   "050": 30%,
-  "100": 25%,
-  "200": 15%,
+  "100": 22.5%,
+  "200": 12.5%,
   "300": 5%,
   "400": 0%,
-  "500": -5%,
-  "600": -15%,
-  "700": -25%,
-  "800": -35%
+  "500": -7.5%,
+  "600": -12.5%,
+  "700": -17.5%,
+  "800": -25%,
+  "900": -32.5%
 ) !default;
 
 $primary-color: #4B68FF !default;
 $secondary-colors: (
-  "red": #FF4343,
-  "teal": #4DB6AC,
-  "yellow": #FDD835,
-  "green": #2ECC71
+  "red": #eb5959,
+  "teal": #58a09a,
+  "yellow": #e4ce30,
+  "green": #2ed12c
 ) !default;
 $tertiary-color: #78909C !default;
 

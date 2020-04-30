@@ -30,6 +30,7 @@ You can also append these classes with `-X`, where X is any of these numbers, to
     <div class="widget--body has-background-color-primary-600 has-color-white">600</div>
     <div class="widget--body has-background-color-primary-700 has-color-white">700</div>
     <div class="widget--body has-background-color-primary-800 has-color-white">800</div>
+    <div class="widget--body has-background-color-primary-900 has-color-white">900</div>
 </div>
 
 ## Secondary colors
@@ -50,6 +51,7 @@ Secondary colors represent a "mood" of your site. Something worked, failed, need
     <div class="widget--body has-background-color-red-600 has-color-white">600</div>
     <div class="widget--body has-background-color-red-700 has-color-white">700</div>
     <div class="widget--body has-background-color-red-800 has-color-white">800</div>
+    <div class="widget--body has-background-color-red-900 has-color-white">900</div>
 </div>
 
 <div class="widget">
@@ -66,6 +68,7 @@ Secondary colors represent a "mood" of your site. Something worked, failed, need
     <div class="widget--body has-background-color-green-600 has-color-white">600</div>
     <div class="widget--body has-background-color-green-700 has-color-white">700</div>
     <div class="widget--body has-background-color-green-800 has-color-white">800</div>
+    <div class="widget--body has-background-color-green-900 has-color-white">900</div>
 </div>
 
 <div class="widget">
@@ -82,6 +85,7 @@ Secondary colors represent a "mood" of your site. Something worked, failed, need
     <div class="widget--body has-background-color-yellow-600 has-color-white">600</div>
     <div class="widget--body has-background-color-yellow-700 has-color-white">700</div>
     <div class="widget--body has-background-color-yellow-800 has-color-white">800</div>
+    <div class="widget--body has-background-color-yellow-900 has-color-white">900</div>
 </div>
 
 <div class="widget">
@@ -98,6 +102,7 @@ Secondary colors represent a "mood" of your site. Something worked, failed, need
     <div class="widget--body has-background-color-teal-600 has-color-white">600</div>
     <div class="widget--body has-background-color-teal-700 has-color-white">700</div>
     <div class="widget--body has-background-color-teal-800 has-color-white">800</div>
+    <div class="widget--body has-background-color-teal-900 has-color-white">900</div>
 </div>
 
 
@@ -134,5 +139,6 @@ You can access the tertiary colors with these classes:
     <div class="widget--body has-background-color-tertiary-600 has-color-white">600</div>
     <div class="widget--body has-background-color-tertiary-700 has-color-white">700</div>
     <div class="widget--body has-background-color-tertiary-800 has-color-white">800</div>
+    <div class="widget--body has-background-color-tertiary-900 has-color-white">900</div>
 </div>
 </main>

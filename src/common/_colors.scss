@@ -1,4 +1,4 @@
-@each $name, $value in map-merge($secondary-colors, (primary: $primary-color, tertiary: $tertiary-color)) {
+@each $name, $value in map-merge($secondary-colors, (primary: $primary-color, tertiary: lighten($tertiary-color, 10%))) {
   .has-color-#{$name},
   .h-c-#{$name} { color: $value; }
   .has-background-color-#{$name},
