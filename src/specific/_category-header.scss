@@ -63,12 +63,12 @@
                 border-radius: $ch-nav-item-border-radius;
 
                 &:hover {
-                    background-color: lighten($color, $ch-nav-item-lighter-hover);
+                    background-color: darken($color, $ch-nav-item-darken-hover);
                     text-decoration: none;
                 }
     
                 &.is-active {
-                    background-color: lighten($color, $ch-nav-item-lighter-active);
+                    background-color: darken($color, $ch-nav-item-darken-active);
                     text-decoration: none;
                 }
 

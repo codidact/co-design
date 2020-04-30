@@ -17,12 +17,12 @@ A category header consists of the following elements:
             - Up to one navigation separator, which pushes everything behind it to the right side (`.category-header--nav-separator`
             - navigation buttons (`.category-header--nav-item.is-button`
 
-A category header **must** have exactly one color code added to it. You can choose from `.is-turquoise`, `.is-green`, `.is-blue`, `.is-purple`, `.is-gray`, `.is-yellow`, `.is-orange`, `.is-pink` and `.is-red`. This is often user-selectable and depends on the chosen category.
+A category header **must** have exactly one color code added to it. You can choose from `.is-turquoise`, `.is-green`, `.is-blue`, `.is-darkblue`, `.is-purple`, `.is-bluegray`, `.is-gray`, `.is-yellow`, `.is-orange`, `.is-pink` and `.is-red`. This is often user-selectable and depends on the chosen category.
 
 By default the name of the current category navigation hides on mobile, to save place as it can be seen on the tabination too.
 
 {% example %}
-<header class="category-header is-orange">
+<header class="category-header is-turquoise">
     <div class="category-header--tabs">
         <div class="container category-header--tabs-container">
             <a href="#" class="category-header--tab is-active">Q&amp;A</a>
@@ -42,3 +42,22 @@ By default the name of the current category navigation hides on mobile, to save 
     </div>
 </header>
 {% endexample %}
+
+<div class="widget">
+    <div class="widget--body">
+        <label for="docs-color-change" class="form-element">Change color to:</label>
+        <select class="js-docs-change-color form-element" id="docs-color-change">
+            <option>turquoise</option>
+            <option>green</option>
+            <option>blue</option>
+            <option>darkblue</option>
+            <option>purple</option>
+            <option>gray</option>
+            <option>bluegray</option>
+            <option>yellow</option>
+            <option>orange</option>
+            <option>pink</option>
+            <option>red</option>
+        </select>
+    </div>
+</div>

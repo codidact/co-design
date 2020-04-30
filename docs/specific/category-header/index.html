@@ -189,9 +189,9 @@
 </ul>
 </li>
 </ul>
-<p>A category header <strong>must</strong> have exactly one color code added to it. You can choose from <code>.is-turquoise</code>, <code>.is-green</code>, <code>.is-blue</code>, <code>.is-purple</code>, <code>.is-gray</code>, <code>.is-yellow</code>, <code>.is-orange</code>, <code>.is-pink</code> and <code>.is-red</code>. This is often user-selectable and depends on the chosen category.</p>
+<p>A category header <strong>must</strong> have exactly one color code added to it. You can choose from <code>.is-turquoise</code>, <code>.is-green</code>, <code>.is-blue</code>, <code>.is-darkblue</code>, <code>.is-purple</code>, <code>.is-bluegray</code>, <code>.is-gray</code>, <code>.is-yellow</code>, <code>.is-orange</code>, <code>.is-pink</code> and <code>.is-red</code>. This is often user-selectable and depends on the chosen category.</p>
 <p>By default the name of the current category navigation hides on mobile, to save place as it can be seen on the tabination too.</p>
-<h5 id="example-undefined">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;header class=&quot;category-header is-orange&quot;&gt;
+<h5 id="example-undefined">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;header class=&quot;category-header is-turquoise&quot;&gt;
     &lt;div class=&quot;category-header--tabs&quot;&gt;
         &lt;div class=&quot;container category-header--tabs-container&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;category-header--tab is-active&quot;&gt;Q&amp;amp;A&lt;/a&gt;
@@ -209,7 +209,7 @@
         &lt;a href=&quot;#&quot; class=&quot;category-header--nav-item is-button&quot;&gt;Ask Question&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/header&gt;</code></pre><div class="d-example-preview undefined"><header class="category-header is-orange">
+&lt;/header&gt;</code></pre><div class="d-example-preview undefined"><header class="category-header is-turquoise">
     <div class="category-header--tabs">
         <div class="container category-header--tabs-container">
             <a href="#" class="category-header--tab is-active">Q&amp;A</a>
@@ -228,6 +228,24 @@
         </div>
     </div>
 </header></div></div>
+<div class="widget">
+    <div class="widget--body">
+        <label for="docs-color-change" class="form-element">Change color to:</label>
+        <select class="js-docs-change-color form-element" id="docs-color-change">
+            <option>turquoise</option>
+            <option>green</option>
+            <option>blue</option>
+            <option>darkblue</option>
+            <option>purple</option>
+            <option>gray</option>
+            <option>bluegray</option>
+            <option>yellow</option>
+            <option>orange</option>
+            <option>pink</option>
+            <option>red</option>
+        </select>
+    </div>
+</div>
             </div>
         </div>
     </div>

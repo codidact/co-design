@@ -1,14 +1,16 @@
 @import "../common/_config.scss";
 
 $application-colors: (
-  "turquoise": #1abc9c,
-  "green": #2ecc71,
+  "turquoise": darken(#61c4a6, 15%),
+  "green": #5b995a,
   "blue": #3498db,
-  "purple": #9b59b6,
-  "gray": lighten(#34495e, 25%),
-  "yellow": darken(#f1c40f, 15%),
-  "orange": #e67e22,
-  "pink": #e74c3c,
+  "darkblue": #4366de,
+  "purple": darken(#b86ad9, 15%),
+  "bluegray": lighten(#34495e, 25%),
+  "gray": darken(#7f8c8d, 10%),
+  "yellow": darken(#eed04b, 25%),
+  "orange": darken(#e67e22, 10%),
+  "pink": darken(#f293cd, 30%),
   "red": #c0392b
 ) !default;
 
@@ -21,7 +23,7 @@ $ch-tab-color: #000;
 $ch-tab-font-size: 1rem;
 $ch-tab-font-weight: 500;
 
-$ch-container-lighter: 10%;
+$ch-container-lighter: 0%;
 $ch-container-color: white;
 $ch-container-padding-y: 1.5;
 $ch-container-padding-x: 2;
@@ -36,18 +38,18 @@ $ch-nav-item-padding-y: 1;
 $ch-nav-item-padding-x: 2;
 $ch-nav-item-margin-y: 0;
 $ch-nav-item-margin-x: 1.5;
-$ch-nav-item-lighter-hover: 5%;
-$ch-nav-item-lighter-active: 0;
+$ch-nav-item-darken-hover: 5%;
+$ch-nav-item-darken-active: 10%;
 $ch-nav-item-font-size: 1rem;
 $ch-nav-item-font-weight: 500;
 $ch-nav-item-border-radius: 3px;
 
 
-$ch-nav-button-darken: 5%;
+$ch-nav-button-darken: 10%;
 $ch-nav-button-padding-y: 1.5;
 $ch-nav-button-padding-x: 2.5;
-$ch-nav-button-darken-hover: 10%;
-$ch-nav-button-darken-active: 20%;
+$ch-nav-button-darken-hover: 20%;
+$ch-nav-button-darken-active: 30%;
 
 $ch-mobile-breakpoint: 850px;
 
