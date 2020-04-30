@@ -15,49 +15,49 @@ $application-colors: (
 ) !default;
 
 /* Category header */
-$ch-tabs-lighter: 30%;
-$ch-tabs-lighter-hover: 20%;
-$ch-tab-padding-y: 1.5;
-$ch-tab-padding-x: 4;
-$ch-tab-color: #000;
-$ch-tab-font-size: 1rem;
-$ch-tab-font-weight: 500;
+$ch-tabs-lighter: 30% !default;
+$ch-tabs-lighter-hover: 20% !default;
+$ch-tab-padding-y: 1.5 !default;
+$ch-tab-padding-x: 4 !default;
+$ch-tab-color: #000 !default;
+$ch-tab-font-size: 1rem !default;
+$ch-tab-font-weight: 500 !default;
 
-$ch-container-lighter: 0%;
-$ch-container-color: white;
-$ch-container-padding-y: 1.5;
-$ch-container-padding-x: 2;
+$ch-container-lighter: 0% !default;
+$ch-container-color: white !default;
+$ch-container-padding-y: 1.5 !default;
+$ch-container-padding-x: 2 !default;
 
-$ch-category-name-font-size: 1.75rem;
-$ch-category-name-font-weight: 700;
+$ch-category-name-font-size: 1.75rem !default;
+$ch-category-name-font-weight: 700 !default;
 
-$ch-nav-padding-y: 1;
-$ch-nav-padding-x: 2;
+$ch-nav-padding-y: 1 !default;
+$ch-nav-padding-x: 2 !default;
 
-$ch-nav-item-padding-y: 1;
-$ch-nav-item-padding-x: 2;
-$ch-nav-item-margin-y: 0;
-$ch-nav-item-margin-x: 1.5;
-$ch-nav-item-darken-hover: 5%;
-$ch-nav-item-darken-active: 10%;
-$ch-nav-item-font-size: 1rem;
-$ch-nav-item-font-weight: 500;
-$ch-nav-item-border-radius: 3px;
+$ch-nav-item-padding-y: 1 !default;
+$ch-nav-item-padding-x: 2 !default;
+$ch-nav-item-margin-y: 0 !default;
+$ch-nav-item-margin-x: 1.5 !default;
+$ch-nav-item-darken-hover: 5% !default;
+$ch-nav-item-darken-active: 10% !default;
+$ch-nav-item-font-size: 1rem !default;
+$ch-nav-item-font-weight: 500 !default;
+$ch-nav-item-border-radius: 3px !default;
 
 
-$ch-nav-button-darken: 10%;
-$ch-nav-button-padding-y: 1.5;
-$ch-nav-button-padding-x: 2.5;
-$ch-nav-button-darken-hover: 20%;
-$ch-nav-button-darken-active: 30%;
+$ch-nav-button-darken: 10% !default;
+$ch-nav-button-padding-y: 1.5 !default;
+$ch-nav-button-padding-x: 2.5 !default;
+$ch-nav-button-darken-hover: 20% !default;
+$ch-nav-button-darken-active: 30% !default;
 
-$ch-mobile-breakpoint: 850px;
+$ch-mobile-breakpoint: 850px !default;
 
 /* Diff */
-$diff-padding: 4;
-$diff-margin: 0.5;
-$diff-element-border-radius: 3px;
+$diff-padding: 4 !default;
+$diff-margin: 0.5 !default;
+$diff-element-border-radius: 3px !default;
 
-$diff-added-background-color: lighten(map-get($secondary-colors, "green"), 45%);
-$diff-removed-background-color: lighten(map-get($secondary-colors, "red"), 30%);
-$diff-changed-background-color: lighten($tertiary-color, 42.5%);
+$diff-added-background-color: lighten(map-get($secondary-colors, "green"), 45%) !default;
+$diff-removed-background-color: lighten(map-get($secondary-colors, "red"), 30%) !default;
+$diff-changed-background-color: lighten($tertiary-color, 42.5%) !default;

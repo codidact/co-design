@@ -99,13 +99,13 @@ $quote-border-width: 2px !default;
 $quote-border-color: lighten($quote-color, 35%) !default;
 $quote-border-radius: 12px !default;
 
-$delta-padding-y: 0.25;
-$delta-padding-x: 0.75;
-$delta-margin-y: 0;
-$delta-margin-x: 0.5;
-$delta-border-radius: 3px;
-$delta-ins-background-color: lighten(map-get($secondary-colors, "green"), 30%);
-$delta-del-background-color: lighten(map-get($secondary-colors, "red"), 20%);
+$delta-padding-y: 0.25 !default;
+$delta-padding-x: 0.75 !default;
+$delta-margin-y: 0 !default;
+$delta-margin-x: 0.5 !default;
+$delta-border-radius: 3px !default;
+$delta-ins-background-color: lighten(map-get($secondary-colors, "green"), 30%) !default;
+$delta-del-background-color: lighten(map-get($secondary-colors, "red"), 20%) !default;
 
 /* Tables */
 $table-border-color: #cccccc !default;
@@ -184,7 +184,7 @@ $button-border-style: solid !default;
 $button-margin: 0.5 !default;
 
 // (font-size, padding-y)
-// paddinx-y = 2*padding-y
+// padding-x = 2*padding-y
 $button-sizes: (
   small: (fs: 0.8em, py: 1),
   medium: (fs: 1.0em, py: 1.75),
@@ -217,10 +217,10 @@ $label-color: #444444 !default;
 $label-font-size: 1.0em !default;
 $label-font-weight: 500 !default;
 
-$form-caption-font-size: map-get($font-size-gradient, "caption");
-$form-caption-color: darken($tertiary-color, 5%);
-$form-caption-margin-top: -1;
-$form-caption-margin-bottom: 2;
+$form-caption-font-size: map-get($font-size-gradient, "caption") !default;
+$form-caption-color: darken($tertiary-color, 5%) !default;
+$form-caption-margin-top: -1 !default;
+$form-caption-margin-bottom: 2 !default;
 
 $input-margin-y: 1 !default;
 $input-margin-x: 0 !default;
