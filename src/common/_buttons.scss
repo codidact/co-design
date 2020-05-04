@@ -173,6 +173,11 @@
       background-color: $close-button-active-background-color;
     }
   }
+
+  &[disabled] {
+    filter: grayscale(1.0) opacity(0.7);
+    cursor: not-allowed;
+  }
 }
 
 .modal--header-button,
