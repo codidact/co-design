@@ -6,6 +6,10 @@
         .category-header--tabs-container {
             display: flex;
             width: 100%;
+
+            @media screen and (max-width: $grid-medium-to-large-breakpoint) {
+                overflow-x: scroll;
+            }
         }
 
         .category-header--tab {
