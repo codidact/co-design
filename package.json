@@ -19,7 +19,7 @@
     "build_sass": "sass src:dist --style=compressed",
     "copy_sass": "cp -r assets docs/ && cp -r dist docs/",
     "copy_js": "cp -r js docs/",
-    "build": "npm run -s build_sass && npm run -s copy_sass"
+    "build": "npm run -s build_sass && npm run -s copy_sass && npm run -s copy_js"
   },
   "dependencies": {
     "sass": "^1.26.3"
