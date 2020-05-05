@@ -206,6 +206,28 @@ Toggle Example&lt;/button&gt;
     data-toggle-value="h-fw-bold">
 Toggle Example</button></p>
 <p id="example-toggle-class-target">This paragraph can be toggled.</p></div></div>
+<h3>Dismiss</h3>
+<p>Co-Design JS supports dismissing target elements. To create a dismisser, you need to give the trigger this attribute:</p>
+<ul>
+<li><code>data-dismiss</code> with a CSS selector selecting the target</li>
+</ul>
+<h5 id="example-dismiss">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p&gt;Click the close button to remove the notice:&lt;/p&gt;
+<p>&lt;div class=&quot;notice is-danger&quot; id=&quot;example-dismiss-target&quot;&gt;
+&lt;button data-dismiss=&quot;#example-dismiss-target&quot; class=&quot;button is-close-button&quot;&gt;&amp;times;&lt;/button&gt;
+Something important happened!
+&lt;/div&gt;</p>
+<p>&lt;div class=&quot;notice is-success&quot; id=&quot;example-dismiss-soft-target&quot;&gt;
+&lt;button data-dismiss=&quot;#example-dismiss-soft-target&quot; data-dismiss-soft class=&quot;button is-close-button&quot;&gt;&amp;times;&lt;/button&gt;
+Something important happened! (soft dismiss)
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><p>Click the close button to remove the notice:</p></p>
+<div class="notice is-danger" id="example-dismiss-target">
+    <button data-dismiss="#example-dismiss-target" class="button is-close-button">&times;</button>
+    Something important happened!
+</div>
+<div class="notice is-success" id="example-dismiss-soft-target">
+    <button data-dismiss="#example-dismiss-soft-target" data-dismiss-soft class="button is-close-button">&times;</button>
+    Something important happened! (soft dismiss)
+</div></div></div>
             </div>
         </div>
     </div>
