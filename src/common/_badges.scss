@@ -1,4 +1,5 @@
-.badge.is-tag {
+.badge.is-tag,
+.badge-tag {
   display: inline-block;
   font-size: $badge-tag-font-size;
   padding: $badge-tag-padding-y*$padding-unit $badge-tag-padding-x*$padding-unit;
@@ -27,7 +28,8 @@
   }
 }
 
-a.badge.is-tag:hover {
+a.badge.is-tag:hover,
+a.badge-tag:hover {
   text-decoration: none !important;
   background-color: darken($badge-tag-background-color, 5%);
 
@@ -50,7 +52,8 @@ a.badge.is-tag:hover {
   }
 }
 
-.badge.is-award {
+.badge.is-award,
+.badge-award {
   display: inline-block;
   padding: $badge-award-padding-y*$padding-unit $badge-award-padding-x*$padding-unit;
   font-weight: $badge-award-font-weight;
@@ -82,7 +85,8 @@ a.badge.is-tag:hover {
 }
 
 
-.badge.is-user-role {
+.badge.is-user-role,
+.badge-user-role {
   display: inline-block;
   font-size: $badge-role-font-size;
   padding: $badge-role-padding-y*$padding-unit $badge-role-padding-x*$padding-unit;
@@ -97,7 +101,8 @@ a.badge.is-tag:hover {
   }
 }
 
-.badge.is-user-trust-level {
+.badge.is-user-trust-level,
+.badge-user-trust-level {
   display: inline-block;
   font-size: $badge-tl-font-size;
   min-width: $badge-tl-min-width;

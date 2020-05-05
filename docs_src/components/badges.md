@@ -4,13 +4,13 @@ title: Badges
 description: Badges are a collection of small, graphic and distinct elements that have in common, that they label something or express properties of something.
 ---
 
-All badges have the CSS class `.badge</code>, and at least one other class in the form `.is-X</code>, where X describes the type of the badge.
+All badges have the CSS class `.badge`, and at least one other class in the form `.is-X`, where X describes the type of the badge. You can contract these two classes to the short form `.badge-X` **when neccessary for operator precedence issues**.
 
 ## Tags
 
-Tags are badges that allow classification of content. Often, tags are entered by your users. Tags are created with the CSS classes `.badge.is-tag</code>.
+Tags are badges that allow classification of content. Often, tags are entered by your users. Tags are created with the CSS classes `.badge.is-tag`.
 
-There are two types of tags: normal tags and filled tags. Filled tags can be used for example for a group of tags, where on of them is required. Or filled tags could be categories. Filled tags have additionally the class `.is-filled</code> (deprecated, but also valid: `.is-master-tag</code>).
+There are two types of tags: normal tags and filled tags. Filled tags can be used for example for a group of tags, where on of them is required. Or filled tags could be categories. Filled tags have additionally the class `.is-filled` (deprecated, but also valid: `.is-master-tag`).
 
 {% example "tags" %}
 <span class="badge is-tag">codidact</span>
@@ -18,7 +18,7 @@ There are two types of tags: normal tags and filled tags. Filled tags can be use
 <a href="#" class="badge is-tag is-filled">co-design</a>
 {% endexample %}
 
-It's also possible to color tags, by giving them one of these classes `.is-red</code>, `.is-yellow</code>, `.is-green</code>, `.is-teal</code> or `.is-muted</code>. This can be combined with filled tags.
+It's also possible to color tags, by giving them one of these classes `.is-red`, `.is-yellow`, `.is-green`, `.is-teal` or `.is-muted`. This can be combined with filled tags.
 
 {% example "tags-colored" %}
 <p>Default styles</p>
@@ -38,11 +38,11 @@ It's also possible to color tags, by giving them one of these classes `.is-red</
 
 ## Awards
 
-Awards are badges that are given to users for doing good things. Often they are awarded automatically. Awards are created with the CSS classes `.badge.is-award</code>.</p>
+Awards are badges that are given to users for doing good things. Often they are awarded automatically. Awards are created with the CSS classes `.badge.is-award`.</p>
 
 It's also possible and recommended to add an icon in front of the award label.
 
-There are three types of awards: bronze, silver and gold. They can be created with the additional classes `.is-bronze</code>, `.is-silver</code> and `.is-gold</code>, respectively.
+There are three types of awards: bronze, silver and gold. They can be created with the additional classes `.is-bronze`, `.is-silver` and `.is-gold`, respectively.
 
 {% example "awards" %}
 <span class="badge is-award is-bronze"><span class="badge--icon">&#x2764;</span>First Upvote</span>
@@ -53,7 +53,7 @@ There are three types of awards: bronze, silver and gold. They can be created wi
 
 ## User roles
 
-It's also possible to use badges to show someone's user role (for example: moderator status). These badges are created with the CSS classes `.badge.is-user-role</code>. They can also be muted with the class `.is-muted</code>.
+It's also possible to use badges to show someone's user role (for example: moderator status). These badges are created with the CSS classes `.badge.is-user-role`. They can also be muted with the class `.is-muted`.
 
 {% example "user-roles" %}
 <span class="badge is-user-role">mod</span>
@@ -63,7 +63,7 @@ It's also possible to use badges to show someone's user role (for example: moder
 
 ## User trust levels
 
-It's also possible to use badges to show someone's user "trust level", which is a number expressing a user's trust and privilege. These badges are created with the CSS classes `.badge.is-user-trust-level</code>. They can also be muted with the class `.is-muted</code>.
+It's also possible to use badges to show someone's user "trust level", which is a number expressing a user's trust and privilege. These badges are created with the CSS classes `.badge.is-user-trust-level`. They can also be muted with the class `.is-muted`.
 
 {% example "user-tl" %}
 <span class="badge is-user-trust-level">1</span>
