@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Components - Co-Design</title>
+    <title>Java Script - Co-Design</title>
 
     <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
     <link rel="stylesheet" type="text/css" href="/assets/docs.css">
@@ -80,13 +80,13 @@
             Colors
         </a>
         
-        <a href="/utilities/javascript/" class="menu--item ">
+        <a href="/utilities/javascript/" class="menu--item is-active">
             Java Script
         </a>
         
     
         
-            <a href="/components/" class="menu--heading is-active">
+            <a href="/components/" class="menu--heading ">
                 Components
             </a>
         
@@ -166,15 +166,46 @@
         </div>
         <div class="grid--cell is-12 is-9-lg docs-page is-flexible">
             <div class="has-padding-8">
-                <h1>Components</h1>
-                <p class="is-lead"></p>
+                <h1>Java Script</h1>
+                <p class="is-lead">Co-Design comes with a standard Java Script library, which should allow you to do many things without writing a single line of Java Script yourself.</p>
                 
                 
                 
-                <p>Besides &quot;atomic classes&quot;, Co-Design comes with a rich and powerful set of standard components that create a consistent, beautiful look-and-feel.</p>
-<p>You can, however, override these components with the utilities provided to you by Co-Design.</p>
-<p>Click on any of the entries in the menu, in order to see the component and an explanation of it.</p>
-
+                <h2>Components</h2>
+<p>Co-Design will provide Java Script controllers to every module, which is in need of one. See the respective component page for details:</p>
+<p><em>None yet</em></p>
+<h2>Utilities</h2>
+<p>Furthermore, Co-Design Java Script provides some commonly used utilities:</p>
+<h3>Toggle</h3>
+<p>Co-Design JS supports toggling various aspects of target elements. To create a toggle, you need to give the trigger these three attributes:</p>
+<ul>
+<li><code>data-toggle</code> with a CSS selector selecting the target</li>
+<li><code>data-toggle-property</code> with a name of the property to be toggled (defaults to: display)</li>
+<li><code>data-toggle-value</code> with a name of the value of the property to be toggled. (defaults to: <code>\auto</code>)</li>
+</ul>
+<p>There are these properties:</p>
+<ul>
+<li><strong>display</strong> - toggles, whether the element is visible or not</li>
+<li><strong>class</strong> - toggles, whether the element has one or many class (defined by value, separated by space) or not.</li>
+</ul>
+<h5 id="example-toggle-display">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-filled&quot;
+    data-toggle=&quot;#example-toggle-display-target&quot;&gt;
+Toggle Example&lt;/button&gt;
+<p>&lt;p id=&quot;example-toggle-display-target&quot;&gt;This paragraph can be toggled.&lt;/p&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-filled"
+    data-toggle="#example-toggle-display-target">
+Toggle Example</button></p>
+<p id="example-toggle-display-target">This paragraph can be toggled.</p></div></div>
+<h5 id="example-toggle-class">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-filled&quot;
+    data-toggle=&quot;#example-toggle-class-target&quot;
+    data-toggle-property=&quot;class&quot;
+    data-toggle-value=&quot;h-fw-bold&quot;&gt;
+Toggle Example&lt;/button&gt;
+<p>&lt;p id=&quot;example-toggle-class-target&quot;&gt;This paragraph can be toggled.&lt;/p&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-filled"
+    data-toggle="#example-toggle-class-target"
+    data-toggle-property="class"
+    data-toggle-value="h-fw-bold">
+Toggle Example</button></p>
+<p id="example-toggle-class-target">This paragraph can be toggled.</p></div></div>
             </div>
         </div>
     </div>
