@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "outDir": "./js/",
+        "outFile": "./js/co-design.c.js",
+        "rootDir": "./js_src/",
+        "target": "ES5",
+    }
+}
