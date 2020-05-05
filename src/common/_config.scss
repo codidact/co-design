@@ -394,10 +394,10 @@ $item-list-separator-width: 1px !default;
 $item-list-separator-color: lighten($tertiary-color, 30%) !default;
 $item-list-highlight: lighten($primary-color, 32.5%) !default;
 
-$item-list-number-padding: 0.5 !default;
+$item-list-number-padding: 5.0 !default;
 $item-list-number-margin: 0.5 !default;
 $item-list-number-width: 100px !default;
-$item-list-number-font-size: 25px !default;
+$item-list-number-font-size: 15px !default;
 $item-list-number-font-color: #222222 !default;
 $item-list-number-small-font-size: 18px !default;
 $item-list-number-small-margin-y: 0 !default;
@@ -415,7 +415,7 @@ $item-list-image-height: 40px !default;
 $item-list-image-width: 40px !default;
 $item-list-image-border-radius: 50% !default;
 
-$item-list-value-height: 60px !default;
+$item-list-value-height: 100px !default;
 
 $item-list-primary-small-margin-y: 0 !default;
 $item-list-primary-small-margin-x: 2 !default;

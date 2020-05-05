@@ -21,53 +21,69 @@ It is also possible to highlight items, for example if they match a query, by gi
 {% example %}
 <div class="item-list">
     <div class="item-list--item">
+        <div class="item-list--text-value is-primary">
+            <a href="#"><p class="has-font-size-subheading">What is Codidact?</p></a>
+            <div class="has-padding-1 has-margin-bottom-2">
+                <a href="#" class="badge is-tag is-master-tag has-border-radius-10">meta</a>
+                <a href="#" class="has-border-radius-10 badge is-tag">support</a>
+                <a href="#" class="badge is-tag has-border-radius-10">codidact</a>
+            </div>
+            <div class="has-margin-bottom-2 has-padding-1">
+                <button class="button has-border-radius-10 is-small">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </button>
+                <span class="has-opacity-4 has-font-size-small">Last modified 20 hours ago: </span>
+                <a href="#"><span class="has-font-size-small">John Doe</span></a>
+            </div>
+        </div>
         <div class="item-list--number-value">
+            <div class="item-list--number">50</div>
+            <div class="item-list--number-label">Votes</div>
+            <button class="button is-icon-only-button has-shadow-0"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+        </div>
+        <div class="item-list--number-value has-border-style-solid has-border-color-green has-border-radius-9 has-border-width-1 has-background-color-green-050 has-shadow-7">
             <div class="item-list--number">23</div>
-            <div class="item-list--number-label">answers</div>
+            <div class="item-list--number-label">Answers</div>
+            <button class="button is-icon-only-button has-shadow-0"><i class="fa fa-comment-o" aria-hidden="true"></i></button>
         </div>
         <div class="item-list--number-value">
             <div class="item-list--number">120</div>
-            <div class="item-list--number-label">votes</div>
-        </div>
-        <div class="item-list--text-value is-primary">
-            <div class="margin-bottom-2"><a href="#" class="has-font-size-larger">What is Codidact?</a></div>
-            <div class="has-padding-1">
-                <a href="#" class="badge is-tag is-master-tag">meta</a>
-                <a href="#" class="badge is-tag">support</a>
-                <a href="#" class="badge is-tag">codidact</a>
-            </div>
-        </div>
-        <div class="item-list--image-value">
-            <a href="#!"><img src="https://placekitten.com/100/100" alt="placeholder image"></a>
-        </div>
-        <div class="item-list--number-value">
-            <div class="item-list--number-label">last active</div>
-            <div class="item-list--number">1d</div>
+            <div class="item-list--number-label">Views</div>
+            <button class="button is-icon-only-button has-shadow-0"><i class="fa fa-eye"></i></button>
         </div>
     </div>
-    <div class="item-list--item is-highlighted">
-        <div class="item-list--number-value">
-            <div class="item-list--number">23</div>
-            <div class="item-list--number-label">answers</div>
-        </div>
-        <div class="item-list--number-value">
-            <div class="item-list--number">120</div>
-            <div class="item-list--number-label">votes</div>
-        </div>
-        <div class="item-list--text-value is-primary">
-            <div class="margin-bottom-2"><a href="#" class="has-font-size-larger">Welcome to Codidact</a></div>
-            <div class="has-padding-1">
-                <a href="#" class="badge is-tag is-master-tag">meta</a>
-                <a href="#" class="badge is-tag">announcement</a>
-                <a href="#" class="badge is-tag">codidact</a>
+    <div class="item-list">
+        <div class="item-list--item">
+            <div class="item-list--text-value is-primary">
+                <a href="#"><p class="has-font-size-subheading">Welcome to Codidact</p></a>
+                <div class="has-padding-1 has-margin-bottom-2">
+                    <a href="#" class="badge is-tag is-master-tag has-border-radius-10">meta</a>
+                    <a href="#" class="has-border-radius-10 badge is-tag">support</a>
+                    <a href="#" class="badge is-tag has-border-radius-10">codidact</a>
+                </div>
+                <div class="has-margin-bottom-2 has-padding-1">
+                    <button class="button has-border-radius-10 is-small">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </button>
+                    <span class="has-opacity-4 has-font-size-small">Last modified 20 hours ago: </span>
+                    <a href="#"><span class="has-font-size-small">John Doe</span></a>
+                </div>
             </div>
-        </div>
-        <div class="item-list--image-value">
-            <a href="#"><img src="https://placekitten.com/101/101" alt="placeholder image"></a>
-        </div>
-        <div class="item-list--number-value">
-            <div class="item-list--number-label">last active</div>
-            <div class="item-list--number">Dec '18</div>
+            <div class="item-list--number-value">
+                <div class="item-list--number">50</div>
+                <div class="item-list--number-label">Votes</div>
+                <button class="button is-icon-only-button has-shadow-0"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+            </div>
+            <div class="item-list--number-value">
+                <div class="item-list--number">23</div>
+                <div class="item-list--number-label">Answers</div>
+                <button class="button is-icon-only-button has-shadow-0"><i class="fa fa-comment-o" aria-hidden="true"></i></button>
+            </div>
+            <div class="item-list--number-value">
+                <div class="item-list--number">120</div>
+                <div class="item-list--number-label">Views</div>
+                <button class="button is-icon-only-button has-shadow-0"><i class="fa fa-eye"></i></button>
+            </div>
         </div>
     </div>
 </div>

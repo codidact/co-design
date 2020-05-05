@@ -154,6 +154,20 @@ You can set the border radius to any integer value between 0 (no border radius) 
 {% endexample %}
 
 
+## Opacity
+
+You can set the opacity to any div between the integer value 10 (opacity: 1) to 0 (opactiy: 0) with the help of the class `has-opacity-x`. The number x is divided by 10.
+
+{% example "opacity" %}
+<div class="grid">
+    <div class="has-padding-4 has-opacity-0">opacity: 0</div>
+    <div class="has-padding-4 has-opacity-1">opacity: 1</div>
+    <div class="has-padding-4 has-opacity-4">opacity: 4</div>
+    <div class="has-padding-4 has-opacity-7">opacity: 7</div>
+    <div class="has-padding-4 has-opacity-10">opacity: 10</div>
+</div>
+{% endexample %}
+
 ## Box shadow
 
 Box shadows can be given to elements. You have to give them the class `.has-shadow-X` for this, where X is a value between 1 and 10. You can use `.has-shadow-0` to reset and remove the shadow.
