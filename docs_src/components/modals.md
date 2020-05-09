@@ -2,7 +2,7 @@
 layout: page
 title: Modals
 description: Modals are popup views that interrupt the normal user flow to maximize their attention.
-js: true
+jshelp: true
 ---
 
 ## Basic structure

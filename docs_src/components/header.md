@@ -2,7 +2,7 @@
 layout: page
 title: Header
 description: The header is the primary navigation of your page.
-js: true
+jshelp: true
 ---
 
 ## Basic structure

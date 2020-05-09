@@ -24,10 +24,9 @@
                 {% if deprecated %}
                     <div class="notice">This component is <strong>deprecated</strong> and will be removed in a future release. Do not use it for new views and remove it from old.</div>
                 {% endif %}
-                {% if js %}
-                    <div class="notice">
-                        <h3>Only CSS!</h3>
-                        <p>Co-Design is a CSS-only framework and therefore doesn't come with the JavaScript neccessary to control this component. You'll need to write JavaScript on your own or use an existing library, in order to be able to effectively use it.</p>
+                {% if jshelp %}
+                    <div class="notice is-warning h-fw-bold">
+                        <p><i class="fa fa-magic"></i> This component could benefit from some <a href="/utilities/javascript">Java Script</a>. You can open a <a href="https://github.com/codidact/co-design/pulls">pull request</a> for it.</p>
                     </div>
                 {% endif %}
                 {{ content |safe }}
