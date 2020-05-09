@@ -20,13 +20,14 @@
     "copy_sass": "cp -r assets docs/ && cp -r dist docs/",
     "copy_js": "cp -r js docs/",
     "build": "npm run -s build_sass && npm run -s copy_sass && npm run -s copy_js",
-    "js_build": "tsc && npm run -s build"
+    "js_build": "tsc-bundle tsconfig.json && npm run -s build"
   },
   "dependencies": {
     "sass": "^1.26.3"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "typescript-bundle": "^1.0.16"
   }
 }
