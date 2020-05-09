@@ -31,14 +31,18 @@
                 var _this = this;
                 this.element = element;
                 this.refersToElement = document.querySelector(element.getAttribute("data-toggle"));
-                if (element.hasAttribute("data-toggle-property"))
+                if (element.hasAttribute("data-toggle-property")) {
                     this.refersToProperty = element.getAttribute("data-toggle-property");
-                else
+                }
+                else {
                     this.refersToProperty = "display";
-                if (element.hasAttribute("data-toggle-value"))
+                }
+                if (element.hasAttribute("data-toggle-value")) {
                     this.refersToValue = element.getAttribute("data-toggle-value");
-                else
+                }
+                else {
                     this.refersToValue = "\\auto";
+                }
                 this.defaultValue = this.getCurrentValue();
                 element.addEventListener("click", function () { _this.toggleValue(); });
             }
