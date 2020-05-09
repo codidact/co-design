@@ -47,9 +47,10 @@ Toggle Example</button>
 
 ### Dismiss
 
-Co-Design JS supports dismissing target elements. To create a dismisser, you need to give the trigger this attribute:
+Co-Design JS supports dismissing target elements. To create a dismisser, you need to give the trigger these attributes:
 
 - `data-dismiss` with a CSS selector selecting the target
+- (optionally) `data-dismiss-soft` for a more soft dismissal (first decrease opacity)
 
 {% example "dismiss" %}
 <p>Click the close button to remove the notice:</p>

@@ -207,9 +207,10 @@ Toggle Example&lt;/button&gt;
 Toggle Example</button></p>
 <p id="example-toggle-class-target">This paragraph can be toggled.</p></div></div>
 <h3>Dismiss</h3>
-<p>Co-Design JS supports dismissing target elements. To create a dismisser, you need to give the trigger this attribute:</p>
+<p>Co-Design JS supports dismissing target elements. To create a dismisser, you need to give the trigger these attributes:</p>
 <ul>
 <li><code>data-dismiss</code> with a CSS selector selecting the target</li>
+<li>(optionally) <code>data-dismiss-soft</code> for a more soft dismissal (first decrease opacity)</li>
 </ul>
 <h5 id="example-dismiss">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p&gt;Click the close button to remove the notice:&lt;/p&gt;
 <p>&lt;div class=&quot;notice is-danger&quot; id=&quot;example-dismiss-target&quot;&gt;
