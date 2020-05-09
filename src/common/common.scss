@@ -26,11 +26,11 @@
 @import "_footer.scss";
 @import "_pagination.scss";
 
-/* Then include atomic design definitions */
-@import "_box.scss";
-@import "_colors.scss";
-
 /* Then include basic design elements */
 @import "_fontface.scss";
 @import "_typography.scss";
 @import "_layout.scss";
+
+/* Then include atomic design definitions */
+@import "_box.scss";
+@import "_colors.scss";

@@ -165,16 +165,16 @@
                 
                 
                 
-                <p>All badges have the CSS class <code>.badge&lt;/code&gt;, and at least one other class in the form</code>.is-X</code>, where X describes the type of the badge.</p>
+                <p>All badges have the CSS class <code>.badge</code>, and at least one other class in the form <code>.is-X</code>, where X describes the type of the badge. You can contract these two classes to the short form <code>.badge-X</code> <strong>when neccessary for operator precedence issues</strong>.</p>
 <h2>Tags</h2>
-<p>Tags are badges that allow classification of content. Often, tags are entered by your users. Tags are created with the CSS classes `.badge.is-tag</code>.</p>
-<p>There are two types of tags: normal tags and filled tags. Filled tags can be used for example for a group of tags, where on of them is required. Or filled tags could be categories. Filled tags have additionally the class <code>.is-filled&lt;/code&gt; (deprecated, but also valid:</code>.is-master-tag</code>).</p>
+<p>Tags are badges that allow classification of content. Often, tags are entered by your users. Tags are created with the CSS classes <code>.badge.is-tag</code>.</p>
+<p>There are two types of tags: normal tags and filled tags. Filled tags can be used for example for a group of tags, where on of them is required. Or filled tags could be categories. Filled tags have additionally the class <code>.is-filled</code> (deprecated, but also valid: <code>.is-master-tag</code>).</p>
 <h5 id="example-tags">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;span class=&quot;badge is-tag&quot;&gt;codidact&lt;/span&gt;
 &lt;a href=&quot;#&quot; class=&quot;badge is-tag&quot;&gt;design&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;badge is-tag is-filled&quot;&gt;co-design&lt;/a&gt;</code></pre><div class="d-example-preview undefined"><span class="badge is-tag">codidact</span>
 <a href="#" class="badge is-tag">design</a>
 <a href="#" class="badge is-tag is-filled">co-design</a></div></div>
-<p>It's also possible to color tags, by giving them one of these classes <code>.is-red&lt;/code&gt;,</code>.is-yellow</code>, <code>.is-green&lt;/code&gt;,</code>.is-teal</code> or `.is-muted</code>. This can be combined with filled tags.</p>
+<p>It's also possible to color tags, by giving them one of these classes <code>.is-red</code>, <code>.is-yellow</code>, <code>.is-green</code>, <code>.is-teal</code> or <code>.is-muted</code>. This can be combined with filled tags.</p>
 <h5 id="example-tags-colored">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p&gt;Default styles&lt;/p&gt;
 &lt;span class=&quot;badge is-tag is-red&quot;&gt;red&lt;/span&gt;
 &lt;span class=&quot;badge is-tag is-yellow&quot;&gt;yellow&lt;/span&gt;
@@ -199,21 +199,21 @@
 <span class="badge is-tag is-filled is-teal">teal</span>
 <span class="badge is-tag is-filled is-muted">muted</span></div></div>
 <h2>Awards</h2>
-<p>Awards are badges that are given to users for doing good things. Often they are awarded automatically. Awards are created with the CSS classes `.badge.is-award</code>.</p></p>
+<p>Awards are badges that are given to users for doing good things. Often they are awarded automatically. Awards are created with the CSS classes <code>.badge.is-award</code>.</p></p>
 <p>It's also possible and recommended to add an icon in front of the award label.</p>
-<p>There are three types of awards: bronze, silver and gold. They can be created with the additional classes <code>.is-bronze&lt;/code&gt;,</code>.is-silver</code> and `.is-gold</code>, respectively.</p>
+<p>There are three types of awards: bronze, silver and gold. They can be created with the additional classes <code>.is-bronze</code>, <code>.is-silver</code> and <code>.is-gold</code>, respectively.</p>
 <h5 id="example-awards">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;span class=&quot;badge is-award is-bronze&quot;&gt;&lt;span class=&quot;badge--icon&quot;&gt;&amp;#x2764;&lt;/span&gt;First Upvote&lt;/span&gt;
 &lt;span class=&quot;badge is-award is-silver&quot;&gt;&lt;span class=&quot;badge--icon&quot;&gt;&amp;#x2764;&lt;/span&gt;Second Upvote&lt;/span&gt;
 &lt;span class=&quot;badge is-award is-gold&quot;&gt;&lt;span class=&quot;badge--icon&quot;&gt;&amp;#x2764;&lt;/span&gt;Third Upvote&lt;/span&gt;</code></pre><div class="d-example-preview undefined"><span class="badge is-award is-bronze"><span class="badge--icon">&#x2764;</span>First Upvote</span>
 <span class="badge is-award is-silver"><span class="badge--icon">&#x2764;</span>Second Upvote</span>
 <span class="badge is-award is-gold"><span class="badge--icon">&#x2764;</span>Third Upvote</span></div></div>
 <h2>User roles</h2>
-<p>It's also possible to use badges to show someone's user role (for example: moderator status). These badges are created with the CSS classes <code>.badge.is-user-role&lt;/code&gt;. They can also be muted with the class</code>.is-muted</code>.</p>
+<p>It's also possible to use badges to show someone's user role (for example: moderator status). These badges are created with the CSS classes <code>.badge.is-user-role</code>. They can also be muted with the class <code>.is-muted</code>.</p>
 <h5 id="example-user-roles">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;span class=&quot;badge is-user-role&quot;&gt;mod&lt;/span&gt;
 &lt;span class=&quot;badge is-user-role is-muted&quot;&gt;mod&lt;/span&gt;</code></pre><div class="d-example-preview undefined"><span class="badge is-user-role">mod</span>
 <span class="badge is-user-role is-muted">mod</span></div></div>
 <h2>User trust levels</h2>
-<p>It's also possible to use badges to show someone's user &quot;trust level&quot;, which is a number expressing a user's trust and privilege. These badges are created with the CSS classes <code>.badge.is-user-trust-level&lt;/code&gt;. They can also be muted with the class</code>.is-muted</code>.</p>
+<p>It's also possible to use badges to show someone's user &quot;trust level&quot;, which is a number expressing a user's trust and privilege. These badges are created with the CSS classes <code>.badge.is-user-trust-level</code>. They can also be muted with the class <code>.is-muted</code>.</p>
 <h5 id="example-user-tl">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;span class=&quot;badge is-user-trust-level&quot;&gt;1&lt;/span&gt;
 &lt;span class=&quot;badge is-user-trust-level&quot;&gt;1382&lt;/span&gt;
 &lt;span class=&quot;badge is-user-trust-level is-muted&quot;&gt;42&lt;/span&gt;</code></pre><div class="d-example-preview undefined"><span class="badge is-user-trust-level">1</span>

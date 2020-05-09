@@ -53,25 +53,11 @@ ul li, ol li {
   line-height: 1.5;
 }
 
-@each $key, $value in $font-size-gradient {
-  .has-font-size-#{$key},
-  .h-fs-#{$key} {
-    font-size: $value;
-  }
-}
-
 a:link, a:visited, .link {
   color: $link-color;
   text-decoration: none;
   transition: $default-transition;
   cursor: pointer;
-
-  font-family: inherit;
-  font-size: inherit;
-  border: none;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
 
   &:hover, &:active {
     color: darken($link-color, 20%);
@@ -104,34 +90,14 @@ a:link, a:visited, .link {
     text-decoration: underline;
   }
 }
-
-.has-font-family-primary,
-.h-ff-primary { font-family: $font-stack-primary; }
-.has-font-family-code,
-.h-ff-code { font-family: $font-stack-code; }
-
-.has-font-weight-normal,
-.h-fw-normal { font-weight: 400; }
-.has-font-weight-medium,
-.h-fw-medium { font-weight: 500; }
-.has-font-weight-bold,
-.h-fw-bold { font-weight: 700; }
-.has-font-weight-black,
-.h-fw-black { font-weight: 900; }
-
-.has-font-style-normal,
-.h-fst-normal { font-style: normal; }
-.has-font-style-italic,
-.h-fst-italic { font-style: italic; }
-
-.has-text-align-left,
-.h-ta-left { text-align: left; }
-.has-text-align-center,
-.h-ta-center { text-align: center; }
-.has-text-align-right,
-.h-ta-right { text-align: right; }
-.has-text-align-justify,
-.h-ta-justify { text-align: justify; }
+.link {
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
 
 code {
   display: inline;
@@ -245,3 +211,39 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+@each $key, $value in $font-size-gradient {
+  .has-font-size-#{$key},
+  .h-fs-#{$key} {
+    font-size: $value;
+  }
+}
+
+.has-font-family-primary,
+.h-ff-primary { font-family: $font-stack-primary; }
+.has-font-family-code,
+.h-ff-code { font-family: $font-stack-code; }
+
+.has-font-weight-normal,
+.h-fw-normal { font-weight: 400; }
+.has-font-weight-medium,
+.h-fw-medium { font-weight: 500; }
+.has-font-weight-bold,
+.h-fw-bold { font-weight: 700; }
+.has-font-weight-black,
+.h-fw-black { font-weight: 900; }
+
+.has-font-style-normal,
+.h-fst-normal { font-style: normal; }
+.has-font-style-italic,
+.h-fst-italic { font-style: italic; }
+
+.has-text-align-left,
+.h-ta-left { text-align: left; }
+.has-text-align-center,
+.h-ta-center { text-align: center; }
+.has-text-align-right,
+.h-ta-right { text-align: right; }
+.has-text-align-justify,
+.h-ta-justify { text-align: justify; }
