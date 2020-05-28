@@ -171,10 +171,6 @@
                 
                 
                 
-                    <div class="notice is-warning h-fw-bold">
-                        <p><i class="fa fa-magic"></i> This component could benefit from some <a href="/utilities/javascript">Java Script</a>. You can open a <a href="https://github.com/codidact/co-design/pulls">pull request</a> for it.</p>
-                    </div>
-                
                 <h2>Basic structure</h2>
 <p>A header consists of the following elements:</p>
 <ul>
@@ -433,7 +429,6 @@
 <h2>Header slides</h2>
 <p>Header slides are a supplementary component to headers. They allow for drop down and mobile menus.</p>
 <p>Header slides have the <code>.header-slide</code> class and its items have either the class <code>.header-slide--item</code> for items or <code>.header-slide--separator</code> for line separators. Header items can be active, use the class <code>.is-active</code> for that.</p>
-<p>Header slides will probably need JavaScript, because you need to explicitely show them, by giving them the class <code>.is-active</code>. Furthermore, you'll need to position it, by setting its <code>top: X</code> and <code>right: X</code> properties appropriately.</p>
 <p>If you plan to use a header slide as mobile menu, you should add all header items to it, that are removed from normal view.</p></p>
 <h5 id="example-slides">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;header-slide is-active&quot;&gt;
     &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;question&lt;/a&gt;
@@ -452,28 +447,37 @@
     <a class="header-slide--item" href="#">help</a>
     <a class="header-slide--item" href="#">discussions</a>
 </div></div></div>
-<p>As we said above, Co-Design does not contain any JavaScript to toggle header slides. This documentation uses the following snippet, which may or may not be appropriate for you:</p>
-<pre><code>const headerSlideTriggers = document.querySelectorAll(&quot;[data-trigger-header-slide]&quot;);
-
-for (let i = 0; i &lt; headerSlideTriggers.length; i++) {
-  headerSlideTriggers[i].addEventListener(&quot;click&quot;, function (e) {
-    const headerSlide = document.querySelector(this.getAttribute(&quot;data-trigger-header-slide&quot;));
-
-    headerSlide.classList.toggle(&quot;is-active&quot;);
-    this.classList.toggle(&quot;is-active&quot;);
-
-    // Position header slide appropriately relative to
-    // trigger.
-    const rect = this.getBoundingClientRect();
-    headerSlide.style.top = (rect.top + rect.height) + &quot;px&quot;;
-    headerSlide.style.right = (document.body.clientWidth - rect.right) + &quot;px&quot;;
-
-    // Prevent navigation
-    e.preventDefault();
-  });
-}
-</code></pre>
-
+<h3>Java Script</h3>
+<p>Co-Design provides standard Java Script to position the header slides. Give your slide an id or a unique class and give the trigger the attribute <code>data-header-slide=&quot;[query]&quot;</code>, where the query is a CSS selector for the slide.</p>
+<h5 id="example-slides-with-js">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;header class=&quot;header is-small h-bg-red-800 is-dark&quot;&gt;
+    &lt;div class=&quot;container header--container&quot;&gt;
+    &lt;div class=&quot;header--brand&quot;&gt;
+        &lt;a class=&quot;header--site-name&quot; href=&quot;#&quot;&gt;Gibberish&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;header--menu&quot;&gt;
+        &lt;div class=&quot;header--separator&quot;&gt;&lt;/div&gt;
+        &lt;a class=&quot;header--item is-visible-on-mobile&quot; href=&quot;#&quot; data-header-slide=&quot;#example-header-slide&quot;&gt;Open Slide&lt;/a&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+&lt;div class=&quot;header-slide&quot; id=&quot;example-header-slide&quot;&gt;
+    &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview d-slides-with-js-example"><header class="header is-small h-bg-red-800 is-dark">
+    <div class="container header--container">
+    <div class="header--brand">
+        <a class="header--site-name" href="#">Gibberish</a>
+    </div>
+    <div class="header--menu">
+        <div class="header--separator"></div>
+        <a class="header--item is-visible-on-mobile" href="#" data-header-slide="#example-header-slide">Open Slide</a>
+        </a>
+    </div>
+    </div>
+</header>
+<div class="header-slide" id="example-header-slide">
+    <p>Hello World!</p>
+</div></div></div>
             </div>
         </div>
     </div>

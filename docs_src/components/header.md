@@ -2,7 +2,6 @@
 layout: page
 title: Header
 description: The header is the primary navigation of your page.
-jshelp: true
 ---
 
 ## Basic structure
@@ -165,8 +164,6 @@ Header slides are a supplementary component to headers. They allow for drop down
 
 Header slides have the `.header-slide` class and its items have either the class `.header-slide--item` for items or `.header-slide--separator` for line separators. Header items can be active, use the class `.is-active` for that.
 
-Header slides will probably need JavaScript, because you need to explicitely show them, by giving them the class `.is-active`. Furthermore, you'll need to position it, by setting its `top: X` and `right: X` properties appropriately.
-
 If you plan to use a header slide as mobile menu, you should add all header items to it, that are removed from normal view.</p>
 
 {% example "slides" %}
@@ -181,26 +178,24 @@ If you plan to use a header slide as mobile menu, you should add all header item
 </div>
 {% endexample %}
 
-As we said above, Co-Design does not contain any JavaScript to toggle header slides. This documentation uses the following snippet, which may or may not be appropriate for you:
+### Java Script
 
-```
-const headerSlideTriggers = document.querySelectorAll("[data-trigger-header-slide]");
+Co-Design provides standard Java Script to position the header slides. Give your slide an id or a unique class and give the trigger the attribute `data-header-slide="[query]"`, where the query is a CSS selector for the slide.
 
-for (let i = 0; i < headerSlideTriggers.length; i++) {
-  headerSlideTriggers[i].addEventListener("click", function (e) {
-    const headerSlide = document.querySelector(this.getAttribute("data-trigger-header-slide"));
-
-    headerSlide.classList.toggle("is-active");
-    this.classList.toggle("is-active");
-
-    // Position header slide appropriately relative to
-    // trigger.
-    const rect = this.getBoundingClientRect();
-    headerSlide.style.top = (rect.top + rect.height) + "px";
-    headerSlide.style.right = (document.body.clientWidth - rect.right) + "px";
-
-    // Prevent navigation
-    e.preventDefault();
-  });
-}
-```
+{% example "slides-with-js" "" "d-slides-with-js-example" %}
+<header class="header is-small h-bg-red-800 is-dark">
+    <div class="container header--container">
+    <div class="header--brand">
+        <a class="header--site-name" href="#">Gibberish</a>
+    </div>
+    <div class="header--menu">
+        <div class="header--separator"></div>
+        <a class="header--item is-visible-on-mobile" href="#" data-header-slide="#example-header-slide">Open Slide</a>
+        </a>
+    </div>
+    </div>
+</header>
+<div class="header-slide" id="example-header-slide">
+    <p>Hello World!</p>
+</div>
+{% endexample %}

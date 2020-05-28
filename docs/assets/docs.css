@@ -110,6 +110,13 @@ html {
     position: static !important;
 }
 
+.d-example .d-slides-with-js-example .header-slide {
+    position: absolute !important;
+}
+.d-example .d-slides-with-js-example {
+    padding-bottom: 4em;
+}
+
 .container {
     max-width: 80rem;
 }
