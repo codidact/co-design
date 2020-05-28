@@ -107,11 +107,79 @@
         exports.default = Dismiss;
         ;
     });
-    define("co-design", ["require", "exports", "toggle", "dismiss"], function (require, exports, toggle_js_1, dismiss_js_1) {
+    define("header", ["require", "exports"], function (require, exports) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: true });
+        var Header = (function () {
+            function Header(element) {
+                this.element = element;
+                HeaderSlideToggle.find(element, "[data-header-slide]");
+            }
+            Header.apply = function () {
+                var elements = document.querySelectorAll(".header");
+                var toggles = [];
+                for (var i = 0; i < elements.length; i++) {
+                    toggles.push(new Header(elements[i]));
+                }
+                return toggles;
+            };
+            return Header;
+        }());
+        exports.default = Header;
+        ;
+        var HeaderSlideToggle = (function () {
+            function HeaderSlideToggle(element) {
+                var _this = this;
+                this.element = element;
+                this.refersToElement = document.querySelector(element.getAttribute("data-header-slide"));
+                element.addEventListener("click", function (e) { _this.toggle(); e.preventDefault(); });
+            }
+            HeaderSlideToggle.prototype.toggle = function () {
+                this.refersToElement.classList.toggle("is-active");
+                this.element.classList.toggle("is-active");
+                console.log(this.refersToElement);
+                var rect = this.element.getBoundingClientRect();
+                this.refersToElement.style.top = (window.scrollY + rect.top + rect.height) + "px";
+                this.refersToElement.style.maxWidth = "";
+                this.refersToElement.style.left = "";
+                this.refersToElement.style.right = "";
+                var isRight = (rect.left + rect.width / 2) > document.body.clientWidth / 2;
+                var refersToElementWidth = this.refersToElement.getBoundingClientRect().width;
+                var offset = 0;
+                if (isRight) {
+                    this.refersToElement.style.right = (document.body.clientWidth - rect.right) + "px";
+                    offset = document.body.clientWidth - rect.right;
+                }
+                else {
+                    this.refersToElement.style.left = (rect.left) + "px";
+                    offset = rect.left;
+                }
+                if (document.body.clientWidth < (refersToElementWidth + offset)) {
+                    this.refersToElement.style.left = "0px";
+                    this.refersToElement.style.right = "0px";
+                    this.refersToElement.style.maxWidth = "100%";
+                }
+            };
+            HeaderSlideToggle.find = function (container, query) {
+                var elements = container.querySelectorAll(query);
+                var toggles = [];
+                for (var i = 0; i < elements.length; i++) {
+                    toggles.push(new HeaderSlideToggle(elements[i]));
+                }
+                return toggles;
+            };
+            HeaderSlideToggle.softDismissDuration = 250;
+            return HeaderSlideToggle;
+        }());
+        exports.HeaderSlideToggle = HeaderSlideToggle;
+        ;
+    });
+    define("co-design", ["require", "exports", "toggle", "dismiss", "header"], function (require, exports, toggle_js_1, dismiss_js_1, header_js_1) {
         "use strict";
         Object.defineProperty(exports, "__esModule", { value: true });
         toggle_js_1.default.find("[data-toggle]");
         dismiss_js_1.default.find("[data-dismiss]");
+        header_js_1.default.apply();
     });
     
     'marker:resolver';
