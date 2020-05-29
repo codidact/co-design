@@ -41,3 +41,30 @@
     border-top: $widget-border-width solid $widget-border-color;
   }
 }
+
+@each $name, $color in (
+  "yellow": map-get($secondary-colors, "yellow"),
+  "red": darken(map-get($secondary-colors, "red"), 2.5%),
+  "green": lighten(map-get($secondary-colors, "green"), 10%),
+  "teal": lighten(map-get($secondary-colors, "teal"), 7.5%),
+  "tertiary": lighten($tertiary-color, 7.5%)
+) {
+  .widget.is-#{$name} {
+    border-color: lighten($color, $widget-border-color-lighten);
+    background-color: lighten($color, $widget-background-color-lighten);
+
+    .widget--header {
+      background-color: lighten($color, $widget-background-color-hf-lighten);
+      border-color: lighten($color, $widget-border-color-lighten);
+    }
+
+    .widget--body + .widget--body {
+        border-color: lighten($color, $widget-border-color-lighten);
+    }
+
+    .widget--footer {
+      background-color: lighten($color, $widget-background-color-hf-lighten);
+      border-color: lighten($color, $widget-border-color-lighten);
+    }
+  }
+}

@@ -57,3 +57,70 @@ Besides a body and a header, a widget can also contain a footer (`.widget--foote
     </div>
 </div>
 {% endexample %}
+
+## Themed modals
+
+You can also color modals by using the classes `.is-yellow`, `.is-red`, `.is-green`, `.is-teal` or `.is-tertiary`. Use them rarely and only, when neccessary. Prefer to use [notices](/components/notices), when applicable.
+
+{% example "color" %}
+<div class="widget is-yellow">
+    <div class="widget--header">
+        <a href="#" class="widget--header-link">edit</a>
+        Welcome to Codidact Law
+    </div>
+    <div class="widget--body">
+        <p><strong>Hello!</strong> Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. <em>Contact a lawyer if you need (immediate) help, rather than posting in an online forum.</em></p>
+    </div>
+    <div class="widget--footer">
+        <a href="#!" class="button is-filled">More information...</a>
+    </div>
+</div>
+<div class="widget is-red">
+    <div class="widget--header">
+        <a href="#" class="widget--header-link">edit</a>
+        Welcome to Codidact Law
+    </div>
+    <div class="widget--body">
+        <p><strong>Hello!</strong> Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. <em>Contact a lawyer if you need (immediate) help, rather than posting in an online forum.</em></p>
+    </div>
+    <div class="widget--footer">
+        <a href="#!" class="button is-filled">More information...</a>
+    </div>
+</div>
+<div class="widget is-green">
+    <div class="widget--header">
+        <a href="#" class="widget--header-link">edit</a>
+        Welcome to Codidact Law
+    </div>
+    <div class="widget--body">
+        <p><strong>Hello!</strong> Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. <em>Contact a lawyer if you need (immediate) help, rather than posting in an online forum.</em></p>
+    </div>
+    <div class="widget--footer">
+        <a href="#!" class="button is-filled">More information...</a>
+    </div>
+</div>
+<div class="widget is-teal">
+    <div class="widget--header">
+        <a href="#" class="widget--header-link">edit</a>
+        Welcome to Codidact Law
+    </div>
+    <div class="widget--body">
+        <p><strong>Hello!</strong> Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. <em>Contact a lawyer if you need (immediate) help, rather than posting in an online forum.</em></p>
+    </div>
+    <div class="widget--footer">
+        <a href="#!" class="button is-filled">More information...</a>
+    </div>
+</div>
+<div class="widget is-tertiary">
+    <div class="widget--header">
+        <a href="#" class="widget--header-link">edit</a>
+        Welcome to Codidact Law
+    </div>
+    <div class="widget--body">
+        <p><strong>Hello!</strong> Welcome to our community for questions around the law. This is only a site for hobbyists and professionals to share their knowledge, however, so we cannot give you legal counsel. <em>Contact a lawyer if you need (immediate) help, rather than posting in an online forum.</em></p>
+    </div>
+    <div class="widget--footer">
+        <a href="#!" class="button is-filled">More information...</a>
+    </div>
+</div>
+{% endexample %}
