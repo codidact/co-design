@@ -8,7 +8,8 @@ description: Co-Design comes with a standard Java Script library, which should a
 
 Co-Design will provide Java Script controllers to every module, which is in need of one. See the respective component page for details:
 
-*None yet*
+- [Header](/components/header)
+- [Modals](/components/modals)
 
 ## Utilities
 

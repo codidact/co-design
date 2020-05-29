@@ -180,7 +180,7 @@ If you plan to use a header slide as mobile menu, you should add all header item
 
 ### Java Script
 
-Co-Design provides standard Java Script to position the header slides. Give your slide an id or a unique class and give the trigger the attribute `data-header-slide="[query]"`, where the query is a CSS selector for the slide.
+Co-Design provides standard Java Script to position the header slides. Give your slide an id or an unique class and give the trigger the attribute `data-header-slide="[query]"`, where the query is a CSS selector for the slide.
 
 {% example "slides-with-js" "" "d-slides-with-js-example" %}
 <header class="header is-small h-bg-red-800 is-dark">
