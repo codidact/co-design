@@ -100,7 +100,7 @@ You can also use icons:
             <p>Modals</p>
         </div>
         <div class="toc--badge">
-            <span class="badge is-tag is-red">new</span>
+            <span class="badge is-tag is-small is-red">new</span>
         </div>
     </a>
 </div>
