@@ -174,11 +174,59 @@
         exports.HeaderSlideToggle = HeaderSlideToggle;
         ;
     });
-    define("co-design", ["require", "exports", "toggle", "dismiss", "header"], function (require, exports, toggle_js_1, dismiss_js_1, header_js_1) {
+    define("modal", ["require", "exports"], function (require, exports) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: true });
+        var Modal = (function () {
+            function Modal(element) {
+                this.element = element;
+                this.isPositionedAbsolute = this.element.classList.contains("is-with-backdrop");
+                this.isDanger = this.element.classList.contains("is-danger");
+            }
+            Modal.prototype.toggle = function () {
+                if (!this.isPositionedAbsolute) {
+                    this.element.style.top = document.scrollingElement.scrollTop + "px";
+                }
+                this.element.classList.toggle("is-active");
+            };
+            Modal.find = function (query) {
+                var elements = document.querySelectorAll(query);
+                var toggles = [];
+                for (var i = 0; i < elements.length; i++) {
+                    toggles.push(new Modal(elements[i]));
+                }
+                return toggles;
+            };
+            return Modal;
+        }());
+        exports.Modal = Modal;
+        ;
+        var ModalToggle = (function () {
+            function ModalToggle(element) {
+                var _this = this;
+                this.element = element;
+                this.modal = new Modal(document.querySelector(element.getAttribute("data-modal")));
+                element.addEventListener("click", function () { _this.modal.toggle(); });
+            }
+            ModalToggle.find = function (query) {
+                var elements = document.querySelectorAll(query);
+                var toggles = [];
+                for (var i = 0; i < elements.length; i++) {
+                    toggles.push(new ModalToggle(elements[i]));
+                }
+                return toggles;
+            };
+            return ModalToggle;
+        }());
+        exports.ModalToggle = ModalToggle;
+        ;
+    });
+    define("co-design", ["require", "exports", "toggle", "dismiss", "header", "modal"], function (require, exports, toggle_js_1, dismiss_js_1, header_js_1, modal_js_1) {
         "use strict";
         Object.defineProperty(exports, "__esModule", { value: true });
         toggle_js_1.default.find("[data-toggle]");
         dismiss_js_1.default.find("[data-dismiss]");
+        modal_js_1.ModalToggle.find("[data-modal]");
         header_js_1.default.apply();
     });
     
