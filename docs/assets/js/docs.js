@@ -50,10 +50,20 @@ for (let i = 0; i < modalTriggers.length; i++) {
 /* Category header color change */
 const catHeaderColorChanger = document.querySelector(".js-docs-change-color");
 
-catHeaderColorChanger.addEventListener("change", function (e) {
+!catHeaderColorChanger || catHeaderColorChanger.addEventListener("change", function (e) {
   const catHeader = document.querySelector(".d-example .category-header");
 
   catHeader.classList.remove("is-turquoise", "is-green", "is-blue", "is-darkblue", "is-purple", "is-bluegray", "is-gray", "is-yellow", "is-orange", "is-pink", "is-red");
 
   catHeader.classList.add("is-" + this.value);
 });
+
+/* ToC */
+const tocTriggers = document.querySelectorAll("button.toc--header");
+
+for (let i = 0; i < tocTriggers.length; i++) {
+  tocTriggers[i].addEventListener("click", function (e) {
+    this.parentNode.classList.toggle("is-active");
+    e.preventDefault();
+  });
+}

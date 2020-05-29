@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Table of Content - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header h-bg-tertiary-900 is-dark is-small h-m-b-0">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-3-lg docs-nav h-bw-r-1 h-bs-r-solid h-bc-tertiary-100">
+
+            <div class="has-padding-4">
+
+                <nav class="menu">
+    
+        
+            <div class="menu--heading">
+                Getting Started
+            </div>
+        
+        
+        <a href="/setup/installation/" class="menu--item ">
+            Installing Co-Design
+        </a>
+        
+        <a href="/setup/improving/" class="menu--item ">
+            Improving Co-Design
+        </a>
+        
+        <a href="/setup/releasing/" class="menu--item ">
+            Releasing Co-Design
+        </a>
+        
+    
+        
+            <a href="/utilities/" class="menu--heading ">
+                Utilities
+            </a>
+        
+        
+        <a href="/utilities/basic-html/" class="menu--item ">
+            Basic HTML
+        </a>
+        
+        <a href="/utilities/typography/" class="menu--item ">
+            Typography
+        </a>
+        
+        <a href="/utilities/layout/" class="menu--item ">
+            Layout
+        </a>
+        
+        <a href="/utilities/box/" class="menu--item ">
+            Box Styles
+        </a>
+        
+        <a href="/utilities/colors/" class="menu--item ">
+            Colors
+        </a>
+        
+    
+        
+            <a href="/components/" class="menu--heading ">
+                Components
+            </a>
+        
+        
+        <a href="/components/tables/" class="menu--item ">
+            Tables
+        </a>
+        
+        <a href="/components/links/" class="menu--item ">
+            Links
+        </a>
+        
+        <a href="/components/buttons/" class="menu--item ">
+            Buttons
+        </a>
+        
+        <a href="/components/inputs/" class="menu--item ">
+            Inputs
+        </a>
+        
+        <a href="/components/badges/" class="menu--item ">
+            Badges
+        </a>
+        
+        <a href="/components/notices/" class="menu--item ">
+            Notices
+        </a>
+        
+        <a href="/components/header/" class="menu--item ">
+            Header
+        </a>
+        
+        <a href="/components/footer/" class="menu--item ">
+            Footer
+        </a>
+        
+        <a href="/components/pagination/" class="menu--item ">
+            Pagination
+        </a>
+        
+        <a href="/components/nav/" class="menu--item ">
+            Navigation
+        </a>
+        
+        <a href="/components/widgets/" class="menu--item ">
+            Widgets
+        </a>
+        
+        <a href="/components/modals/" class="menu--item ">
+            Modals
+        </a>
+        
+        <a href="/components/item-lists/" class="menu--item ">
+            Item Lists
+        </a>
+        
+    
+        
+            <a href="/specific/" class="menu--heading ">
+                Codidact-specific Components
+            </a>
+        
+        
+        <a href="/specific/category-header/" class="menu--item ">
+            Category Header
+        </a>
+        
+        <a href="/specific/diff/" class="menu--item ">
+            Diff
+        </a>
+        
+        <a href="/specific/toc/" class="menu--item is-active">
+            Table of Contents
+        </a>
+        
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-9-lg docs-page is-flexible">
+            <div class="has-padding-8">
+                <h1>Table of Content</h1>
+                <p class="is-lead">Tables of Content can be used to give a summary about the contents on a page.</p>
+                
+                
+                
+                    <div class="notice">
+                        <h3>Only CSS!</h3>
+                        <p>Co-Design is a CSS-only framework and therefore doesn't come with the JavaScript neccessary to control this component. You'll need to write JavaScript on your own or use an existing library, in order to be able to effectively use it.</p>
+                    </div>
+                
+                <p>Sometimes you might want to have a Table of Content on your page. For example, you might want to show one between the question and the answers on posts with many replies. A ToC entry can contain almost any content you want, as long as they are equal for all entries.</p>
+<p>In a ToC component (<code>.toc</code>) you'll need two types of entries:</p>
+<ul>
+<li>one <strong>ToC header</strong> (<code>.toc--header</code>), which summarizes, what kind of information is shown in the table (e.g. &quot;Summary&quot;, &quot;Table of Contents&quot; or &quot;Answer Summary&quot;). This can be a button if you want to allow toggling the ToC visibility</li>
+<li>many <strong>ToC entries</strong> (<code>.toc--entry</code>), which contain the actual data. This can/should be links targeting the respective section. Can contain:
+<ul>
+<li><strong>Icon Container</strong> (<code>.toc--icon</code>) for icons depicting the type or other information for the current entry.</li>
+<li><strong>Badge Container</strong> (<code>.toc--badge</code>) for status badges (probably tags) giving meta-information for the current category.</li>
+<li><strong>Full Container</strong> (<code>.toc--full</code>) for a text summary (title or excerpt) of the current entry (spans all available space)</li>
+</ul>
+</li>
+</ul>
+<p>By default, all entries are collapsed if the header is a button and unless you add the class <code>.is-active</code> to the ToC.</p>
+<h5 id="example-static">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;toc&quot;&gt;
+    &lt;div class=&quot;toc--header&quot;&gt;Table of Contents&lt;/div&gt;
+    &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
+        &lt;div class=&quot;toc--badge&quot;&gt;
+            &lt;span class=&quot;badge is-tag is-green&quot;&gt;+2&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--badge&quot;&gt;
+            &lt;span class=&quot;badge is-tag is-red&quot;&gt;-2&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--full&quot;&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...&lt;/p&gt;
+            &lt;p&gt;2 days ago by luap42&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
+        &lt;div class=&quot;toc--badge&quot;&gt;
+            &lt;span class=&quot;badge is-tag is-green&quot;&gt;+2&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--badge&quot;&gt;
+            &lt;span class=&quot;badge is-tag is-red&quot;&gt;-2&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--full&quot;&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...&lt;/p&gt;
+            &lt;p&gt;2 days ago by luap42&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="toc">
+    <div class="toc--header">Table of Contents</div>
+    <a href="#" class="toc--entry">
+        <div class="toc--badge">
+            <span class="badge is-tag is-green">+2</span>
+        </div>
+        <div class="toc--badge">
+            <span class="badge is-tag is-red">-2</span>
+        </div>
+        <div class="toc--full">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+            <p>2 days ago by luap42</p>
+        </div>
+    </a>
+    <a href="#" class="toc--entry">
+        <div class="toc--badge">
+            <span class="badge is-tag is-green">+2</span>
+        </div>
+        <div class="toc--badge">
+            <span class="badge is-tag is-red">-2</span>
+        </div>
+        <div class="toc--full">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+            <p>2 days ago by luap42</p>
+        </div>
+    </a>
+</div></div></div>
+<p>This one can be toggled (defaults to: off). Note, that the JS for it is not included with Co-Design, but is only for this documentation.</p>
+<h5 id="example-toggleable">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;toc&quot;&gt;
+    &lt;button class=&quot;toc--header&quot;&gt;Table of Contents&lt;/button&gt;
+    &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
+        &lt;div class=&quot;toc--badge&quot;&gt;
+            &lt;span class=&quot;badge is-tag is-green&quot;&gt;+2&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--badge&quot;&gt;
+            &lt;span class=&quot;badge is-tag is-red&quot;&gt;-2&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--full&quot;&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...&lt;/p&gt;
+            &lt;p&gt;2 days ago by luap42&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
+        &lt;div class=&quot;toc--badge&quot;&gt;
+            &lt;span class=&quot;badge is-tag is-green&quot;&gt;+2&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--badge&quot;&gt;
+            &lt;span class=&quot;badge is-tag is-red&quot;&gt;-2&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--full&quot;&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...&lt;/p&gt;
+            &lt;p&gt;2 days ago by luap42&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="toc">
+    <button class="toc--header">Table of Contents</button>
+    <a href="#" class="toc--entry">
+        <div class="toc--badge">
+            <span class="badge is-tag is-green">+2</span>
+        </div>
+        <div class="toc--badge">
+            <span class="badge is-tag is-red">-2</span>
+        </div>
+        <div class="toc--full">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+            <p>2 days ago by luap42</p>
+        </div>
+    </a>
+    <a href="#" class="toc--entry">
+        <div class="toc--badge">
+            <span class="badge is-tag is-green">+2</span>
+        </div>
+        <div class="toc--badge">
+            <span class="badge is-tag is-red">-2</span>
+        </div>
+        <div class="toc--full">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+            <p>2 days ago by luap42</p>
+        </div>
+    </a>
+</div></div></div>
+<p>You can also use icons:</p>
+<h5 id="example-with-icon">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;toc is-active&quot;&gt;
+    &lt;button class=&quot;toc--header&quot;&gt;Table of Contents&lt;/button&gt;
+    &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
+        &lt;div class=&quot;toc--icon&quot;&gt;
+            &lt;i class=&quot;fa fa-hashtag&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--full&quot;&gt;
+            &lt;p&gt;Notices&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
+        &lt;div class=&quot;toc--icon&quot;&gt;
+            &lt;i class=&quot;fa fa-hashtag&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--full&quot;&gt;
+            &lt;p&gt;Modals&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;toc--badge&quot;&gt;
+            &lt;span class=&quot;badge is-tag is-red&quot;&gt;new&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="toc is-active">
+    <button class="toc--header">Table of Contents</button>
+    <a href="#" class="toc--entry">
+        <div class="toc--icon">
+            <i class="fa fa-hashtag"></i>
+        </div>
+        <div class="toc--full">
+            <p>Notices</p>
+        </div>
+    </a>
+    <a href="#" class="toc--entry">
+        <div class="toc--icon">
+            <i class="fa fa-hashtag"></i>
+        </div>
+        <div class="toc--full">
+            <p>Modals</p>
+        </div>
+        <div class="toc--badge">
+            <span class="badge is-tag is-red">new</span>
+        </div>
+    </a>
+</div></div></div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

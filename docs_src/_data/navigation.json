@@ -113,6 +113,10 @@
                 {
                     "title": "Diff",
                     "url": "/specific/diff/"
+                },
+                {
+                    "title": "Table of Contents",
+                    "url": "/specific/toc/"
                 }
             ]
         }

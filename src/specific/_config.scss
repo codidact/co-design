@@ -61,3 +61,27 @@ $diff-element-border-radius: 3px !default;
 $diff-added-background-color: lighten(map-get($secondary-colors, "green"), 45%) !default;
 $diff-removed-background-color: lighten(map-get($secondary-colors, "red"), 30%) !default;
 $diff-changed-background-color: lighten($tertiary-color, 42.5%) !default;
+
+/* ToC */
+$toc-header-font-weight: 500;
+$toc-header-top-margin: 2;
+$toc-header-active-background-color: lighten($tertiary-color, 35%);
+$toc-header-active-color: inherit;
+$toc-header-padding-x: 2;
+$toc-header-padding-y: 1;
+
+$toc-outer-border-width: 2px;
+$toc-inner-border-width: 1px;
+$toc-border-color: lighten($tertiary-color, 35%);
+
+$toc-entry-font-size: 0.9em;
+$toc-entry-padding: 1;
+$toc-entry-hover-background-color: lighten($tertiary-color, 40%);
+
+$toc-icon-width: 2rem;
+
+$toc-badge-min-width: 3rem;
+$toc-badge-padding: 0.5;
+
+$toc-full-padding-y: 0;
+$toc-full-padding-x: 2;

@@ -1,0 +1,86 @@
+.toc {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    button.toc--header {
+        background: none;
+        font: inherit;
+        cursor: pointer;
+        font-weight: $toc-header-font-weight;
+        background-color: $toc-header-active-background-color;
+        color: $toc-header-active-color;
+    }
+
+    .toc--header {
+        margin-top: $toc-header-top-margin * $margin-unit;
+        align-self: flex-start;
+        font-weight: $toc-header-font-weight;
+        border: $toc-outer-border-width solid $toc-border-color;
+        border-bottom-width: 0;
+        background-color: $toc-header-active-background-color;
+        padding: $toc-header-padding-y*$padding-unit $toc-header-padding-x*$padding-unit;
+        color: $toc-header-active-color;
+    }
+
+    .toc--entry {
+        display: flex;
+        border: $toc-outer-border-width solid $toc-border-color;
+        border-top-width: $toc-inner-border-width;
+        font-size: $toc-entry-font-size;
+        padding: $toc-entry-padding * $padding-unit;
+
+        &:not(:last-of-type) {
+            border-bottom: none;
+        }
+
+        .toc--icon {
+            width: $toc-icon-width;
+            text-align: center;
+        }
+        .toc--badge {
+            min-width: $toc-badge-min-width;
+            padding: $toc-badge-padding * $padding-unit;
+
+            .badge {
+                display: block;
+                width: 100%;
+                border-radius: 0;
+                text-align: center;
+            }
+        }
+
+        .toc--full {
+            flex-grow: 1;
+            width: 0;
+            padding: $toc-full-padding-y*$padding-unit $toc-full-padding-x*$padding-unit;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .toc--header + .toc--entry {
+        border-top-width: $toc-outer-border-width;
+    }
+
+    a.toc--entry {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $toc-entry-hover-background-color;
+        }
+    }
+
+    &:not(.is-active) {
+        button.toc--header {
+            background-color: white;
+            border-bottom-width: $toc-outer-border-width;
+        }
+        button.toc--header ~ .toc--entry {
+            display: none;
+        }
+    }
+}
