@@ -70,7 +70,7 @@
     }
 
     &.is-outlined {
-      background-color: transparent;
+      background-color: #ffffff;
       border-color: lighten($button-danger-color, 5%);
 
       &:hover {
@@ -116,7 +116,7 @@
     }
 
     &.is-outlined {
-      background-color: transparent;
+      background-color: #ffffff;
       border-color: lighten($button-muted-color, 5%);
 
       &:hover {
