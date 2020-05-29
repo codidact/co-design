@@ -18,7 +18,7 @@ There are two types of tags: normal tags and filled tags. Filled tags can be use
 <a href="#" class="badge is-tag is-filled">co-design</a>
 {% endexample %}
 
-It's also possible to color tags, by giving them one of these classes `.is-red`, `.is-yellow`, `.is-green`, `.is-teal` or `.is-muted`. This can be combined with filled tags.
+It's also possible to color tags, by giving them one of these classes `.is-red`, `.is-yellow`, `.is-green`, `.is-teal` or `.is-muted`. This can be combined with filled tags. You can also make smaller tags with `.is-small`.
 
 {% example "tags-colored" %}
 <p>Default styles</p>
@@ -33,6 +33,12 @@ It's also possible to color tags, by giving them one of these classes `.is-red`,
 <span class="badge is-tag is-filled is-green">green</span>
 <span class="badge is-tag is-filled is-teal">teal</span>
 <span class="badge is-tag is-filled is-muted">muted</span>
+<p>Small styles</p>
+<span class="badge is-tag is-small is-red">red</span>
+<span class="badge is-tag is-small is-yellow">yellow</span>
+<span class="badge is-tag is-small is-green">green</span>
+<span class="badge is-tag is-small is-teal">teal</span>
+<span class="badge is-tag is-small is-muted">muted</span>
 {% endexample %}
 
 

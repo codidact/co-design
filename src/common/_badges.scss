@@ -26,6 +26,11 @@
       }
     }
   }
+
+  &.is-small {
+    padding: $badge-tag-padding-y*$padding-unit/2 $badge-tag-padding-x*$padding-unit/2;
+    line-height: 1;
+  }
 }
 
 a.badge.is-tag:hover,
