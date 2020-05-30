@@ -82,10 +82,10 @@ You can also add more complex contents:
 </div>
 {% endexample %}
 
-<button class="button is-outlined is-muted" onclick="document.getElementById('example-bar').classList.toggle('d-hide')">Open an example bar</button>
+<button class="button is-outlined is-muted" onclick="document.getElementById('example-bar').classList.toggle('hide')">Open an example bar</button>
 
-<div class="bar d-hide" id="example-bar">
-    <button class="button is-close-button" onclick="document.getElementById('example-bar').classList.toggle('d-hide')">&times;</button>
+<div class="bar hide" id="example-bar">
+    <button class="button is-close-button" onclick="document.getElementById('example-bar').classList.toggle('hide')">&times;</button>
     <div class="bar--container container">
         <h2>Table of Contents</h2>
         <div class="toc h-bg-white">
