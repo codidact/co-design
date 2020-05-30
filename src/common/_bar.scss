@@ -1,0 +1,22 @@
+.bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: $bar-max-height;
+    overflow: auto;
+    background-color: $bar-background-color;
+    border-top: $bar-border-width solid $bar-border-color;
+
+    .bar--container {
+        padding: $bar-padding * $padding-unit;
+    }
+
+    & > .button.is-close-button {
+        position: absolute;
+        font-size: 2*$close-button-font-size !important;
+        right: 0.5rem;
+        top: 1rem;
+        line-height: 0.75;
+    }
+}

@@ -534,3 +534,10 @@ $pagination-item-active-color: white !default;
 $pagination-item-active-font-weight: 600 !default;
 
 $pagination-item-hover-box-shadow: none !default;
+
+/* Bar */
+$bar-max-height: 35vh;
+$bar-background-color: lighten($tertiary-color, 42.5%);
+$bar-border-color: lighten($tertiary-color, 25%);
+$bar-border-width: 1px;
+$bar-padding: 5;

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bar - Co-Design</title>
+
+    <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
+    <link rel="stylesheet" type="text/css" href="/assets/docs.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="header h-bg-tertiary-900 is-dark is-small h-m-b-0">
+    <div class="container header--container">
+        <div class="header--brand">
+          <a class="header--site-name" href="/">Co-Design</a>
+        </div>
+        <div class="header--menu">
+          <div class="header--separator"></div>
+
+          <a class="header--item is-complex is-visible-on-mobile" href="https://github.com/codidact/co-design"><i class="fa fa-2x fa-github fa-fw"></i></a>
+          <a class="header--item is-complex is-visible-on-mobile" href="https://forum.codidact.org"><i class="fa fa-2x fa-community fa-fw"></i></a>
+        </div>
+    </div>
+</header>
+    <div class="grid container">
+        <div class="grid--cell is-12 is-3-lg docs-nav h-bw-r-1 h-bs-r-solid h-bc-tertiary-100">
+
+            <div class="has-padding-4">
+
+                <nav class="menu">
+    
+        
+            <div class="menu--heading">
+                Getting Started
+            </div>
+        
+        
+        <a href="/setup/installation/" class="menu--item ">
+            Installing Co-Design
+        </a>
+        
+        <a href="/setup/improving/" class="menu--item ">
+            Improving Co-Design
+        </a>
+        
+        <a href="/setup/releasing/" class="menu--item ">
+            Releasing Co-Design
+        </a>
+        
+    
+        
+            <a href="/utilities/" class="menu--heading ">
+                Utilities
+            </a>
+        
+        
+        <a href="/utilities/basic-html/" class="menu--item ">
+            Basic HTML
+        </a>
+        
+        <a href="/utilities/typography/" class="menu--item ">
+            Typography
+        </a>
+        
+        <a href="/utilities/layout/" class="menu--item ">
+            Layout
+        </a>
+        
+        <a href="/utilities/box/" class="menu--item ">
+            Box Styles
+        </a>
+        
+        <a href="/utilities/colors/" class="menu--item ">
+            Colors
+        </a>
+        
+    
+        
+            <a href="/components/" class="menu--heading ">
+                Components
+            </a>
+        
+        
+        <a href="/components/tables/" class="menu--item ">
+            Tables
+        </a>
+        
+        <a href="/components/links/" class="menu--item ">
+            Links
+        </a>
+        
+        <a href="/components/buttons/" class="menu--item ">
+            Buttons
+        </a>
+        
+        <a href="/components/inputs/" class="menu--item ">
+            Inputs
+        </a>
+        
+        <a href="/components/badges/" class="menu--item ">
+            Badges
+        </a>
+        
+        <a href="/components/notices/" class="menu--item ">
+            Notices
+        </a>
+        
+        <a href="/components/header/" class="menu--item ">
+            Header
+        </a>
+        
+        <a href="/components/footer/" class="menu--item ">
+            Footer
+        </a>
+        
+        <a href="/components/pagination/" class="menu--item ">
+            Pagination
+        </a>
+        
+        <a href="/components/nav/" class="menu--item ">
+            Navigation
+        </a>
+        
+        <a href="/components/widgets/" class="menu--item ">
+            Widgets
+        </a>
+        
+        <a href="/components/modals/" class="menu--item ">
+            Modals
+        </a>
+        
+        <a href="/components/bar/" class="menu--item is-active">
+            Bar
+        </a>
+        
+        <a href="/components/item-lists/" class="menu--item ">
+            Item Lists
+        </a>
+        
+    
+        
+            <a href="/specific/" class="menu--heading ">
+                Codidact-specific Components
+            </a>
+        
+        
+        <a href="/specific/category-header/" class="menu--item ">
+            Category Header
+        </a>
+        
+        <a href="/specific/diff/" class="menu--item ">
+            Diff
+        </a>
+        
+        <a href="/specific/toc/" class="menu--item ">
+            Table of Contents
+        </a>
+        
+    
+</nav>
+
+            </div>
+
+        </div>
+        <div class="grid--cell is-12 is-9-lg docs-page is-flexible">
+            <div class="has-padding-8">
+                <h1>Bar</h1>
+                <p class="is-lead">The bar is a flexible component shown at the bottom of the screen.</p>
+                
+                
+                
+                <p>You can use the bar for many purposes, for example you can show annotations for the current page, add controls for the whole page, that should be permanently visible or add a <a href="/specific/toc">Table of Contents</a> into it.</p>
+<p>It can contain any content you want. It's not going to become larger than 35% of the screen height, but if it needs less space, it will take less.</p>
+<p>A bar can be created by giving it the class <code>.bar</code> and adding a <code>.bar--container</code> (should be centered with <code>.container</code>) into it. A close button can also be added and will be positioned correctly.</p>
+<h5 id="example-simple">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;bar&quot;&gt;
+    &lt;div class=&quot;bar--container container&quot;&gt;
+        &lt;div class=&quot;h-f-r&quot;&gt;
+            &lt;button class=&quot;button is-filled is-large&quot;&gt;Save&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;h-fw-bold h-c-red-600&quot;&gt;You have unsaved changes&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="bar">
+    <div class="bar--container container">
+        <div class="h-f-r">
+            <button class="button is-filled is-large">Save</button>
+        </div>
+        <p class="h-fw-bold h-c-red-600">You have unsaved changes</p>
+    </div>
+</div></div></div>
+<p>You can also add more complex contents:</p>
+<h5 id="example-simple">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;bar&quot;&gt;
+    &lt;button class=&quot;button is-close-button&quot;&gt;&amp;times;&lt;/button&gt;
+    &lt;div class=&quot;bar--container container&quot;&gt;
+        &lt;h2&gt;Table of Contents&lt;/h2&gt;
+        &lt;div class=&quot;toc h-bg-white&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
+                &lt;div class=&quot;toc--badge&quot;&gt;
+                    &lt;span class=&quot;badge is-tag is-green&quot;&gt;+2&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc--badge&quot;&gt;
+                    &lt;span class=&quot;badge is-tag is-red&quot;&gt;-2&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc--full&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...&lt;/p&gt;
+                    &lt;p&gt;2 days ago by luap42&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
+                &lt;div class=&quot;toc--badge&quot;&gt;
+                    &lt;span class=&quot;badge is-tag is-green&quot;&gt;+2&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc--badge&quot;&gt;
+                    &lt;span class=&quot;badge is-tag is-red&quot;&gt;-2&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc--full&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...&lt;/p&gt;
+                    &lt;p&gt;2 days ago by luap42&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
+                &lt;div class=&quot;toc--badge&quot;&gt;
+                    &lt;span class=&quot;badge is-tag is-green&quot;&gt;+2&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc--badge&quot;&gt;
+                    &lt;span class=&quot;badge is-tag is-red&quot;&gt;-2&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc--full&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...&lt;/p&gt;
+                    &lt;p&gt;2 days ago by luap42&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
+                &lt;div class=&quot;toc--badge&quot;&gt;
+                    &lt;span class=&quot;badge is-tag is-green&quot;&gt;+2&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc--badge&quot;&gt;
+                    &lt;span class=&quot;badge is-tag is-red&quot;&gt;-2&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;toc--full&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...&lt;/p&gt;
+                    &lt;p&gt;2 days ago by luap42&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="bar">
+    <button class="button is-close-button">&times;</button>
+    <div class="bar--container container">
+        <h2>Table of Contents</h2>
+        <div class="toc h-bg-white">
+            <a href="#" class="toc--entry">
+                <div class="toc--badge">
+                    <span class="badge is-tag is-green">+2</span>
+                </div>
+                <div class="toc--badge">
+                    <span class="badge is-tag is-red">-2</span>
+                </div>
+                <div class="toc--full">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+                    <p>2 days ago by luap42</p>
+                </div>
+            </a>
+            <a href="#" class="toc--entry">
+                <div class="toc--badge">
+                    <span class="badge is-tag is-green">+2</span>
+                </div>
+                <div class="toc--badge">
+                    <span class="badge is-tag is-red">-2</span>
+                </div>
+                <div class="toc--full">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+                    <p>2 days ago by luap42</p>
+                </div>
+            </a>
+            <a href="#" class="toc--entry">
+                <div class="toc--badge">
+                    <span class="badge is-tag is-green">+2</span>
+                </div>
+                <div class="toc--badge">
+                    <span class="badge is-tag is-red">-2</span>
+                </div>
+                <div class="toc--full">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+                    <p>2 days ago by luap42</p>
+                </div>
+            </a>
+            <a href="#" class="toc--entry">
+                <div class="toc--badge">
+                    <span class="badge is-tag is-green">+2</span>
+                </div>
+                <div class="toc--badge">
+                    <span class="badge is-tag is-red">-2</span>
+                </div>
+                <div class="toc--full">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+                    <p>2 days ago by luap42</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div></div></div>
+<p><button class="button is-outlined is-muted" onclick="document.getElementById('example-bar').classList.toggle('d-hide')">Open an example bar</button></p>
+<div class="bar d-hide" id="example-bar">
+    <button class="button is-close-button" onclick="document.getElementById('example-bar').classList.toggle('d-hide')">&times;</button>
+    <div class="bar--container container">
+        <h2>Table of Contents</h2>
+        <div class="toc h-bg-white">
+            <a href="#" class="toc--entry">
+                <div class="toc--badge">
+                    <span class="badge is-tag is-green">+2</span>
+                </div>
+                <div class="toc--badge">
+                    <span class="badge is-tag is-red">-2</span>
+                </div>
+                <div class="toc--full">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+                    <p>2 days ago by luap42</p>
+                </div>
+            </a>
+            <a href="#" class="toc--entry">
+                <div class="toc--badge">
+                    <span class="badge is-tag is-green">+2</span>
+                </div>
+                <div class="toc--badge">
+                    <span class="badge is-tag is-red">-2</span>
+                </div>
+                <div class="toc--full">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+                    <p>2 days ago by luap42</p>
+                </div>
+            </a>
+            <a href="#" class="toc--entry">
+                <div class="toc--badge">
+                    <span class="badge is-tag is-green">+2</span>
+                </div>
+                <div class="toc--badge">
+                    <span class="badge is-tag is-red">-2</span>
+                </div>
+                <div class="toc--full">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+                    <p>2 days ago by luap42</p>
+                </div>
+            </a>
+            <a href="#" class="toc--entry">
+                <div class="toc--badge">
+                    <span class="badge is-tag is-green">+2</span>
+                </div>
+                <div class="toc--badge">
+                    <span class="badge is-tag is-red">-2</span>
+                </div>
+                <div class="toc--full">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem illo voluptatem...</p>
+                    <p>2 days ago by luap42</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/docs.js" defer></script>
+</body>
+</html>

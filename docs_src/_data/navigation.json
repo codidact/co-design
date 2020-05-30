@@ -97,6 +97,10 @@
                     "url": "/components/modals/"
                 },
                 {
+                    "title": "Bar",
+                    "url": "/components/bar/"
+                },
+                {
                     "title": "Item Lists",
                     "url": "/components/item-lists/"
                 }
