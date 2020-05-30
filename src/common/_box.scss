@@ -108,3 +108,11 @@
 .has-clear-clear,
 .has-clear,
 .h-c { clear: both; }
+
+@each $i in (none, block, flex, inline-block, inline, inline-flex) {
+  .has-display-#{$i},
+  .h-d-#{$i} { display: #{$i} }
+}
+.hide, [hidden] {
+  display: none !important;
+}

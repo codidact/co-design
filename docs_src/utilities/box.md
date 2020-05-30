@@ -167,3 +167,15 @@ Box shadows can be given to elements. You have to give them the class `.has-shad
     <div class="has-padding-4 has-shadow-10">shadow: 10</div>
 </div>
 {% endexample %}
+
+## Display
+
+You can set the display of an element with the class `.has-display-X`, where X is one of:
+
+- none
+- block
+- inline-block
+- flex
+- inline-flex
+
+You can also use `.hide` or `[hidden]` to remove an element from the screen.
