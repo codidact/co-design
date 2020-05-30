@@ -1,19 +1,19 @@
 ---
 layout: page
-title: Java Script
-description: Co-Design comes with a standard Java Script library, which should allow you to do many things without writing a single line of Java Script yourself.
+title: Javascript
+description: Co-Design comes with a standard Javascript library, which should allow you to do many things without writing a single line of Javascript yourself.
 ---
 
 ## Components
 
-Co-Design will provide Java Script controllers to every module, which is in need of one. See the respective component page for details:
+Co-Design will provide Javascript controllers to every module, which is in need of one. See the respective component page for details:
 
 - [Header](/components/header)
 - [Modals](/components/modals)
 
 ## Utilities
 
-Furthermore, Co-Design Java Script provides some commonly used utilities:
+Furthermore, Co-Design Javascript provides some commonly used utilities:
 
 ### Toggle
 
