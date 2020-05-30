@@ -22,7 +22,7 @@
             class: {
                 getValue: function (el, value) { value.split(" ").map(function (i) { return [i, el.classList.contains(i)]; }); },
                 toggle: function (el, value, defaultValue) {
-                    value.split(" ").forEach(function (i) { return el.classList.toggle(i); });
+                    value.split(" ").forEach(function (className) { return el.classList.toggle(className); });
                 }
             }
         };
@@ -31,18 +31,11 @@
                 var _this = this;
                 this.element = element;
                 this.refersToElement = document.querySelector(element.getAttribute("data-toggle"));
-                if (element.hasAttribute("data-toggle-property")) {
-                    this.refersToProperty = element.getAttribute("data-toggle-property");
+                if (this.refersToElement == null) {
+                    throw "Missing target for dismiss: " + element.getAttribute("data-dismiss");
                 }
-                else {
-                    this.refersToProperty = "display";
-                }
-                if (element.hasAttribute("data-toggle-value")) {
-                    this.refersToValue = element.getAttribute("data-toggle-value");
-                }
-                else {
-                    this.refersToValue = "\\auto";
-                }
+                this.refersToProperty = element.getAttribute("data-toggle-property") || "display";
+                this.refersToValue = element.getAttribute("data-toggle-value") || "\\auto";
                 this.defaultValue = this.getCurrentValue();
                 element.addEventListener("click", function () { _this.toggleValue(); });
             }
@@ -73,8 +66,11 @@
                 var _this = this;
                 this.element = element;
                 this.refersToElement = document.querySelector(element.getAttribute("data-dismiss"));
+                if (this.refersToElement == null) {
+                    throw "Missing target for dismiss: " + element.getAttribute("data-dismiss");
+                }
                 this.doesSoftDismiss = element.hasAttribute("data-dismiss-soft");
-                element.addEventListener("click", function () { _this.dismiss(); });
+                element.addEventListener("click", function (e) { _this.dismiss(); e.preventDefault(); });
             }
             Dismiss.prototype.dismiss = function () {
                 var _this = this;
@@ -86,22 +82,22 @@
                         { opacity: 1.0 },
                         { opacity: 0 }
                     ], {
-                        duration: Dismiss.softDismissDuration
+                        duration: Dismiss.softDismissDurationinMilliseconds
                     });
                     setTimeout(function () {
                         _this.refersToElement.remove();
-                    }, Dismiss.softDismissDuration);
+                    }, Dismiss.softDismissDurationinMilliseconds);
                 }
             };
             Dismiss.find = function (query) {
                 var elements = document.querySelectorAll(query);
-                var toggles = [];
+                var dismisses = [];
                 for (var i = 0; i < elements.length; i++) {
-                    toggles.push(new Dismiss(elements[i]));
+                    dismisses.push(new Dismiss(elements[i]));
                 }
-                return toggles;
+                return dismisses;
             };
-            Dismiss.softDismissDuration = 250;
+            Dismiss.softDismissDurationinMilliseconds = 250;
             return Dismiss;
         }());
         exports.default = Dismiss;
@@ -117,11 +113,11 @@
             }
             Header.apply = function () {
                 var elements = document.querySelectorAll(".header");
-                var toggles = [];
+                var headers = [];
                 for (var i = 0; i < elements.length; i++) {
-                    toggles.push(new Header(elements[i]));
+                    headers.push(new Header(elements[i]));
                 }
-                return toggles;
+                return headers;
             };
             return Header;
         }());
@@ -132,12 +128,14 @@
                 var _this = this;
                 this.element = element;
                 this.refersToElement = document.querySelector(element.getAttribute("data-header-slide"));
+                if (this.refersToElement == null) {
+                    throw "Missing target for dismiss: " + element.getAttribute("data-dismiss");
+                }
                 element.addEventListener("click", function (e) { _this.toggle(); e.preventDefault(); });
             }
             HeaderSlideToggle.prototype.toggle = function () {
                 this.refersToElement.classList.toggle("is-active");
                 this.element.classList.toggle("is-active");
-                console.log(this.refersToElement);
                 var rect = this.element.getBoundingClientRect();
                 this.refersToElement.style.top = (window.scrollY + rect.top + rect.height) + "px";
                 this.refersToElement.style.maxWidth = "";
@@ -162,13 +160,12 @@
             };
             HeaderSlideToggle.find = function (container, query) {
                 var elements = container.querySelectorAll(query);
-                var toggles = [];
+                var headerslidetoggles = [];
                 for (var i = 0; i < elements.length; i++) {
-                    toggles.push(new HeaderSlideToggle(elements[i]));
+                    headerslidetoggles.push(new HeaderSlideToggle(elements[i]));
                 }
-                return toggles;
+                return headerslidetoggles;
             };
-            HeaderSlideToggle.softDismissDuration = 250;
             return HeaderSlideToggle;
         }());
         exports.HeaderSlideToggle = HeaderSlideToggle;
@@ -206,15 +203,15 @@
                 var _this = this;
                 this.element = element;
                 this.modal = new Modal(document.querySelector(element.getAttribute("data-modal")));
-                element.addEventListener("click", function () { _this.modal.toggle(); });
+                element.addEventListener("click", function (e) { _this.modal.toggle(); e.preventDefault(); });
             }
             ModalToggle.find = function (query) {
                 var elements = document.querySelectorAll(query);
-                var toggles = [];
+                var modaltoggles = [];
                 for (var i = 0; i < elements.length; i++) {
-                    toggles.push(new ModalToggle(elements[i]));
+                    modaltoggles.push(new ModalToggle(elements[i]));
                 }
-                return toggles;
+                return modaltoggles;
             };
             return ModalToggle;
         }());

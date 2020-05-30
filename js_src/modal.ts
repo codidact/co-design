@@ -1,13 +1,13 @@
 class Modal {
-    public readonly isPositionedAbsolute;
-    public readonly isDanger;
+    public readonly isPositionedAbsolute: boolean;
+    public readonly isDanger: boolean;
 
-    constructor(public element) {
+    constructor(public readonly element: HTMLElement ) {
         this.isPositionedAbsolute = this.element.classList.contains("is-with-backdrop");
         this.isDanger = this.element.classList.contains("is-danger");
     }
 
-    private toggle() {
+    public toggle() {
         if (!this.isPositionedAbsolute) {
             this.element.style.top = document.scrollingElement.scrollTop + "px";
         }
@@ -15,33 +15,33 @@ class Modal {
         this.element.classList.toggle("is-active");
     }
 
-    static find(query) {
+    static find(query: string) {
         const elements = document.querySelectorAll(query);
         let toggles = [];
         for (let i = 0; i < elements.length; i++) {
-            toggles.push(new Modal(elements[i]));
+            toggles.push(new Modal(elements[i] as HTMLElement));
         }
         return toggles;
     }
 };
 
 class ModalToggle {
-    private modal;
-    private isPositionedAbsolute;
+    private readonly modal: Modal;
+    private readonly isPositionedAbsolute: boolean;
 
-    constructor(public element) {
+    constructor(public readonly element: HTMLElement) {
         this.modal = new Modal(document.querySelector(element.getAttribute("data-modal")));
         
-        element.addEventListener("click", () => { this.modal.toggle() });
+        element.addEventListener("click", (e) => { this.modal.toggle(); e.preventDefault(); });
     }
     
-    static find(query) {
+    static find(query: string) {
         const elements = document.querySelectorAll(query);
-        let toggles = [];
+        let modaltoggles = [];
         for (let i = 0; i < elements.length; i++) {
-            toggles.push(new ModalToggle(elements[i]));
+            modaltoggles.push(new ModalToggle(elements[i] as HTMLElement));
         }
-        return toggles;
+        return modaltoggles;
     }
 };
 

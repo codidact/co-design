@@ -11,38 +11,35 @@ const toggleProperties = {
     class: {
         getValue: (el, value) => { value.split(" ").map((i) => [i, el.classList.contains(i)]) },
         toggle: (el, value, defaultValue) => {
-            value.split(" ").forEach((i) => el.classList.toggle(i));
+            value.split(" ").forEach(
+                (className) => el.classList.toggle(className)
+            );
         }
     }
 };
 
 export default class Toggle {
-    private refersToElement;
-    private refersToProperty;
-    private refersToValue;
-    private defaultValue;
+    private readonly refersToElement: HTMLElement;
+    private readonly refersToProperty: string;
+    private readonly refersToValue: string;
+    private readonly defaultValue: any;
 
-    constructor(public element) {
+    constructor(public readonly element: HTMLElement) {
         this.refersToElement = document.querySelector(element.getAttribute("data-toggle"));
-        
-        if (element.hasAttribute("data-toggle-property")) {
-            this.refersToProperty = element.getAttribute("data-toggle-property");
-        } else {
-            this.refersToProperty = "display";
+
+        if (this.refersToElement == null) {
+            throw "Missing target for dismiss: " + element.getAttribute("data-dismiss");
         }
         
-        if (element.hasAttribute("data-toggle-value")) {
-            this.refersToValue = element.getAttribute("data-toggle-value");
-        } else {
-            this.refersToValue = "\\auto";
-        }
+        this.refersToProperty = element.getAttribute("data-toggle-property") || "display";
+        this.refersToValue = element.getAttribute("data-toggle-value") || "\\auto";
         
         this.defaultValue = this.getCurrentValue();
 
         element.addEventListener("click", () => { this.toggleValue() });
     }
 
-    private getCurrentValue() {
+    private getCurrentValue(): any {
         return toggleProperties[this.refersToProperty].getValue(this.refersToElement, this.refersToValue);
     }
 
@@ -50,11 +47,11 @@ export default class Toggle {
         toggleProperties[this.refersToProperty].toggle(this.refersToElement, this.refersToValue, this.defaultValue);
     }
     
-    static find(query) {
+    static find(query: string) {
         const elements = document.querySelectorAll(query);
         let toggles = [];
         for (let i = 0; i < elements.length; i++) {
-            toggles.push(new Toggle(elements[i]));
+            toggles.push(new Toggle(elements[i] as HTMLElement));
         }
         return toggles;
     }

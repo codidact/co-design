@@ -1,27 +1,27 @@
 export default class Header {
-    private refersToElement;
-
-    constructor(public element) {
+    constructor(public readonly element: HTMLElement) {
         HeaderSlideToggle.find(element, "[data-header-slide]");
     }
     
     static apply() {
         const elements = document.querySelectorAll(".header");
-        let toggles = [];
+        let headers = [];
         for (let i = 0; i < elements.length; i++) {
-            toggles.push(new Header(elements[i]));
+            headers.push(new Header(elements[i] as HTMLElement));
         }
-        return toggles;
+        return headers;
     }
 };
 
 export class HeaderSlideToggle {
-    private refersToElement;
+    private readonly refersToElement: HTMLElement;
 
-    public static softDismissDuration = 250; // ms
-
-    constructor(public element) {
+    constructor(public readonly element: HTMLElement) {
         this.refersToElement = document.querySelector(element.getAttribute("data-header-slide"));
+
+        if (this.refersToElement == null) {
+            throw "Missing target for dismiss: " + element.getAttribute("data-dismiss");
+        }
         
         element.addEventListener("click", (e) => { this.toggle(); e.preventDefault(); });
     }
@@ -29,8 +29,6 @@ export class HeaderSlideToggle {
     private toggle() {
         this.refersToElement.classList.toggle("is-active");
         this.element.classList.toggle("is-active");
-
-        console.log(this.refersToElement)
 
         // Position header slide appropriately relative to
         // trigger.
@@ -44,10 +42,10 @@ export class HeaderSlideToggle {
         this.refersToElement.style.left = "";
         this.refersToElement.style.right = "";
 
-        const isRight = (rect.left + rect.width / 2) > document.body.clientWidth / 2;
-        // ^ check, whether the trigger is more on the left or on the right
+        // check, whether the trigger is more on the left or on the right
+        const isRight: boolean = (rect.left + rect.width / 2) > document.body.clientWidth / 2;
         const refersToElementWidth = this.refersToElement.getBoundingClientRect().width;
-        let offset = 0;
+        let offset: number = 0;
         if (isRight) {
             this.refersToElement.style.right = (document.body.clientWidth - rect.right) + "px";
             offset = document.body.clientWidth - rect.right;
@@ -62,12 +60,12 @@ export class HeaderSlideToggle {
         }
     }
     
-    static find(container, query) {
+    static find(container: HTMLElement, query: string) {
         const elements = container.querySelectorAll(query);
-        let toggles = [];
+        let headerslidetoggles = [];
         for (let i = 0; i < elements.length; i++) {
-            toggles.push(new HeaderSlideToggle(elements[i]));
+            headerslidetoggles.push(new HeaderSlideToggle(elements[i] as HTMLElement));
         }
-        return toggles;
+        return headerslidetoggles;
     }
 };

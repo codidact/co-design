@@ -1,15 +1,19 @@
 export default class Dismiss {
-    private refersToElement;
-    private doesSoftDismiss;
+    private readonly refersToElement: HTMLElement;
+    private readonly doesSoftDismiss: boolean;
 
-    public static softDismissDuration = 250; // ms
+    public static softDismissDurationinMilliseconds: number = 250; // ms
 
-    constructor(public element) {
+    constructor(public readonly element: HTMLElement) {
         this.refersToElement = document.querySelector(element.getAttribute("data-dismiss"));
+
+        if (this.refersToElement == null) {
+            throw "Missing target for dismiss: " + element.getAttribute("data-dismiss");
+        }
 
         this.doesSoftDismiss = element.hasAttribute("data-dismiss-soft");
         
-        element.addEventListener("click", () => { this.dismiss() });
+        element.addEventListener("click", (e) => { this.dismiss(); e.preventDefault(); });
     }
 
     private dismiss() {
@@ -21,20 +25,20 @@ export default class Dismiss {
                 { opacity: 1.0 },
                 { opacity: 0 }
             ], {
-                duration: Dismiss.softDismissDuration
+                duration: Dismiss.softDismissDurationinMilliseconds
             });
             setTimeout(() => {
                 this.refersToElement.remove();
-            }, Dismiss.softDismissDuration)
+            }, Dismiss.softDismissDurationinMilliseconds)
         }
     }
     
-    static find(query) {
+    static find(query: string) {
         const elements = document.querySelectorAll(query);
-        let toggles = [];
+        let dismisses = [];
         for (let i = 0; i < elements.length; i++) {
-            toggles.push(new Dismiss(elements[i]));
+            dismisses.push(new Dismiss(elements[i] as HTMLElement));
         }
-        return toggles;
+        return dismisses;
     }
 };
