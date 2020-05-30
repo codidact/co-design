@@ -1,19 +1,19 @@
 ---
 layout: page
-title: Javascript
-description: Co-Design comes with a standard Javascript library, which should allow you to do many things without writing a single line of Javascript yourself.
+title: JavaScript
+description: Co-Design comes with a standard JavaScript library, which should allow you to do many things without writing a single line of JavaScript yourself.
 ---
 
 ## Components
 
-Co-Design will provide Javascript controllers to every module, which is in need of one. See the respective component page for details:
+Co-Design will provide JavaScript controllers to every module, which is in need of one. See the respective component page for details:
 
 - [Header](/components/header)
 - [Modals](/components/modals)
 
 ## Utilities
 
-Furthermore, Co-Design Javascript provides some commonly used utilities:
+Furthermore, Co-Design JavaScript provides some commonly used utilities:
 
 ### Toggle
 

@@ -263,6 +263,6 @@ It's also possible to change the size of the modal, by giving it either `.is-lar
     </div>
 </div>
 
-## Javascript
+## JavaScript
 
- Co-Design provides standard Javascript to show and position the modals. Give your modal an id or an unique class and give the trigger the attribute `data-modal="[query]"`, where the query is a CSS selector for the slide. The same attribute should be given to the close button.
+ Co-Design provides standard JavaScript to show and position the modals. Give your modal an id or an unique class and give the trigger the attribute `data-modal="[query]"`, where the query is a CSS selector for the slide. The same attribute should be given to the close button.
