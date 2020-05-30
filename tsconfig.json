@@ -4,6 +4,7 @@
         "outDir": "./js/",
         "outFile": "./js/co-design.js",
         "rootDir": "./js_src/",
-        "target": "ES5"
+        "target": "ES5",
+        "alwaysStrict": true
     }
 }
