@@ -189,7 +189,7 @@
 </ul>
 </li>
 </ul>
-<p>By default, all entries are collapsed if the header is a button and unless you add the class <code>.is-active</code> to the ToC.</p>
+<p>By default, all entries are collapsed if the header is a button and unless you add the class <code>.is-active</code> to the ToC. You can use the <a href="/utilities/javascript">included JavaScript utilities</a> for that.</p>
 <h5 id="example-static">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;toc&quot;&gt;
     &lt;div class=&quot;toc--header&quot;&gt;Table of Contents&lt;/div&gt;
     &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
@@ -244,8 +244,8 @@
     </a>
 </div></div></div>
 <p>This one can be toggled (defaults to: off). Note, that the JS for it is not included with Co-Design, but is only for this documentation.</p>
-<h5 id="example-toggleable">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;toc&quot;&gt;
-    &lt;button class=&quot;toc--header&quot;&gt;Table of Contents&lt;/button&gt;
+<h5 id="example-toggleable">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;toc&quot; id=&quot;toc-example-toggle&quot;&gt;
+    &lt;button class=&quot;toc--header&quot; data-toggle=&quot;#toc-example-toggle&quot; data-toggle-property=&quot;class&quot; data-toggle-value=&quot;is-active&quot;&gt;Table of Contents&lt;/button&gt;
     &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
         &lt;div class=&quot;toc--badge&quot;&gt;
             &lt;span class=&quot;badge is-tag is-green&quot;&gt;+2&lt;/span&gt;
@@ -270,8 +270,8 @@
             &lt;p&gt;2 days ago by luap42&lt;/p&gt;
         &lt;/div&gt;
     &lt;/a&gt;
-&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="toc">
-    <button class="toc--header">Table of Contents</button>
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="toc" id="toc-example-toggle">
+    <button class="toc--header" data-toggle="#toc-example-toggle" data-toggle-property="class" data-toggle-value="is-active">Table of Contents</button>
     <a href="#" class="toc--entry">
         <div class="toc--badge">
             <span class="badge is-tag is-green">+2</span>
@@ -298,8 +298,8 @@
     </a>
 </div></div></div>
 <p>You can also use icons:</p>
-<h5 id="example-with-icon">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;toc is-active&quot;&gt;
-    &lt;button class=&quot;toc--header&quot;&gt;Table of Contents&lt;/button&gt;
+<h5 id="example-with-icon">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;toc is-active&quot; id=&quot;toc-example-icon&quot;&gt;
+    &lt;button class=&quot;toc--header&quot; data-toggle=&quot;#toc-example-icon&quot; data-toggle-property=&quot;class&quot; data-toggle-value=&quot;is-active&quot;&gt;Table of Contents&lt;/button&gt;
     &lt;a href=&quot;#&quot; class=&quot;toc--entry&quot;&gt;
         &lt;div class=&quot;toc--icon&quot;&gt;
             &lt;i class=&quot;fa fa-hashtag&quot;&gt;&lt;/i&gt;
@@ -319,8 +319,8 @@
             &lt;span class=&quot;badge is-tag is-small is-red&quot;&gt;new&lt;/span&gt;
         &lt;/div&gt;
     &lt;/a&gt;
-&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="toc is-active">
-    <button class="toc--header">Table of Contents</button>
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="toc is-active" id="toc-example-icon">
+    <button class="toc--header" data-toggle="#toc-example-icon" data-toggle-property="class" data-toggle-value="is-active">Table of Contents</button>
     <a href="#" class="toc--entry">
         <div class="toc--icon">
             <i class="fa fa-hashtag"></i>
