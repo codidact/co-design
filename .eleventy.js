@@ -14,6 +14,7 @@ function escapeHtml(unsafe) {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('home', 'layouts/home.html');
   eleventyConfig.addLayoutAlias('page', 'layouts/page.html');
+  eleventyConfig.addLayoutAlias('playground', 'layouts/playground.html');
 
   eleventyConfig.addPairedShortcode("example", function (content, id, application_notice, further_preview_class) {
     content = content.trim();

@@ -2,7 +2,6 @@
 layout: page
 title: Modals
 description: Modals are popup views that interrupt the normal user flow to maximize their attention.
-js: true
 ---
 
 ## Basic structure
@@ -43,12 +42,12 @@ You need to give a modal the class `.is-active`, in order for it to be shown.
 </div>
 {% endexample %}
 
-<button class="button is-outlined is-muted" data-trigger-modal="#js-basic-example-modal">Launch example basic modal</button>
+<button class="button is-outlined is-muted" data-modal="#js-basic-example-modal">Launch example basic modal</button>
 
 <div class="modal" id="js-basic-example-modal">
     <div class="modal--container">
         <div class="modal--header">
-            <button class="button is-close-button modal--header-button" data-trigger-modal="#js-basic-example-modal">×</button>
+            <button class="button is-close-button modal--header-button" data-modal="#js-basic-example-modal">×</button>
             An example modal
         </div>
         <div class="modal--body">
@@ -92,12 +91,12 @@ When a modal needs your full attention, so that nothing else may be done while i
 </div>
 {% endexample %}
 
-<button class="button is-outlined is-muted" data-trigger-modal="#js-backdrop-example-modal">Launch example modal with backdrop</button>
+<button class="button is-outlined is-muted" data-modal="#js-backdrop-example-modal">Launch example modal with backdrop</button>
 
 <div class="modal is-with-backdrop" id="js-backdrop-example-modal">
     <div class="modal--container">
         <div class="modal--header">
-            <button class="button is-close-button modal--header-button" data-trigger-modal="#js-backdrop-example-modal">×</button>
+            <button class="button is-close-button modal--header-button" data-modal="#js-backdrop-example-modal">×</button>
             An example modal
         </div>
         <div class="modal--body">
@@ -145,12 +144,12 @@ Of course the actions are probably dangerous, too, so you should also add the cl
 </div>
 {% endexample %}
 
-<button class="button is-outlined is-muted" data-trigger-modal="#js-danger-example-modal">Launch example danger modal</button>
+<button class="button is-outlined is-muted" data-modal="#js-danger-example-modal">Launch example danger modal</button>
 
 <div class="modal is-danger" id="js-danger-example-modal">
     <div class="modal--container">
         <div class="modal--header">
-            <button class="button is-close-button modal--header-button" data-trigger-modal="#js-danger-example-modal">×</button>
+            <button class="button is-close-button modal--header-button" data-modal="#js-danger-example-modal">×</button>
             An example modal
         </div>
         <div class="modal--body">
@@ -198,12 +197,12 @@ It's also possible to change the size of the modal, by giving it either `.is-lar
 </div>
 {% endexample %}
 
-<button class="button is-outlined is-muted" data-trigger-modal="#js-large-example-modal">Launch example large modal</button>
+<button class="button is-outlined is-muted" data-modal="#js-large-example-modal">Launch example large modal</button>
 
 <div class="modal is-large" id="js-large-example-modal">
     <div class="modal--container">
         <div class="modal--header">
-            <button class="button is-close-button modal--header-button" data-trigger-modal="#js-large-example-modal">×</button>
+            <button class="button is-close-button modal--header-button" data-modal="#js-large-example-modal">×</button>
             An example modal
         </div>
         <div class="modal--body">
@@ -244,12 +243,12 @@ It's also possible to change the size of the modal, by giving it either `.is-lar
 </div>
 {% endexample %}
 
-<button class="button is-outlined is-muted" data-trigger-modal="#js-small-example-modal">Launch example small modal</button>
+<button class="button is-outlined is-muted" data-modal="#js-small-example-modal">Launch example small modal</button>
 
 <div class="modal is-small" id="js-small-example-modal">
     <div class="modal--container">
         <div class="modal--header">
-            <button class="button is-close-button modal--header-button" data-trigger-modal="#js-small-example-modal">×</button>
+            <button class="button is-close-button modal--header-button" data-modal="#js-small-example-modal">×</button>
             An example modal
         </div>
         <div class="modal--body">
@@ -263,3 +262,7 @@ It's also possible to change the size of the modal, by giving it either `.is-lar
         </div>
     </div>
 </div>
+
+## JavaScript
+
+ Co-Design provides standard JavaScript to show and position the modals. Give your modal an id or an unique class and give the trigger the attribute `data-modal="[query]"`, where the query is a CSS selector for the slide. The same attribute should be given to the close button.

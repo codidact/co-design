@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Installing Co-Design - Co-Design</title>
+    <title>JavaScript - Co-Design</title>
 
     <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
     <link rel="stylesheet" type="text/css" href="/assets/docs.css">
@@ -39,7 +39,7 @@
             </div>
         
         
-        <a href="/setup/installation/" class="menu--item is-active">
+        <a href="/setup/installation/" class="menu--item ">
             Installing Co-Design
         </a>
         
@@ -78,7 +78,7 @@
             Colors
         </a>
         
-        <a href="/utilities/javascript/" class="menu--item ">
+        <a href="/utilities/javascript/" class="menu--item is-active">
             JavaScript
         </a>
         
@@ -137,10 +137,6 @@
             Modals
         </a>
         
-        <a href="/components/bar/" class="menu--item ">
-            Bar
-        </a>
-        
         <a href="/components/item-lists/" class="menu--item ">
             Item Lists
         </a>
@@ -160,10 +156,6 @@
             Diff
         </a>
         
-        <a href="/specific/toc/" class="menu--item ">
-            Table of Contents
-        </a>
-        
     
 </nav>
 
@@ -172,67 +164,72 @@
         </div>
         <div class="grid--cell is-12 is-9-lg docs-page is-flexible">
             <div class="has-padding-8">
-                <h1>Installing Co-Design</h1>
-                <p class="is-lead">This instructions will guide you through the installation of Co-Design.</p>
+                <h1>JavaScript</h1>
+                <p class="is-lead">Co-Design comes with a standard JavaScript library, which should allow you to do many things without writing a single line of JavaScript yourself.</p>
                 
                 
                 
-                <p>You can use this design framework for your own project. You should use it for any Codidact project.</p>
-<p>The software is licensed under the terms of the <a href="https://choosealicense.com/licenses/mit/">MIT</a> license, which you must follow, if you want to use it for an external project.</p>
-<p>To include this framework in your project, you'll need to include its CSS files into your HTML files.</p>
-<h2>1. Obtaining a copy of this framework</h2>
-<p>There two different ways to obtain a copy of this framework: You can build it from source from GitHub or you can get a pre-built version.</p>
-<h3>Building from source (GitHub)</h3>
-<p>To build our framework from source, you'll first need to download it from <a href="https://github.com/Codidact/Co-Design">GitHub</a>. Then you can run the build processes, by running the this on the command line:</p>
-<pre><code>~/co-design $ npm install
-~/co-design $ npm run build
-</code></pre>
-<p>Your build will then be in <code>/dist</code>.</p>
-<p>You can modify the configuration, by overriding the variables in the child theme file. That one is located at <code>src/_child.scss</code> in the repository.</p>
-<p><a href="https://github.com/codidact/co-design" class="button">Go to the GitHub repository</a></p>
-<h3>Using a pre-built version</h3>
-<p>You can also use a pre-built version. However, you won't be able to change variables (such as: font, color, ...), if you choose to do so.</p>
-<p>You can find a pre-built version <a href="https://unpkg.com/@codidact/co-design@latest/dist/codidact.css">here</a>. You can link to that CDN directly in your code:</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/@codidact/co-design@latest/dist/codidact.css&quot;&gt;
-</code></pre>
-<p><a href="https://unpkg.com/@codidact/co-design@latest/dist/codidact.css" class="button" download="codidact.css">Download the pre-built CSS</a></p>
-<h2>2. Minimal HTML template</h2>
-<p>When you want to use Co-Design for a Codidact project, it should already be included and have a correct template. If you need assistance, you can always ping <em>luap42</em> in Discord.</p>
-<p>When you want to use Co-Design for an external project, we recommend you to use the following HTML template:</p>
-<pre><code>&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-    &lt;title&gt;Your Co-Design page&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/dist/codidact.css&quot;&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;header class=&quot;header&quot;&gt;
-      &lt;div class=&quot;header--container container&quot;&gt;
-        &lt;div class=&quot;header--brand&quot;&gt;
-          &lt;a href=&quot;...&quot; class=&quot;header--site-name&quot;&gt;Brand&lt;/a&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;header--menu&quot;&gt;
-          &lt;a href=&quot;...&quot; class=&quot;header--item&quot;&gt;Menu item 1&lt;/a&gt;
-          &lt;a href=&quot;...&quot; class=&quot;header--item&quot;&gt;Menu item 2&lt;/a&gt;
-
-          &lt;div class=&quot;header--separator&quot;&gt;&lt;/div&gt;
-
-          &lt;a href=&quot;...&quot; class=&quot;header--item&quot;&gt;Menu item 3&lt;/a&gt;
-          &lt;a href=&quot;...&quot; class=&quot;header--item&quot;&gt;Menu item 4&lt;/a&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/header&gt;
-
-    &lt;main class=&quot;container has-padding-2&quot;&gt;
-      &lt;!-- Add page content here --&gt;
-    &lt;/main&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
+                <h2>Components</h2>
+<p>Co-Design will provide JavaScript controllers to every module, which is in need of one. See the respective component page for details:</p>
+<ul>
+<li><a href="/components/header">Header</a></li>
+<li><a href="/components/modals">Modals</a></li>
+</ul>
+<h2>Utilities</h2>
+<p>Furthermore, Co-Design JavaScript provides some commonly used utilities:</p>
+<h3>Toggle</h3>
+<p>Co-Design JS supports toggling various aspects of target elements. To create a toggle, you need to give the trigger these three attributes:</p>
+<ul>
+<li><code>data-toggle</code> with a CSS selector selecting the target</li>
+<li><code>data-toggle-property</code> with a name of the property to be toggled (defaults to: display)</li>
+<li><code>data-toggle-value</code> with a name of the value of the property to be toggled. (defaults to: <code>\auto</code>)</li>
+</ul>
+<p>There are these properties:</p>
+<ul>
+<li><strong>display</strong> - toggles, whether the element is visible or not</li>
+<li><strong>class</strong> - toggles, whether the element has one or many class (defined by value, separated by space) or not.</li>
+</ul>
+<h5 id="example-toggle-display">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-filled&quot;
+    data-toggle=&quot;#example-toggle-display-target&quot;&gt;
+Toggle Example&lt;/button&gt;
+<p>&lt;p id=&quot;example-toggle-display-target&quot;&gt;This paragraph can be toggled.&lt;/p&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-filled"
+    data-toggle="#example-toggle-display-target">
+Toggle Example</button></p>
+<p id="example-toggle-display-target">This paragraph can be toggled.</p></div></div>
+<h5 id="example-toggle-class">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-filled&quot;
+    data-toggle=&quot;#example-toggle-class-target&quot;
+    data-toggle-property=&quot;class&quot;
+    data-toggle-value=&quot;h-fw-bold&quot;&gt;
+Toggle Example&lt;/button&gt;
+<p>&lt;p id=&quot;example-toggle-class-target&quot;&gt;This paragraph can be toggled.&lt;/p&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-filled"
+    data-toggle="#example-toggle-class-target"
+    data-toggle-property="class"
+    data-toggle-value="h-fw-bold">
+Toggle Example</button></p>
+<p id="example-toggle-class-target">This paragraph can be toggled.</p></div></div>
+<h3>Dismiss</h3>
+<p>Co-Design JS supports dismissing target elements. To create a dismisser, you need to give the trigger these attributes:</p>
+<ul>
+<li><code>data-dismiss</code> with a CSS selector selecting the target</li>
+<li>(optionally) <code>data-dismiss-soft</code> for a more soft dismissal (first decrease opacity)</li>
+</ul>
+<h5 id="example-dismiss">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p&gt;Click the close button to remove the notice:&lt;/p&gt;
+<p>&lt;div class=&quot;notice is-danger&quot; id=&quot;example-dismiss-target&quot;&gt;
+&lt;button data-dismiss=&quot;#example-dismiss-target&quot; class=&quot;button is-close-button&quot;&gt;&amp;times;&lt;/button&gt;
+Something important happened!
+&lt;/div&gt;</p>
+<p>&lt;div class=&quot;notice is-success&quot; id=&quot;example-dismiss-soft-target&quot;&gt;
+&lt;button data-dismiss=&quot;#example-dismiss-soft-target&quot; data-dismiss-soft class=&quot;button is-close-button&quot;&gt;&amp;times;&lt;/button&gt;
+Something important happened! (soft dismiss)
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><p>Click the close button to remove the notice:</p></p>
+<div class="notice is-danger" id="example-dismiss-target">
+    <button data-dismiss="#example-dismiss-target" class="button is-close-button">&times;</button>
+    Something important happened!
+</div>
+<div class="notice is-success" id="example-dismiss-soft-target">
+    <button data-dismiss="#example-dismiss-soft-target" data-dismiss-soft class="button is-close-button">&times;</button>
+    Something important happened! (soft dismiss)
+</div></div></div>
             </div>
         </div>
     </div>

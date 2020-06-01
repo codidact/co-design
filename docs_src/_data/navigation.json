@@ -41,6 +41,10 @@
                 {
                     "title": "Colors",
                     "url": "/utilities/colors/"
+                },
+                {
+                    "title": "JavaScript",
+                    "url": "/utilities/javascript/"
                 }
             ]
         },
