@@ -4,6 +4,8 @@ title: JavaScript
 description: Co-Design comes with a standard JavaScript library, which should allow you to do many things without writing a single line of JavaScript yourself.
 ---
 
+To be able to use this JavaScript, you'll need to include it into your project. See the [installation guide](/setup/installation) for more information.
+
 ## Components
 
 Co-Design will provide JavaScript controllers to every module, which is in need of one. See the respective component page for details:
