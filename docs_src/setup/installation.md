@@ -21,9 +21,10 @@ To build our framework from source, you'll first need to download it from [GitHu
 ```
 ~/co-design $ npm install
 ~/co-design $ npm run build
+~/co-design $ npm run js_build
 ```
 
-Your build will then be in `/dist`.
+Your CSS build will then be in `/dist`, your JS build in `/js`.
 
 You can modify the configuration, by overriding the variables in the child theme file. That one is located at `src/_child.scss` in the repository.
 
@@ -33,13 +34,15 @@ You can modify the configuration, by overriding the variables in the child theme
 
 You can also use a pre-built version. However, you won't be able to change variables (such as: font, color, ...), if you choose to do so.
 
-You can find a pre-built version <a href="https://unpkg.com/@codidact/co-design@latest/dist/codidact.css">here</a>. You can link to that CDN directly in your code:
+You can find a pre-built version of the <a href="https://unpkg.com/@codidact/co-design@latest/dist/codidact.css">CSS</a> and of the <a href="https://unpkg.com/@codidact/co-design@latest/js/co-design.js">JavaScript</a>. You can link to that CDN directly in your code:
 
 ```
 <link rel="stylesheet" href="https://unpkg.com/@codidact/co-design@latest/dist/codidact.css">
+<script src="https://unpkg.com/@codidact/co-design@latest/js/co-design.js" defer></script>
 ```
 
 <a href="https://unpkg.com/@codidact/co-design@latest/dist/codidact.css" class="button" download="codidact.css">Download the pre-built CSS</a>
+<a href="https://unpkg.com/@codidact/co-design@latest/js/co-design.js" class="button" download="codidact.css">Download the pre-built JavaScript</a>
 
 
 ## 2. Minimal HTML template
@@ -79,6 +82,8 @@ When you want to use Co-Design for an external project, we recommend you to use 
     <main class="container has-padding-2">
       <!-- Add page content here -->
     </main>
+
+    <script src="https://unpkg.com/@codidact/co-design@latest/js/co-design.js" defer></script>
   </body>
 </html>
 ```
