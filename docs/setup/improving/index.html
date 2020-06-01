@@ -216,12 +216,15 @@ pass, we won't be able to merge - there are <em>no exceptions</em>,
 so please fix the failures and commit again. You can always
 mark your pull request as <em>Draft Pull Request</em>
 while you're still trying to make it work.</p>
-<h2>How to build the CSS and the documentation?</h2>
+<h2>How to build the CSS, the JS and the documentation?</h2>
 <p>First of all, you need to make sure, that you have everything important installed. Run this command to set up the development environment:</p>
 <pre><code>$ npm install
 </code></pre>
 <p>To build the CSS you need to run:</p>
 <pre><code>$ npm run build
+</code></pre>
+<p>To build the JS you need to run:</p>
+<pre><code>$ npm run js_build
 </code></pre>
 <p>To build the documentation you need to run:</p>
 <pre><code>$ npx @11ty/eleventy

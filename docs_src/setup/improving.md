@@ -46,7 +46,7 @@ so please fix the failures and commit again. You can always
 mark your pull request as *Draft Pull Request*
 while you're still trying to make it work.
 
-## How to build the CSS and the documentation?
+## How to build the CSS, the JS and the documentation?
 
 First of all, you need to make sure, that you have everything important installed. Run this command to set up the development environment:
 
@@ -58,6 +58,12 @@ To build the CSS you need to run:
 
 ```
 $ npm run build
+```
+
+To build the JS you need to run:
+
+```
+$ npm run js_build
 ```
 
 To build the documentation you need to run:

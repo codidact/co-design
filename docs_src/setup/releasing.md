@@ -6,7 +6,7 @@ description: This instructions will guide you how to release a new version Co-De
 
 Follow this guide to release a new version of Co-Design:
 
-1. Open the repository in your terminal and [build both the css and the documentation](/setup/improving). There shouldn't be any changes in the most cases, but if there are any, commit them.
+1. Open the repository in your terminal and [build the css, the js and the documentation](/setup/improving). There shouldn't be any changes in the most cases, but if there are any, commit them.
 2. Now run `npm version x.y.z`. This will update the package json files and create a new commit with that version name.
 
     Choose x, y and z based on our current release version and on the amount of changes this release introduces. As a general rule, you'll probably never increment x, you'll increment y if new components are introduced or other major changes are done and you'll increment z in all other cases. When changing y, set z to 0.
