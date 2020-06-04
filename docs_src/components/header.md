@@ -172,7 +172,7 @@ If you plan to use a header slide as mobile menu, you should add all header item
         <a class="menu--item" href="#">question</a>
         <a class="menu--item is-active" href="#">tags</a>
         <a class="menu--item" href="#">users</a>
-        <a class="menu--item" href="#">mod (1)</a>
+        <a class="menu--item" href="#">mod<span class="badge is-status"></span></a>
         <a class="menu--item" href="#">help</a>
         <a class="menu--item" href="#">discussions</a>
     </div>
