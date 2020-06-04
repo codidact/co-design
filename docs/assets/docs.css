@@ -105,9 +105,9 @@ html {
     margin: 0 auto;
 }
 
-.d-example .header-slide,
-.d-example .modal,
-.d-example .bar {
+.d-example-preview:not(.d-slides-with-js-example) .header-slide,
+.d-example-preview .modal,
+.d-example-preview .bar {
     position: relative !important;
     top: 0 !important;
     left: 0 !important;
@@ -115,11 +115,8 @@ html {
     bottom: 0 !important;
 }
 
-.d-example .d-slides-with-js-example .header-slide {
-    position: absolute !important;
-}
 .d-example .d-slides-with-js-example {
-    padding-bottom: 4em;
+    padding-bottom: 6em;
 }
 
 .container {

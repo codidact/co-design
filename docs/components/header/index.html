@@ -434,24 +434,47 @@
 </header></div></div>
 <h2>Header slides</h2>
 <p>Header slides are a supplementary component to headers. They allow for drop down and mobile menus.</p>
-<p>Header slides have the <code>.header-slide</code> class and its items have either the class <code>.header-slide--item</code> for items or <code>.header-slide--separator</code> for line separators. Header items can be active, use the class <code>.is-active</code> for that.</p>
-<p>If you plan to use a header slide as mobile menu, you should add all header items to it, that are removed from normal view.</p></p>
+<p>Header slides have the <code>.header-slide</code> class. You can also make large header slides with <code>.is-large</code></p>
+<p>If you plan to use a header slide as mobile menu, you should add all header items to it, that are removed from normal view and use a <a href="/components/nav">Menu component</a>.</p>
 <h5 id="example-slides">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;header-slide is-active&quot;&gt;
-    &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;question&lt;/a&gt;
-    &lt;a class=&quot;header-slide--item is-active&quot; href=&quot;#&quot;&gt;tags&lt;/a&gt;
-    &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;users&lt;/a&gt;
-    &lt;div class=&quot;header-slide--separator&quot;&gt;&lt;/div&gt;
-    &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;header-slide--alert&quot;&gt;1&lt;/span&gt;mod&lt;/a&gt;
-    &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;help&lt;/a&gt;
-    &lt;a class=&quot;header-slide--item&quot; href=&quot;#&quot;&gt;discussions&lt;/a&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+        &lt;a class=&quot;menu--item&quot; href=&quot;#&quot;&gt;question&lt;/a&gt;
+        &lt;a class=&quot;menu--item is-active&quot; href=&quot;#&quot;&gt;tags&lt;/a&gt;
+        &lt;a class=&quot;menu--item&quot; href=&quot;#&quot;&gt;users&lt;/a&gt;
+        &lt;a class=&quot;menu--item&quot; href=&quot;#&quot;&gt;mod (1)&lt;/a&gt;
+        &lt;a class=&quot;menu--item&quot; href=&quot;#&quot;&gt;help&lt;/a&gt;
+        &lt;a class=&quot;menu--item&quot; href=&quot;#&quot;&gt;discussions&lt;/a&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="header-slide is-active">
-    <a class="header-slide--item" href="#">question</a>
-    <a class="header-slide--item is-active" href="#">tags</a>
-    <a class="header-slide--item" href="#">users</a>
-    <div class="header-slide--separator"></div>
-    <a class="header-slide--item" href="#"><span class="header-slide--alert">1</span>mod</a>
-    <a class="header-slide--item" href="#">help</a>
-    <a class="header-slide--item" href="#">discussions</a>
+    <div class="menu">
+        <a class="menu--item" href="#">question</a>
+        <a class="menu--item is-active" href="#">tags</a>
+        <a class="menu--item" href="#">users</a>
+        <a class="menu--item" href="#">mod (1)</a>
+        <a class="menu--item" href="#">help</a>
+        <a class="menu--item" href="#">discussions</a>
+    </div>
+</div></div></div>
+<h5 id="example-slides-large">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;header-slide is-large is-active&quot;&gt;
+    &lt;h3 class=&quot;h-m-0 h-m-b-1&quot;&gt;Search this site&lt;/h3&gt;
+    &lt;div class=&quot;grid is-nowrap&quot;&gt;
+        &lt;input class=&quot;form-element&quot;&gt;
+        &lt;div class=&quot;h-m-1&quot;&gt;
+            &lt;button class=&quot;button is-filled&quot;&gt;
+                &lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="header-slide is-large is-active">
+    <h3 class="h-m-0 h-m-b-1">Search this site</h3>
+    <div class="grid is-nowrap">
+        <input class="form-element">
+        <div class="h-m-1">
+            <button class="button is-filled">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
 </div></div></div>
 <h3>JavaScript</h3>
 <p>Co-Design provides standard JavaScript to position the header slides. Give your slide an id or an unique class and give the trigger the attribute <code>data-header-slide=&quot;[query]&quot;</code>, where the query is a CSS selector for the slide.</p>
@@ -462,6 +485,7 @@
     &lt;/div&gt;
     &lt;div class=&quot;header--menu&quot;&gt;
         &lt;div class=&quot;header--separator&quot;&gt;&lt;/div&gt;
+        &lt;a class=&quot;header--item is-visible-on-mobile&quot; href=&quot;#&quot; data-header-slide=&quot;#example-header-slide-large&quot;&gt;Search&lt;/a&gt;
         &lt;a class=&quot;header--item is-visible-on-mobile&quot; href=&quot;#&quot; data-header-slide=&quot;#example-header-slide&quot;&gt;Open Slide&lt;/a&gt;
         &lt;/a&gt;
     &lt;/div&gt;
@@ -469,6 +493,17 @@
 &lt;/header&gt;
 &lt;div class=&quot;header-slide&quot; id=&quot;example-header-slide&quot;&gt;
     &lt;p&gt;Hello World!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;header-slide is-large&quot; id=&quot;example-header-slide-large&quot;&gt;
+    &lt;h3 class=&quot;h-m-0 h-m-b-1&quot;&gt;Search this site&lt;/h3&gt;
+    &lt;div class=&quot;grid is-nowrap&quot;&gt;
+        &lt;input class=&quot;form-element&quot;&gt;
+        &lt;div class=&quot;h-m-1&quot;&gt;
+            &lt;button class=&quot;button is-filled&quot;&gt;
+                &lt;i class=&quot;fa fa-search&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre><div class="d-example-preview d-slides-with-js-example"><header class="header is-small h-bg-red-800 is-dark">
     <div class="container header--container">
     <div class="header--brand">
@@ -476,6 +511,7 @@
     </div>
     <div class="header--menu">
         <div class="header--separator"></div>
+        <a class="header--item is-visible-on-mobile" href="#" data-header-slide="#example-header-slide-large">Search</a>
         <a class="header--item is-visible-on-mobile" href="#" data-header-slide="#example-header-slide">Open Slide</a>
         </a>
     </div>
@@ -483,6 +519,17 @@
 </header>
 <div class="header-slide" id="example-header-slide">
     <p>Hello World!</p>
+</div>
+<div class="header-slide is-large" id="example-header-slide-large">
+    <h3 class="h-m-0 h-m-b-1">Search this site</h3>
+    <div class="grid is-nowrap">
+        <input class="form-element">
+        <div class="h-m-1">
+            <button class="button is-filled">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
 </div></div></div>
             </div>
         </div>
