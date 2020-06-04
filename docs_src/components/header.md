@@ -162,19 +162,34 @@ If your header has only a brand site name and some simple menu items, you can ha
 
 Header slides are a supplementary component to headers. They allow for drop down and mobile menus.
 
-Header slides have the `.header-slide` class and its items have either the class `.header-slide--item` for items or `.header-slide--separator` for line separators. Header items can be active, use the class `.is-active` for that.
+Header slides have the `.header-slide` class. You can also make large header slides with `.is-large`
 
-If you plan to use a header slide as mobile menu, you should add all header items to it, that are removed from normal view.</p>
+If you plan to use a header slide as mobile menu, you should add all header items to it, that are removed from normal view and use a [Menu component](/components/nav).
 
 {% example "slides" %}
 <div class="header-slide is-active">
-    <a class="header-slide--item" href="#">question</a>
-    <a class="header-slide--item is-active" href="#">tags</a>
-    <a class="header-slide--item" href="#">users</a>
-    <div class="header-slide--separator"></div>
-    <a class="header-slide--item" href="#"><span class="header-slide--alert">1</span>mod</a>
-    <a class="header-slide--item" href="#">help</a>
-    <a class="header-slide--item" href="#">discussions</a>
+    <div class="menu">
+        <a class="menu--item" href="#">question</a>
+        <a class="menu--item is-active" href="#">tags</a>
+        <a class="menu--item" href="#">users</a>
+        <a class="menu--item" href="#">mod<span class="badge is-status"></span></a>
+        <a class="menu--item" href="#">help</a>
+        <a class="menu--item" href="#">discussions</a>
+    </div>
+</div>
+{% endexample %}
+
+{% example "slides-large" %}
+<div class="header-slide is-large is-active">
+    <h3 class="h-m-0 h-m-b-1">Search this site</h3>
+    <div class="grid is-nowrap">
+        <input class="form-element">
+        <div class="h-m-1">
+            <button class="button is-filled">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
 </div>
 {% endexample %}
 
@@ -190,6 +205,7 @@ Co-Design provides standard JavaScript to position the header slides. Give your 
     </div>
     <div class="header--menu">
         <div class="header--separator"></div>
+        <a class="header--item is-visible-on-mobile" href="#" data-header-slide="#example-header-slide-large">Search</a>
         <a class="header--item is-visible-on-mobile" href="#" data-header-slide="#example-header-slide">Open Slide</a>
         </a>
     </div>
@@ -197,5 +213,16 @@ Co-Design provides standard JavaScript to position the header slides. Give your 
 </header>
 <div class="header-slide" id="example-header-slide">
     <p>Hello World!</p>
+</div>
+<div class="header-slide is-large" id="example-header-slide-large">
+    <h3 class="h-m-0 h-m-b-1">Search this site</h3>
+    <div class="grid is-nowrap">
+        <input class="form-element">
+        <div class="h-m-1">
+            <button class="button is-filled">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
 </div>
 {% endexample %}

@@ -222,6 +222,54 @@
 <span class="badge is-tag is-small is-green">green</span>
 <span class="badge is-tag is-small is-teal">teal</span>
 <span class="badge is-tag is-small is-muted">muted</span></div></div>
+<h2>Status badges</h2>
+<p>Status badges are shown on clickable components to inform the user, that changes or new things are available or that some amount has been selected.</p>
+<p>Create one by using the class <code>.badge.is-status</code>. It can (but isn't required to) contain a number indicating the amount of changes. The badge will be styled appropriately in both cases. Don't forget to keep accessibility in mind.</p>
+<h5 id="example-status-on-button">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-danger is-filled&quot;&gt;
+    &lt;span class=&quot;badge is-status&quot;&gt;5&lt;/span&gt;
+    Delete selected posts
+&lt;/button&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-danger is-filled">
+    <span class="badge is-status">5</span>
+    Delete selected posts
+</button></div></div>
+<p>Or you could use it within a category header (here with both possible styles):</p>
+<h5 id="example-status-on-category-header">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;header class=&quot;category-header is-red&quot;&gt;
+    &lt;div class=&quot;category-header--tabs&quot;&gt;
+        &lt;div class=&quot;container category-header--tabs-container&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;category-header--tab is-active&quot;&gt;Q&amp;amp;A&lt;span class=&quot;badge is-status&quot;&gt;2&lt;/span&gt;&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;category-header--tab&quot;&gt;Wiki&lt;span class=&quot;badge is-status&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;category-header--tab&quot;&gt;Blog&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container category-header--container&quot;&gt;
+        &lt;div class=&quot;category-header--name&quot;&gt;Q&amp;amp;A&lt;/div&gt;
+        &lt;div class=&quot;category-header--nav&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;category-header--nav-item is-active&quot;&gt;Questions&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;category-header--nav-item&quot;&gt;Tags&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;category-header--nav-item&quot;&gt;Search&lt;/a&gt;
+        &lt;div class=&quot;category-header--nav-separator&quot;&gt;&lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;category-header--nav-item is-button&quot;&gt;Ask Question&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</code></pre><div class="d-example-preview undefined"><header class="category-header is-red">
+    <div class="category-header--tabs">
+        <div class="container category-header--tabs-container">
+            <a href="#" class="category-header--tab is-active">Q&amp;A<span class="badge is-status">2</span></a>
+            <a href="#" class="category-header--tab">Wiki<span class="badge is-status"></span></a>
+            <a href="#" class="category-header--tab">Blog</a>
+        </div>
+    </div>
+    <div class="container category-header--container">
+        <div class="category-header--name">Q&amp;A</div>
+        <div class="category-header--nav">
+        <a href="#" class="category-header--nav-item is-active">Questions</a>
+        <a href="#" class="category-header--nav-item">Tags</a>
+        <a href="#" class="category-header--nav-item">Search</a>
+        <div class="category-header--nav-separator"></div>
+        <a href="#" class="category-header--nav-item is-button">Ask Question</a>
+        </div>
+    </div>
+</header></div></div>
 <h2>Awards</h2>
 <p>Awards are badges that are given to users for doing good things. Often they are awarded automatically. Awards are created with the CSS classes <code>.badge.is-award</code>.</p></p>
 <p>It's also possible and recommended to add an icon in front of the award label.</p>
