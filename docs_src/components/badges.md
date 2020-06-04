@@ -42,6 +42,44 @@ It's also possible to color tags, by giving them one of these classes `.is-red`,
 {% endexample %}
 
 
+## Status badges
+
+Status badges are shown on clickable components to inform the user, that changes or new things are available or that some amount has been selected.
+
+Create one by using the class `.badge.is-status`. It can (but isn't required to) contain a number indicating the amount of changes. The badge will be styled appropriately in both cases. Don't forget to keep accessibility in mind.
+
+{% example "status-on-button" %}
+<button class="button is-danger is-filled">
+    <span class="badge is-status">5</span>
+    Delete selected posts
+</button>
+{% endexample %}
+
+Or you could use it within a category header (here with both possible styles):
+
+{% example "status-on-category-header" %}
+<header class="category-header is-red">
+    <div class="category-header--tabs">
+        <div class="container category-header--tabs-container">
+            <a href="#" class="category-header--tab is-active">Q&amp;A<span class="badge is-status">2</span></a>
+            <a href="#" class="category-header--tab">Wiki<span class="badge is-status"></span></a>
+            <a href="#" class="category-header--tab">Blog</a>
+        </div>
+    </div>
+    <div class="container category-header--container">
+        <div class="category-header--name">Q&amp;A</div>
+        <div class="category-header--nav">
+        <a href="#" class="category-header--nav-item is-active">Questions</a>
+        <a href="#" class="category-header--nav-item">Tags</a>
+        <a href="#" class="category-header--nav-item">Search</a>
+        <div class="category-header--nav-separator"></div>
+        <a href="#" class="category-header--nav-item is-button">Ask Question</a>
+        </div>
+    </div>
+</header>
+{% endexample %}
+
+
 ## Awards
 
 Awards are badges that are given to users for doing good things. Often they are awarded automatically. Awards are created with the CSS classes `.badge.is-award`.</p>

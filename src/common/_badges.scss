@@ -123,3 +123,25 @@ a.badge-tag:hover {
     color: $badge-tl-muted-color;
   }
 }
+
+
+.badge.is-status {
+  background-color: rgba(0,0,0,0.2);
+  color: inherit;
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 0.1em 0.3em;
+  min-width: 1.5em;
+  margin: 0 0.3em;
+  border-radius: 4px;
+  line-height: 1;
+  text-align: center;
+
+  &:empty {
+    height: 0.75em;
+    width: 0.75em;
+    border-radius: 50%;
+    min-width: 0;
+    background-color: rgba(0,0,0,0.4);
+  }
+}
