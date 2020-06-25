@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>JavaScript - Co-Design</title>
+    <title>Meter - Co-Design</title>
 
     <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
     <link rel="stylesheet" type="text/css" href="/assets/docs.css">
@@ -78,7 +78,7 @@
             Colors
         </a>
         
-        <a href="/utilities/javascript/" class="menu--item is-active">
+        <a href="/utilities/javascript/" class="menu--item ">
             JavaScript
         </a>
         
@@ -164,7 +164,7 @@
             Table of Contents
         </a>
         
-        <a href="/specific/meter/" class="menu--item ">
+        <a href="/specific/meter/" class="menu--item is-active">
             Meter
         </a>
         
@@ -176,72 +176,33 @@
         </div>
         <div class="grid--cell is-12 is-9-lg docs-page is-flexible">
             <div class="has-padding-8">
-                <h1 class="h-ff-brand">JavaScript</h1>
-                <p class="is-lead">Co-Design comes with a standard JavaScript library, which should allow you to do many things without writing a single line of JavaScript yourself.</p>
+                <h1 class="h-ff-brand">Meter</h1>
+                <p class="is-lead">The meter component allows you to visualise some progress or score.</p>
                 
                 
                 
-                <p>To be able to use this JavaScript, you'll need to include it into your project. See the <a href="/setup/installation">installation guide</a> for more information.</p>
-<h2>Components</h2>
-<p>Co-Design will provide JavaScript controllers to every module, which is in need of one. See the respective component page for details:</p>
-<ul>
-<li><a href="/components/header">Header</a></li>
-<li><a href="/components/modals">Modals</a></li>
-</ul>
-<h2>Utilities</h2>
-<p>Furthermore, Co-Design JavaScript provides some commonly used utilities:</p>
-<h3>Toggle</h3>
-<p>Co-Design JS supports toggling various aspects of target elements. To create a toggle, you need to give the trigger these three attributes:</p>
-<ul>
-<li><code>data-toggle</code> with a CSS selector selecting the target</li>
-<li><code>data-toggle-property</code> with a name of the property to be toggled (defaults to: display)</li>
-<li><code>data-toggle-value</code> with a name of the value of the property to be toggled. (defaults to: <code>\auto</code>)</li>
-</ul>
-<p>There are these properties:</p>
-<ul>
-<li><strong>display</strong> - toggles, whether the element is visible or not</li>
-<li><strong>class</strong> - toggles, whether the element has one or many class (defined by value, separated by space) or not.</li>
-</ul>
-<h5 id="example-toggle-display">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-filled&quot;
-    data-toggle=&quot;#example-toggle-display-target&quot;&gt;
-Toggle Example&lt;/button&gt;
-<p>&lt;p id=&quot;example-toggle-display-target&quot;&gt;This paragraph can be toggled.&lt;/p&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-filled"
-    data-toggle="#example-toggle-display-target">
-Toggle Example</button></p>
-<p id="example-toggle-display-target">This paragraph can be toggled.</p></div></div>
-<h5 id="example-toggle-class">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-filled&quot;
-    data-toggle=&quot;#example-toggle-class-target&quot;
-    data-toggle-property=&quot;class&quot;
-    data-toggle-value=&quot;h-fw-bold&quot;&gt;
-Toggle Example&lt;/button&gt;
-<p>&lt;p id=&quot;example-toggle-class-target&quot;&gt;This paragraph can be toggled.&lt;/p&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-filled"
-    data-toggle="#example-toggle-class-target"
-    data-toggle-property="class"
-    data-toggle-value="h-fw-bold">
-Toggle Example</button></p>
-<p id="example-toggle-class-target">This paragraph can be toggled.</p></div></div>
-<h3>Dismiss</h3>
-<p>Co-Design JS supports dismissing target elements. To create a dismisser, you need to give the trigger these attributes:</p>
-<ul>
-<li><code>data-dismiss</code> with a CSS selector selecting the target</li>
-<li>(optionally) <code>data-dismiss-soft</code> for a more soft dismissal (first decrease opacity)</li>
-</ul>
-<h5 id="example-dismiss">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p&gt;Click the close button to remove the notice:&lt;/p&gt;
-<p>&lt;div class=&quot;notice is-danger&quot; id=&quot;example-dismiss-target&quot;&gt;
-&lt;button data-dismiss=&quot;#example-dismiss-target&quot; class=&quot;button is-close-button&quot;&gt;&amp;times;&lt;/button&gt;
-Something important happened!
-&lt;/div&gt;</p>
-<p>&lt;div class=&quot;notice is-success&quot; id=&quot;example-dismiss-soft-target&quot;&gt;
-&lt;button data-dismiss=&quot;#example-dismiss-soft-target&quot; data-dismiss-soft class=&quot;button is-close-button&quot;&gt;&amp;times;&lt;/button&gt;
-Something important happened! (soft dismiss)
-&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><p>Click the close button to remove the notice:</p></p>
-<div class="notice is-danger" id="example-dismiss-target">
-    <button data-dismiss="#example-dismiss-target" class="button is-close-button">&times;</button>
-    Something important happened!
-</div>
-<div class="notice is-success" id="example-dismiss-soft-target">
-    <button data-dismiss="#example-dismiss-soft-target" data-dismiss-soft class="button is-close-button">&times;</button>
-    Something important happened! (soft dismiss)
+                <p>Every Meter consists of a <code>.meter</code> and a <code>.meter--bar</code> within that. There may be other type-specific children. The meter-bar has a <code>.is-X%</code> option, which needs to be set to the percentage of the current meter's value. In most cases, you should add the percentage into the <code>.meter--bar</code> for accessibility reasons.</p>
+<h2>Progress Meter</h2>
+<p>The progress meter is the most basic meter you can have. It indicates % of completion or progress. Use <code>.meter.is-progress</code> for this variant:</p>
+<h5 id="example-progress">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;meter is-progress&quot;&gt;
+    &lt;div class=&quot;meter--bar is-72%&quot;&gt;72%&lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="meter is-progress">
+    <div class="meter--bar is-72%">72%</div>
+</div></div></div>
+<p>You can also add a label, by adding a <code>.meter--label</code> element.</p>
+<h5 id="example-progress">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;meter is-progress&quot; style=&quot;max-width: 400px;&quot;&gt;
+    &lt;div class=&quot;meter--bar is-48%&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;meter--label&quot;&gt;48%&lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="meter is-progress" style="max-width: 400px;">
+    <div class="meter--bar is-48%"></div>
+    <div class="meter--label">48%</div>
+</div></div></div>
+<h2>Question Score Meter</h2>
+<p>There is supposed to be a meter component indicating the relative question score. The value of this meter is going to be influenced by such things as votes, close/lock status and answers. Use <code>.meter.is-question-score</code> for this component:</p>
+<h5 id="example-question-score">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;meter is-question-score&quot;&gt;
+    &lt;div class=&quot;meter--bar is-72%&quot;&gt;72%&lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="meter is-question-score">
+    <div class="meter--bar is-72%">72%</div>
 </div></div></div>
             </div>
         </div>

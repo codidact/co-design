@@ -1,0 +1,60 @@
+.meter {
+    height: $meter-height;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    position: relative;
+
+    .meter--bar {
+        width: 0;
+        font-size: 0;
+        line-height: 0;
+        color: transparent;
+
+        @for $i from 0 through 100 {
+            &.is-#{$i}\%, {
+                width: $i * 1%;
+            }
+        }
+    }
+
+    .meter--label {
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+}
+
+.meter.is-progress {
+    border-radius: $meter-progress-border-radius;
+    border: $meter-progress-border-width solid $meter-progress-border-color;
+    height: 1.5rem;
+    color: $meter-progress-color;
+
+    .meter--bar {
+        border-radius: $meter-progress-border-radius;
+        background-color: $meter-progress-inner-color;
+    }
+}
+
+.meter.is-question-score {
+    border: $meter-question-score-border-width solid $meter-question-score-border-color;
+    background-color: $meter-question-score-outer-color;
+    max-width: $meter-max-width;
+
+    .meter--bar {
+        background-color: $meter-question-score-inner-color;
+        border-right: $meter-question-score-border-width solid $meter-question-score-border-color;
+
+        &.is-0\%,
+        &.is-100\%, {
+            border-right: 0;
+        }
+    }
+}
