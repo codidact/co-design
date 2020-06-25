@@ -2,6 +2,7 @@
   padding: $tabs-padding*$padding-unit;
   display: flex;
   flex-wrap: wrap;
+  font-family: $font-stack-brand;
 
   .tabs--item {
     display: block;
@@ -36,6 +37,7 @@
   padding: $menu-padding*$padding-unit;
   display: flex;
   flex-direction: column;
+  font-family: $font-stack-brand;
 
   .menu--heading {
     display: block;

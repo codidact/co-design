@@ -77,7 +77,7 @@ To set the font size, you need to give the element the class `has-font-size-X`, 
 
 ## Font family
 
-You can set the `font-family` to either "primary" (the default sans serif font) or "code" (the monospace font). Unless you override it in the "_child.scss", each option uses this font stack:
+You can set the `font-family` to either "primary" (the default sans serif font), "brand" (the sans serif font used in headers and other branding-specific components) or "code" (the monospace font). Unless you override it in the "_child.scss", each option uses this font stack:
 
 <table class="table is-compact">
     <tr>
@@ -86,6 +86,10 @@ You can set the `font-family` to either "primary" (the default sans serif font) 
     </tr>
     <tr>
         <td>primary</td>
+        <td><span class="has-font-family-code">"Roboto", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif</span></td>
+    </tr>
+    <tr>
+        <td>brand</td>
         <td><span class="has-font-family-code">"Red Hat Display", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif</span></td>
     </tr>
     <tr>
@@ -97,7 +101,9 @@ You can set the `font-family` to either "primary" (the default sans serif font) 
 To set the font family, you need to give the element the class `has-font-family-X`, where X is replaced with the font stack name.
 
 {% example "font-family" %}
-This is <span class="has-font-family-code"> code with some <span class="has-font-family-primary">default text</span> followed by some code</span> again.
+<div class="has-font-family-primary">This is the primary font.</div>
+<div class="has-font-family-brand">This is the brand font..</div>
+<div class="has-font-family-code">This is the code font.</div>
 {% endexample %}
 
 

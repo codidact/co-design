@@ -1,20 +1,14 @@
-/* latin-ext */
-@font-face {
+/*
+ * RED HAT DISPLAY
+ */
+
+ @font-face {
   font-family: 'Red Hat Display';
   font-style: italic;
   font-weight: 400;
   src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Italic.ttf");
 }
 
-/* latin */
-@font-face {
-  font-family: 'Red Hat Display';
-  font-style: italic;
-  font-weight: 400;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Italic.ttf");
-}
-
-/* latin-ext */
 @font-face {
   font-family: 'Red Hat Display';
   font-style: italic;
@@ -22,15 +16,6 @@
   src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-MediumItalic.ttf");
 }
 
-/* latin */
-@font-face {
-  font-family: 'Red Hat Display';
-  font-style: italic;
-  font-weight: 500;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-MediumItalic.ttf");
-}
-
-/* latin-ext */
 @font-face {
   font-family: 'Red Hat Display';
   font-style: italic;
@@ -38,15 +23,6 @@
   src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-BoldItalic.ttf");
 }
 
-/* latin */
-@font-face {
-  font-family: 'Red Hat Display';
-  font-style: italic;
-  font-weight: 700;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-BoldItalic.ttf");
-}
-
-/* latin-ext */
 @font-face {
   font-family: 'Red Hat Display';
   font-style: italic;
@@ -54,74 +30,100 @@
   src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-BlackItalic.ttf");
 }
 
-/* latin */
 @font-face {
   font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Black.ttf");
+}
+
+
+/*
+ * ROBOTO
+ */
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Roboto/Roboto-Italic.ttf");  
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/Roboto/Roboto-MediumItalic.ttf");  
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/Roboto/Roboto-BoldItalic.ttf");  
+}
+
+@font-face {
+  font-family: 'Roboto';
   font-style: italic;
   font-weight: 900;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-BlackItalic.ttf");
+  font-display: swap;
+  src: url("../assets/fonts/Roboto/Roboto-BlackItalic.ttf");  
 }
 
-/* latin-ext */
+
 @font-face {
-  font-family: 'Red Hat Display';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf");
+  font-display: swap;
+  src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");  
 }
 
-/* latin */
 @font-face {
-  font-family: 'Red Hat Display';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Regular.ttf");
-}
-
-/* latin-ext */
-@font-face {
-  font-family: 'Red Hat Display';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Medium.ttf");
+  font-display: swap;
+  src: url("../assets/fonts/Roboto/Roboto-Medium.ttf");  
 }
 
-/* latin */
 @font-face {
-  font-family: 'Red Hat Display';
-  font-style: normal;
-  font-weight: 500;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Medium.ttf");
-}
-
-/* latin-ext */
-@font-face {
-  font-family: 'Red Hat Display';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Bold.ttf");
+  font-display: swap;
+  src: url("../assets/fonts/Roboto/Roboto-Bold.ttf");  
 }
 
-/* latin */
 @font-face {
-  font-family: 'Red Hat Display';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Bold.ttf");
-}
-
-/* latin-ext */
-@font-face {
-  font-family: 'Red Hat Display';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 900;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Black.ttf");
-}
-
-/* latin */
-@font-face {
-  font-family: 'Red Hat Display';
-  font-style: normal;
-  font-weight: 900;
-  src: url("../assets/fonts/Red_Hat_Display/RedHatDisplay-Black.ttf");
+  font-display: swap;
+  src: url("../assets/fonts/Roboto/Roboto-Black.ttf");  
 }

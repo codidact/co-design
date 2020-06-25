@@ -1,6 +1,7 @@
 .header {
   padding: $padding-unit * $header-padding;
   margin-bottom: $margin-unit * $header-bottom-margin;
+  font-family: $font-stack-brand;
 
   background: $header-background;
   color: $header-color;

@@ -3,6 +3,9 @@ label.form-element {
 
   display: block;
   margin: $label-margin-y*$margin-unit $label-margin-x*$margin-unit;
+  @if ($label-smaller-margin-bottom < 1) {
+    margin-bottom: $label-margin-y*$margin-unit*$label-smaller-margin-bottom;
+  }
 
   font-size: $label-font-size;
   font-weight: $label-font-weight;

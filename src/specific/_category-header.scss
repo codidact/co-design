@@ -1,5 +1,7 @@
 @mixin category-header-content ($color) {
     background-color: lighten($color, $ch-container-lighter);
+    font-family: $font-stack-brand;
+    
     .category-header--tabs {
         background-color: lighten($color, $ch-tabs-lighter);
 

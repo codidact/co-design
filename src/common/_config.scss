@@ -1,5 +1,6 @@
 /* Typography */
-$font-stack-primary: "Red Hat Display", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$font-stack-primary: "Roboto", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$font-stack-brand: "Red Hat Display", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
 $font-stack-code: "Consolas", "Courier New", monospace !default;
 
 $font-size: 16px !default;
@@ -211,11 +212,12 @@ $form-color: $tertiary-color !default;
 $form-danger-color: map-get($secondary-colors, "red") !default;
 
 
-$label-margin-y: 1 !default;
+$label-margin-y: 4 !default;
 $label-margin-x: 0 !default;
 $label-color: #444444 !default;
 $label-font-size: 1.0em !default;
-$label-font-weight: 500 !default;
+$label-font-weight: 600 !default;
+$label-smaller-margin-bottom: 0.25 !default;
 
 $form-caption-font-size: map-get($font-size-gradient, "caption") !default;
 $form-caption-color: darken($tertiary-color, 5%) !default;
@@ -225,7 +227,7 @@ $form-caption-margin-bottom: 2 !default;
 $input-margin-y: 1 !default;
 $input-margin-x: 0 !default;
 $input-padding: 2 !default;
-$input-font-weight: 500 !default;
+$input-font-weight: 400 !default;
 $input-border-width: 1px !default;
 $input-border-color: lighten($form-color, 35%) !default;
 $input-active-border-color: lighten($form-color, 20%) !default;
