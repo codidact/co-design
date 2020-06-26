@@ -100,3 +100,34 @@ $meter-question-score-border-width: 1.5px;
 $meter-question-score-border-color: #000;
 $meter-question-score-outer-color: lighten(map-get($secondary-colors, "red"), 7.5%);
 $meter-question-score-inner-color: darken(map-get($secondary-colors, "green"), 15%);
+
+/* Tools */
+$tools-padding-y: 2;
+$tools-padding-x: 2;
+
+$tools-item-font-size: 1.125em;
+$tools-item-font-weight: 500;
+$tools-item-padding-y: 2;
+$tools-item-padding-x: 2;
+$tools-item-margin-y: 0.125;
+$tools-item-margin-x: 0.6;
+
+$tools-item-background-color: transparent;
+$tools-item-color: darken($tertiary-color, 5%);
+$tools-item-active-background-color: lighten($tertiary-color, 35%);
+$tools-item-active-color: darken($tertiary-color, 25%);
+$tools-item-active-inner-shadow: 0 2px 4px -2px darken($tertiary-color, 5%);
+
+$tools-item-danger-background-color: transparent;
+$tools-item-danger-color: darken($tertiary-color, 5%);
+$tools-item-danger-hover-background-color: darken(map-get($secondary-colors, "red"), 10%);
+$tools-item-danger-active-background-color: darken(map-get($secondary-colors, "red"), 20%);
+$tools-item-danger-active-color: white;
+$tools-item-danger-active-inner-shadow: 0 2px 4px -2px darken(map-get($secondary-colors, "red"), 45%);
+
+$tools-item-danger-filled-background-color: map-get($secondary-colors, "red");
+$tools-item-danger-filled-color: white;
+$tools-item-danger-filled-hover-background-color: darken(map-get($secondary-colors, "red"), 20%);
+$tools-item-danger-filled-active-background-color: darken(map-get($secondary-colors, "red"), 30%);
+$tools-item-danger-filled-active-color: white;
+$tools-item-danger-filled-active-inner-shadow: 0 2px 4px -2px darken(map-get($secondary-colors, "red"), 45%);
