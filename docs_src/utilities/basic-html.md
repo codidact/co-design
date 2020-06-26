@@ -58,3 +58,18 @@ Co-Design supports standard styles for `<ins>` and `<del>`, which should be used
 {% example "ins-del" %}
 <p>Co-Design is <del>nice</del><ins>awesome</ins>.</p>
 {% endexample %}
+
+## Details and Summary
+
+Co-Design has default styles for `<details>` (with `<summary>`) elements. These  are used to collapse certain parts of the site.
+
+{% example "details-summary" %}
+<details>
+    <summary>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nemo, quae, explicabo doloribus quos corporis omnis error ipsum ex quia voluptatibus consectetur neque natus quisquam nulla sunt non impedit ducimus.
+    </summary>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae sequi quam sit magni neque repellat, natus debitis necessitatibus a, maxime placeat doloribus alias nobis perferendis non excepturi tenetur, quos porro! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut magnam fugit tempora deserunt sint vel aperiam nemo reiciendis perferendis! Exercitationem culpa velit labore doloribus et quae at commodi porro dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consectetur rerum, unde minima reprehenderit laboriosam fugiat deserunt animi? Tenetur sit nisi magnam quis dolorem eius recusandae possimus distinctio, error incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor suscipit laudantium ipsam iste ipsa nobis obcaecati impedit sequi exercitationem, quasi rerum repellat omnis, aliquam accusantium at provident eum recusandae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eos asperiores est ea aliquam aut quasi at ratione similique suscipit laboriosam cupiditate, esse nesciunt, aperiam odio numquam quae soluta cumque!
+    </p>
+</details>
+{% endexample %}
