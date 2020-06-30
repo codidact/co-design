@@ -44,16 +44,17 @@
 }
 
 .meter.is-question-score {
-    border: $meter-question-score-border-width solid $meter-question-score-border-color;
     background-color: $meter-question-score-outer-color;
     max-width: $meter-max-width;
+    border-radius: $meter-question-score-border-radius;
 
     .meter--bar {
         background-color: $meter-question-score-inner-color;
-        border-right: $meter-question-score-border-width solid $meter-question-score-border-color;
+        border-top-left-radius: $meter-question-score-border-radius;
+        border-bottom-left-radius: $meter-question-score-border-radius;
 
         &.is-0\%,
-        &.is-100\%, {
+        &.is-100\% {
             border-right: 0;
         }
     }
