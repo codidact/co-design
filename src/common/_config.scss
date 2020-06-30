@@ -178,7 +178,7 @@ $button-muted-color: $tertiary-color !default;
 
 $button-icon-only-default-color: $tertiary-color !default;
 
-$button-font-weight: 500 !default;
+$button-font-weight: 400 !default;
 $button-border-radius: 3px !default;
 $button-border-width: 1px !default;
 $button-border-style: solid !default;
@@ -216,7 +216,7 @@ $label-margin-y: 4 !default;
 $label-margin-x: 0 !default;
 $label-color: #444444 !default;
 $label-font-size: 1.0em !default;
-$label-font-weight: 600 !default;
+$label-font-weight: 400 !default;
 $label-smaller-margin-bottom: 0.25 !default;
 
 $form-caption-font-size: map-get($font-size-gradient, "caption") !default;
