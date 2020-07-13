@@ -107,7 +107,8 @@ html {
 
 .d-example-preview:not(.d-slides-with-js-example) .header-slide,
 .d-example-preview .modal,
-.d-example-preview .bar {
+.d-example-preview .bar,
+.d-example-preview:not(.d-dp-with-js-example) .droppanel {
     position: relative !important;
     top: 0 !important;
     left: 0 !important;

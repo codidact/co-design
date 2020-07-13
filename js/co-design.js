@@ -171,6 +171,79 @@
         exports.HeaderSlideToggle = HeaderSlideToggle;
         ;
     });
+    define("droppanel", ["require", "exports"], function (require, exports) {
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: true });
+        var DropPanel = (function () {
+            function DropPanel(element) {
+                var _this = this;
+                this.element = element;
+                this.refersToElement = document.querySelector(element.getAttribute("data-drop"));
+                if (this.refersToElement == null) {
+                    throw "Missing target for DropPanel: " + element.getAttribute("data-drop");
+                }
+                this.elementActiveClass = element.hasAttribute("data-drop-self-class-toggle") ? element.getAttribute("data-drop-self-class-toggle") : null;
+                this.forcedDirection = element.hasAttribute("data-drop-force-dir") ? element.getAttribute("data-drop-force-dir") : null;
+                element.addEventListener("click", function (e) { _this.toggleDropPanel(); e.preventDefault(); });
+            }
+            DropPanel.prototype.toggleDropPanel = function () {
+                this.refersToElement.classList.toggle("is-active");
+                if (this.elementActiveClass) {
+                    this.element.classList.toggle(this.elementActiveClass);
+                }
+                if (this.refersToElement.classList.contains("is-active")) {
+                    this.refersToElement.style.top = null;
+                    this.refersToElement.style.bottom = null;
+                    this.refersToElement.style.left = null;
+                    this.refersToElement.style.right = null;
+                    var rect = this.element.getBoundingClientRect();
+                    var isRight = (rect.left + rect.width / 2) > document.body.clientWidth / 2;
+                    var refersToElementWidth = this.refersToElement.getBoundingClientRect().width;
+                    var refersToElementHeight = this.refersToElement.getBoundingClientRect().width;
+                    var offset = 0;
+                    if (isRight) {
+                        this.refersToElement.style.right = (document.body.clientWidth - rect.right) + "px";
+                    }
+                    else {
+                        this.refersToElement.style.left = (rect.left) + "px";
+                    }
+                    if (document.body.clientWidth < (refersToElementWidth + offset)) {
+                        this.refersToElement.style.left = "0px";
+                        this.refersToElement.style.right = "0px";
+                        this.refersToElement.style.maxWidth = "100%";
+                    }
+                    var isTop = void 0;
+                    if (this.forcedDirection == "up") {
+                        isTop = false;
+                    }
+                    else if (this.forcedDirection == "down") {
+                        isTop = true;
+                    }
+                    else {
+                        isTop = (rect.top + rect.height / 2) <= (window.innerHeight) / 2;
+                    }
+                    if (isTop) {
+                        this.refersToElement.style.top = (rect.bottom + window.scrollY + DropPanel.offsetInPixel) + "px";
+                    }
+                    else {
+                        this.refersToElement.style.bottom = (window.innerHeight - window.scrollY - rect.top + DropPanel.offsetInPixel) + "px";
+                    }
+                }
+            };
+            DropPanel.find = function (query) {
+                var elements = document.querySelectorAll(query);
+                var DropPanels = [];
+                for (var i = 0; i < elements.length; i++) {
+                    DropPanels.push(new DropPanel(elements[i]));
+                }
+                return DropPanels;
+            };
+            DropPanel.offsetInPixel = 2;
+            return DropPanel;
+        }());
+        exports.default = DropPanel;
+        ;
+    });
     define("modal", ["require", "exports"], function (require, exports) {
         "use strict";
         Object.defineProperty(exports, "__esModule", { value: true });
@@ -218,12 +291,13 @@
         exports.ModalToggle = ModalToggle;
         ;
     });
-    define("co-design", ["require", "exports", "toggle", "dismiss", "header", "modal"], function (require, exports, toggle_js_1, dismiss_js_1, header_js_1, modal_js_1) {
+    define("co-design", ["require", "exports", "toggle", "dismiss", "header", "droppanel", "modal"], function (require, exports, toggle_js_1, dismiss_js_1, header_js_1, droppanel_js_1, modal_js_1) {
         "use strict";
         Object.defineProperty(exports, "__esModule", { value: true });
         toggle_js_1.default.find("[data-toggle]");
         dismiss_js_1.default.find("[data-dismiss]");
         modal_js_1.ModalToggle.find("[data-modal]");
+        droppanel_js_1.default.find("[data-drop]");
         header_js_1.default.apply();
     });
     

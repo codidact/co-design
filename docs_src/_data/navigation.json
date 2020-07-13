@@ -107,6 +107,10 @@
                 {
                     "title": "Item Lists",
                     "url": "/components/item-lists/"
+                },
+                {
+                    "title": "Drop Panels",
+                    "url": "/components/drop-panels/"
                 }
             ]
         },

@@ -543,3 +543,24 @@ $bar-background-color: lighten($tertiary-color, 42.5%);
 $bar-border-color: lighten($tertiary-color, 25%);
 $bar-border-width: 1px;
 $bar-padding: 5;
+
+/* Drop Panel */
+$drop-border-width: 1px;
+$drop-border-color: lighten($tertiary-color, 25%);
+$drop-padding: 4;
+$drop-border-radius: 3px;
+$drop-max-width: 15rem;
+$drop-large-max-width: 30rem;
+$drop-wide-max-width: 45rem;
+$drop-background-color: white;
+$drop-shadow: 0 3px 5px -2px #eeeeee !default;
+
+$drop-header-color: darken($tertiary-color, 10%);
+$drop-header-margin: 4;
+
+$drop-menu-item-padding-y: 2;
+$drop-menu-item-padding-x: 5;
+$drop-menu-item-color: darken($tertiary-color, 30%);
+$drop-menu-item-hover-background-color: lighten($tertiary-color, 40%);
+$drop-menu-item-active-color: white;
+$drop-menu-item-active-background-color: darken($tertiary-color, 15%);

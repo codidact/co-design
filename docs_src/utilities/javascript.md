@@ -12,6 +12,7 @@ Co-Design will provide JavaScript controllers to every module, which is in need 
 
 - [Header](/components/header)
 - [Modals](/components/modals)
+- [Drop Panels](/components/drop-panels)
 
 ## Utilities
 

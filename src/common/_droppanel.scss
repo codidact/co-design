@@ -1,0 +1,53 @@
+.droppanel {
+    border: $drop-border-width solid $drop-border-color;
+    padding: $drop-padding * $padding-unit;
+    border-radius: $drop-border-radius;
+    max-width: $drop-max-width;
+    width: 100%;
+    box-shadow: $drop-shadow;
+    position: absolute;
+    display: none;
+    background-color: $drop-background-color;
+
+    &.is-active { display: block; }
+
+    &.is-large {
+        max-width: $drop-large-max-width;
+    }
+
+    &.is-wide {
+        max-width: $drop-wide-max-width;
+    }
+
+    .droppanel--header {
+        color: $drop-header-color;
+        margin: $drop-header-margin*$margin-unit 0;
+        font-variant: small-caps;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .droppanel--menu {
+        margin: 0 $padding-unit * -$drop-padding;
+        display: flex;
+        flex-direction: column;
+
+        a {
+            padding: $drop-menu-item-padding-y*$padding-unit $drop-menu-item-padding-x*$padding-unit;
+            color: $drop-menu-item-color;
+
+            &:hover, &:focus, &:active {
+                background-color: $drop-menu-item-hover-background-color;
+                color: $drop-menu-item-color;
+                text-decoration: none;
+            }
+
+            &.is-active {
+                background-color: $drop-menu-item-active-background-color;
+                color: $drop-menu-item-active-color;
+            }
+        }
+    }
+}

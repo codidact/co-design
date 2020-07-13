@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>JavaScript - Co-Design</title>
+    <title>Drop Panels - Co-Design</title>
 
     <link rel="stylesheet" type="text/css" href="/dist/codidact.css">
     <link rel="stylesheet" type="text/css" href="/assets/docs.css">
@@ -78,7 +78,7 @@
             Colors
         </a>
         
-        <a href="/utilities/javascript/" class="menu--item is-active">
+        <a href="/utilities/javascript/" class="menu--item ">
             JavaScript
         </a>
         
@@ -145,7 +145,7 @@
             Item Lists
         </a>
         
-        <a href="/components/drop-panels/" class="menu--item ">
+        <a href="/components/drop-panels/" class="menu--item is-active">
             Drop Panels
         </a>
         
@@ -184,73 +184,67 @@
         </div>
         <div class="grid--cell is-12 is-9-lg docs-page is-flexible">
             <div class="has-padding-8">
-                <h1 class="h-ff-brand">JavaScript</h1>
-                <p class="is-lead">Co-Design comes with a standard JavaScript library, which should allow you to do many things without writing a single line of JavaScript yourself.</p>
+                <h1 class="h-ff-brand">Drop Panels</h1>
+                <p class="is-lead">Drop panels can be used for dropdowns and dropups and are automatically positioned through Co-Design's JavaScript.</p>
                 
                 
                 
-                <p>To be able to use this JavaScript, you'll need to include it into your project. See the <a href="/setup/installation">installation guide</a> for more information.</p>
-<h2>Components</h2>
-<p>Co-Design will provide JavaScript controllers to every module, which is in need of one. See the respective component page for details:</p>
-<ul>
-<li><a href="/components/header">Header</a></li>
-<li><a href="/components/modals">Modals</a></li>
-<li><a href="/components/drop-panels">Drop Panels</a></li>
-</ul>
-<h2>Utilities</h2>
-<p>Furthermore, Co-Design JavaScript provides some commonly used utilities:</p>
-<h3>Toggle</h3>
-<p>Co-Design JS supports toggling various aspects of target elements. To create a toggle, you need to give the trigger these three attributes:</p>
-<ul>
-<li><code>data-toggle</code> with a CSS selector selecting the target</li>
-<li><code>data-toggle-property</code> with a name of the property to be toggled (defaults to: display)</li>
-<li><code>data-toggle-value</code> with a name of the value of the property to be toggled. (defaults to: <code>\auto</code>)</li>
-</ul>
-<p>There are these properties:</p>
-<ul>
-<li><strong>display</strong> - toggles, whether the element is visible or not</li>
-<li><strong>class</strong> - toggles, whether the element has one or many class (defined by value, separated by space) or not.</li>
-</ul>
-<h5 id="example-toggle-display">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-filled&quot;
-    data-toggle=&quot;#example-toggle-display-target&quot;&gt;
-Toggle Example&lt;/button&gt;
-<p>&lt;p id=&quot;example-toggle-display-target&quot;&gt;This paragraph can be toggled.&lt;/p&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-filled"
-    data-toggle="#example-toggle-display-target">
-Toggle Example</button></p>
-<p id="example-toggle-display-target">This paragraph can be toggled.</p></div></div>
-<h5 id="example-toggle-class">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-filled&quot;
-    data-toggle=&quot;#example-toggle-class-target&quot;
-    data-toggle-property=&quot;class&quot;
-    data-toggle-value=&quot;h-fw-bold&quot;&gt;
-Toggle Example&lt;/button&gt;
-<p>&lt;p id=&quot;example-toggle-class-target&quot;&gt;This paragraph can be toggled.&lt;/p&gt;</code></pre><div class="d-example-preview undefined"><button class="button is-filled"
-    data-toggle="#example-toggle-class-target"
-    data-toggle-property="class"
-    data-toggle-value="h-fw-bold">
-Toggle Example</button></p>
-<p id="example-toggle-class-target">This paragraph can be toggled.</p></div></div>
-<h3>Dismiss</h3>
-<p>Co-Design JS supports dismissing target elements. To create a dismisser, you need to give the trigger these attributes:</p>
-<ul>
-<li><code>data-dismiss</code> with a CSS selector selecting the target</li>
-<li>(optionally) <code>data-dismiss-soft</code> for a more soft dismissal (first decrease opacity)</li>
-</ul>
-<h5 id="example-dismiss">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;p&gt;Click the close button to remove the notice:&lt;/p&gt;
-<p>&lt;div class=&quot;notice is-danger&quot; id=&quot;example-dismiss-target&quot;&gt;
-&lt;button data-dismiss=&quot;#example-dismiss-target&quot; class=&quot;button is-close-button&quot;&gt;&amp;times;&lt;/button&gt;
-Something important happened!
-&lt;/div&gt;</p>
-<p>&lt;div class=&quot;notice is-success&quot; id=&quot;example-dismiss-soft-target&quot;&gt;
-&lt;button data-dismiss=&quot;#example-dismiss-soft-target&quot; data-dismiss-soft class=&quot;button is-close-button&quot;&gt;&amp;times;&lt;/button&gt;
-Something important happened! (soft dismiss)
-&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><p>Click the close button to remove the notice:</p></p>
-<div class="notice is-danger" id="example-dismiss-target">
-    <button data-dismiss="#example-dismiss-target" class="button is-close-button">&times;</button>
-    Something important happened!
+                <h2>Basic</h2>
+<p>You create a drop panel by using the class <code>.droppanel</code>. Drop panels can contain (among other elements): Drop panel headers (<code>.droppanel--header</code>) and drop panel menus (<code>.droppanel--menu</code>). The menu contains menu items (<code>&lt;a&gt;</code>), with active ones marked as <code>.is-active</code>.</p>
+<p>By default, drop panels are hidden. You need to give them the class <code>.is-active</code> to make them visible. In most cases, Co-Design's JavaScript should be able to do this for you. You can also make a drop panel larger (<code>.is-large</code>) or ultra-wide (<code>.is-wide</code>).</p>
+<h5 id="example-basic">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;droppanel is-active&quot;&gt;
+    &lt;div class=&quot;droppanel--header&quot;&gt;
+        Search for...
+    &lt;/div&gt;
+    &lt;input class=&quot;form-element&quot;&gt;
+    &lt;div class=&quot;droppanel--header&quot;&gt;
+        Order by...
+    &lt;/div&gt;
+    &lt;div class=&quot;droppanel--menu&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Score&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;is-active&quot;&gt;Creation date&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Last activity&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Answer count&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="droppanel is-active">
+    <div class="droppanel--header">
+        Search for...
+    </div>
+    <input class="form-element">
+    <div class="droppanel--header">
+        Order by...
+    </div>
+    <div class="droppanel--menu">
+        <a href="#">Score</a>
+        <a href="#" class="is-active">Creation date</a>
+        <a href="#">Last activity</a>
+        <a href="#">Answer count</a>
+    </div>
+</div></div></div>
+<p>Here is an example with different sizes</p>
+<h5 id="example-sizes">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;div class=&quot;droppanel is-active is-large&quot;&gt;
+    &lt;p&gt;Large size.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;droppanel is-active is-wide&quot;&gt;
+    &lt;p&gt;Wide size.&lt;/p&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview undefined"><div class="droppanel is-active is-large">
+    <p>Large size.</p>
 </div>
-<div class="notice is-success" id="example-dismiss-soft-target">
-    <button data-dismiss="#example-dismiss-soft-target" data-dismiss-soft class="button is-close-button">&times;</button>
-    Something important happened! (soft dismiss)
+<div class="droppanel is-active is-wide">
+    <p>Wide size.</p>
+</div></div></div>
+<h2>JavaScript</h2>
+<p>Co-Design's JavaScript provides full support for showing drop panels and aligning them automatically.</p>
+<p>Give the drop panel an id or unique class and add <code>data-drop=&quot;[query]&quot;</code> to the trigger, where the query is a CSS selector for the drop panel.</p>
+<p>If you want to toggle a class on the trigger (for example <code>.is-active</code>), you can add <code>data-drop-self-class-toggle=&quot;[class]&quot;</code> to the trigger. If you want to force a direction (up or down), to which the drop panel should go, add <code>data-drop-force-dir=&quot;[up|down]&quot;</code> to the trigger.</p>
+<h5 id="example-js">Example</h5><div class="d-example"><pre class="d-example-code"><code>&lt;button class=&quot;button is-filled&quot; data-drop=&quot;#droppanel-example&quot; data-drop-self-class-toggle=&quot;is-active&quot;&gt;Toggle example drop panel&lt;/button&gt;
+&lt;div class=&quot;droppanel&quot; id=&quot;droppanel-example&quot;&gt;
+    &lt;div class=&quot;droppanel--header&quot;&gt;👋 Hello!&lt;/div&gt;
+    &lt;p&gt;Welcome to my drop panel!&lt;/p&gt;
+&lt;/div&gt;</code></pre><div class="d-example-preview d-dp-with-js-example"><button class="button is-filled" data-drop="#droppanel-example" data-drop-self-class-toggle="is-active">Toggle example drop panel</button>
+<div class="droppanel" id="droppanel-example">
+    <div class="droppanel--header">👋 Hello!</div>
+    <p>Welcome to my drop panel!</p>
 </div></div></div>
             </div>
         </div>
