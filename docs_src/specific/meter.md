@@ -30,7 +30,16 @@ You can also add a label, by adding a `.meter--label` element.
 There is supposed to be a meter component indicating the relative question score. The value of this meter is going to be influenced by such things as votes, close/lock status and answers. Use `.meter.is-question-score` for this component:
 
 {% example "question-score" %}
-<div class="meter is-question-score">
+<div class="meter is-question-score h-m-2">
+    <div class="meter--bar is-95%">95%</div>
+</div>
+<div class="meter is-question-score h-m-2">
+    <div class="meter--bar is-50%">50%</div>
+</div>
+<div class="meter is-question-score h-m-2">
+    <div class="meter--bar is-30%">30%</div>
+</div>
+<div class="meter is-question-score h-m-2" style="max-width: 75px;">
     <div class="meter--bar is-72%">72%</div>
 </div>
 {% endexample %}

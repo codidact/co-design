@@ -48,14 +48,47 @@
     max-width: $meter-max-width;
     border-radius: $meter-question-score-border-radius;
 
-    .meter--bar {
-        background-color: $meter-question-score-inner-color;
-        border-top-left-radius: $meter-question-score-border-radius;
-        border-bottom-left-radius: $meter-question-score-border-radius;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: $meter-question-score-dash-width;
+        left: calc(50% - #{$meter-question-score-dash-width/2});
+        right: calc(50% - #{$meter-question-score-dash-width/2});
+        z-index: 1;
+        background-color: $meter-question-score-dash-color;
+    }
 
-        &.is-0\%,
-        &.is-100\% {
-            border-right: 0;
+    .meter--bar {
+        position: absolute;
+        height: 100%;
+        z-index: 0;
+
+        @for $i from 0 through 49 {
+            &.is-#{$i}\% {
+                width: (50 - $i) * 1%;
+                right: 50%;
+                border-top-left-radius: $meter-question-score-border-radius;
+                border-bottom-left-radius: $meter-question-score-border-radius;
+                background-color: $meter-question-score-negative-color;
+            }
+        }
+
+        &.is-50\% {
+            left: 50%;
+            right: 50%;
+            width: 0;
+        }
+
+        @for $i from 51 through 100 {
+            &.is-#{$i}\% {
+                width: ($i - 50) * 1%;
+                left: 50%;
+                border-top-right-radius: $meter-question-score-border-radius;
+                border-bottom-right-radius: $meter-question-score-border-radius;
+                background-color: $meter-question-score-positive-color;
+            }
         }
     }
 }

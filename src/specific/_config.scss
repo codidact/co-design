@@ -97,8 +97,11 @@ $meter-progress-border-radius: 0.25rem;
 $meter-progress-inner-color: lighten($primary-color, 25%);
 
 $meter-question-score-border-radius: 3px;
-$meter-question-score-outer-color: lighten(map-get($secondary-colors, "red"), 7.5%);
-$meter-question-score-inner-color: darken(map-get($secondary-colors, "green"), 15%);
+$meter-question-score-dash-width: 2px;
+$meter-question-score-outer-color: lighten($tertiary-color, 35%);
+$meter-question-score-dash-color: darken($tertiary-color, 30%);
+$meter-question-score-negative-color: lighten(map-get($secondary-colors, "red"), 5%);
+$meter-question-score-positive-color: darken(map-get($secondary-colors, "green"), 10%);
 
 /* Tools */
 $tools-padding-y: 2;
