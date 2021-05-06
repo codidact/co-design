@@ -2,10 +2,12 @@ export default class DropPanel {
     private readonly refersToElement: HTMLElement;
     private readonly elementActiveClass: string;
     private readonly forcedDirection: string;
+    private readonly panelTriggerNode: HTMLElement;
 
     public static offsetInPixel: number = 2;
 
     constructor(public readonly element: HTMLElement) {
+        this.panelTriggerNode = element;
         this.refersToElement = document.querySelector(element.getAttribute("data-drop"));
 
         if (this.refersToElement == null) {
@@ -14,7 +16,8 @@ export default class DropPanel {
 
         this.elementActiveClass = element.hasAttribute("data-drop-self-class-toggle") ? element.getAttribute("data-drop-self-class-toggle") : null;
         this.forcedDirection = element.hasAttribute("data-drop-force-dir") ? element.getAttribute("data-drop-force-dir") : null;
-
+        
+        this.closePanelOnClickOutside();
         element.addEventListener("click", (e) => { this.toggleDropPanel(); e.preventDefault(); });
     }
 
@@ -71,6 +74,25 @@ export default class DropPanel {
             } else {
                 this.refersToElement.style.bottom = (window.innerHeight - window.scrollY - rect.top + DropPanel.offsetInPixel) + "px";
             }
+        }
+    }
+
+    private closePanelOnClickOutside() {
+        const dropPanelSelector = this.panelTriggerNode.getAttribute("data-drop");
+        document.addEventListener("click", (e) => {
+            const target = e.target as HTMLElement;
+            const parentDropdown = target.closest(dropPanelSelector);
+            if(parentDropdown !== this.refersToElement && this.panelTriggerNode !== target) {
+                this.closeDropPanel();
+                e.preventDefault();
+            }
+        });
+    }
+
+    private closeDropPanel() {
+        this.refersToElement.classList.remove("is-active");
+        if (this.elementActiveClass) {
+            this.element.classList.remove(this.elementActiveClass);
         }
     }
     
