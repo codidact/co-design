@@ -127,10 +127,12 @@
             function HeaderSlideToggle(element) {
                 var _this = this;
                 this.element = element;
+                this.slideTriggerNode = element;
                 this.refersToElement = document.querySelector(element.getAttribute("data-header-slide"));
                 if (this.refersToElement == null) {
                     throw "Missing target for dismiss: " + element.getAttribute("data-dismiss");
                 }
+                this.closeSlideOnClickOutside();
                 element.addEventListener("click", function (e) { _this.toggle(); e.preventDefault(); });
             }
             HeaderSlideToggle.prototype.toggle = function () {
@@ -158,6 +160,22 @@
                     this.refersToElement.style.maxWidth = "100%";
                 }
             };
+            HeaderSlideToggle.prototype.closeSlide = function () {
+                this.refersToElement.classList.remove("is-active");
+                this.element.classList.remove("is-active");
+            };
+            HeaderSlideToggle.prototype.closeSlideOnClickOutside = function () {
+                var _this = this;
+                var slideSelector = this.slideTriggerNode.getAttribute("data-header-slide");
+                document.addEventListener("click", function (e) {
+                    var target = e.target;
+                    var parentSlide = target.closest(slideSelector);
+                    if (parentSlide !== _this.refersToElement && _this.slideTriggerNode !== target) {
+                        _this.closeSlide();
+                        e.preventDefault();
+                    }
+                });
+            };
             HeaderSlideToggle.find = function (container, query) {
                 var elements = container.querySelectorAll(query);
                 var headerslidetoggles = [];
@@ -178,12 +196,14 @@
             function DropPanel(element) {
                 var _this = this;
                 this.element = element;
+                this.panelTriggerNode = element;
                 this.refersToElement = document.querySelector(element.getAttribute("data-drop"));
                 if (this.refersToElement == null) {
                     throw "Missing target for DropPanel: " + element.getAttribute("data-drop");
                 }
                 this.elementActiveClass = element.hasAttribute("data-drop-self-class-toggle") ? element.getAttribute("data-drop-self-class-toggle") : null;
                 this.forcedDirection = element.hasAttribute("data-drop-force-dir") ? element.getAttribute("data-drop-force-dir") : null;
+                this.closePanelOnClickOutside();
                 element.addEventListener("click", function (e) { _this.toggleDropPanel(); e.preventDefault(); });
             }
             DropPanel.prototype.toggleDropPanel = function () {
@@ -228,6 +248,24 @@
                     else {
                         this.refersToElement.style.bottom = (window.innerHeight - window.scrollY - rect.top + DropPanel.offsetInPixel) + "px";
                     }
+                }
+            };
+            DropPanel.prototype.closePanelOnClickOutside = function () {
+                var _this = this;
+                var dropPanelSelector = this.panelTriggerNode.getAttribute("data-drop");
+                document.addEventListener("click", function (e) {
+                    var target = e.target;
+                    var parentDropdown = target.closest(dropPanelSelector);
+                    if (parentDropdown !== _this.refersToElement && _this.panelTriggerNode !== target) {
+                        _this.closeDropPanel();
+                        e.preventDefault();
+                    }
+                });
+            };
+            DropPanel.prototype.closeDropPanel = function () {
+                this.refersToElement.classList.remove("is-active");
+                if (this.elementActiveClass) {
+                    this.element.classList.remove(this.elementActiveClass);
                 }
             };
             DropPanel.find = function (query) {

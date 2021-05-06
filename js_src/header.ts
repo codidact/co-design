@@ -15,14 +15,17 @@ export default class Header {
 
 export class HeaderSlideToggle {
     private readonly refersToElement: HTMLElement;
+    private readonly slideTriggerNode: HTMLElement;
 
     constructor(public readonly element: HTMLElement) {
+        this.slideTriggerNode = element;
         this.refersToElement = document.querySelector(element.getAttribute("data-header-slide"));
 
         if (this.refersToElement == null) {
             throw "Missing target for dismiss: " + element.getAttribute("data-dismiss");
         }
         
+        this.closeSlideOnClickOutside();
         element.addEventListener("click", (e) => { this.toggle(); e.preventDefault(); });
     }
 
@@ -58,6 +61,23 @@ export class HeaderSlideToggle {
             this.refersToElement.style.right = "0px";
             this.refersToElement.style.maxWidth = "100%";
         }
+    }
+
+    private closeSlide() {
+        this.refersToElement.classList.remove("is-active");
+        this.element.classList.remove("is-active");
+    }
+
+    private closeSlideOnClickOutside() {
+        const slideSelector = this.slideTriggerNode.getAttribute("data-header-slide");
+        document.addEventListener("click", (e) => {
+            const target = e.target as HTMLElement;
+            const parentSlide = target.closest(slideSelector);
+            if(parentSlide !== this.refersToElement && this.slideTriggerNode !== target) {
+                this.closeSlide();
+                e.preventDefault();
+            }
+        });
     }
     
     static find(container: HTMLElement, query: string) {
