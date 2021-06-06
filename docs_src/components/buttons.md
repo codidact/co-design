@@ -31,6 +31,16 @@ As primary buttons, danger buttons can have different levels of importance. Ther
 <button class="button is-danger is-filled">filled danger button</button>
 {% endexample %}
 
+You can also use any other available secondary colors to create a button of that color (for instance, for informational or success buttons):
+
+{% example "colors" %}
+<button class="button is-green">default green button</button>
+<button class="button is-green is-outlined">outlined green button</button>
+<button class="button is-green is-filled">filled green button</button>
+<button class="button is-teal">default teal button</button>
+<button class="button is-yellow">default yellow button</button>
+{% endexample %}
+
 ## Muted buttons
 
 Sometimes actions are not available or should only be considered secondary to others. For these cases, it's possible to use muted buttons.
