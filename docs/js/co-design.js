@@ -106,6 +106,7 @@
     define("header", ["require", "exports"], function (require, exports) {
         "use strict";
         Object.defineProperty(exports, "__esModule", { value: true });
+        exports.HeaderSlideToggle = void 0;
         var Header = (function () {
             function Header(element) {
                 this.element = element;
@@ -172,7 +173,6 @@
                     var parentSlide = target.closest(slideSelector);
                     if (parentSlide !== _this.refersToElement && _this.slideTriggerNode !== target) {
                         _this.closeSlide();
-                        e.preventDefault();
                     }
                 });
             };
@@ -285,6 +285,7 @@
     define("modal", ["require", "exports"], function (require, exports) {
         "use strict";
         Object.defineProperty(exports, "__esModule", { value: true });
+        exports.Modal = exports.ModalToggle = void 0;
         var Modal = (function () {
             function Modal(element) {
                 this.element = element;
