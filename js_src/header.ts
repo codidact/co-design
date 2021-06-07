@@ -73,9 +73,8 @@ export class HeaderSlideToggle {
         document.addEventListener("click", (e) => {
             const target = e.target as HTMLElement;
             const parentSlide = target.closest(slideSelector);
-            if(parentSlide !== this.refersToElement && this.slideTriggerNode !== target) {
+            if (parentSlide !== this.refersToElement && this.slideTriggerNode !== target) {
                 this.closeSlide();
-                e.preventDefault();
             }
         });
     }
