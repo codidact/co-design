@@ -219,7 +219,7 @@
                     var rect = this.element.getBoundingClientRect();
                     var isRight = (rect.left + rect.width / 2) > document.body.clientWidth / 2;
                     var refersToElementWidth = this.refersToElement.getBoundingClientRect().width;
-                    var refersToElementHeight = this.refersToElement.getBoundingClientRect().width;
+                    var refersToElementHeight = this.refersToElement.getBoundingClientRect().height;
                     var offset = 0;
                     if (isRight) {
                         this.refersToElement.style.right = (document.body.clientWidth - rect.right) + "px";
@@ -333,11 +333,30 @@
     define("co-design", ["require", "exports", "toggle", "dismiss", "header", "droppanel", "modal"], function (require, exports, toggle_js_1, dismiss_js_1, header_js_1, droppanel_js_1, modal_js_1) {
         "use strict";
         Object.defineProperty(exports, "__esModule", { value: true });
-        toggle_js_1.default.find("[data-toggle]");
-        dismiss_js_1.default.find("[data-dismiss]");
-        modal_js_1.ModalToggle.find("[data-modal]");
-        droppanel_js_1.default.find("[data-drop]");
+        var toggles = toggle_js_1.default.find("[data-toggle]");
+        var dismiss = dismiss_js_1.default.find("[data-dismiss]");
+        var modals = modal_js_1.ModalToggle.find("[data-modal]");
+        var drops = droppanel_js_1.default.find("[data-drop]");
         header_js_1.default.apply();
+        var delegated = {
+            'toggle': [toggle_js_1.default, toggles],
+            'dismiss': [dismiss_js_1.default, dismiss],
+            'modal': [modal_js_1.ModalToggle, modals],
+            'drop': [droppanel_js_1.default, drops]
+        };
+        document.addEventListener('click', function (ev) {
+            var target = ev.target;
+            Object.keys(delegated).forEach(function (key) {
+                if (target.hasAttribute("data-" + key)) {
+                    var existing = delegated[key][1].filter(function (x) { return x.element === target; });
+                    if (existing.length === 0) {
+                        delegated[key][1].push(new delegated[key][0](target));
+                        var redispatch = new MouseEvent(ev.type, ev);
+                        target.dispatchEvent(redispatch);
+                    }
+                }
+            });
+        });
     });
     
     'marker:resolver';

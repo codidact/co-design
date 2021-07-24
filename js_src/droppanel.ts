@@ -46,7 +46,7 @@ export default class DropPanel {
             const isRight: boolean = (rect.left + rect.width / 2) > document.body.clientWidth / 2;
 
             const refersToElementWidth = this.refersToElement.getBoundingClientRect().width;
-            const refersToElementHeight = this.refersToElement.getBoundingClientRect().width;
+            const refersToElementHeight = this.refersToElement.getBoundingClientRect().height;
             let offset: number = 0;
             if (isRight) {
                 this.refersToElement.style.right = (document.body.clientWidth - rect.right) + "px";
