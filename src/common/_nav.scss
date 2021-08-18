@@ -1,85 +1,174 @@
-.tabs {
-  padding: $tabs-padding*$padding-unit;
-  display: flex;
-  flex-wrap: wrap;
-  font-family: $font-stack-brand;
+@media (prefers-color-scheme: light){
+  .tabs {
+    padding: $tabs-padding*$padding-unit;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $font-stack-brand;
 
-  .tabs--item {
-    display: block;
-    font-weight: $tabs-font-weight;
-    color: $tabs-color;
-    text-decoration: none !important;
-    padding: $tabs-item-padding-y*$padding-unit $tabs-item-padding-x*$padding-unit;
-    margin: $tabs-item-margin*$padding-unit;
+    .tabs--item {
+      display: block;
+      font-weight: $tabs-font-weight;
+      color: $tabs-color;
+      text-decoration: none !important;
+      padding: $tabs-item-padding-y*$padding-unit $tabs-item-padding-x*$padding-unit;
+      margin: $tabs-item-margin*$padding-unit;
 
-    &:hover {
-      background-color: $tabs-hover-background-color;
-      color: $tabs-hover-color;
+      &:hover {
+        background-color: $tabs-hover-background-color;
+        color: $tabs-hover-color;
+      }
+
+      &.is-active {
+        background-color: $tabs-active-background-color;
+        color: $tabs-active-color;
+      }
     }
 
-    &.is-active {
-      background-color: $tabs-active-background-color;
-      color: $tabs-active-color;
+    &.is-classic-tabs {
+      border-bottom: $tabs-classic-border-width solid $tabs-classic-border-color;
+
+      .tabs--item {
+        margin-bottom: 0;
+      }
     }
   }
 
-  &.is-classic-tabs {
-    border-bottom: $tabs-classic-border-width solid $tabs-classic-border-color;
 
-    .tabs--item {
-      margin-bottom: 0;
+  .menu {
+    padding: $menu-padding*$padding-unit;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-stack-brand;
+
+    .menu--heading {
+      display: block;
+      font-weight: $menu-heading-font-weight;
+      color: $menu-heading-color;
+      text-decoration: none !important;
+      padding: $menu-heading-padding-y*$padding-unit $menu-heading-padding-x*$padding-unit;
+      margin: $menu-heading-margin-y*$padding-unit $menu-heading-margin-x*$padding-unit;
+      border-radius: $menu-heading-border-radius;
+      font-variant: small-caps;
+      font-size: $menu-heading-font-size;
+    }
+    a.menu--heading {
+      &:hover {
+        background-color: $menu-hover-background-color;
+        color: $menu-hover-color;
+      }
+
+      &.is-active {
+        background-color: $menu-active-background-color;
+        color: $menu-active-color;
+      }
+    }
+
+    .menu--item {
+      display: block;
+      font-weight: $menu-font-weight;
+      color: $menu-color;
+      text-decoration: none !important;
+      padding: $menu-item-padding-y*$padding-unit $menu-item-padding-x*$padding-unit;
+      margin: $menu-item-margin-y*$padding-unit $menu-item-margin-x*$padding-unit;
+      border-radius: $menu-item-border-radius;
+      font-size: $menu-font-size;
+
+      &:hover {
+        background-color: $menu-hover-background-color;
+        color: $menu-hover-color;
+      }
+
+      &.is-active {
+        background-color: $menu-active-background-color;
+        color: $menu-active-color;
+      }
     }
   }
 }
+@media (prefers-color-scheme: dark){
+  .tabs {
+    padding: $tabs-padding*$padding-unit;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $font-stack-brand;
 
+    .tabs--item {
+      display: block;
+      font-weight: $tabs-font-weight;
+      color: #666;
+      text-decoration: none !important;
+      padding: $tabs-item-padding-y*$padding-unit $tabs-item-padding-x*$padding-unit;
+      margin: $tabs-item-margin*$padding-unit;
 
-.menu {
-  padding: $menu-padding*$padding-unit;
-  display: flex;
-  flex-direction: column;
-  font-family: $font-stack-brand;
+      &:hover {
+        background-color: #141212;
+        color: #001898;
+      }
 
-  .menu--heading {
-    display: block;
-    font-weight: $menu-heading-font-weight;
-    color: $menu-heading-color;
-    text-decoration: none !important;
-    padding: $menu-heading-padding-y*$padding-unit $menu-heading-padding-x*$padding-unit;
-    margin: $menu-heading-margin-y*$padding-unit $menu-heading-margin-x*$padding-unit;
-    border-radius: $menu-heading-border-radius;
-    font-variant: small-caps;
-    font-size: $menu-heading-font-size;
+      &.is-active {
+        background-color: #0025e4;
+        color: #fff;
+      }
+    }
+
+    &.is-classic-tabs {
+      border-bottom: $tabs-classic-border-width solid #0025e4;
+
+      .tabs--item {
+        margin-bottom: 0;
+      }
+    }
   }
-  a.menu--heading {
-    &:hover {
-      background-color: $menu-hover-background-color;
-      color: $menu-hover-color;
+
+
+  .menu {
+    padding: $menu-padding*$padding-unit;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-stack-brand;
+
+    .menu--heading {
+      display: block;
+      font-weight: $menu-heading-font-weight;
+      color: #333;
+      text-decoration: none !important;
+      padding: $menu-heading-padding-y*$padding-unit $menu-heading-padding-x*$padding-unit;
+      margin: $menu-heading-margin-y*$padding-unit $menu-heading-margin-x*$padding-unit;
+      border-radius: $menu-heading-border-radius;
+      font-variant: small-caps;
+      font-size: $menu-heading-font-size;
+    }
+    a.menu--heading {
+      &:hover {
+        background-color: #0c0b0b;
+        color: #001898;
+      }
+
+      &.is-active {
+        background-color: #0025e4;
+        color: #fff;
+      }
     }
 
-    &.is-active {
-      background-color: $menu-active-background-color;
-      color: $menu-active-color;
-    }
-  }
+    .menu--item {
+      display: block;
+      font-weight: $menu-font-weight;
+      color: #666;
+      text-decoration: none !important;
+      padding: $menu-item-padding-y*$padding-unit $menu-item-padding-x*$padding-unit;
+      margin: $menu-item-margin-y*$padding-unit $menu-item-margin-x*$padding-unit;
+      border-radius: $menu-item-border-radius;
+      font-size: $menu-font-size;
 
-  .menu--item {
-    display: block;
-    font-weight: $menu-font-weight;
-    color: $menu-color;
-    text-decoration: none !important;
-    padding: $menu-item-padding-y*$padding-unit $menu-item-padding-x*$padding-unit;
-    margin: $menu-item-margin-y*$padding-unit $menu-item-margin-x*$padding-unit;
-    border-radius: $menu-item-border-radius;
-    font-size: $menu-font-size;
+      &:hover {
+        background-color: #0c0b0b;
+        color: #001898;
+      }
 
-    &:hover {
-      background-color: $menu-hover-background-color;
-      color: $menu-hover-color;
-    }
-
-    &.is-active {
-      background-color: $menu-active-background-color;
-      color: $menu-active-color;
+      &.is-active {
+        background-color: #0025e4;
+        color: #fff;
+      }
     }
   }
 }
