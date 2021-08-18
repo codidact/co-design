@@ -66,15 +66,15 @@
             }
 
             .diff-old.is-changed {
-                background-color: #fcc8c8;
+                background-color: $diff-old-changed-dark;
             }
 
             .diff-new.is-changed {
-                background-color: #dafce8;
+                background-color: $diff-new-changed-dark;
             }
 
             .diff-inline.is-changed {
-                background-color: #eaf7fd;
+                background-color: $diff-inline-changed-dark;
             }
         }
 
