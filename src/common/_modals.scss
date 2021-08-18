@@ -1,103 +1,210 @@
-.modal {
-  position: absolute;
-  width: 100%;
-  min-height: 100%;
-  top: 0;
-  left: 0;
-  padding: $modal-outer-padding*$padding-unit;
+@media (prefers-color-scheme: light){
+  .modal {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    padding: $modal-outer-padding*$padding-unit;
 
-  pointer-events: none;
+    pointer-events: none;
 
-  display: none;
+    display: none;
 
-  &.is-active { display: block; }
+    &.is-active { display: block; }
 
-  &.is-with-backdrop {
-    background-color: $modal-backdrop-background;
-    position: fixed;
+    &.is-with-backdrop {
+      background-color: $modal-backdrop-background;
+      position: fixed;
 
-    height: 100%;
+      height: 100%;
 
-    pointer-events: all;
+      pointer-events: all;
+
+      .modal--container {
+        box-shadow: $modal-shadow;
+        max-height: 100%;
+      }
+    }
 
     .modal--container {
+      margin: 0 auto;
+      max-width: $modal-width;
+      width: 100%;
+
+      pointer-events: all;
+
+      background-color: $modal-background-color;
       box-shadow: $modal-shadow;
-      max-height: 100%;
+      border: $modal-border-width solid $modal-border-color;
+
+      display: flex;
+      flex-direction: column;
+
+
+      .modal--header {
+        padding: $modal-header-padding * $padding-unit;
+        font-size: $modal-header-font-size;
+        border-bottom: $modal-border-width solid $modal-inner-border-color;
+        font-weight: $modal-header-font-weight;
+
+        .modal--header-link {
+          float: right;
+          font-size: $modal-header-link-font-size;
+          padding: $padding-unit*$modal-header-link-padding-y $padding-unit*$modal-header-link-padding-x;
+        }
+
+        .modal--header-button {
+          float: right;
+          font-size: $modal-header-button-font-size;
+          margin: 0;
+        }
+      }
+
+      .modal--body {
+        padding: $modal-body-padding * $padding-unit;
+        max-height: $modal-body-overflow-height;
+        overflow-y: auto;
+      }
+
+      .modal--footer {
+        padding: $modal-footer-padding * $padding-unit;
+        border-top: $modal-border-width solid $modal-inner-border-color;
+      }
+    }
+
+    &.is-large .modal--container {
+      max-width: $modal-large-width;
+
+      .modal--body {
+        max-height: $modal-large-body-overflow-height;
+      }
+    }
+
+    &.is-small .modal--container {
+      max-width: $modal-small-width;
+
+      .modal--body {
+        max-height: $modal-small-body-overflow-height;
+      }
+    }
+
+    &.is-danger {
+      .modal--header,
+      .modal--container,
+      .modal--footer {
+        border-color: $modal-danger-border-color;
+      }
+
+      .modal--header {
+        color: $modal-danger-header-color;
+        background-color: $modal-danger-background-color;
+      }
     }
   }
-
-  .modal--container {
-    margin: 0 auto;
-    max-width: $modal-width;
+}
+@media (prefers-color-scheme: dark){
+  .modal {
+    position: absolute;
     width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    padding: $modal-outer-padding*$padding-unit;
 
-    pointer-events: all;
+    pointer-events: none;
 
-    background-color: $modal-background-color;
-    box-shadow: $modal-shadow;
-    border: $modal-border-width solid $modal-border-color;
+    display: none;
 
-    display: flex;
-    flex-direction: column;
+    &.is-active { display: block; }
 
+    &.is-with-backdrop {
+      background-color: rgba(0,0,0,.5);
+      position: fixed;
 
-    .modal--header {
-      padding: $modal-header-padding * $padding-unit;
-      font-size: $modal-header-font-size;
-      border-bottom: $modal-border-width solid $modal-inner-border-color;
-      font-weight: $modal-header-font-weight;
+      height: 100%;
 
-      .modal--header-link {
-        float: right;
-        font-size: $modal-header-link-font-size;
-        padding: $padding-unit*$modal-header-link-padding-y $padding-unit*$modal-header-link-padding-x;
-      }
+      pointer-events: all;
 
-      .modal--header-button {
-        float: right;
-        font-size: $modal-header-button-font-size;
-        margin: 0;
+      .modal--container {
+        box-shadow: $modal-shadow;
+        max-height: 100%;
       }
     }
 
-    .modal--body {
-      padding: $modal-body-padding * $padding-unit;
-      max-height: $modal-body-overflow-height;
-      overflow-y: auto;
+    .modal--container {
+      margin: 0 auto;
+      max-width: $modal-width;
+      width: 100%;
+
+      pointer-events: all;
+
+      background-color: #0c0b0b;
+      box-shadow: 0 3px 5px -3px #141212;
+      border: $modal-border-width solid #b3c0c7;
+
+      display: flex;
+      flex-direction: column;
+
+
+      .modal--header {
+        padding: $modal-header-padding * $padding-unit;
+        font-size: $modal-header-font-size;
+        border-bottom: $modal-border-width solid #0c0b0b;
+        font-weight: $modal-header-font-weight;
+
+        .modal--header-link {
+          float: right;
+          font-size: $modal-header-link-font-size;
+          padding: $padding-unit*$modal-header-link-padding-y $padding-unit*$modal-header-link-padding-x;
+        }
+
+        .modal--header-button {
+          float: right;
+          font-size: $modal-header-button-font-size;
+          margin: 0;
+        }
+      }
+
+      .modal--body {
+        padding: $modal-body-padding * $padding-unit;
+        max-height: $modal-body-overflow-height;
+        overflow-y: auto;
+      }
+
+      .modal--footer {
+        padding: $modal-footer-padding * $padding-unit;
+        border-top: $modal-border-width solid $modal-inner-border-color;
+      }
     }
 
-    .modal--footer {
-      padding: $modal-footer-padding * $padding-unit;
-      border-top: $modal-border-width solid $modal-inner-border-color;
-    }
-  }
+    &.is-large .modal--container {
+      max-width: $modal-large-width;
 
-  &.is-large .modal--container {
-    max-width: $modal-large-width;
-
-    .modal--body {
-      max-height: $modal-large-body-overflow-height;
-    }
-  }
-
-  &.is-small .modal--container {
-    max-width: $modal-small-width;
-
-    .modal--body {
-      max-height: $modal-small-body-overflow-height;
-    }
-  }
-
-  &.is-danger {
-    .modal--header,
-    .modal--container,
-    .modal--footer {
-      border-color: $modal-danger-border-color;
+      .modal--body {
+        max-height: $modal-large-body-overflow-height;
+      }
     }
 
-    .modal--header {
-      color: $modal-danger-header-color;
-      background-color: $modal-danger-background-color;
+    &.is-small .modal--container {
+      max-width: $modal-small-width;
+
+      .modal--body {
+        max-height: $modal-small-body-overflow-height;
+      }
+    }
+
+    &.is-danger {
+      .modal--header,
+      .modal--container,
+      .modal--footer {
+        border-color: #f28d9d;
+      }
+
+      .modal--header {
+        color: #4c0404;
+        background-color: #141212;
+      }
     }
   }
 }
