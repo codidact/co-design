@@ -1,146 +1,296 @@
-label.form-element {
-  cursor: pointer;
-
-  display: block;
-  margin: $label-margin-y*$margin-unit $label-margin-x*$margin-unit;
-  @if ($label-smaller-margin-bottom < 1) {
-    margin-bottom: $label-margin-y*$margin-unit*$label-smaller-margin-bottom;
-  }
-
-  font-size: $label-font-size;
-  font-weight: $label-font-weight;
-  color: $label-color;
-}
-
-.form-caption {
-  color: $form-caption-color;
-  font-size: $form-caption-font-size;
-  margin-top: $form-caption-margin-top*$margin-unit;
-  margin-bottom: $form-caption-margin-bottom*$margin-unit;
-}
-
-input.form-element {
-  font: inherit;
-  font-weight: $input-font-weight;
-
-  padding: $input-padding*$padding-unit;
-  margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
-
-  border: $input-border-width solid $input-border-color;
-  background-color: $input-background-color;
-  border-radius: $input-border-radius;
-
-  display: block;
-  width: 100%;
-
-  &:focus {
-    border-color: $input-active-border-color;
-  }
-
-  &.is-danger {
-    border-color: $input-danger-border-color;
-    background-color: $input-danger-background-color;
-  }
-}
-
-textarea.form-element {
-  font: inherit;
-  font-weight: $input-font-weight;
-
-  padding: $input-padding*$padding-unit;
-  margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
-
-  border: $input-border-width solid $input-border-color;
-  background-color: $input-background-color;
-  border-radius: $input-border-radius;
-
-  resize: $textarea-resize;
-
-  display: block;
-  width: 100%;
-  min-height: $textarea-min-height;
-
-  &:focus {
-    border-color: $input-active-border-color;
-  }
-
-  &.is-danger {
-    border-color: $input-danger-border-color;
-    background-color: $input-danger-background-color;
-  }
-
-  &.is-small { min-height: $textarea-small-min-height; }
-  &.is-large { min-height: $textarea-large-min-height; }
-}
-
-
-input[type="radio"].form-radio-element,
-input[type="checkbox"].form-checkbox-element {
-  margin: $padding-unit;
-  display: inline-block;
-  cursor: pointer;
-}
-
-
-select.form-element {
-  font: inherit;
-  font-weight: $input-font-weight;
-
-  padding: $input-padding*$padding-unit;
-  margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
-
-  cursor: pointer;
-
-  border: $input-border-width solid $input-border-color;
-  background-color: $input-background-color;
-  border-radius: $input-border-radius;
-
-  display: block;
-  width: 100%;
-
-  option {
-    font: inherit;
-  }
-
-  &:focus {
-    border-color: $input-active-border-color;
-  }
-
-  &.is-danger {
-    border-color: $input-danger-border-color;
-    background-color: $input-danger-background-color;
-  }
-}
-
-select.form-element[multiple] {
-  font: inherit;
-  font-weight: $input-font-weight;
-
-  padding: $input-padding*$padding-unit*0.5;
-  margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
-
-  cursor: inherit;
-
-  border: $input-border-width solid $input-border-color;
-  background-color: $input-background-color;
-  border-radius: $input-border-radius;
-
-  display: block;
-  width: 100%;
-
-  option {
-    font: inherit;
-    padding: $input-padding*$padding-unit*0.5;
+@media (prefers-color-scheme: light){
+  label.form-element {
     cursor: pointer;
+
+    display: block;
+    margin: $label-margin-y*$margin-unit $label-margin-x*$margin-unit;
+    @if ($label-smaller-margin-bottom < 1) {
+      margin-bottom: $label-margin-y*$margin-unit*$label-smaller-margin-bottom;
+    }
+
+    font-size: $label-font-size;
+    font-weight: $label-font-weight;
+    color: $label-color;
+  }
+
+  .form-caption {
+    color: $form-caption-color;
+    font-size: $form-caption-font-size;
+    margin-top: $form-caption-margin-top*$margin-unit;
+    margin-bottom: $form-caption-margin-bottom*$margin-unit;
+  }
+
+  input.form-element {
+    font: inherit;
+    font-weight: $input-font-weight;
+
+    padding: $input-padding*$padding-unit;
+    margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
+
+    border: $input-border-width solid $input-border-color;
+    background-color: $input-background-color;
     border-radius: $input-border-radius;
+
+    display: block;
+    width: 100%;
+
+    &:focus {
+      border-color: $input-active-border-color;
+    }
+
+    &.is-danger {
+      border-color: $input-danger-border-color;
+      background-color: $input-danger-background-color;
+    }
   }
 
-  &:focus {
-    border-color: $input-active-border-color;
+  textarea.form-element {
+    font: inherit;
+    font-weight: $input-font-weight;
+
+    padding: $input-padding*$padding-unit;
+    margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
+
+    border: $input-border-width solid $input-border-color;
+    background-color: $input-background-color;
+    border-radius: $input-border-radius;
+
+    resize: $textarea-resize;
+
+    display: block;
+    width: 100%;
+    min-height: $textarea-min-height;
+
+    &:focus {
+      border-color: $input-active-border-color;
+    }
+
+    &.is-danger {
+      border-color: $input-danger-border-color;
+      background-color: $input-danger-background-color;
+    }
+
+    &.is-small { min-height: $textarea-small-min-height; }
+    &.is-large { min-height: $textarea-large-min-height; }
   }
 
-  &.is-danger {
-    border-color: $input-danger-border-color;
-    background-color: $input-danger-background-color;
+
+  input[type="radio"].form-radio-element,
+  input[type="checkbox"].form-checkbox-element {
+    margin: $padding-unit;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+
+  select.form-element {
+    font: inherit;
+    font-weight: $input-font-weight;
+
+    padding: $input-padding*$padding-unit;
+    margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
+
+    cursor: pointer;
+
+    border: $input-border-width solid $input-border-color;
+    background-color: $input-background-color;
+    border-radius: $input-border-radius;
+
+    display: block;
+    width: 100%;
+
+    option {
+      font: inherit;
+    }
+
+    &:focus {
+      border-color: $input-active-border-color;
+    }
+
+    &.is-danger {
+      border-color: $input-danger-border-color;
+      background-color: $input-danger-background-color;
+    }
+  }
+
+  select.form-element[multiple] {
+    font: inherit;
+    font-weight: $input-font-weight;
+
+    padding: $input-padding*$padding-unit*0.5;
+    margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
+
+    cursor: inherit;
+
+    border: $input-border-width solid $input-border-color;
+    background-color: $input-background-color;
+    border-radius: $input-border-radius;
+
+    display: block;
+    width: 100%;
+
+    option {
+      font: inherit;
+      padding: $input-padding*$padding-unit*0.5;
+      cursor: pointer;
+      border-radius: $input-border-radius;
+    }
+
+    &:focus {
+      border-color: $input-active-border-color;
+    }
+
+    &.is-danger {
+      border-color: $input-danger-border-color;
+      background-color: $input-danger-background-color;
+    }
+  }
+}
+@media (prefers-color-scheme: dark){
+  label.form-element {
+    cursor: pointer;
+
+    display: block;
+    margin: $label-margin-y*$margin-unit $label-margin-x*$margin-unit;
+    @if ($label-smaller-margin-bottom < 1) {
+      margin-bottom: $label-margin-y*$margin-unit*$label-smaller-margin-bottom;
+    }
+
+    font-size: $label-font-size;
+    font-weight: $label-font-weight;
+    color: #fff;
+  }
+
+  .form-caption {
+    color: #fff;
+    font-size: $form-caption-font-size;
+    margin-top: $form-caption-margin-top*$margin-unit;
+    margin-bottom: $form-caption-margin-bottom*$margin-unit;
+  }
+
+  input.form-element {
+    font: inherit;
+    font-weight: $input-font-weight;
+
+    padding: $input-padding*$padding-unit;
+    margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
+
+    border: $input-border-width solid #141212;
+    background-color: #0c0b0b;
+    border-radius: $input-border-radius;
+
+    display: block;
+    width: 100%;
+
+    &:focus {
+      border-color: #141212;
+    }
+
+    &.is-danger {
+      border-color: $input-danger-border-color;
+      background-color: #ba0b01;
+    }
+  }
+
+  textarea.form-element {
+    font: inherit;
+    font-weight: $input-font-weight;
+    color:#fff;
+    padding: $input-padding*$padding-unit;
+    margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
+
+    border: $input-border-width solid #141212;
+    background-color: #0c0b0b;
+    border-radius: $input-border-radius;
+
+    resize: $textarea-resize;
+
+    display: block;
+    width: 100%;
+    min-height: $textarea-min-height;
+
+    &:focus {
+      border-color: #b3c0c7;
+    }
+
+    &.is-danger {
+      border-color: #f6b4b4;
+      background-color: #ba0b01;
+    }
+
+    &.is-small { min-height: $textarea-small-min-height; }
+    &.is-large { min-height: $textarea-large-min-height; }
+  }
+
+
+  input[type="radio"].form-radio-element,
+  input[type="checkbox"].form-checkbox-element {
+    margin: $padding-unit;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+
+  select.form-element {
+    font: inherit;
+    font-weight: $input-font-weight;
+    color:white;
+    padding: $input-padding*$padding-unit;
+    margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
+
+    cursor: pointer;
+
+    border: $input-border-width solid #141212;
+    background-color: #0c0b0b;
+    border-radius: $input-border-radius;
+
+    display: block;
+    width: 100%;
+
+    option {
+      font: inherit;
+    }
+
+    &:focus {
+      border-color: #b3c0c7;
+    }
+
+    &.is-danger {
+      border-color: #f6b4b4;
+      background-color: #ba0b01;
+    }
+  }
+
+  select.form-element[multiple] {
+    font: inherit;
+    font-weight: $input-font-weight;
+    color:white;
+    padding: $input-padding*$padding-unit*0.5;
+    margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
+
+    cursor: inherit;
+
+    border: $input-border-width solid #141212;
+    background-color: #0c0b0b;
+    border-radius: $input-border-radius;
+
+    display: block;
+    width: 100%;
+
+    option {
+      font: inherit;
+      padding: $input-padding*$padding-unit*0.5;
+      cursor: pointer;
+      border-radius: $input-border-radius;
+    }
+
+    &:focus {
+      border-color: $input-active-border-color;
+    }
+
+    &.is-danger {
+      border-color: #f6b4b4;
+      background-color: #ba0b01;
+    }
   }
 }
