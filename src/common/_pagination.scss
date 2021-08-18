@@ -5,41 +5,82 @@ ul.pagination {
     padding: 0;
     list-style: none;
 
-    li {
-        display: block;
-        margin: $pagination-item-margin-y*$margin-unit $margin-unit*$pagination-item-margin-x;
-        padding: 0;
-        border: $pagination-item-border-width solid $pagination-item-border-color;
-        background-color: $pagination-item-background-color;
-        box-shadow: $pagination-item-box-shadow;
-        border-radius: $pagination-item-border-radius;
-        font-weight: $pagination-item-font-weight;
+    @media (prefers-color-scheme: light){
+        li {
+            display: block;
+            margin: $pagination-item-margin-y*$margin-unit $margin-unit*$pagination-item-margin-x;
+            padding: 0;
+            border: $pagination-item-border-width solid $pagination-item-border-color;
+            background-color: $pagination-item-background-color;
+            box-shadow: $pagination-item-box-shadow;
+            border-radius: $pagination-item-border-radius;
+            font-weight: $pagination-item-font-weight;
 
-        &.is-active {
-            border-color: $pagination-item-active-border-color;
-            background-color: $pagination-item-active-background-color;
-            box-shadow: $pagination-item-active-box-shadow;
-            color: $pagination-item-active-color;
-            font-weight: $pagination-item-active-font-weight;
+            &.is-active {
+                border-color: $pagination-item-active-border-color;
+                background-color: $pagination-item-active-background-color;
+                box-shadow: $pagination-item-active-box-shadow;
+                color: $pagination-item-active-color;
+                font-weight: $pagination-item-active-font-weight;
+
+                a:hover {
+                    background-color: transparent;
+                }
+            }
+
+            &.is-disabled {
+                box-shadow: $pagination-item-hover-box-shadow;
+            }
+
+            span, a {
+                padding: $pagination-item-padding-y*$padding-unit $pagination-item-padding-x*$padding-unit;
+                display: block;
+                color: inherit;
+            }
 
             a:hover {
-                background-color: transparent;
+                background-color: $pagination-item-hover-background-color;
+                color: inherit;
             }
         }
-
-        &.is-disabled {
-            box-shadow: $pagination-item-hover-box-shadow;
-        }
-
-        span, a {
-            padding: $pagination-item-padding-y*$padding-unit $pagination-item-padding-x*$padding-unit;
+    }
+    @media (prefers-color-scheme: dark){
+        li {
             display: block;
-            color: inherit;
-        }
+            margin: $pagination-item-margin-y*$margin-unit $margin-unit*$pagination-item-margin-x;
+            padding: 0;
+            border: $pagination-item-border-width solid #1e1b1c;
+            background-color: #141212;
+            box-shadow: 2px 3px 2px -1px #0c0b0b;
+            border-radius: $pagination-item-border-radius;
+            font-weight: $pagination-item-font-weight;
 
-        a:hover {
-            background-color: $pagination-item-hover-background-color;
-            color: inherit;
+            &.is-active {
+                border-color: #293338;
+                background-color: rgb(8, 8, 8);
+                box-shadow: 2px 3px 2px -2px #060707;
+                color: #fff;
+                font-weight: $pagination-item-active-font-weight;
+
+                a:hover {
+                    background-color: transparent;
+                }
+            }
+
+            &.is-disabled {
+                box-shadow: $pagination-item-hover-box-shadow;
+            }
+
+            span, a {
+                padding: $pagination-item-padding-y*$padding-unit $pagination-item-padding-x*$padding-unit;
+                display: block;
+                color: inherit;
+            }
+
+            a:hover {
+                background-color: #070707;
+                color: inherit;
+            }
         }
     }
 }
