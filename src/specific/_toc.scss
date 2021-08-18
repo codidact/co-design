@@ -97,7 +97,7 @@
             font: inherit;
             cursor: pointer;
             font-weight: $toc-header-font-weight;
-            background-color: #ccdee7;
+            background-color: $toc-entry-hover-dark-background-color;
             color: inherit;
         }
 
@@ -105,9 +105,9 @@
             margin-top: $toc-header-top-margin * $margin-unit;
             align-self: flex-start;
             font-weight: $toc-header-font-weight;
-            border: $toc-outer-border-width solid #cedfe7;
+            border: $toc-outer-border-width solid $toc-header-dark-color;
             border-bottom-width: 0;
-            background-color: #cedfe7;
+            background-color: $toc-header-dark-color;
             padding: $toc-header-padding-y*$padding-unit $toc-header-padding-x*$padding-unit;
             color: inherit;
         }
@@ -159,13 +159,13 @@
             text-decoration: none;
 
             &:hover {
-                background-color: #deeef3;
+                background-color: $toc-entry-hover-dark-background-color-hover;
             }
         }
 
         &:not(.is-active) {
             button.toc--header {
-                background-color: rgb(30, 30, 30);
+                background-color: $toc-header-button-dark-background;
                 border-bottom-width: $toc-outer-border-width;
             }
             button.toc--header ~ .toc--entry {
