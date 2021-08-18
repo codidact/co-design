@@ -1,147 +1,298 @@
-.badge.is-tag,
-.badge-tag {
-  display: inline-block;
-  font-size: $badge-tag-font-size;
-  padding: $badge-tag-padding-y*$padding-unit $badge-tag-padding-x*$padding-unit;
-  font-weight: $badge-tag-font-weight;
-  color: $badge-tag-color;
-  background-color: $badge-tag-background-color;
-  border-radius: $badge-tag-border-radius;
+@media (prefers-color-scheme: light){
+  .badge.is-tag,
+  .badge-tag {
+    display: inline-block;
+    font-size: $badge-tag-font-size;
+    padding: $badge-tag-padding-y*$padding-unit $badge-tag-padding-x*$padding-unit;
+    font-weight: $badge-tag-font-weight;
+    color: $badge-tag-color;
+    background-color: $badge-tag-background-color;
+    border-radius: $badge-tag-border-radius;
 
-  &.is-master-tag, /* DEPRECATED */
-  &.is-filled {
-    color: #ffffff;
-    background-color: $badge-tag-master-background-color;
+    &.is-master-tag, /* DEPRECATED */
+    &.is-filled {
+      color: #ffffff;
+      background-color: $badge-tag-master-background-color;
+    }
+
+    @each $name, $value in $badge-tag-alternative-colors {
+      &.is-#{$name} {
+        background-color: lighten($value, 25%);
+        color: darken($value, 35%);
+
+        &.is-master-tag, /* DEPRECATED */
+        &.is-filled {
+          background-color: darken($value, 20%);
+          color: white;
+        }
+      }
+    }
+
+    &.is-small {
+      padding: $badge-tag-padding-y*$padding-unit/2 $badge-tag-padding-x*$padding-unit/2;
+      line-height: 1;
+    }
   }
 
-  @each $name, $value in $badge-tag-alternative-colors {
-    &.is-#{$name} {
-      background-color: lighten($value, 25%);
-      color: darken($value, 35%);
+  a.badge.is-tag:hover,
+  a.badge-tag:hover {
+    text-decoration: none !important;
+    background-color: darken($badge-tag-background-color, 5%);
 
-      &.is-master-tag, /* DEPRECATED */
-      &.is-filled {
-        background-color: darken($value, 20%);
-        color: white;
+    &.is-master-tag, /* DEPRECATED */
+    &.is-filled {
+      color: #ffffff;
+      background-color: darken($badge-tag-master-background-color, 5%);
+    }
+
+    @each $name, $value in $badge-tag-alternative-colors {
+      &.is-#{$name} {
+        background-color: lighten($value, 20%);
+
+        &.is-master-tag, /* DEPRECATED */
+        &.is-filled {
+          background-color: darken($value, 25%);
+          color: white;
+        }
       }
     }
   }
 
-  &.is-small {
-    padding: $badge-tag-padding-y*$padding-unit/2 $badge-tag-padding-x*$padding-unit/2;
+  .badge.is-award,
+  .badge-award {
+    display: inline-block;
+    padding: $badge-award-padding-y*$padding-unit $badge-award-padding-x*$padding-unit;
+    font-weight: $badge-award-font-weight;
+    font-size: $badge-award-font-size;
+    color: $badge-award-color;
+    background-color: $badge-award-background-color;
+    border: $badge-award-border-width solid $badge-award-border-color;
+    border-radius: $badge-award-border-radius;
+
+    .badge--icon {
+      margin-right: $margin-unit;
+    }
+
+    &.is-gold .badge--icon {
+      color: $badge-award-gold-color;
+    }
+
+    &.is-silver .badge--icon {
+      color: $badge-award-silver-color;
+    }
+
+    &.is-bronze .badge--icon {
+      color: $badge-award-bronze-color;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+  .badge.is-user-role,
+  .badge-user-role {
+    display: inline-block;
+    font-size: $badge-role-font-size;
+    padding: $badge-role-padding-y*$padding-unit $badge-role-padding-x*$padding-unit;
+    border-radius: $badge-role-border-radius;
+    background-color: $badge-role-background-color;
+    color: $badge-role-color;
+    font-weight: $badge-role-font-weight;
+
+    &.is-muted {
+      background-color: $badge-role-muted-background-color;
+      color: $badge-role-muted-color;
+    }
+  }
+
+  .badge.is-user-trust-level,
+  .badge-user-trust-level {
+    display: inline-block;
+    font-size: $badge-tl-font-size;
+    min-width: $badge-tl-min-width;
+    text-align: center;
+    padding: $badge-tl-padding-y*$padding-unit $badge-tl-padding-x*$padding-unit;
+    border-radius: $badge-tl-border-radius;
+    background-color: $badge-tl-background-color;
+    color: $badge-tl-color;
+    font-weight: $badge-tl-font-weight;
+
+    &.is-muted {
+      background-color: $badge-tl-muted-background-color;
+      color: $badge-tl-muted-color;
+    }
+  }
+
+
+  .badge.is-status {
+    background-color: rgba(0,0,0,0.2);
+    color: inherit;
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 0.1em 0.3em;
+    min-width: 1.5em;
+    margin: 0 0.3em;
+    border-radius: 4px;
     line-height: 1;
-  }
-}
+    text-align: center;
 
-a.badge.is-tag:hover,
-a.badge-tag:hover {
-  text-decoration: none !important;
-  background-color: darken($badge-tag-background-color, 5%);
-
-  &.is-master-tag, /* DEPRECATED */
-  &.is-filled {
-    color: #ffffff;
-    background-color: darken($badge-tag-master-background-color, 5%);
-  }
-
-  @each $name, $value in $badge-tag-alternative-colors {
-    &.is-#{$name} {
-      background-color: lighten($value, 20%);
-
-      &.is-master-tag, /* DEPRECATED */
-      &.is-filled {
-        background-color: darken($value, 25%);
-        color: white;
-      }
+    &:empty {
+      height: 0.75em;
+      width: 0.75em;
+      border-radius: 50%;
+      min-width: 0;
+      background-color: rgba(0,0,0,0.4);
     }
   }
 }
+@media (prefers-color-scheme: dark){
+  .badge.is-tag,
+  .badge-tag {
+    display: inline-block;
+    font-size: $badge-tag-font-size;
+    padding: $badge-tag-padding-y*$padding-unit $badge-tag-padding-x*$padding-unit;
+    font-weight: $badge-tag-font-weight;
+    color: #001898;
+    background-color: #e4e8ff;
+    border-radius: $badge-tag-border-radius;
 
-.badge.is-award,
-.badge-award {
-  display: inline-block;
-  padding: $badge-award-padding-y*$padding-unit $badge-award-padding-x*$padding-unit;
-  font-weight: $badge-award-font-weight;
-  font-size: $badge-award-font-size;
-  color: $badge-award-color;
-  background-color: $badge-award-background-color;
-  border: $badge-award-border-width solid $badge-award-border-color;
-  border-radius: $badge-award-border-radius;
+    &.is-master-tag, /* DEPRECATED */
+    &.is-filled {
+      color: #ffffff;
+      background-color: #001db1;
+    }
 
-  .badge--icon {
-    margin-right: $margin-unit;
+    @each $name, $value in $badge-tag-alternative-colors {
+      &.is-#{$name} {
+        background-color: lighten($value, 25%);
+        color: darken($value, 35%);
+
+        &.is-master-tag, /* DEPRECATED */
+        &.is-filled {
+          background-color: darken($value, 20%);
+          color: white;
+        }
+      }
+    }
+
+    &.is-small {
+      padding: $badge-tag-padding-y*$padding-unit/2 $badge-tag-padding-x*$padding-unit/2;
+      line-height: 1;
+    }
   }
 
-  &.is-gold .badge--icon {
-    color: $badge-award-gold-color;
+  a.badge.is-tag:hover,
+  a.badge-tag:hover {
+    text-decoration: none !important;
+    background-color: #cbd3ff;
+
+    &.is-master-tag, /* DEPRECATED */
+    &.is-filled {
+      color: #ffffff;
+      background-color: darken($badge-tag-master-background-color, 5%);
+    }
+
+    @each $name, $value in $badge-tag-alternative-colors {
+      &.is-#{$name} {
+        background-color: lighten($value, 20%);
+
+        &.is-master-tag, /* DEPRECATED */
+        &.is-filled {
+          background-color: darken($value, 25%);
+          color: white;
+        }
+      }
+    }
   }
 
-  &.is-silver .badge--icon {
-    color: $badge-award-silver-color;
+  .badge.is-award,
+  .badge-award {
+    display: inline-block;
+    padding: $badge-award-padding-y*$padding-unit $badge-award-padding-x*$padding-unit;
+    font-weight: $badge-award-font-weight;
+    font-size: $badge-award-font-size;
+    color: #3f4e56;
+    background-color: #eef1f2;
+    border: $badge-award-border-width solid #dfe5e8;
+    border-radius: $badge-award-border-radius;
+
+    .badge--icon {
+      margin-right: $margin-unit;
+    }
+
+    &.is-gold .badge--icon {
+      color: $badge-award-gold-color;
+    }
+
+    &.is-silver .badge--icon {
+      color: $badge-award-silver-color;
+    }
+
+    &.is-bronze .badge--icon {
+      color: $badge-award-bronze-color;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
-  &.is-bronze .badge--icon {
-    color: $badge-award-bronze-color;
+
+  .badge.is-user-role,
+  .badge-user-role {
+    display: inline-block;
+    font-size: $badge-role-font-size;
+    padding: $badge-role-padding-y*$padding-unit $badge-role-padding-x*$padding-unit;
+    border-radius: $badge-role-border-radius;
+    background-color: #0025e4;
+    color: #fff;
+    font-weight: $badge-role-font-weight;
+
+    &.is-muted {
+      background-color: #d0d9dd;
+      color: #344147;
+    }
   }
 
-  &:hover {
-    text-decoration: none;
+  .badge.is-user-trust-level,
+  .badge-user-trust-level {
+    display: inline-block;
+    font-size: $badge-tl-font-size;
+    min-width: $badge-tl-min-width;
+    text-align: center;
+    padding: $badge-tl-padding-y*$padding-unit $badge-tl-padding-x*$padding-unit;
+    border-radius: $badge-tl-border-radius;
+    background-color: #0025e4;
+    color: #fff;
+    font-weight: $badge-tl-font-weight;
+
+    &.is-muted {
+      background-color: #d0d9dd;
+      color: #344147;
+    }
   }
-}
 
 
-.badge.is-user-role,
-.badge-user-role {
-  display: inline-block;
-  font-size: $badge-role-font-size;
-  padding: $badge-role-padding-y*$padding-unit $badge-role-padding-x*$padding-unit;
-  border-radius: $badge-role-border-radius;
-  background-color: $badge-role-background-color;
-  color: $badge-role-color;
-  font-weight: $badge-role-font-weight;
+  .badge.is-status {
+    background-color: rgba(0,0,0,0.2);
+    color: inherit;
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 0.1em 0.3em;
+    min-width: 1.5em;
+    margin: 0 0.3em;
+    border-radius: 4px;
+    line-height: 1;
+    text-align: center;
 
-  &.is-muted {
-    background-color: $badge-role-muted-background-color;
-    color: $badge-role-muted-color;
-  }
-}
-
-.badge.is-user-trust-level,
-.badge-user-trust-level {
-  display: inline-block;
-  font-size: $badge-tl-font-size;
-  min-width: $badge-tl-min-width;
-  text-align: center;
-  padding: $badge-tl-padding-y*$padding-unit $badge-tl-padding-x*$padding-unit;
-  border-radius: $badge-tl-border-radius;
-  background-color: $badge-tl-background-color;
-  color: $badge-tl-color;
-  font-weight: $badge-tl-font-weight;
-
-  &.is-muted {
-    background-color: $badge-tl-muted-background-color;
-    color: $badge-tl-muted-color;
-  }
-}
-
-
-.badge.is-status {
-  background-color: rgba(0,0,0,0.2);
-  color: inherit;
-  display: inline-block;
-  font-size: 0.8em;
-  padding: 0.1em 0.3em;
-  min-width: 1.5em;
-  margin: 0 0.3em;
-  border-radius: 4px;
-  line-height: 1;
-  text-align: center;
-
-  &:empty {
-    height: 0.75em;
-    width: 0.75em;
-    border-radius: 50%;
-    min-width: 0;
-    background-color: rgba(0,0,0,0.4);
+    &:empty {
+      height: 0.75em;
+      width: 0.75em;
+      border-radius: 50%;
+      min-width: 0;
+      background-color: rgba(0,0,0,0.4);
+    }
   }
 }
