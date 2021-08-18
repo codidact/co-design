@@ -1,70 +1,144 @@
-.widget {
-  border: $widget-border-width solid $widget-border-color;
-  border-radius: $widet-border-radius;
-  box-shadow: $widget-shadow;
-  margin: $widget-margin-y*$margin-unit $widget-margin-x*$margin-unit;
-  background-color: $widget-background-color;
+@media (prefers-color-scheme: light){
+  .widget {
+    border: $widget-border-width solid $widget-border-color;
+    border-radius: $widet-border-radius;
+    box-shadow: $widget-shadow;
+    margin: $widget-margin-y*$margin-unit $widget-margin-x*$margin-unit;
+    background-color: $widget-background-color;
 
-  .widget--header {
-    padding: $widget-header-padding * $padding-unit;
-    font-size: $widget-header-font-size;
-    font-weight: $widget-header-font-weight;
-    border-bottom: $widget-border-width solid $widget-border-color;
+    .widget--header {
+      padding: $widget-header-padding * $padding-unit;
+      font-size: $widget-header-font-size;
+      font-weight: $widget-header-font-weight;
+      border-bottom: $widget-border-width solid $widget-border-color;
 
-    &.is-complex {
-      font-size: 1em;
+      &.is-complex {
+        font-size: 1em;
+      }
+
+      .widget--header-link {
+        float: right;
+        font-size: $widget-header-link-font-size;
+        padding: $padding-unit*$widget-header-link-padding-y $padding-unit*$widget-header-link-padding-x;
+      }
+      .widget--header-button {
+        float: right;
+        font-size: $widget-header-button-font-size;
+        position: relative;
+        top: -$widget-header-padding/1.8*$padding-unit;
+      }
     }
 
-    .widget--header-link {
-      float: right;
-      font-size: $widget-header-link-font-size;
-      padding: $padding-unit*$widget-header-link-padding-y $padding-unit*$widget-header-link-padding-x;
-    }
-    .widget--header-button {
-      float: right;
-      font-size: $widget-header-button-font-size;
-      position: relative;
-      top: -$widget-header-padding/1.8*$padding-unit;
-    }
-  }
+    .widget--body {
+      padding: $widget-body-padding * $padding-unit;
 
-  .widget--body {
-    padding: $widget-body-padding * $padding-unit;
+      & + .widget--body {
+        border-top: $widget-border-width solid $widget-border-color;
+      }
+    }
 
-    & + .widget--body {
+    .widget--footer {
+      padding: $widget-footer-padding * $padding-unit;
       border-top: $widget-border-width solid $widget-border-color;
     }
   }
 
-  .widget--footer {
-    padding: $widget-footer-padding * $padding-unit;
-    border-top: $widget-border-width solid $widget-border-color;
+  @each $name, $color in (
+    "yellow": map-get($secondary-colors, "yellow"),
+    "red": darken(map-get($secondary-colors, "red"), 2.5%),
+    "green": lighten(map-get($secondary-colors, "green"), 10%),
+    "teal": lighten(map-get($secondary-colors, "teal"), 7.5%),
+    "tertiary": lighten($tertiary-color, 7.5%)
+  ) {
+    .widget.is-#{$name} {
+      border-color: lighten($color, $widget-border-color-lighten);
+      background-color: lighten($color, $widget-background-color-lighten);
+
+      .widget--header {
+        background-color: lighten($color, $widget-background-color-hf-lighten);
+        border-color: lighten($color, $widget-border-color-lighten);
+      }
+
+      .widget--body + .widget--body {
+          border-color: lighten($color, $widget-border-color-lighten);
+      }
+
+      .widget--footer {
+        background-color: lighten($color, $widget-background-color-hf-lighten);
+        border-color: lighten($color, $widget-border-color-lighten);
+      }
+    }
   }
 }
-
-@each $name, $color in (
-  "yellow": map-get($secondary-colors, "yellow"),
-  "red": darken(map-get($secondary-colors, "red"), 2.5%),
-  "green": lighten(map-get($secondary-colors, "green"), 10%),
-  "teal": lighten(map-get($secondary-colors, "teal"), 7.5%),
-  "tertiary": lighten($tertiary-color, 7.5%)
-) {
-  .widget.is-#{$name} {
-    border-color: lighten($color, $widget-border-color-lighten);
-    background-color: lighten($color, $widget-background-color-lighten);
+@media (prefers-color-scheme: dark){
+  .widget {
+    border: $widget-border-width solid #6b6666;
+    border-radius: $widet-border-radius;
+    box-shadow: 0 3px 5px -2px #6b6666;
+    margin: $widget-margin-y*$margin-unit $widget-margin-x*$margin-unit;
+    background-color: #141212;
 
     .widget--header {
-      background-color: lighten($color, $widget-background-color-hf-lighten);
-      border-color: lighten($color, $widget-border-color-lighten);
+      padding: $widget-header-padding * $padding-unit;
+      font-size: $widget-header-font-size;
+      font-weight: $widget-header-font-weight;
+      border-bottom: $widget-border-width solid $widget-border-color;
+
+      &.is-complex {
+        font-size: 1em;
+      }
+
+      .widget--header-link {
+        float: right;
+        font-size: $widget-header-link-font-size;
+        padding: $padding-unit*$widget-header-link-padding-y $padding-unit*$widget-header-link-padding-x;
+      }
+      .widget--header-button {
+        float: right;
+        font-size: $widget-header-button-font-size;
+        position: relative;
+        top: -$widget-header-padding/1.8*$padding-unit;
+      }
     }
 
-    .widget--body + .widget--body {
-        border-color: lighten($color, $widget-border-color-lighten);
+    .widget--body {
+      padding: $widget-body-padding * $padding-unit;
+
+      & + .widget--body {
+        border-top: $widget-border-width solid $widget-border-color;
+      }
     }
 
     .widget--footer {
-      background-color: lighten($color, $widget-background-color-hf-lighten);
-      border-color: lighten($color, $widget-border-color-lighten);
+      padding: $widget-footer-padding * $padding-unit;
+      border-top: $widget-border-width solid $widget-border-color;
+    }
+  }
+
+  @each $name, $color in (
+    "yellow": map-get($secondary-colors, "yellow"),
+    "red": darken(map-get($secondary-colors, "red"), 2.5%),
+    "green": lighten(map-get($secondary-colors, "green"), 10%),
+    "teal": lighten(map-get($secondary-colors, "teal"), 7.5%),
+    "tertiary": lighten($tertiary-color, 7.5%)
+  ) {
+    .widget.is-#{$name} {
+      border-color: darken($color, $widget-border-color-lighten);
+      background-color: darken($color, $widget-background-color-lighten);
+
+      .widget--header {
+        background-color:  #0c0b0b;
+        border-color: #141212;
+      }
+
+      .widget--body + .widget--body {
+          border-color: #0c0b0b;
+      }
+
+      .widget--footer {
+        background-color: #141212;
+        border-color: darken($color, $widget-border-color-lighten);
+      }
     }
   }
 }
