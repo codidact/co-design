@@ -1,55 +1,113 @@
-.notice {
-  margin: $notice-margin-y*$margin-unit $notice-margin-x*$margin-unit;
-  padding: $notice-padding * $padding-unit;
-  border-radius: $notice-border-radius;
-  border: $notice-border-width solid $notice-default-border-color;
-  background-color: $notice-default-background-color;
+@media (prefers-color-scheme: light){
+  .notice {
+    margin: $notice-margin-y*$margin-unit $notice-margin-x*$margin-unit;
+    padding: $notice-padding * $padding-unit;
+    border-radius: $notice-border-radius;
+    border: $notice-border-width solid $notice-default-border-color;
+    background-color: $notice-default-background-color;
 
-  &.is-filled {
-    border-color: transparent;
-    color: white;
-    background-color: $notice-default-filled-background-color;
-  }
-
-  @each $name, $color in (
-    "warning": map-get($secondary-colors, "yellow"),
-    "danger": darken(map-get($secondary-colors, "red"), 2.5%),
-    "success": lighten(map-get($secondary-colors, "green"), 7.5%),
-    "info": lighten(map-get($secondary-colors, "teal"), 5%),
-  ) {
-    &.is-#{$name} {
-      border-color: lighten($color, 15%);
-      background-color: lighten($color, 35%);
-    }
-    &.is-#{$name}.is-filled {
+    &.is-filled {
       border-color: transparent;
-      background-color: darken($color, 25%);
+      color: white;
+      background-color: $notice-default-filled-background-color;
     }
-  }
 
-  &.is-banner {
-    border-left: none;
-    border-right: none;
-    margin: 0;
-    border-radius: 0;
-  }
+    @each $name, $color in (
+      "warning": map-get($secondary-colors, "yellow"),
+      "danger": darken(map-get($secondary-colors, "red"), 2.5%),
+      "success": lighten(map-get($secondary-colors, "green"), 7.5%),
+      "info": lighten(map-get($secondary-colors, "teal"), 5%),
+    ) {
+      &.is-#{$name} {
+        border-color: lighten($color, 15%);
+        background-color: lighten($color, 35%);
+      }
+      &.is-#{$name}.is-filled {
+        border-color: transparent;
+        background-color: darken($color, 25%);
+      }
+    }
 
-  :first-child {
-    margin-top: 0;
-  }
+    &.is-banner {
+      border-left: none;
+      border-right: none;
+      margin: 0;
+      border-radius: 0;
+    }
 
-  // Don't remove the margin for close buttons as first element
-  .is-close-button:first-child {
-    margin-top: -$margin-unit;
-
-    // Remove margin then for second element
-    & + * {
+    :first-child {
       margin-top: 0;
     }
-  }
 
-  :last-child {
-    margin-bottom: 0;
+    // Don't remove the margin for close buttons as first element
+    .is-close-button:first-child {
+      margin-top: -$margin-unit;
+
+      // Remove margin then for second element
+      & + * {
+        margin-top: 0;
+      }
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+@media (prefers-color-scheme: dark){
+  .notice {
+    margin: $notice-margin-y*$margin-unit $notice-margin-x*$margin-unit;
+    padding: $notice-padding * $padding-unit;
+    border-radius: $notice-border-radius;
+    border: $notice-border-width solid #b3c0c7;
+    background-color: #eef1f2;
+
+    &.is-filled {
+      border-color: transparent;
+      color: white;
+      background-color: #1e262a;
+    }
+
+    @each $name, $color in (
+      "warning": map-get($secondary-colors, "yellow"),
+      "danger": darken(map-get($secondary-colors, "red"), 2.5%),
+      "success": lighten(map-get($secondary-colors, "green"), 7.5%),
+      "info": lighten(map-get($secondary-colors, "teal"), 5%),
+    ) {
+      &.is-#{$name} {
+        border-color: lighten($color, 15%);
+        background-color: lighten($color, 35%);
+      }
+      &.is-#{$name}.is-filled {
+        border-color: transparent;
+        background-color: darken($color, 25%);
+      }
+    }
+
+    &.is-banner {
+      border-left: none;
+      border-right: none;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    :first-child {
+      margin-top: 0;
+    }
+
+    // Don't remove the margin for close buttons as first element
+    .is-close-button:first-child {
+      margin-top: -$margin-unit;
+
+      // Remove margin then for second element
+      & + * {
+        margin-top: 0;
+      }
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
