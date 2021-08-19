@@ -163,3 +163,15 @@ $tools-item-danger-filled-dark-background: #dd4e4e;
 $tools-item-danger-filled-dark-focus-background: #be1515;
 $tools-item-danger-filled-dark-hover-background: #b61212;
 $tools-item-danger-filled-dark-active-background: #880f0f;
+
+@mixin theme-switch-val($light-val, $dark-val){
+  @media (prefers-color-scheme: light){
+    @content($light-val);
+  }
+  @media (prefers-color-scheme: dark){
+    @content($dark-val);
+  }
+  :root.theme-dark {
+    @content($dark-val);
+  }
+}
