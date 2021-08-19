@@ -1,88 +1,48 @@
-@media (prefers-color-scheme: light){
-    .diff {
-        .diff-section {
-            display: flex;
+.diff {
+    .diff-section {
+        display: flex;
 
-            .diff-old,
-            .diff-new,
-            .diff-inline {
-                padding: $diff-padding*$padding-unit;
-                margin: $diff-margin*$margin-unit;
-                border-radius: $diff-element-border-radius;
-                width: 0;
-                flex-grow: 1;
+        .diff-old,
+        .diff-new,
+        .diff-inline {
+            padding: $diff-padding*$padding-unit;
+            margin: $diff-margin*$margin-unit;
+            border-radius: $diff-element-border-radius;
+            width: 0;
+            flex-grow: 1;
 
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
+            &:first-child {
+                margin-left: 0;
             }
 
-            .diff-old.is-changed {
-                background-color: $diff-removed-background-color;
-            }
-
-            .diff-new.is-changed {
-                background-color: $diff-added-background-color;
-            }
-
-            .diff-inline.is-changed {
-                background-color: $diff-changed-background-color;
+            &:last-child {
+                margin-right: 0;
             }
         }
 
-        .diff-load-more-button {
-            display: block;
-            width: 100%;
-            margin: 0;
-            border-radius: $diff-element-border-radius;
+        .diff-old.is-changed {
+            @include theme-switch-val($diff-removed-background-color,$diff-old-changed-dark) using ($val){
+                background-color: $val;
+            }
+        }
+
+        .diff-new.is-changed {
+            @include theme-switch-val($diff-added-background-color,$diff-new-changed-dark) using ($val){
+                background-color: $val;
+            }
+        }
+
+        .diff-inline.is-changed {
+            @include theme-switch-val($diff-changed-background-color,$diff-inline-changed-dark) using ($val){
+                background-color: $val;
+            }
         }
     }
-}
-@media (prefers-color-scheme: dark){
-    .diff {
-        .diff-section {
-            display: flex;
 
-            .diff-old,
-            .diff-new,
-            .diff-inline {
-                padding: $diff-padding*$padding-unit;
-                margin: $diff-margin*$margin-unit;
-                border-radius: $diff-element-border-radius;
-                width: 0;
-                flex-grow: 1;
-
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-
-            .diff-old.is-changed {
-                background-color: $diff-old-changed-dark;
-            }
-
-            .diff-new.is-changed {
-                background-color: $diff-new-changed-dark;
-            }
-
-            .diff-inline.is-changed {
-                background-color: $diff-inline-changed-dark;
-            }
-        }
-
-        .diff-load-more-button {
-            display: block;
-            width: 100%;
-            margin: 0;
-            border-radius: $diff-element-border-radius;
-        }
+    .diff-load-more-button {
+        display: block;
+        width: 100%;
+        margin: 0;
+        border-radius: $diff-element-border-radius;
     }
 }
