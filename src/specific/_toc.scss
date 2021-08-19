@@ -1,176 +1,100 @@
-@media (prefers-color-scheme: light){
-    .toc {
+.toc {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    button.toc--header {
+        background: none;
+        font: inherit;
+        cursor: pointer;
+        font-weight: $toc-header-font-weight;
+        @include theme-switch-val($toc-header-active-background-color,$toc-entry-hover-dark-background-color) using ($val){
+            background-color: $val;
+        }
+        @include theme-switch-val($toc-header-active-color,inherit) using ($val){
+            color: $val;
+        }
+    }
+
+    .toc--header {
+        margin-top: $toc-header-top-margin * $margin-unit;
+        align-self: flex-start;
+        font-weight: $toc-header-font-weight;
+        @include theme-switch-val($toc-border-color,$toc-header-dark-color) using ($val){
+            border: $toc-outer-border-width solid $val;
+        }
+        border-bottom-width: 0;
+        @include theme-switch-val($toc-header-active-background-color,$toc-header-dark-color) using ($val){
+            background-color: $val;
+        }
+        padding: $toc-header-padding-y*$padding-unit $toc-header-padding-x*$padding-unit;
+        @include theme-switch-val($toc-header-active-color, inherit) using ($val){
+            color: $val;
+        }
+    }
+
+    .toc--entry {
         display: flex;
-        flex-direction: column;
-        align-items: stretch;
+        border: $toc-outer-border-width solid $toc-border-color;
+        border-top-width: $toc-inner-border-width;
+        font-size: $toc-entry-font-size;
+        padding: $toc-entry-padding * $padding-unit;
 
-        button.toc--header {
-            background: none;
-            font: inherit;
-            cursor: pointer;
-            font-weight: $toc-header-font-weight;
-            background-color: $toc-header-active-background-color;
-            color: $toc-header-active-color;
+        &:not(:last-of-type) {
+            border-bottom: none;
         }
 
-        .toc--header {
-            margin-top: $toc-header-top-margin * $margin-unit;
-            align-self: flex-start;
-            font-weight: $toc-header-font-weight;
-            border: $toc-outer-border-width solid $toc-border-color;
-            border-bottom-width: 0;
-            background-color: $toc-header-active-background-color;
-            padding: $toc-header-padding-y*$padding-unit $toc-header-padding-x*$padding-unit;
-            color: $toc-header-active-color;
+        .toc--icon {
+            width: $toc-icon-width;
+            text-align: center;
         }
+        .toc--badge {
+            min-width: $toc-badge-min-width;
+            padding: $toc-badge-padding * $padding-unit;
 
-        .toc--entry {
-            display: flex;
-            border: $toc-outer-border-width solid $toc-border-color;
-            border-top-width: $toc-inner-border-width;
-            font-size: $toc-entry-font-size;
-            padding: $toc-entry-padding * $padding-unit;
-
-            &:not(:last-of-type) {
-                border-bottom: none;
-            }
-
-            .toc--icon {
-                width: $toc-icon-width;
+            .badge {
+                display: block;
+                width: 100%;
+                border-radius: 0;
                 text-align: center;
             }
-            .toc--badge {
-                min-width: $toc-badge-min-width;
-                padding: $toc-badge-padding * $padding-unit;
-
-                .badge {
-                    display: block;
-                    width: 100%;
-                    border-radius: 0;
-                    text-align: center;
-                }
-            }
-
-            .toc--full {
-                flex-grow: 1;
-                width: 0;
-                padding: $toc-full-padding-y*$padding-unit $toc-full-padding-x*$padding-unit;
-
-                p {
-                    margin: 0;
-                }
-            }
         }
 
-        .toc--header + .toc--entry {
-            border-top-width: $toc-outer-border-width;
-        }
+        .toc--full {
+            flex-grow: 1;
+            width: 0;
+            padding: $toc-full-padding-y*$padding-unit $toc-full-padding-x*$padding-unit;
 
-        a.toc--entry {
-            color: inherit;
-            text-decoration: none;
-
-            &:hover {
-                background-color: $toc-entry-hover-background-color;
-            }
-        }
-
-        &:not(.is-active) {
-            button.toc--header {
-                background-color: white;
-                border-bottom-width: $toc-outer-border-width;
-            }
-            button.toc--header ~ .toc--entry {
-                display: none;
+            p {
+                margin: 0;
             }
         }
     }
-}
-@media (prefers-color-scheme: dark){
-    .toc {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
 
+    .toc--header + .toc--entry {
+        border-top-width: $toc-outer-border-width;
+    }
+
+    a.toc--entry {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            @include theme-switch-val($toc-entry-hover-background-color,$toc-entry-hover-dark-background-color-hover) using ($val){
+                background-color: $val;
+            }
+        }
+    }
+
+    &:not(.is-active) {
         button.toc--header {
-            background: none;
-            font: inherit;
-            cursor: pointer;
-            font-weight: $toc-header-font-weight;
-            background-color: $toc-entry-hover-dark-background-color;
-            color: inherit;
+            @include theme-switch-val(white,$toc-header-button-dark-background) using ($val){
+                background-color: $val;
+            }
+            border-bottom-width: $toc-outer-border-width;
         }
-
-        .toc--header {
-            margin-top: $toc-header-top-margin * $margin-unit;
-            align-self: flex-start;
-            font-weight: $toc-header-font-weight;
-            border: $toc-outer-border-width solid $toc-header-dark-color;
-            border-bottom-width: 0;
-            background-color: $toc-header-dark-color;
-            padding: $toc-header-padding-y*$padding-unit $toc-header-padding-x*$padding-unit;
-            color: inherit;
-        }
-
-        .toc--entry {
-            display: flex;
-            border: $toc-outer-border-width solid $toc-border-color;
-            border-top-width: $toc-inner-border-width;
-            font-size: $toc-entry-font-size;
-            padding: $toc-entry-padding * $padding-unit;
-
-            &:not(:last-of-type) {
-                border-bottom: none;
-            }
-
-            .toc--icon {
-                width: $toc-icon-width;
-                text-align: center;
-            }
-            .toc--badge {
-                min-width: $toc-badge-min-width;
-                padding: $toc-badge-padding * $padding-unit;
-
-                .badge {
-                    display: block;
-                    width: 100%;
-                    border-radius: 0;
-                    text-align: center;
-                }
-            }
-
-            .toc--full {
-                flex-grow: 1;
-                width: 0;
-                padding: $toc-full-padding-y*$padding-unit $toc-full-padding-x*$padding-unit;
-
-                p {
-                    margin: 0;
-                }
-            }
-        }
-
-        .toc--header + .toc--entry {
-            border-top-width: $toc-outer-border-width;
-        }
-
-        a.toc--entry {
-            color: inherit;
-            text-decoration: none;
-
-            &:hover {
-                background-color: $toc-entry-hover-dark-background-color-hover;
-            }
-        }
-
-        &:not(.is-active) {
-            button.toc--header {
-                background-color: $toc-header-button-dark-background;
-                border-bottom-width: $toc-outer-border-width;
-            }
-            button.toc--header ~ .toc--entry {
-                display: none;
-            }
+        button.toc--header ~ .toc--entry {
+            display: none;
         }
     }
 }
