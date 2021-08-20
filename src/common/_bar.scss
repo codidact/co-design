@@ -1,48 +1,26 @@
-@media (prefers-color-scheme: light){
-    .bar {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        max-height: $bar-max-height;
-        overflow: auto;
-        background-color: $bar-background-color;
-        border-top: $bar-border-width solid $bar-border-color;
-
-        .bar--container {
-            padding: $bar-padding * $padding-unit;
-        }
-
-        & > .button.is-close-button {
-            position: absolute;
-            font-size: 2*$close-button-font-size !important;
-            right: 0.5rem;
-            top: 1rem;
-            line-height: 0.75;
-        }
+.bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: $bar-max-height;
+    overflow: auto;
+    @include theme-switch-val($bar-background-color,$bar-background-color-dark) using ($val){
+        background-color: $val;
     }
-}
-@media (prefers-color-scheme: dark){
-    .bar {
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        max-height: $bar-max-height;
-        overflow: auto;
-        background-color: #0c0b0b;
-        border-top: $bar-border-width solid #141212;
+    @include theme-switch-val($bar-border-color,$bar-border-color-dark) using ($val){
+        border-top: $bar-border-width solid $val;
+    }
 
-        .bar--container {
-            padding: $bar-padding * $padding-unit;
-        }
+    .bar--container {
+        padding: $bar-padding * $padding-unit;
+    }
 
-        & > .button.is-close-button {
-            position: absolute;
-            font-size: 2*$close-button-font-size !important;
-            right: 0.5rem;
-            top: 1rem;
-            line-height: 0.75;
-        }
+    & > .button.is-close-button {
+        position: absolute;
+        font-size: 2*$close-button-font-size !important;
+        right: 0.5rem;
+        top: 1rem;
+        line-height: 0.75;
     }
 }
