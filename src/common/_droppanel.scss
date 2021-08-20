@@ -1,108 +1,67 @@
-@media (prefers-color-scheme: light){
-    .droppanel {
-        border: $drop-border-width solid $drop-border-color;
-        padding: $drop-padding * $padding-unit;
-        border-radius: $drop-border-radius;
-        max-width: $drop-max-width;
-        width: 100%;
-        box-shadow: $drop-shadow;
-        position: absolute;
-        display: none;
-        background-color: $drop-background-color;
+.droppanel {
+    @include theme-switch-val($drop-border-color,$drop-border-color-dark) using ($val){
+        border: $drop-border-width solid $val;
+    }
+    padding: $drop-padding * $padding-unit;
+    border-radius: $drop-border-radius;
+    max-width: $drop-max-width;
+    width: 100%;
+    box-shadow: $drop-shadow;
+    position: absolute;
+    display: none;
+    @include theme-switch-val($drop-background-color,$drop-background-color-dark) using ($val){
+        background-color: $val;
+    }
 
-        &.is-active { display: block; }
+    &.is-active { display: block; }
 
-        &.is-large {
-            max-width: $drop-large-max-width;
+    &.is-large {
+        max-width: $drop-large-max-width;
+    }
+
+    &.is-wide {
+        max-width: $drop-wide-max-width;
+    }
+
+    .droppanel--header {
+        @include theme-switch-val($drop-header-color,$drop-background-color-dark) using ($val){
+            color: $val;
         }
+        margin: $drop-header-margin*$margin-unit 0;
+        font-variant: small-caps;
 
-        &.is-wide {
-            max-width: $drop-wide-max-width;
-        }
-
-        .droppanel--header {
-            color: $drop-header-color;
-            margin: $drop-header-margin*$margin-unit 0;
-            font-variant: small-caps;
-
-            &:first-child {
-                margin-top: 0;
-            }
-        }
-
-        .droppanel--menu {
-            margin: 0 $padding-unit * -$drop-padding;
-            display: flex;
-            flex-direction: column;
-
-            a {
-                padding: $drop-menu-item-padding-y*$padding-unit $drop-menu-item-padding-x*$padding-unit;
-                color: $drop-menu-item-color;
-
-                &:hover, &:focus, &:active {
-                    background-color: $drop-menu-item-hover-background-color;
-                    color: $drop-menu-item-color;
-                    text-decoration: none;
-                }
-
-                &.is-active {
-                    background-color: $drop-menu-item-active-background-color;
-                    color: $drop-menu-item-active-color;
-                }
-            }
+        &:first-child {
+            margin-top: 0;
         }
     }
-}
-@media (prefers-color-scheme: dark){
-    .droppanel {
-        border: $drop-border-width solid #0c0b0b;
-        padding: $drop-padding * $padding-unit;
-        border-radius: $drop-border-radius;
-        max-width: $drop-max-width;
-        width: 100%;
-        box-shadow: 0 3px 5px -2px #0c0b0b;
-        position: absolute;
-        display: none;
-        background-color: #141212;
 
-        &.is-active { display: block; }
+    .droppanel--menu {
+        margin: 0 $padding-unit * -$drop-padding;
+        display: flex;
+        flex-direction: column;
 
-        &.is-large {
-            max-width: $drop-large-max-width;
-        }
-
-        &.is-wide {
-            max-width: $drop-wide-max-width;
-        }
-
-        .droppanel--header {
-            color: #141212;
-            margin: $drop-header-margin*$margin-unit 0;
-            font-variant: small-caps;
-
-            &:first-child {
-                margin-top: 0;
+        a {
+            padding: $drop-menu-item-padding-y*$padding-unit $drop-menu-item-padding-x*$padding-unit;
+            @include theme-switch-val($drop-menu-item-color,$drop-menu-item-color-dark) using ($val){
+                color: $val;
             }
-        }
 
-        .droppanel--menu {
-            margin: 0 $padding-unit * -$drop-padding;
-            display: flex;
-            flex-direction: column;
-
-            a {
-                padding: $drop-menu-item-padding-y*$padding-unit $drop-menu-item-padding-x*$padding-unit;
-                color: #fff;
-
-                &:hover, &:focus, &:active {
-                    background-color: #0c0b0b;
-                    color: #ddd;
-                    text-decoration: none;
+            &:hover, &:focus, &:active {
+                @include theme-switch-val($drop-menu-item-hover-background-color,$drop-menu-item-hover-background-color-dark) using ($val){
+                    background-color: $val;
                 }
+                @include theme-switch-val($drop-menu-item-color,$drop-menu-item-color-dark) using ($val){
+                    color: $val;
+                }
+                text-decoration: none;
+            }
 
-                &.is-active {
-                    background-color: #141212;
-                    color: #fff;
+            &.is-active {
+                @include theme-switch-val($drop-menu-item-active-background-color,$drop-menu-item-active-background-color-dark) using ($val){
+                    background-color: $val;
+                }
+                @include theme-switch-val($drop-menu-item-active-color,$drop-menu-item-active-color-dark) using ($val){
+                    color: $val;
                 }
             }
         }
