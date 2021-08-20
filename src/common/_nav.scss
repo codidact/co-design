@@ -54,7 +54,7 @@
   .menu--heading {
     display: block;
     font-weight: $menu-heading-font-weight;
-    @include theme-switch-val($menu-header-color,$menu-header-color-dark) using ($val){
+    @include theme-switch-val($menu-heading-color,$menu-header-color-dark) using ($val){
       color: $val;
     }
     text-decoration: none !important;
