@@ -1,209 +1,118 @@
-@media (prefers-color-scheme: light){
-  .modal {
-    position: absolute;
-    width: 100%;
-    min-height: 100%;
-    top: 0;
-    left: 0;
-    padding: $modal-outer-padding*$padding-unit;
+.modal {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  padding: $modal-outer-padding*$padding-unit;
 
-    pointer-events: none;
+  pointer-events: none;
 
-    display: none;
+  display: none;
 
-    &.is-active { display: block; }
+  &.is-active { display: block; }
 
-    &.is-with-backdrop {
-      background-color: $modal-backdrop-background;
-      position: fixed;
-
-      height: 100%;
-
-      pointer-events: all;
-
-      .modal--container {
-        box-shadow: $modal-shadow;
-        max-height: 100%;
-      }
+  &.is-with-backdrop {
+    @include theme-switch-val($modal-backdrop-background,$modal-backdrop-background-dark) using ($val){
+      background-color: $val;
     }
+    position: fixed;
+
+    height: 100%;
+
+    pointer-events: all;
 
     .modal--container {
-      margin: 0 auto;
-      max-width: $modal-width;
-      width: 100%;
-
-      pointer-events: all;
-
-      background-color: $modal-background-color;
       box-shadow: $modal-shadow;
-      border: $modal-border-width solid $modal-border-color;
-
-      display: flex;
-      flex-direction: column;
-
-
-      .modal--header {
-        padding: $modal-header-padding * $padding-unit;
-        font-size: $modal-header-font-size;
-        border-bottom: $modal-border-width solid $modal-inner-border-color;
-        font-weight: $modal-header-font-weight;
-
-        .modal--header-link {
-          float: right;
-          font-size: $modal-header-link-font-size;
-          padding: $padding-unit*$modal-header-link-padding-y $padding-unit*$modal-header-link-padding-x;
-        }
-
-        .modal--header-button {
-          float: right;
-          font-size: $modal-header-button-font-size;
-          margin: 0;
-        }
-      }
-
-      .modal--body {
-        padding: $modal-body-padding * $padding-unit;
-        max-height: $modal-body-overflow-height;
-        overflow-y: auto;
-      }
-
-      .modal--footer {
-        padding: $modal-footer-padding * $padding-unit;
-        border-top: $modal-border-width solid $modal-inner-border-color;
-      }
-    }
-
-    &.is-large .modal--container {
-      max-width: $modal-large-width;
-
-      .modal--body {
-        max-height: $modal-large-body-overflow-height;
-      }
-    }
-
-    &.is-small .modal--container {
-      max-width: $modal-small-width;
-
-      .modal--body {
-        max-height: $modal-small-body-overflow-height;
-      }
-    }
-
-    &.is-danger {
-      .modal--header,
-      .modal--container,
-      .modal--footer {
-        border-color: $modal-danger-border-color;
-      }
-
-      .modal--header {
-        color: $modal-danger-header-color;
-        background-color: $modal-danger-background-color;
-      }
+      max-height: 100%;
     }
   }
-}
-@media (prefers-color-scheme: dark){
-  .modal {
-    position: absolute;
+
+  .modal--container {
+    margin: 0 auto;
+    max-width: $modal-width;
     width: 100%;
-    min-height: 100%;
-    top: 0;
-    left: 0;
-    padding: $modal-outer-padding*$padding-unit;
 
-    pointer-events: none;
+    pointer-events: all;
 
-    display: none;
+    @include theme-switch-val($modal-background-color,$modal-background-color-dark) using ($val){
+      background-color: $val; 
+    }
+    @include theme-switch-val($modal-shadow,$modal-shadow-dark) using ($val){
+      box-shadow: $modal-shadow;
+    }
+    @include theme-switch-val($modal-border-color,$modal-border-color-dark) using ($val){
+      border: $modal-border-width solid $val;
+    }
 
-    &.is-active { display: block; }
+    display: flex;
+    flex-direction: column;
 
-    &.is-with-backdrop {
-      background-color: rgba(0,0,0,.5);
-      position: fixed;
 
-      height: 100%;
+    .modal--header {
+      padding: $modal-header-padding * $padding-unit;
+      font-size: $modal-header-font-size;
+      @include theme-switch-val($modal-inner-border-color,$modal-background-color-dark) using ($val){
+        border-bottom: $modal-border-width solid $val;
+      }
+      font-weight: $modal-header-font-weight;
 
-      pointer-events: all;
+      .modal--header-link {
+        float: right;
+        font-size: $modal-header-link-font-size;
+        padding: $padding-unit*$modal-header-link-padding-y $padding-unit*$modal-header-link-padding-x;
+      }
 
-      .modal--container {
-        box-shadow: $modal-shadow;
-        max-height: 100%;
+      .modal--header-button {
+        float: right;
+        font-size: $modal-header-button-font-size;
+        margin: 0;
       }
     }
 
-    .modal--container {
-      margin: 0 auto;
-      max-width: $modal-width;
-      width: 100%;
+    .modal--body {
+      padding: $modal-body-padding * $padding-unit;
+      max-height: $modal-body-overflow-height;
+      overflow-y: auto;
+    }
 
-      pointer-events: all;
+    .modal--footer {
+      padding: $modal-footer-padding * $padding-unit;
+      border-top: $modal-border-width solid $modal-inner-border-color;
+    }
+  }
 
-      background-color: #0c0b0b;
-      box-shadow: 0 3px 5px -3px #141212;
-      border: $modal-border-width solid #b3c0c7;
+  &.is-large .modal--container {
+    max-width: $modal-large-width;
 
-      display: flex;
-      flex-direction: column;
+    .modal--body {
+      max-height: $modal-large-body-overflow-height;
+    }
+  }
 
+  &.is-small .modal--container {
+    max-width: $modal-small-width;
 
-      .modal--header {
-        padding: $modal-header-padding * $padding-unit;
-        font-size: $modal-header-font-size;
-        border-bottom: $modal-border-width solid #0c0b0b;
-        font-weight: $modal-header-font-weight;
+    .modal--body {
+      max-height: $modal-small-body-overflow-height;
+    }
+  }
 
-        .modal--header-link {
-          float: right;
-          font-size: $modal-header-link-font-size;
-          padding: $padding-unit*$modal-header-link-padding-y $padding-unit*$modal-header-link-padding-x;
-        }
-
-        .modal--header-button {
-          float: right;
-          font-size: $modal-header-button-font-size;
-          margin: 0;
-        }
-      }
-
-      .modal--body {
-        padding: $modal-body-padding * $padding-unit;
-        max-height: $modal-body-overflow-height;
-        overflow-y: auto;
-      }
-
-      .modal--footer {
-        padding: $modal-footer-padding * $padding-unit;
-        border-top: $modal-border-width solid $modal-inner-border-color;
+  &.is-danger {
+    .modal--header,
+    .modal--container,
+    .modal--footer {
+      @include theme-switch-val($modal-danger-border-color,$modal-danger-border-color-dark) using ($val){
+        border-color: $val;
       }
     }
 
-    &.is-large .modal--container {
-      max-width: $modal-large-width;
-
-      .modal--body {
-        max-height: $modal-large-body-overflow-height;
+    .modal--header {
+      @include theme-switch-val($modal-danger-header-color,$modal-danger-header-color-dark) using ($val){
+        color: $val;
       }
-    }
-
-    &.is-small .modal--container {
-      max-width: $modal-small-width;
-
-      .modal--body {
-        max-height: $modal-small-body-overflow-height;
-      }
-    }
-
-    &.is-danger {
-      .modal--header,
-      .modal--container,
-      .modal--footer {
-        border-color: #f28d9d;
-      }
-
-      .modal--header {
-        color: #4c0404;
-        background-color: #141212;
+      @include theme-switch-val($modal-danger-background-color,$modal-danger-background-color-dark) using ($val){
+        background-color: $val;
       }
     }
   }
