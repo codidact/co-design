@@ -9,13 +9,13 @@ label.form-element {
 
   font-size: $label-font-size;
   font-weight: $label-font-weight;
-  @include theme-switch-val($label-color,$label-color-dark) using ($val){
+  @include theme-switch-val($label-color,white) using ($val){
     color: $val;
   }
 }
 
 .form-caption {
-  @include theme-switch-val($form-caption-color,$label-color-dark) using ($val){
+  @include theme-switch-val($form-caption-color,white) using ($val){
     color: $val;
   }
   font-size: $form-caption-font-size;
@@ -29,7 +29,9 @@ input.form-element {
 
   padding: $input-padding*$padding-unit;
   margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
-
+  @media (prefers-color-scheme: dark){
+    color: white;
+  }
   @include theme-switch-val($input-border-color,$input-border-color-dark) using ($val){
     border: $input-border-width solid $val;
   }
@@ -63,7 +65,9 @@ textarea.form-element {
 
   padding: $input-padding*$padding-unit;
   margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
-
+  @media (prefers-color-scheme: dark){
+    color: white;
+  }
   @include theme-switch-val($input-border-color,$input-border-color-dark) using ($val){
     border: $input-border-width solid $val;
   }
@@ -114,7 +118,9 @@ select.form-element {
   margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
 
   cursor: pointer;
-
+  @media (prefers-color-scheme: dark){
+    color: white;
+  }
   @include theme-switch-val($input-border-color,$input-border-color-dark) using ($val){
     border: $input-border-width solid $val;
   }
@@ -154,7 +160,9 @@ select.form-element[multiple] {
   margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
 
   cursor: inherit;
-
+  @media (prefers-color-scheme: dark){
+    color: white;
+  }
   @include theme-switch-val($input-border-color,$input-border-color-dark) using ($val){
     border: $input-border-width solid $val;
   }
