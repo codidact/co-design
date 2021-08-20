@@ -1,30 +1,17 @@
-@media (prefers-color-scheme: light){
-  .footer {
-    padding: $footer-padding * $padding-unit;
-    border-top: $footer-top-border-width solid $footer-border-color;
-    color: $footer-color;
-    font-family: $font-stack-brand;
-
-    margin-top: $footer-top-margin * $margin-unit;
-
-    &.is-inverted {
-      border-top: none;
-      background-color: $footer-background-color;
-    }
+.footer {
+  padding: $footer-padding * $padding-unit;
+  @include theme-switch-val($footer-border-color,$footer-border-color-dark) using ($val){
+    border-top: $footer-top-border-width solid $val;
   }
-}
-@media (prefers-color-scheme: dark){
-  .footer {
-    padding: $footer-padding * $padding-unit;
-    border-top: $footer-top-border-width solid #0c0b0b;
-    color: $footer-color;
-    font-family: $font-stack-brand;
+  color: $footer-color;
+  font-family: $font-stack-brand;
 
-    margin-top: $footer-top-margin * $margin-unit;
+  margin-top: $footer-top-margin * $margin-unit;
 
-    &.is-inverted {
-      border-top: none;
-      background-color: #141212;
+  &.is-inverted {
+    border-top: none;
+    @include theme-switch-val($footer-background-color,$footer-background-color-dark) using ($val){
+      background-color: $val;
     }
   }
 }
