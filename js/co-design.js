@@ -258,7 +258,6 @@
                     var parentDropdown = target.closest(dropPanelSelector);
                     if (parentDropdown !== _this.refersToElement && _this.panelTriggerNode !== target) {
                         _this.closeDropPanel();
-                        e.preventDefault();
                     }
                 });
             };

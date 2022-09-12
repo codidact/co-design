@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .widget {
   border: $widget-border-width solid $widget-border-color;
   border-radius: $widet-border-radius;
@@ -24,7 +26,7 @@
       float: right;
       font-size: $widget-header-button-font-size;
       position: relative;
-      top: -$widget-header-padding/1.8*$padding-unit;
+      top: math.div(-$widget-header-padding, 1.8)*$padding-unit;
     }
   }
 

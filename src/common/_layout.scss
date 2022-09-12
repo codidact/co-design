@@ -1,3 +1,5 @@
+@use "sass:math";
+
 * { box-sizing: border-box; }
 
 html, body {
@@ -13,7 +15,7 @@ html, body {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 $grid-column-gap / -2;
+  margin: 0 math.div($grid-column-gap, -2);
   max-width: calc(100% - $grid-column-gap);
 
   &.is-nowrap {
@@ -23,7 +25,7 @@ html, body {
   .grid--cell {
     flex-grow: 0;
     flex-shrink: 0;
-    padding: $grid-column-gap / 2;
+    padding: $grid-column-gap * 0.5;
 
     &.is-flexible {
       flex-grow: 1;
@@ -32,7 +34,7 @@ html, body {
 
     @for $i from 1 through $grid-column-count {
       &.is-#{$i} {
-        width: 100% * $i / $grid-column-count;
+        width: math.div(100% * $i, $grid-column-count);
       }
     }
 
@@ -40,7 +42,7 @@ html, body {
     @media all and (max-width: $grid-small-to-medium-breakpoint) {
       @for $i from 1 through $grid-column-count {
         &.is-#{$i}-sm {
-          width: 100% * $i / $grid-column-count;
+          width: math.div(100% * $i, $grid-column-count);
         }
       }
     }
@@ -48,7 +50,7 @@ html, body {
     @media all and (min-width: $grid-small-to-medium-breakpoint) and (max-width: $grid-medium-to-large-breakpoint) {
       @for $i from 1 through $grid-column-count {
         &.is-#{$i}-md {
-          width: 100% * $i / $grid-column-count;
+          width: math.div(100% * $i, $grid-column-count);
         }
       }
     }
@@ -56,7 +58,7 @@ html, body {
     @media all and (min-width: $grid-medium-to-large-breakpoint) {
       @for $i from 1 through $grid-column-count {
         &.is-#{$i}-lg {
-          width: 100% * $i / $grid-column-count;
+          width: math.div(100% * $i, $grid-column-count);
         }
       }
     }

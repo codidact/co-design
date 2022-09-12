@@ -84,7 +84,6 @@ export default class DropPanel {
             const parentDropdown = target.closest(dropPanelSelector);
             if(parentDropdown !== this.refersToElement && this.panelTriggerNode !== target) {
                 this.closeDropPanel();
-                e.preventDefault();
             }
         });
     }
