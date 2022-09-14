@@ -171,7 +171,7 @@
                 document.addEventListener("click", function (e) {
                     var target = e.target;
                     var parentSlide = target.closest(slideSelector);
-                    if (parentSlide !== _this.refersToElement && _this.slideTriggerNode !== target) {
+                    if (parentSlide !== _this.refersToElement && !_this.slideTriggerNode.contains(target)) {
                         _this.closeSlide();
                     }
                 });
@@ -256,7 +256,7 @@
                 document.addEventListener("click", function (e) {
                     var target = e.target;
                     var parentDropdown = target.closest(dropPanelSelector);
-                    if (parentDropdown !== _this.refersToElement && _this.panelTriggerNode !== target) {
+                    if (parentDropdown !== _this.refersToElement && !_this.panelTriggerNode.contains(target)) {
                         _this.closeDropPanel();
                     }
                 });
