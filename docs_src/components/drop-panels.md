@@ -45,6 +45,8 @@ Co-Design's JavaScript provides full support for showing drop panels and alignin
 
 Give the drop panel an id or unique class and add `data-drop="[query]"` to the trigger, where the query is a CSS selector for the drop panel.
 
+<div class="notice is-warning">Co-Design only supports <strong>one</strong> trigger per drop panel &mdash; attempting to use multiple triggers may cause bugs!</div>
+
 If you want to toggle a class on the trigger (for example `.is-active`), you can add `data-drop-self-class-toggle="[class]"` to the trigger. If you want to force a direction (up or down), to which the drop panel should go, add `data-drop-force-dir="[up|down]"` to the trigger.
 
 {% example "js" "" "d-dp-with-js-example" %}
