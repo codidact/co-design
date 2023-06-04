@@ -1,6 +1,6 @@
 {
   "name": "@codidact/co-design",
-  "version": "0.12.4",
+  "version": "0.12.6",
   "description": "Co-Design is the design and component framework for Codidact",
   "author": "luap42",
   "repository": {
@@ -26,7 +26,7 @@
     "sass": "^1.34.1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.2",
     "typescript": "^3.9.9",
     "typescript-bundle": "^1.0.17"
   }

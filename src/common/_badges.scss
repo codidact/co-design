@@ -28,7 +28,7 @@
   }
 
   &.is-small {
-    padding: $badge-tag-padding-y*$padding-unit/2 $badge-tag-padding-x*$padding-unit/2;
+    padding: $badge-tag-padding-y*$padding-unit*0.5 $badge-tag-padding-x*$padding-unit*0.5;
     line-height: 1;
   }
 }

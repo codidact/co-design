@@ -54,8 +54,8 @@
         position: absolute;
         height: 100%;
         width: $meter-question-score-dash-width;
-        left: calc(50% - #{$meter-question-score-dash-width/2});
-        right: calc(50% - #{$meter-question-score-dash-width/2});
+        left: calc(50% - #{$meter-question-score-dash-width*0.5});
+        right: calc(50% - #{$meter-question-score-dash-width*0.5});
         z-index: 1;
         background-color: $meter-question-score-dash-color;
     }

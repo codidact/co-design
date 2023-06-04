@@ -82,9 +82,8 @@ export default class DropPanel {
         document.addEventListener("click", (e) => {
             const target = e.target as HTMLElement;
             const parentDropdown = target.closest(dropPanelSelector);
-            if(parentDropdown !== this.refersToElement && this.panelTriggerNode !== target) {
+            if(parentDropdown !== this.refersToElement && !this.panelTriggerNode.contains(target)) {
                 this.closeDropPanel();
-                e.preventDefault();
             }
         });
     }
