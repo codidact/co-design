@@ -32,5 +32,10 @@
     "@11ty/eleventy": "^2.0.1",
     "typescript": "^3.9.9",
     "typescript-bundle": "^1.0.17"
-  }
+  },
+  "files": [
+    "dist/",
+    "js/",
+    "assets/fonts/"
+  ]
 }
