@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
-{% include head.html %}
+{% include "head.html" %}
 
 <body>
-    {% include header.html %}
+    {% include "header.html" %}
     <div class="grid container">
         <div class="grid--cell is-12 is-3-lg docs-nav h-bw-r-1 h-bs-r-solid h-bc-tertiary-100">
 
             <div class="has-padding-4">
 
-                {% include sidebar-nav.html %}
+                {% include "sidebar-nav.html" %}
 
             </div>
 
@@ -17,7 +17,7 @@
         <div class="grid--cell is-12 is-9-lg docs-page is-flexible">
             <div class="has-padding-8">
                 <h1 class="h-ff-brand">{{ title }}</h1>
-                <p class="is-lead">{{ description |safe }}</p>
+                <p class="is-lead">{{ description }}</p>
                 {% if beta %}
                     <div class="notice">This component is still in <strong>beta</strong> and cannot be considered stable.</div>
                 {% endif %}
@@ -29,10 +29,10 @@
                         <p><i class="fa fa-magic"></i> This component could benefit from some <a href="/utilities/javascript">JavaScript</a>. You can open a <a href="https://github.com/codidact/co-design/pulls">pull request</a> for it.</p>
                     </div>
                 {% endif %}
-                {{ content |safe }}
+                {{ content }}
             </div>
         </div>
     </div>
-    {% include scripts.html %}
+    {% include "scripts.html" %}
 </body>
 </html>
