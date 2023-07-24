@@ -16,12 +16,13 @@
   },
   "homepage": "https://github.com/codidact/co-design#readme",
   "scripts": {
-    "build_sass": "sass src:dist --style=compressed",
-    "build_js": "tsc-bundle tsconfig.json",
-    "build_docs": "npx @11ty/eleventy",
-    "symlink_sass": "mkdir -p docs && (readlink docs/assets || ln -s $(pwd)/assets docs/assets) && mkdir -p dist && (readlink docs/dist || ln -s $(pwd)/dist docs/dist)",
-    "symlink_js": "mkdir -p js && (readlink docs/js || ln -s $(pwd)/js docs/js)",
-    "build": "npm run -s build_sass && npm run -s build_js && npm run -s symlink_sass && npm run -s symlink_js && npm run -s build_docs",
+    "css_build": "sass src:dist --style=compressed",
+    "js_build": "tsc-bundle tsconfig.json",
+    "docs_build": "npx @11ty/eleventy",
+    "css_symlink": "mkdir -p docs && (readlink docs/assets || ln -s $(pwd)/assets docs/assets) && mkdir -p dist && (readlink docs/dist || ln -s $(pwd)/dist docs/dist)",
+    "js_symlink": "mkdir -p js && (readlink docs/js || ln -s $(pwd)/js docs/js)",
+    "setup": "npm run -s css_symlink && npm run -s js_symlink",
+    "build": "npm run -s css_build && npm run -s js_build && npm run -s css_symlink && npm run -s js_symlink && npm run -s docs_build",
     "server": "npx @11ty/eleventy --serve"
   },
   "dependencies": {
