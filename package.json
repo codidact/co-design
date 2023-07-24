@@ -19,9 +19,9 @@
     "build_sass": "sass src:dist --style=compressed",
     "build_js": "tsc-bundle tsconfig.json",
     "build_docs": "npx @11ty/eleventy",
-    "copy_sass": "cp -r assets docs/ && cp -r dist docs/",
-    "copy_js": "cp -r js docs/",
-    "build": "npm run -s build_sass && npm run -s build_js && npm run -s copy_sass && npm run -s copy_js && npm run -s build_docs",
+    "symlink_sass": "mkdir -p docs && (readlink docs/assets || ln -s $(pwd)/assets docs/assets) && mkdir -p dist && (readlink docs/dist || ln -s $(pwd)/dist docs/dist)",
+    "symlink_js": "mkdir -p js && (readlink docs/js || ln -s $(pwd)/js docs/js)",
+    "build": "npm run -s build_sass && npm run -s build_js && npm run -s symlink_sass && npm run -s symlink_js && npm run -s build_docs",
     "server": "npx @11ty/eleventy --serve"
   },
   "dependencies": {
