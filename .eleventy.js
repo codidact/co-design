@@ -14,6 +14,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('page', 'layouts/page.html');
   eleventyConfig.addLayoutAlias('playground', 'layouts/playground.html');
 
+  // When the linked css or javascript changes, restart the server
+  eleventyConfig.addWatchTarget("dist/**/*.css");
+  eleventyConfig.addWatchTarget("js/**/*.js");
+
+  // Add some delay to ensure that we catch all the changes
+  eleventyConfig.setWatchThrottleWaitTime(500);
 
   eleventyConfig.addPairedShortcode("example", function (content, id, application_notice, further_preview_class) {
     content = content.trim();

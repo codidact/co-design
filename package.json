@@ -21,15 +21,19 @@
     "docs_build": "npx @11ty/eleventy",
     "css_symlink": "mkdir -p docs && (readlink docs/assets || ln -s $(pwd)/assets docs/assets) && mkdir -p dist && (readlink docs/dist || ln -s $(pwd)/dist docs/dist)",
     "js_symlink": "mkdir -p js && (readlink docs/js || ln -s $(pwd)/js docs/js)",
+    "watch:sass": "sass src:dist --style=compressed --watch",
+    "watch:ts": "tsc-bundle tsconfig.json --watch",
+    "watch:docs": "npx @11ty/eleventy --serve --incremental",
     "setup": "npm run -s css_symlink && npm run -s js_symlink",
     "build": "npm run -s css_build && npm run -s js_build && npm run -s css_symlink && npm run -s js_symlink && npm run -s docs_build",
-    "server": "npx @11ty/eleventy --serve"
+    "dev": "npm-run-all --parallel watch:sass watch:ts watch:docs"
   },
   "dependencies": {
     "sass": "^1.34.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "npm-run-all": "^4.1.5",
     "typescript": "^3.9.9",
     "typescript-bundle": "^1.0.17"
   },
