@@ -21,14 +21,21 @@ To set up, simply run:
 
     npm install
 
-and to build the files, run
+and to build all the files, run
 
     npm run build
 
-### Server
+If you only want to rebuild CSS/JS/Docs, run one of
 
-To run a server with the documentation, simply run:
+    npm run css_build
+    npm run js_build
+    npm run docs_build
 
-    npm run server
+### Development
 
-If you go to http://localhost:3000 it will now show the documentation pages with the current code.
+For easy development, run
+
+    npm run dev
+
+and it will host the documentation at http://localhost:8080.
+The site will automatically update when you make changes.
