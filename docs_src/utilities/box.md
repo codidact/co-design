@@ -144,7 +144,10 @@ You can set the border radius to any integer value between 0 (no border radius) 
 - `.has-border-bottom-left-style-X` for only the bottom-left corner border radius
 - `.has-border-bottom-right-style-X` for only the bottom-right corner border radius
 
-      <h5 id="border-radius-example">Example</h5>
+```
+<h5 id="border-radius-example">Example</h5>
+```
+
 
 {% example "border-radius" %}
 <div class="has-margin-2 has-padding-2 has-border-radius-0 has-border-width-5 has-border-style-solid has-border-color-red">r0</div>

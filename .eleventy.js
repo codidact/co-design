@@ -9,12 +9,11 @@ function escapeHtml(unsafe) {
        .replace(/'/g, "&#039;");
 }
 
-
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('home', 'layouts/home.html');
   eleventyConfig.addLayoutAlias('page', 'layouts/page.html');
   eleventyConfig.addLayoutAlias('playground', 'layouts/playground.html');
+
 
   eleventyConfig.addPairedShortcode("example", function (content, id, application_notice, further_preview_class) {
     content = content.trim();
@@ -30,6 +29,7 @@ module.exports = function (eleventyConfig) {
   });
   
   return {
+    // htmlTemplateEngine: "njk",
     dir: {
       input: "docs_src",
       output: "docs"

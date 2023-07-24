@@ -17,16 +17,18 @@
   "homepage": "https://github.com/codidact/co-design#readme",
   "scripts": {
     "build_sass": "sass src:dist --style=compressed",
+    "build_js": "tsc-bundle tsconfig.json",
+    "build_docs": "npx @11ty/eleventy",
     "copy_sass": "cp -r assets docs/ && cp -r dist docs/",
     "copy_js": "cp -r js docs/",
-    "build": "npm run -s build_sass && npm run -s copy_sass && npm run -s copy_js",
-    "js_build": "tsc-bundle tsconfig.json && npm run -s build"
+    "build": "npm run -s build_sass && npm run -s build_js && npm run -s copy_sass && npm run -s copy_js && npm run -s build_docs",
+    "server": "npx @11ty/eleventy --serve"
   },
   "dependencies": {
     "sass": "^1.34.1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.1",
     "typescript": "^3.9.9",
     "typescript-bundle": "^1.0.17"
   }

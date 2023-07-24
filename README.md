@@ -24,3 +24,11 @@ To set up, simply run:
 and to build the files, run
 
     npm run build
+
+### Server
+
+To run a server with the documentation, simply run:
+
+    npm run server
+
+If you go to http://localhost:3000 it will now show the documentation pages with the current code.
