@@ -29,7 +29,6 @@ module.exports = function (eleventyConfig) {
   });
   
   return {
-    // htmlTemplateEngine: "njk",
     dir: {
       input: "docs_src",
       output: "docs"
