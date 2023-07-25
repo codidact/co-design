@@ -273,5 +273,18 @@
   --item-list-number-font-color: #{$item-list-number-font-color};
   --item-list-number-label-color: #{$item-list-number-label-color};
 
+  // ------------------------
+  // Notices
+  // ------------------------
 
+  --notice-default-border-color: #{$notice-default-border-color};
+  --notice-default-background-color: #{$notice-default-background-color};
+  --notice-default-filled-background-color: #{$notice-default-filled-background-color};
+
+  @each $name, $color in $notice-type-colors {
+    --notice-#{$name}-border-color: #{lighten($color, 15%)};
+    --notice-#{$name}-background-color: #{lighten($color, 35%)};
+    --notice-filled-#{$name}-border-color: transparent;
+    --notice-filled-#{$name}-background-color: #{darken($color, 25%)};
+  }
 }

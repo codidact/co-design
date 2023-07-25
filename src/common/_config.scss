@@ -466,6 +466,12 @@ $notice-default-border-color: lighten($tertiary-color, 20%) !default;
 $notice-default-background-color: lighten($tertiary-color, 40%) !default;
 $notice-default-filled-background-color: darken($tertiary-color, 40%) !default;
 
+$notice-type-colors: (
+   "warning": map-get($secondary-colors, "warning"),
+   "danger": darken(map-get($secondary-colors, "danger"), 2.5%),
+   "success": lighten(map-get($secondary-colors, "success"), 7.5%),
+   "info": lighten(map-get($secondary-colors, "info"), 5%)
+);
 
 /* Tabs */
 $tabs-padding: 0 !default;
