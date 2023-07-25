@@ -26,6 +26,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("dist/**/*");
   eleventyConfig.addPassthroughCopy("js/**/*.js");
 
+  // For source maps, pass through scss as well
+  eleventyConfig.addPassthroughCopy("src/**/*.scss");
+
   eleventyConfig.addPairedShortcode("example", function (content, id, application_notice, further_preview_class) {
     content = content.trim();
     if (application_notice) {
