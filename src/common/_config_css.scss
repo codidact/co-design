@@ -184,4 +184,20 @@
   --input-background-color: #{$input-background-color};
   --input-danger-border-color: #{$input-danger-border-color};
   --input-danger-background-color: #{$input-danger-background-color};
+
+  // ------------------------
+  // Modals
+  // ------------------------
+
+  --modal-shadow: #{$modal-shadow};
+  --modal-background-color: #{$modal-background-color};
+  --modal-border-color: #{$modal-border-color};
+  --modal-inner-border-color: #{$modal-inner-border-color};
+
+  --modal-backdrop-background: #{$modal-backdrop-background};
+  --modal-backdrop-shadow: #{$modal-backdrop-shadow}; // Previously unused, fixed.
+
+  --modal-danger-border-color: #{$modal-danger-border-color};
+  --modal-danger-header-color: #{$modal-danger-header-color};
+  --modal-danger-background-color: #{$modal-danger-background-color};
 }

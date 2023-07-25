@@ -13,7 +13,7 @@
   &.is-active { display: block; }
 
   &.is-with-backdrop {
-    background-color: $modal-backdrop-background;
+    background-color: var(--modal-backdrop-background);
     position: fixed;
 
     height: 100%;
@@ -21,7 +21,7 @@
     pointer-events: all;
 
     .modal--container {
-      box-shadow: $modal-shadow;
+      box-shadow: var(--modal-backdrop-shadow);
       max-height: 100%;
     }
   }
@@ -33,9 +33,9 @@
 
     pointer-events: all;
 
-    background-color: $modal-background-color;
-    box-shadow: $modal-shadow;
-    border: $modal-border-width solid $modal-border-color;
+    background-color: var(--modal-background-color);
+    box-shadow: var(--modal-shadow);
+    border: $modal-border-width solid var(--modal-border-color);
 
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@
     .modal--header {
       padding: $modal-header-padding * $padding-unit;
       font-size: $modal-header-font-size;
-      border-bottom: $modal-border-width solid $modal-inner-border-color;
+      border-bottom: $modal-border-width solid var(--modal-inner-border-color);
       font-weight: $modal-header-font-weight;
 
       .modal--header-link {
@@ -68,7 +68,7 @@
 
     .modal--footer {
       padding: $modal-footer-padding * $padding-unit;
-      border-top: $modal-border-width solid $modal-inner-border-color;
+      border-top: $modal-border-width solid var(--modal-inner-border-color);
     }
   }
 
@@ -92,12 +92,12 @@
     .modal--header,
     .modal--container,
     .modal--footer {
-      border-color: $modal-danger-border-color;
+      border-color: var(--modal-danger-border-color);
     }
 
     .modal--header {
-      color: $modal-danger-header-color;
-      background-color: $modal-danger-background-color;
+      color: var(--modal-danger-header-color);
+      background-color: var(--modal-danger-background-color);
     }
   }
 }
