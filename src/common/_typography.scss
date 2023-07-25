@@ -141,8 +141,8 @@ pre {
 blockquote {
   margin: $quote-margin-y*$margin-unit $quote-margin-x*$margin-unit;
   padding: $quote-padding-y*$padding-unit $quote-padding-x*$padding-unit;
-  background-color: $quote-background-color;
-  border: $quote-border-width solid $quote-border-color;
+  background-color: var(--quote-background-color);
+  border: $quote-border-width solid var(--quote-border-color);
 
   border-radius: $quote-border-radius;
   border-bottom-left-radius: 0;
@@ -163,11 +163,11 @@ ins, del {
   border-radius: $delta-border-radius;
 }
 ins {
-  background-color: $delta-ins-background-color;
+  background-color: var(--delta-ins-background-color);
   text-decoration: underline;
 }
 del {
-  background-color: $delta-del-background-color;
+  background-color: var(--delta-del-background-color);
   text-decoration: line-through;
 }
 
@@ -182,21 +182,21 @@ table.table {
   }
 
   th {
-    border-bottom: $table-th-border-width solid $table-border-color;
+    border-bottom: $table-th-border-width solid var(--table-border-color);
     padding: $table-padding-y*$padding-unit $table-padding-x*$padding-unit;
     font-weight: $table-th-font-weight;
     text-align: left;
   }
 
   td {
-    border-bottom: $table-td-border-width solid $table-border-color;
+    border-bottom: $table-td-border-width solid var(--table-border-color);
     padding: $table-padding-y*$padding-unit $table-padding-x*$padding-unit;
     text-align: left;
   }
 
   th, td {
     &:not(:last-child) {
-      border-right: $table-td-border-width solid $table-border-color;
+      border-right: $table-td-border-width solid var(--table-border-color);
     }
   }
 
@@ -207,11 +207,11 @@ table.table {
   }
 
   &.is-striped tr:nth-of-type(2n+1) td {
-    background-color: $table-stripe-background-color;
+    background-color: var(--table-stripe-background-color);
   }
 
   &.is-with-hover tr:hover td {
-    background-color: $table-hover-background-color;
+    background-color: var(--table-hover-background-color);
   }
 }
 

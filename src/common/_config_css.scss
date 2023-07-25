@@ -30,6 +30,34 @@
     --link-hover-#{$name}-color: #{darken($color, 40%)};
   }
 
+  // ------------------------
+  // Quote
+  // ------------------------
+
+  --quote-color: #{$quote-color};
+  --quote-background-color: #{$quote-background-color};
+  --quote-border-color: #{$quote-border-color};
+
+  // ------------------------
+  // Code
+  // ------------------------
+
+  --code-border-color: #{$code-border-color};
+
+  // ------------------------
+  // Delta (diff)
+  // ------------------------
+
+  --delta-ins-background-color: #{$delta-ins-background-color};
+  --delta-del-background-color: #{$delta-del-background-color};
+
+  // ------------------------
+  // Table
+  // ------------------------
+
+  --table-border-color: #{$table-border-color};
+  --table-stripe-background-color: #{$table-stripe-background-color};
+  --table-hover-background-color: #{$table-hover-background-color};
 
   // Badges
   //--badge-filled-text-color: #FFFFFF;
