@@ -21,11 +21,14 @@
     "docs_build": "npx @11ty/eleventy",
     "css_symlink": "mkdir -p docs && (readlink docs/assets || ln -s $(pwd)/assets docs/assets) && mkdir -p dist && (readlink docs/dist || ln -s $(pwd)/dist docs/dist)",
     "js_symlink": "mkdir -p js && (readlink docs/js || ln -s $(pwd)/js docs/js)",
+    "css_copy": "cp -r assets docs/ && cp -r dist docs/",
+    "js_copy": "cp -r js docs/",
     "watch:sass": "sass src:dist --style=compressed --watch",
     "watch:ts": "tsc-bundle tsconfig.json --watch",
     "watch:docs": "npx @11ty/eleventy --serve --incremental",
     "setup": "npm run -s css_symlink && npm run -s js_symlink",
     "build": "npm run -s css_build && npm run -s js_build && npm run -s css_symlink && npm run -s js_symlink && npm run -s docs_build",
+    "ci_build": "npm run -s css_build && npm run -s js_build && npm run -s css_copy && npm run -s js_copy && npm run -s docs_build",
     "dev": "npm-run-all --parallel watch:sass watch:ts watch:docs"
   },
   "dependencies": {
