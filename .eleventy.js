@@ -23,7 +23,7 @@ module.exports = function (eleventyConfig) {
 
   // Make sure to either copy (or passthrough from original location for dev server) needed files
   eleventyConfig.addPassthroughCopy("assets/**/*");
-  eleventyConfig.addPassthroughCopy("dist/**/*.css");
+  eleventyConfig.addPassthroughCopy("dist/**/*");
   eleventyConfig.addPassthroughCopy("js/**/*.js");
 
   eleventyConfig.addPairedShortcode("example", function (content, id, application_notice, further_preview_class) {
