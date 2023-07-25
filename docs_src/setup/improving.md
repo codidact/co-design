@@ -54,28 +54,24 @@ First of all, you need to make sure, that you have everything important installe
 $ npm install
 ```
 
-To build the CSS you need to run:
+To build all you need to run:
 
 ```
 $ npm run build
 ```
 
-To build the JS you need to run:
+To build just the CSS/JS/Docs run any of the following:
 
 ```
+$ npm run css_build
 $ npm run js_build
+$ npm run docs_build
 ```
 
-To build the documentation you need to run:
+For a live updating web server:
 
 ```
-$ npx @11ty/eleventy
-```
-
-Or for running a live update web server
-
-```
-$ npx @11ty/eleventy --serve
+$ npm run dev
 ```
 
 ## What standards are there?
