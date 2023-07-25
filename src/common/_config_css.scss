@@ -200,4 +200,58 @@
   --modal-danger-border-color: #{$modal-danger-border-color};
   --modal-danger-header-color: #{$modal-danger-header-color};
   --modal-danger-background-color: #{$modal-danger-background-color};
+
+  // ------------------------
+  // Header
+  // ------------------------
+
+  --header-background: #{$header-background};
+  --header-color: #{$header-color};
+  --header-shadow: #{$header-shadow};
+
+  --header-link-hover-shadow: #{$header-link-hover-shadow};
+
+  --header-item-color: #{$header-item-color};
+  --header-item-active-color: #{$header-item-active-color};
+  --header-item-background-color: #{$header-item-background-color};
+  --header-item-active-background-color: #{$header-item-active-background-color};
+
+  --header-alert-background-color: #{$header-alert-background-color};
+  --header-alert-color: #{$header-alert-color};
+
+  --header-tl-color: #{$header-tl-color};
+  --header-tl-small-outline-shadow: #{$header-tl-small-outline-shadow};
+
+  --header-bars-color: #{$header-bars-color};
+  --header-bars-active-color: #{$header-bars-active-color};
+
+  // Header slide
+
+  --header-slide-shadow: #{$header-slide-shadow};
+
+  --header-slide-item-color: #{$header-slide-item-color};
+  --header-slide-item-background-color: #{$header-slide-item-background-color};
+  --header-slide-item-active-color: #{$header-slide-item-active-color};
+  --header-slide-item-active-background-color: #{$header-slide-item-active-background-color};
+  --header-slide-item-active-shadow: #{$header-slide-item-active-shadow};
+
+  --header-slide-separator-color: #{$header-slide-separator-color};
+
+  // dark header
+
+  --header-dark-color: #{$header-dark-color};
+  --header-dark-shadow: #{$header-dark-shadow};
+
+  --header-dark-link-hover-shadow: #{$header-dark-link-hover-shadow};
+
+  --header-dark-item-color: #{$header-dark-item-color};
+  --header-dark-item-active-color: #{$header-dark-item-active-color};
+  --header-dark-item-background-color: #{$header-dark-item-background-color};
+  --header-dark-item-active-background-color: #{$header-dark-item-active-background-color};
+
+  --header-dark-alert-background-color: #{$header-dark-alert-background-color};
+  --header-dark-alert-color: #{$header-dark-alert-color};
+
+  --header-dark-bars-color: #{$header-dark-bars-color};
+  --header-dark-bars-active-color: #{$header-dark-bars-active-color};
 }
