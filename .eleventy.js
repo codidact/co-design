@@ -9,13 +9,20 @@ function escapeHtml(unsafe) {
        .replace(/'/g, "&#039;");
 }
 
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+
   eleventyConfig.addLayoutAlias('home', 'layouts/home.html');
   eleventyConfig.addLayoutAlias('page', 'layouts/page.html');
   eleventyConfig.addLayoutAlias('playground', 'layouts/playground.html');
 
-  // When the linked css or javascript changes, update in the browser
+  // When the linked css or javascript changes and we are in dev mode, update in the browser
   eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
+  // Make sure to either copy (or passthrough from original location for dev server) needed files
+  eleventyConfig.addPassthroughCopy("assets/**/*");
   eleventyConfig.addPassthroughCopy("dist/**/*.css");
   eleventyConfig.addPassthroughCopy("js/**/*.js");
 
@@ -33,6 +40,7 @@ module.exports = function (eleventyConfig) {
   });
   
   return {
+    pathPrefix: process.env.ELEVENTY_PATH_PREFIX || "",
     dir: {
       input: "docs_src",
       output: "docs"
