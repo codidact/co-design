@@ -25,24 +25,14 @@ $link-type-colors: (
 
 
   // ------------------------
-  // Links
+  // Link
+  // ------------------------
+
   --link-color: #{$link-color};
   --link-hover-color: #{darken($link-color, 20%)};
   --link-active-color: #{darken($link-color, 20%)};
 
-  //--link-danger-color: #{darken($danger-color, 25%)};
-  //--link-active-danger-color: #{darken($danger-color, 40%)};
-  //--link-hover-danger-color: #{darken($danger-color, 40%)};
-  //--link-warning-color: #{darken($warning-color, 25%)};
-  //--link-active-warning-color: #{darken($warning-color, 40%)};
-  //--link-hover-warning-color: #{darken($warning-color, 40%)};
-  //--link-success-color: #{darken($success-color, 25%)};
-  //--link-active-success-color: #{darken($success-color, 40%)};
-  //--link-hover-success-color: #{darken($success-color, 40%)};
-  //--link-info-color: #{darken($info-color, 25%)};
-  //--link-active-info-color: #{darken($info-color, 40%)};
-  //--link-hover-info-color: #{darken($info-color, 40%)};
-
+  // --link-danger-color / --link-active-danger-color / --link-hover-danger-color etc.
   @each $name, $color in $link-type-colors {
     --link-#{$name}-color: #{darken($color, 25%)};
     --link-active-#{$name}-color: #{darken($color, 40%)};
