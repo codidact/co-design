@@ -1,15 +1,4 @@
-$link-type-colors: (
-  "danger": $danger-color,
-  "warning": $warning-color,
-  "success": $success-color,
-  "info": $info-color,
 
-  // Deprecated
-  "red": $danger-color,
-  "yellow": $warning-color,
-  "green": $success-color,
-  "teal": $info-color
-);
 
 :root {
   --primary-color: #{$primary-color};
@@ -29,8 +18,10 @@ $link-type-colors: (
   // ------------------------
 
   --link-color: #{$link-color};
-  --link-hover-color: #{darken($link-color, 20%)};
-  --link-active-color: #{darken($link-color, 20%)};
+  --link-hover-color: #{$link-hover-color};
+  --link-active-color: #{$link-active-color};
+  --link-muted-color: #{$link-muted-color};
+  --link-hover-muted-color: #{$link-hover-muted-color};
 
   // --link-danger-color / --link-active-danger-color / --link-hover-danger-color etc.
   @each $name, $color in $link-type-colors {
@@ -39,8 +30,6 @@ $link-type-colors: (
     --link-hover-#{$name}-color: #{darken($color, 40%)};
   }
 
-  --link-muted-color: #{darken($tertiary-color, 5%)};
-  --link-hover-muted-color: #{darken($tertiary-color, 25%)};
 
   // Badges
   //--badge-filled-text-color: #FFFFFF;
