@@ -167,4 +167,21 @@
   --close-button-color: #{$close-button-color};
   --close-button-hover-color: #{$close-button-hover-color};
   --close-button-active-background-color: #{$close-button-active-background-color};
+
+  // ------------------------
+  // Forms
+  // ------------------------
+
+  --form-color: #{$form-color};
+  --form-danger-color: #{$form-danger-color};
+
+
+  --label-color: #{$label-color};
+  --form-caption-color: #{$form-caption-color};
+
+  --input-border-color: #{$input-border-color};
+  --input-active-border-color: #{$input-active-border-color};
+  --input-background-color: #{$input-background-color};
+  --input-danger-border-color: #{$input-danger-border-color};
+  --input-danger-background-color: #{$input-danger-background-color};
 }

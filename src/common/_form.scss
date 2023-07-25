@@ -9,11 +9,11 @@ label.form-element {
 
   font-size: $label-font-size;
   font-weight: $label-font-weight;
-  color: $label-color;
+  color: var(--label-color);
 }
 
 .form-caption {
-  color: $form-caption-color;
+  color: var(--form-caption-color);
   font-size: $form-caption-font-size;
   margin-top: $form-caption-margin-top*$margin-unit;
   margin-bottom: $form-caption-margin-bottom*$margin-unit;
@@ -26,20 +26,20 @@ input.form-element {
   padding: $input-padding*$padding-unit;
   margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
 
-  border: $input-border-width solid $input-border-color;
-  background-color: $input-background-color;
+  border: $input-border-width solid var(--input-border-color);
+  background-color: var(--input-background-color);
   border-radius: $input-border-radius;
 
   display: block;
   width: 100%;
 
   &:focus {
-    border-color: $input-active-border-color;
+    border-color: var(--input-active-border-color);
   }
 
   &.is-danger {
-    border-color: $input-danger-border-color;
-    background-color: $input-danger-background-color;
+    border-color: var(--input-danger-border-color);
+    background-color: var(--input-danger-background-color);
   }
 }
 
@@ -50,8 +50,8 @@ textarea.form-element {
   padding: $input-padding*$padding-unit;
   margin: $input-margin-y*$margin-unit $input-margin-x*$margin-unit;
 
-  border: $input-border-width solid $input-border-color;
-  background-color: $input-background-color;
+  border: $input-border-width solid var(--input-border-color);
+  background-color: var(--input-background-color);
   border-radius: $input-border-radius;
 
   resize: $textarea-resize;
@@ -61,12 +61,12 @@ textarea.form-element {
   min-height: $textarea-min-height;
 
   &:focus {
-    border-color: $input-active-border-color;
+    border-color: var(--input-active-border-color);
   }
 
   &.is-danger {
-    border-color: $input-danger-border-color;
-    background-color: $input-danger-background-color;
+    border-color: var(--input-danger-border-color);
+    background-color: var(--input-danger-background-color);
   }
 
   &.is-small { min-height: $textarea-small-min-height; }
@@ -91,8 +91,8 @@ select.form-element {
 
   cursor: pointer;
 
-  border: $input-border-width solid $input-border-color;
-  background-color: $input-background-color;
+  border: $input-border-width solid var(--input-border-color);
+  background-color: var(--input-background-color);
   border-radius: $input-border-radius;
 
   display: block;
@@ -103,12 +103,12 @@ select.form-element {
   }
 
   &:focus {
-    border-color: $input-active-border-color;
+    border-color: var(--input-active-border-color);
   }
 
   &.is-danger {
-    border-color: $input-danger-border-color;
-    background-color: $input-danger-background-color;
+    border-color: var(--input-danger-border-color);
+    background-color: var(--input-danger-background-color);
   }
 }
 
@@ -121,8 +121,8 @@ select.form-element[multiple] {
 
   cursor: inherit;
 
-  border: $input-border-width solid $input-border-color;
-  background-color: $input-background-color;
+  border: $input-border-width solid var(--input-border-color);
+  background-color: var(--input-background-color);
   border-radius: $input-border-radius;
 
   display: block;
@@ -136,11 +136,11 @@ select.form-element[multiple] {
   }
 
   &:focus {
-    border-color: $input-active-border-color;
+    border-color: var(--input-active-border-color);
   }
 
   &.is-danger {
-    border-color: $input-danger-border-color;
-    background-color: $input-danger-background-color;
+    border-color: var(--input-danger-border-color);
+    background-color: var(--input-danger-background-color);
   }
 }
