@@ -73,6 +73,13 @@ $secondary-colors: (
   "yellow": #FDD835,
   "green": #2ECC71
 ) !default;
+
+$danger-color: map-get($secondary-colors, "red");
+$warning-color: map-get($secondary-colors, "yellow");
+$success-color: map-get($secondary-colors, "green");
+$info-color: map-get($secondary-colors, "teal");
+
+
 $tertiary-color: #78909C !default;
 
 $link-color: #2980B9 !default;
