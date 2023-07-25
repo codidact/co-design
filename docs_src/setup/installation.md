@@ -21,7 +21,6 @@ To build our framework from source, you'll first need to download it from [GitHu
 ```
 ~/co-design $ npm install
 ~/co-design $ npm run build
-~/co-design $ npm run js_build
 ```
 
 Your CSS build will then be in `/dist`, your JS build in `/js`.
