@@ -262,4 +262,16 @@
   --footer-color: #{$footer-color};
   --footer-border-color: #{$footer-border-color};
   --footer-background-color: #{$footer-background-color};
+
+  // ------------------------
+  // Item lists
+  // ------------------------
+
+  --item-list-separator-color: #{$item-list-separator-color};
+  --item-list-highlight: #{$item-list-highlight};
+
+  --item-list-number-font-color: #{$item-list-number-font-color};
+  --item-list-number-label-color: #{$item-list-number-label-color};
+
+
 }
