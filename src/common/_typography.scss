@@ -54,31 +54,39 @@ ul li, ol li {
 }
 
 a:link, a:visited, .link {
-  color: $link-color;
+  color: var(--link-color);
   text-decoration: none;
   transition: $default-transition;
   cursor: pointer;
 
-  &:hover, &:active {
-    color: darken($link-color, 20%);
+  &:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+  }
+  &:active {
+    color: var(--link-active-color);
     text-decoration: underline;
   }
 
-  @each $key, $value in $secondary-colors {
+  @each $key, $value in $link-type-colors {
     &.is-#{$key} {
-      color: darken($value, 25%);
+      color: var(--link-#{$key}-color);
 
-      &:hover, &:active {
-        color: darken($value, 40%);
+      &:hover {
+        color: var(--link-hover-#{$key}-color);
+      }
+
+      &:active {
+        color: var(--link-active-#{$key}-color);
       }
     }
   }
 
   &.is-muted {
-    color: darken($tertiary-color, 5%);
+    color: var(--link-muted-color);
 
     &:hover {
-      color: darken($tertiary-color, 25%);
+      color: var(--link-hover-muted-color);
     }
   }
 
