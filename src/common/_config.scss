@@ -68,16 +68,22 @@ $color-gradient-stops: (
 
 $primary-color: #4B68FF !default;
 $secondary-colors: (
+  "danger": #EB5959,
+  "warning": #FDD835,
+  "success": #2ECC71,
+  "info": #58a09a,
+
+  // deprecated
   "red": #eb5959,
   "teal": #58a09a,
   "yellow": #FDD835,
   "green": #2ECC71
 ) !default;
 
-$danger-color: map-get($secondary-colors, "red");
-$warning-color: map-get($secondary-colors, "yellow");
-$success-color: map-get($secondary-colors, "green");
-$info-color: map-get($secondary-colors, "teal");
+$danger-color: map-get($secondary-colors, "danger");
+$warning-color: map-get($secondary-colors, "warning");
+$success-color: map-get($secondary-colors, "success");
+$info-color: map-get($secondary-colors, "info");
 
 $tertiary-color: #78909C !default;
 
@@ -87,18 +93,7 @@ $link-hover-color: darken($link-color, 20%) !default;
 $link-active-color: darken($link-color, 20%) !default;
 $link-muted-color: darken($tertiary-color, 5%) !default;
 $link-hover-muted-color: darken($tertiary-color, 25%) !default;
-$link-type-colors: (
-  "danger": $danger-color,
-  "warning": $warning-color,
-  "success": $success-color,
-  "info": $info-color,
-
-   // Deprecated
-  "red": $danger-color,
-  "yellow": $warning-color,
-  "green": $success-color,
-  "teal": $info-color
-);
+$link-type-colors: $secondary-colors;
 
 $box-shadow-color: #cccccc !default;
 
@@ -153,8 +148,13 @@ $badge-tag-padding-y: 1 !default; // in padding units
 $badge-tag-font-weight: 400 !default;
 $badge-tag-color: darken($primary-color, 35%) !default;
 $badge-tag-background-color: lighten($primary-color, 30%) !default;
-$badge-tag-master-background-color: darken($primary-color, 30%) !default;
+$badge-tag-filled-color: white !default;
+$badge-tag-filled-background-color: darken($primary-color, 30%) !default;
 $badge-tag-border-radius: 3px !default;
+
+$badge-tag-a-hover-background-color: darken($badge-tag-background-color, 5%) !default;
+$badge-tag-filled-a-hover-color: white !default;
+$badge-tag-filled-a-hover-background-color: darken($badge-tag-filled-background-color, 5%) !default;
 
 $badge-tag-alternative-colors: map-merge($secondary-colors, ('muted': $tertiary-color));
 
@@ -180,7 +180,7 @@ $badge-role-color: white !default;
 $badge-role-border-radius: 2px !default;
 
 $badge-role-muted-background-color: lighten($tertiary-color, 30%) !default;
-$badge-role-muted-color:darken($tertiary-color, 30%) !default;
+$badge-role-muted-color: darken($tertiary-color, 30%) !default;
 
 $badge-tl-font-size: 14px !default;
 $badge-tl-min-width: 20px !default;
@@ -192,7 +192,7 @@ $badge-tl-background-color: darken($primary-color, 20%) !default;
 $badge-tl-color: white !default;
 
 $badge-tl-muted-background-color: lighten($tertiary-color, 30%) !default;
-$badge-tl-muted-color:darken($tertiary-color, 30%) !default;
+$badge-tl-muted-color: darken($tertiary-color, 30%) !default;
 
 /* Buttons */
 $button-primary-color: $primary-color !default;

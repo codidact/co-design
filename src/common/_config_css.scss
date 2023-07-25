@@ -59,7 +59,50 @@
   --table-stripe-background-color: #{$table-stripe-background-color};
   --table-hover-background-color: #{$table-hover-background-color};
 
+  // ------------------------
   // Badges
-  //--badge-filled-text-color: #FFFFFF;
-  //--badge-filled-background-color: var(--badge-tag-master-background-color);
+  // ------------------------
+  --badge-tag-color: #{$badge-tag-color};
+  --badge-tag-background-color: #{$badge-tag-background-color};
+  --badge-tag-filled-color: #{$badge-tag-filled-color};
+  --badge-tag-filled-background-color: #{$badge-tag-filled-background-color};
+
+  --badge-tag-a-hover-background-color: #{$badge-tag-a-hover-background-color};
+  --badge-tag-filled-a-hover-color: #{$badge-tag-filled-a-hover-color};
+  --badge-tag-filled-a-hover-background-color: #{$badge-tag-filled-a-hover-background-color};
+
+  // --badge-tag-danger-color / --badge-tag-danger-background-color
+  // --badge-tag-filled--danger-color / --badge-tag-filled--danger-background-color
+  // --badge-tag-a-hover-danger-background-color
+  // --badge-tag-filled-a-hover-danger-color / --badge-tag-filled-a-hover-danger-background-color etc.
+  @each $name, $color in $badge-tag-alternative-colors {
+    --badge-tag-#{$name}-color: #{darken($color, 35%)};
+    --badge-tag-#{$name}-background-color: #{lighten($color, 25%)};
+    --badge-tag-filled-#{$name}-background-color: #{darken($color, 20%)};
+    --badge-tag-filled-#{$name}-color: #{$badge-tag-filled-color};
+
+    --badge-tag-a-hover-#{$name}-background-color: #{lighten($color, 20%)};
+    --badge-tag-filled-a-hover-#{$name}-color: #{$badge-tag-filled-color};
+    --badge-tag-filled-a-hover-#{$name}-background-color: #{darken($color, 25%)};
+  }
+
+  --badge-award-color: #{$badge-award-color};
+  --badge-award-background-color: #{$badge-award-background-color};
+  --badge-award-border-color: #{$badge-award-border-color};
+
+    --badge-award-gold-color: #{$badge-award-gold-color};
+    --badge-award-silver-color: #{$badge-award-silver-color};
+    --badge-award-bronze-color: #{$badge-award-bronze-color};
+
+  --badge-role-background-color: #{$badge-role-background-color};
+  --badge-role-color: #{$badge-role-color};
+
+  --badge-role-muted-background-color: #{$badge-role-muted-background-color};
+  --badge-role-muted-color: #{$badge-role-muted-color};
+
+  --badge-tl-background-color: #{$badge-tl-background-color};
+  --badge-tl-color: #{$badge-tl-color};
+
+  --badge-tl-muted-background-color: #{$badge-tl-muted-background-color};
+  --badge-tl-muted-color: #{$badge-tl-muted-color};
 }
