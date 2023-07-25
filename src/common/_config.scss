@@ -196,8 +196,10 @@ $badge-tl-muted-color: darken($tertiary-color, 30%) !default;
 
 /* Buttons */
 $button-primary-color: $primary-color !default;
-$button-danger-color: map-get($secondary-colors, "red") !default;
+$button-danger-color: map-get($secondary-colors, "danger") !default;
 $button-muted-color: $tertiary-color !default;
+
+$button-type-colors: map-merge($secondary-colors, ('muted': $button-muted-color, 'primary': $button-primary-color));
 
 $button-icon-only-default-color: $tertiary-color !default;
 

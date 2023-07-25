@@ -5,189 +5,98 @@
   text-decoration: none !important;
   cursor: pointer;
   display: inline-block;
-  background-color: lighten($button-primary-color, 32.5%);
-  color: darken($button-primary-color, 30%);
+  background-color: var(--button-primary-background-color);
+  color: var(--button-primary-text-color);
   padding: $padding-unit*map-get($button-default-size, py) $padding-unit*2*map-get($button-default-size, py);
   font-weight: $button-font-weight;
   border-radius: $button-border-radius;
   border: $button-border-width $button-border-style transparent;
   transition: $default-transition;
   margin: $margin-unit * $button-margin;
-
+  
   &:hover {
-    background-color: lighten($button-primary-color, 30%);
-    color: darken($button-primary-color, 30%);
+    background-color: var(--button-hover-primary-background-color);
+    color: var(--button-hover-primary-text-color);
   }
 
   &:active, &.is-active {
-    background-color: lighten($button-primary-color, 25%);
-    color: darken($button-primary-color, 30%);
+    background-color: var(--button-active-primary-background-color);
+    color: var(--button-active-primary-text-color);
   }
 
   &.is-outlined {
-    background-color: #ffffff;
-    border-color: lighten($button-primary-color, 5%);
+    background-color: var(--button-outline-primary-background-color);
+    border-color: var(--button-outline-primary-border-color);
 
     &:hover {
-      background-color: lighten($button-primary-color, 32.5%);
-      border-color: darken($button-primary-color, 15%);
+      background-color: var(--button-outline-hover-primary-background-color);
+      border-color: var(--button-outline-hover-primary-border-color);
     }
 
     &:active, &.is-active {
-      background-color: lighten($button-primary-color, 30%);
-      border-color: darken($button-primary-color, 25%);
+      background-color: var(--button-outline-active-primary-background-color);
+      border-color: var(--button-outline-active-primary-border-color);
     }
   }
 
   &.is-filled {
-    background-color: darken($button-primary-color, 15%);
-    color: white;
+    background-color: var(--button-filled-primary-background-color);
+    color: var(--button-filled-primary-text-color);
 
     &:hover {
-      background-color: darken($button-primary-color, 25%);
-      color: white;
+      background-color: var(--button-filled-hover-primary-background-color);
+      color: var(--button-filled-hover-primary-text-color);
     }
 
     &:active, &.is-active {
-      background-color: darken($button-primary-color, 35%);
-      color: white;
+      background-color: var(--button-filled-active-primary-background-color);
+      color: var(--button-filled-active-primary-text-color);
     }
   }
 
-  @each $color-name, $base-color in $secondary-colors {
-    &.is-#{$color-name} {
-      background-color: lighten($base-color, 32.5%);
-      color: darken($base-color, 30%);
+  @each $name, $color in map-remove($button-type-colors, "primary") {
+    &.is-#{$name} {
+      background-color: var(--button-#{$name}-background-color);
+      color: var(--button-#{$name}-text-color);
 
       &:hover {
-        background-color: lighten($base-color, 30%);
-        color: darken($base-color, 30%);
+        background-color: var(--button-hover-#{$name}-background-color);
+        color: var(--button-hover-#{$name}-text-color);
       }
 
       &:active, &.is-active {
-        background-color: lighten($base-color, 25%);
-        color: darken($base-color, 30%);
+        background-color: var(--button-active-#{$name}-background-color);
+        color: var(--button-active-#{$name}-text-color);
       }
 
       &.is-outlined {
-        background-color: #ffffff;
-        border-color: lighten($base-color, 5%);
+        background-color: var(--button-outline-#{$name}-background-color);
+        border-color: var(--button-outline-#{$name}-border-color);
 
         &:hover {
-          background-color: lighten($base-color, 32.5%);
-          border-color: darken($base-color, 15%);
+          background-color: var(--button-outline-hover-#{$name}-background-color);
+          border-color: var(--button-outline-hover-#{$name}-border-color);
         }
 
         &:active, &.is-active {
-          background-color: lighten($base-color, 30%);
-          border-color: darken($base-color, 25%);
+          background-color: var(--button-outline-active-#{$name}-background-color);
+          border-color: var(--button-outline-active-#{$name}-border-color);
         }
       }
 
       &.is-filled {
-        background-color: darken($base-color, 15%);
-        color: white;
+        background-color: var(--button-filled-#{$name}-background-color);
+        color: var(--button-filled-#{$name}-text-color);
 
         &:hover {
-          background-color: darken($base-color, 25%);
-          color: white;
+          background-color: var(--button-filled-hover-#{$name}-background-color);
+          color: var(--button-filled-hover-#{$name}-text-color);
         }
 
         &:active, &.is-active {
-          background-color: darken($base-color, 35%);
-          color: white;
+          background-color: var(--button-filled-active-#{$name}-background-color);
+          color: var(--button-filled-active-#{$name}-text-color);
         }
-      }
-    }
-  }
-
-  &.is-danger {
-    background-color: lighten($button-danger-color, 32.5%);
-    color: darken($button-danger-color, 30%);
-
-    &:hover {
-      background-color: lighten($button-danger-color, 30%);
-      color: darken($button-danger-color, 30%);
-    }
-
-    &:active, &.is-active {
-      background-color: lighten($button-danger-color, 25%);
-      color: darken($button-danger-color, 30%);
-    }
-
-    &.is-outlined {
-      background-color: #ffffff;
-      border-color: lighten($button-danger-color, 5%);
-
-      &:hover {
-        background-color: lighten($button-danger-color, 32.5%);
-        border-color: darken($button-danger-color, 15%);
-      }
-
-      &:active, &.is-active {
-        background-color: lighten($button-danger-color, 30%);
-        border-color: darken($button-danger-color, 25%);
-      }
-    }
-
-    &.is-filled {
-      background-color: darken($button-danger-color, 15%);
-      color: white;
-
-      &:hover {
-        background-color: darken($button-danger-color, 25%);
-        color: white;
-      }
-
-      &:active, &.is-active {
-        background-color: darken($button-danger-color, 35%);
-        color: white;
-      }
-    }
-  }
-
-
-  &.is-muted {
-    background-color: lighten($button-muted-color, 40%);
-    color: darken($button-muted-color, 30%);
-
-    &:hover {
-      background-color: lighten($button-muted-color, 37.5%);
-      color: darken($button-muted-color, 30%);
-    }
-
-    &:active, &.is-active {
-      background-color: lighten($button-muted-color, 32.5%);
-      color: darken($button-muted-color, 30%);
-    }
-
-    &.is-outlined {
-      background-color: #ffffff;
-      border-color: lighten($button-muted-color, 5%);
-
-      &:hover {
-        background-color: lighten($button-muted-color, 40%);
-        border-color: darken($button-muted-color, 15%);
-      }
-
-      &:active, &.is-active {
-        background-color: lighten($button-muted-color, 35%);
-        border-color: darken($button-muted-color, 25%);
-      }
-    }
-
-    &.is-filled {
-      background-color: darken($button-muted-color, 10%);
-      color: white;
-
-      &:hover {
-        background-color: darken($button-muted-color, 20%);
-        color: white;
-      }
-
-      &:active, &.is-active {
-        background-color: darken($button-muted-color, 30%);
-        color: white;
       }
     }
   }
@@ -203,7 +112,7 @@
 
   &.is-close-button {
     background-color: transparent;
-    color: $close-button-color;
+    color: var(--close-button-color);
     font-size: $close-button-font-size !important;
     padding: $padding-unit*$close-button-padding-y $padding-unit*$close-button-padding-x;
     line-height: 1;
@@ -212,11 +121,11 @@
     &:hover,
     &:active,
     &.is-active {
-      color: $close-button-hover-color;
+      color: var(--close-button-hover-color);
     }
 
     &:active, &.is-active {
-      background-color: $close-button-active-background-color;
+      background-color: var(--close-button-active-background-color);
     }
   }
 
@@ -270,7 +179,7 @@
 
 .button.is-icon-only-button {
   background-color: transparent !important;
-  color: lighten($button-icon-only-default-color, 10%);
+  color: var(--button-icon-only-primary-text-color);
   padding: $icon-button-padding;
 
   line-height: 1;
@@ -287,39 +196,39 @@
   }
 
   &:hover {
-    color: darken($button-primary-color, 5%);
+    color: var(--button-icon-only-hover-primary-text-color);
   }
 
   &:active,
   &.is-active {
-    color: darken($button-primary-color, 20%);
+    color: var(--button-icon-only-active-primary-text-color);
   }
 
   &.is-danger {
-    color: lighten($button-danger-color, 15%);
+    color: var(--button-icon-only-danger-text-color);
 
 
     &:hover {
-      color: darken($button-danger-color, 5%);
+      color: var(--button-icon-only-hover-danger-text-color);
     }
 
     &:active,
     &.is-active {
-      color: darken($button-danger-color, 20%);
+      color: var(--button-icon-only-active-danger-text-color);
     }
   }
 
   &.is-muted {
-    color: lighten($button-muted-color, 17.5%);
+    color: var(--button-icon-only-muted-text-color);
 
 
     &:hover {
-      color: darken($button-muted-color, 5%);
+      color: var(--button-icon-only-hover-muted-text-color);
     }
 
     &:active,
     &.is-active {
-      color: darken($button-muted-color, 20%);
+      color: var(--button-icon-only-active-muted-text-color);
     }
   }
 
