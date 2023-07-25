@@ -1,9 +1,14 @@
-node_modules/*
+node_modules/
 scratch/*
-.idea/*
+/.idea/
 
-# Do not duplicate compiled sources in the repo
-docs/assets
-docs/dist
-docs/js
-docs/src
+# Do not put from-MD-compiled-HTML into the repo
+/docs/
+!/docs/CNAME
+
+
+# Do not put from-SASS-compiled-CSS into the repo
+/dist/
+
+# Do not put from-TS-compiled-JS into the repo
+/js/
