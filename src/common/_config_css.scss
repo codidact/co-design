@@ -14,7 +14,7 @@
 
 
   // ------------------------
-  // Link
+  // Links
   // ------------------------
 
   --link-color: #{$link-color};
@@ -31,7 +31,7 @@
   }
 
   // ------------------------
-  // Quote
+  // Quotes
   // ------------------------
 
   --quote-color: #{$quote-color};
@@ -39,7 +39,7 @@
   --quote-border-color: #{$quote-border-color};
 
   // ------------------------
-  // Code
+  // Code blocks
   // ------------------------
 
   --code-border-color: #{$code-border-color};
@@ -52,7 +52,7 @@
   --delta-del-background-color: #{$delta-del-background-color};
 
   // ------------------------
-  // Table
+  // Tables
   // ------------------------
 
   --table-border-color: #{$table-border-color};
@@ -62,6 +62,7 @@
   // ------------------------
   // Badges
   // ------------------------
+
   --badge-tag-color: #{$badge-tag-color};
   --badge-tag-background-color: #{$badge-tag-background-color};
   --badge-tag-filled-color: #{$badge-tag-filled-color};
