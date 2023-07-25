@@ -1,11 +1,10 @@
 node_modules/
 scratch/*
-/.idea/
+.idea/
 
 # Do not put from-MD-compiled-HTML into the repo
 /docs/
 !/docs/CNAME
-
 
 # Do not put from-SASS-compiled-CSS into the repo
 /dist/
