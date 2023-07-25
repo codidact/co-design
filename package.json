@@ -22,7 +22,6 @@
     "watch:sass": "sass src:dist --style=compressed --watch",
     "watch:ts": "tsc-bundle tsconfig.json --watch",
     "watch:docs": "npx @11ty/eleventy --serve --incremental",
-    "setup": "npm run -s css_symlink && npm run -s js_symlink",
     "build": "npm run -s css_build && npm run -s js_build && npm run -s docs_build",
     "dev": "npm-run-all --parallel watch:sass watch:ts watch:docs"
   },
