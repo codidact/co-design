@@ -215,6 +215,7 @@ img {
 
 details {
   padding: 2 * $padding-unit;
+
   summary {
     border-bottom: 1px solid lighten($tertiary-color, 30%);
     padding: 2 * $padding-unit 0;
@@ -253,7 +254,7 @@ details {
     summary {
       margin-bottom: 2 * $margin-unit;
     }
-    summary::before {
+    & > summary::before {
       transform: rotate(135deg);
       left: 2 * $padding-unit;
     }
