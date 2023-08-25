@@ -3,9 +3,9 @@
   margin-bottom: $margin-unit * $header-bottom-margin;
   font-family: $font-stack-brand;
 
-  background: $header-background;
-  color: $header-color;
-  box-shadow: $header-shadow;
+  background: var(--header-background);
+  color: var(--header-color);
+  box-shadow: var(--header-shadow);
 
   font-weight: $header-font-weight;
 
@@ -18,7 +18,7 @@
 
     &:hover, &:active {
       color: inherit;
-      box-shadow: $header-link-hover-shadow;
+      box-shadow: var(--header-link-hover-shadow);
       text-decoration: none;
     }
   }
@@ -63,8 +63,8 @@
       margin: $header-item-margin-y*$margin-unit $header-item-margin-x*$margin-unit;
       cursor: pointer;
       font: inherit;
-      color: $header-item-color;
-      background-color: $header-item-background-color;
+      color: var(--header-item-color);
+      background-color: var(--header-item-background-color);
       border: none;
       display: flex;
       align-items: center;
@@ -73,15 +73,15 @@
       text-decoration: none !important;
 
       &:hover, &.is-active {
-        color: $header-item-active-color;
-        background-color: $header-item-active-background-color;
+        color: var(--header-item-active-color);
+        background-color: var(--header-item-active-background-color);
       }
 
       &.is-mobile-menu { display: none; }
 
       .header--alert {
-        background-color: $header-alert-background-color;
-        color: $header-alert-color;
+        background-color: var(--header-alert-background-color);
+        color: var(--header-alert-color);
         font-size: $header-alert-font-size;
         min-width: 1.5em;
         height: 1.5em;
@@ -99,10 +99,10 @@
       }
 
       .header--trust-level {
-        color: $header-tl-color;
+        color: var(--header-tl-color);
         font-size: $header-tl-font-size;
         opacity: $header-tl-opacity;
-        text-shadow: $header-tl-small-outline-shadow;
+        text-shadow: var(--header-tl-small-outline-shadow);
         min-width: 1.5em;
         height: 1.5em;
         padding: $header-tl-padding * $padding-unit;
@@ -132,13 +132,13 @@
           width: $header-bars-width;
           height: $header-bars-height;
           margin: $header-bars-margin-y-raw 0;
-          background-color: $header-bars-color;
+          background-color: var(--header-bars-color);
           transition: $default-transition;
         }
 
       }
       &:hover, &.is-active {
-        .header--menu-bars span { background-color: $header-bars-active-color; }
+        .header--menu-bars span { background-color: var(--header-bars-active-color); }
       }
     }
   }
@@ -165,39 +165,39 @@
 }
 
 .header.is-dark {
-  color: $header-color__dark;
-  box-shadow: $header-shadow__dark;
+  color: var(--header-dark-color);
+  box-shadow: var(--header-dark-shadow);
 
   a:link, a:visited {
     &:hover, &:active {
-      box-shadow: $header-link-hover-shadow__dark;
+      box-shadow: var(--header-dark-link-hover-shadow);
     }
   }
 
   .header--menu {
     .header--item {
-      color: $header-item-color__dark;
-      background-color: $header-item-background-color__dark;
+      color: var(--header-dark-item-color);
+      background-color: var(--header-dark-item-background-color);
       
       &:hover, &.is-active {
-        color: $header-item-active-color__dark;
-        background-color: $header-item-active-background-color__dark;
+        color: var(--header-dark-item-active-color);
+        background-color: var(--header-dark-item-active-background-color);
       }
 
       .header--alert {
-        background-color: $header-alert-background-color__dark;
-        color: $header-alert-color__dark;
+        background-color: var(--header-dark-alert-background-color);
+        color: var(--header-dark-alert-color);
       }
 
       .header--menu-bars {
         span {
           margin: $header-bars-margin-y-raw 0;
-          background-color: $header-bars-color__dark;
+          background-color: var(--header-dark-bars-color);
         }
 
       }
       &:hover, &.is-active {
-        .header--menu-bars span { background-color: $header-bars-active-color__dark; }
+        .header--menu-bars span { background-color: var(--header-dark-bars-active-color); }
       }
     }
   }
@@ -223,12 +223,12 @@
   right: $header-slide-default-right;
   width: 100%;
   max-width: $header-slide-max-width;
-  background-color: $header-slide-background-color;
+  background-color: var(--header-slide-background-color);
 
   padding: $header-slide-padding * $padding-unit;
 
   border: $header-slide-border;
-  box-shadow: $header-slide-shadow;
+  box-shadow: var(--header-slide-shadow);
   
   z-index: 100;
 

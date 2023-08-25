@@ -8,10 +8,10 @@
   .item-list--item {
     display: flex;
     align-items: center;
-    border-bottom: $item-list-separator-width solid $item-list-separator-color;
+    border-bottom: $item-list-separator-width solid var(--item-list-separator-color);
 
     &.is-highlighted {
-      background-color: $item-list-highlight;
+      background-color: var(--item-list-highlight);
     }
 
     .item-list--number-value {
@@ -28,12 +28,12 @@
 
       .item-list--number {
         font-size: $item-list-number-font-size;
-        color: $item-list-number-font-color;
+        color: var(--item-list-number-font-color);
       }
 
       .item-list--number-label {
         font-size: $item-list-number-label-font-size;
-        color: $item-list-number-label-color;
+        color: var(--item-list-number-label-color);
       }
     }
 

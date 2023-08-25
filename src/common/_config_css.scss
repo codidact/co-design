@@ -1,0 +1,290 @@
+
+
+:root {
+  --primary-color: #{$primary-color};
+
+  // Secondary colors
+  --danger-color: #{$danger-color};
+  --warning-color: #{$warning-color};
+  --success-color: #{$success-color};
+  --info-color: #{$info-color};
+
+  // Tertiary color
+  --tertiary-color: #{$tertiary-color};
+
+
+  // ------------------------
+  // Links
+  // ------------------------
+
+  --link-color: #{$link-color};
+  --link-hover-color: #{$link-hover-color};
+  --link-active-color: #{$link-active-color};
+  --link-muted-color: #{$link-muted-color};
+  --link-hover-muted-color: #{$link-hover-muted-color};
+
+  // --link-danger-color / --link-active-danger-color / --link-hover-danger-color etc.
+  @each $name, $color in $link-type-colors {
+    --link-#{$name}-color: #{darken($color, 25%)};
+    --link-active-#{$name}-color: #{darken($color, 40%)};
+    --link-hover-#{$name}-color: #{darken($color, 40%)};
+  }
+
+  // ------------------------
+  // Quotes
+  // ------------------------
+
+  --quote-color: #{$quote-color};
+  --quote-background-color: #{$quote-background-color};
+  --quote-border-color: #{$quote-border-color};
+
+  // ------------------------
+  // Code blocks
+  // ------------------------
+
+  --code-border-color: #{$code-border-color};
+
+  // ------------------------
+  // Delta (diff)
+  // ------------------------
+
+  --delta-ins-background-color: #{$delta-ins-background-color};
+  --delta-del-background-color: #{$delta-del-background-color};
+
+  // ------------------------
+  // Tables
+  // ------------------------
+
+  --table-border-color: #{$table-border-color};
+  --table-stripe-background-color: #{$table-stripe-background-color};
+  --table-hover-background-color: #{$table-hover-background-color};
+
+  // ------------------------
+  // Badges
+  // ------------------------
+
+  --badge-tag-color: #{$badge-tag-color};
+  --badge-tag-background-color: #{$badge-tag-background-color};
+  --badge-tag-filled-color: #{$badge-tag-filled-color};
+  --badge-tag-filled-background-color: #{$badge-tag-filled-background-color};
+
+  --badge-tag-a-hover-background-color: #{$badge-tag-a-hover-background-color};
+  --badge-tag-filled-a-hover-color: #{$badge-tag-filled-a-hover-color};
+  --badge-tag-filled-a-hover-background-color: #{$badge-tag-filled-a-hover-background-color};
+
+  // --badge-tag-danger-color / --badge-tag-danger-background-color
+  // --badge-tag-filled--danger-color / --badge-tag-filled--danger-background-color
+  // --badge-tag-a-hover-danger-background-color
+  // --badge-tag-filled-a-hover-danger-color / --badge-tag-filled-a-hover-danger-background-color etc.
+  @each $name, $color in $badge-tag-alternative-colors {
+    --badge-tag-#{$name}-color: #{darken($color, 35%)};
+    --badge-tag-#{$name}-background-color: #{lighten($color, 25%)};
+    --badge-tag-filled-#{$name}-background-color: #{darken($color, 20%)};
+    --badge-tag-filled-#{$name}-color: #{$badge-tag-filled-color};
+
+    --badge-tag-a-hover-#{$name}-background-color: #{lighten($color, 20%)};
+    --badge-tag-filled-a-hover-#{$name}-color: #{$badge-tag-filled-color};
+    --badge-tag-filled-a-hover-#{$name}-background-color: #{darken($color, 25%)};
+  }
+
+  --badge-award-color: #{$badge-award-color};
+  --badge-award-background-color: #{$badge-award-background-color};
+  --badge-award-border-color: #{$badge-award-border-color};
+
+    --badge-award-gold-color: #{$badge-award-gold-color};
+    --badge-award-silver-color: #{$badge-award-silver-color};
+    --badge-award-bronze-color: #{$badge-award-bronze-color};
+
+  --badge-role-background-color: #{$badge-role-background-color};
+  --badge-role-color: #{$badge-role-color};
+
+  --badge-role-muted-background-color: #{$badge-role-muted-background-color};
+  --badge-role-muted-color: #{$badge-role-muted-color};
+
+  --badge-tl-background-color: #{$badge-tl-background-color};
+  --badge-tl-color: #{$badge-tl-color};
+
+  --badge-tl-muted-background-color: #{$badge-tl-muted-background-color};
+  --badge-tl-muted-color: #{$badge-tl-muted-color};
+
+  // ------------------------
+  // Buttons
+  // ------------------------
+
+  --button-primary-color: #{$button-primary-color};
+  --button-danger-color: #{$button-danger-color};
+  --button-muted-color: #{$button-muted-color};
+
+  --button-primary-background-color: #{lighten($button-primary-color, 32.5%)};
+  --button-primary-text-color: #{darken($button-primary-color, 30%)};
+
+  @each $name, $color in $button-type-colors {
+    --button-#{$name}-text-color: #{darken($color, 30%)};
+    --button-#{$name}-background-color: #{lighten($color, 32.5%)};
+    --button-hover-#{$name}-text-color: #{darken($color, 30%)};
+    --button-hover-#{$name}-background-color: #{lighten($color, 30%)};
+    --button-active-#{$name}-text-color: #{darken($color, 30%)};
+    --button-active-#{$name}-background-color: #{lighten($color, 25%)};
+
+    --button-outline-#{$name}-background-color: white;
+    --button-outline-#{$name}-border-color: #{lighten($color, 5%)};
+    --button-outline-hover-#{$name}-background-color: #{lighten($color, 32.5%)};
+    --button-outline-hover-#{$name}-border-color: #{darken($color, 15%)};
+    --button-outline-active-#{$name}-background-color: #{lighten($color, 30%)};
+    --button-outline-active-#{$name}-border-color: #{darken($color, 25%)};
+
+    --button-filled-#{$name}-text-color: white;
+    --button-filled-#{$name}-background-color: #{darken($color, 15%)};
+    --button-filled-hover-#{$name}-text-color: white;
+    --button-filled-hover-#{$name}-background-color: #{darken($color, 25%)};
+    --button-filled-active-#{$name}-text-color: white;
+    --button-filled-active-#{$name}-background-color: #{darken($color, 35%)};
+  }
+
+  // The muted background colors are slightly off relative to all other colors :/
+  --button-muted-background-color: #{lighten($button-muted-color, 40%)};
+  --button-hover-muted-background-color: #{lighten($button-muted-color, 37.5%)};
+  --button-active-muted-background-color: #{lighten($button-muted-color, 32.5%)};
+  --button-outline-hover-muted-background-color: #{lighten($button-muted-color, 40%)};
+  --button-outline-active-muted-background-color: #{lighten($button-muted-color, 35%)};
+  --button-filled-muted-background-color: #{darken($button-muted-color, 10%)};
+  --button-filled-hover-muted-background-color: #{darken($button-muted-color, 20%)};
+  --button-filled-active-muted-background-color: #{darken($button-muted-color, 30%)};
+
+  --button-icon-only-default-color: #{$button-icon-only-default-color};
+
+  // TODO: Base case here is strange, as it uses the tertiary color rather than the primary one, while it uses primary on hover.
+  --button-icon-only-primary-text-color: #{lighten($button-icon-only-default-color, 10%)};
+  --button-icon-only-hover-primary-text-color: #{darken($button-primary-color, 5%)};
+  --button-icon-only-active-primary-text-color: #{darken($button-primary-color, 20%)};
+  --button-icon-only-danger-text-color: #{lighten($button-danger-color, 15%)};
+  --button-icon-only-hover-danger-text-color: #{darken($button-danger-color, 5%)};
+  --button-icon-only-active-danger-text-color: #{darken($button-danger-color, 20%)};
+  --button-icon-only-muted-text-color: #{lighten($button-muted-color, 17.5%)};
+  --button-icon-only-hover-muted-text-color: #{darken($button-muted-color, 5%)};
+  --button-icon-only-active-muted-text-color: #{darken($button-muted-color, 20%)};
+
+  --close-button-color: #{$close-button-color};
+  --close-button-hover-color: #{$close-button-hover-color};
+  --close-button-active-background-color: #{$close-button-active-background-color};
+
+  // ------------------------
+  // Forms
+  // ------------------------
+
+  --form-color: #{$form-color};
+  --form-danger-color: #{$form-danger-color};
+
+
+  --label-color: #{$label-color};
+  --form-caption-color: #{$form-caption-color};
+
+  --input-border-color: #{$input-border-color};
+  --input-active-border-color: #{$input-active-border-color};
+  --input-background-color: #{$input-background-color};
+  --input-danger-border-color: #{$input-danger-border-color};
+  --input-danger-background-color: #{$input-danger-background-color};
+
+  // ------------------------
+  // Modals
+  // ------------------------
+
+  --modal-shadow: #{$modal-shadow};
+  --modal-background-color: #{$modal-background-color};
+  --modal-border-color: #{$modal-border-color};
+  --modal-inner-border-color: #{$modal-inner-border-color};
+
+  --modal-backdrop-background: #{$modal-backdrop-background};
+  --modal-backdrop-shadow: #{$modal-backdrop-shadow}; // Previously unused, fixed.
+
+  --modal-danger-border-color: #{$modal-danger-border-color};
+  --modal-danger-header-color: #{$modal-danger-header-color};
+  --modal-danger-background-color: #{$modal-danger-background-color};
+
+  // ------------------------
+  // Header
+  // ------------------------
+
+  --header-background: #{$header-background};
+  --header-color: #{$header-color};
+  --header-shadow: #{$header-shadow};
+
+  --header-link-hover-shadow: #{$header-link-hover-shadow};
+
+  --header-item-color: #{$header-item-color};
+  --header-item-active-color: #{$header-item-active-color};
+  --header-item-background-color: #{$header-item-background-color};
+  --header-item-active-background-color: #{$header-item-active-background-color};
+
+  --header-alert-background-color: #{$header-alert-background-color};
+  --header-alert-color: #{$header-alert-color};
+
+  --header-tl-color: #{$header-tl-color};
+  --header-tl-small-outline-shadow: #{$header-tl-small-outline-shadow};
+
+  --header-bars-color: #{$header-bars-color};
+  --header-bars-active-color: #{$header-bars-active-color};
+
+  // Header slide
+
+  --header-slide-shadow: #{$header-slide-shadow};
+
+  --header-slide-item-color: #{$header-slide-item-color};
+  --header-slide-item-background-color: #{$header-slide-item-background-color};
+  --header-slide-item-active-color: #{$header-slide-item-active-color};
+  --header-slide-item-active-background-color: #{$header-slide-item-active-background-color};
+  --header-slide-item-active-shadow: #{$header-slide-item-active-shadow};
+
+  --header-slide-separator-color: #{$header-slide-separator-color};
+
+  // dark header
+
+  --header-dark-color: #{$header-dark-color};
+  --header-dark-shadow: #{$header-dark-shadow};
+
+  --header-dark-link-hover-shadow: #{$header-dark-link-hover-shadow};
+
+  --header-dark-item-color: #{$header-dark-item-color};
+  --header-dark-item-active-color: #{$header-dark-item-active-color};
+  --header-dark-item-background-color: #{$header-dark-item-background-color};
+  --header-dark-item-active-background-color: #{$header-dark-item-active-background-color};
+
+  --header-dark-alert-background-color: #{$header-dark-alert-background-color};
+  --header-dark-alert-color: #{$header-dark-alert-color};
+
+  --header-dark-bars-color: #{$header-dark-bars-color};
+  --header-dark-bars-active-color: #{$header-dark-bars-active-color};
+
+  // ------------------------
+  // Footer
+  // ------------------------
+
+  --footer-color: #{$footer-color};
+  --footer-border-color: #{$footer-border-color};
+  --footer-background-color: #{$footer-background-color};
+
+  // ------------------------
+  // Item lists
+  // ------------------------
+
+  --item-list-separator-color: #{$item-list-separator-color};
+  --item-list-highlight: #{$item-list-highlight};
+
+  --item-list-number-font-color: #{$item-list-number-font-color};
+  --item-list-number-label-color: #{$item-list-number-label-color};
+
+  // ------------------------
+  // Notices
+  // ------------------------
+
+  --notice-default-border-color: #{$notice-default-border-color};
+  --notice-default-background-color: #{$notice-default-background-color};
+  --notice-default-filled-background-color: #{$notice-default-filled-background-color};
+
+  @each $name, $color in $notice-type-colors {
+    --notice-#{$name}-border-color: #{lighten($color, 15%)};
+    --notice-#{$name}-background-color: #{lighten($color, 35%)};
+    --notice-filled-#{$name}-border-color: transparent;
+    --notice-filled-#{$name}-background-color: #{darken($color, 25%)};
+  }
+}

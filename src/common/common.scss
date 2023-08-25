@@ -12,6 +12,7 @@
 
 /* First import configuration stylesheet */
 @import "_config.scss";
+@import "_config_css.scss";
 
 /* Then include components */
 @import "_header.scss";

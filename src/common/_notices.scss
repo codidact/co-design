@@ -2,28 +2,23 @@
   margin: $notice-margin-y*$margin-unit $notice-margin-x*$margin-unit;
   padding: $notice-padding * $padding-unit;
   border-radius: $notice-border-radius;
-  border: $notice-border-width solid $notice-default-border-color;
-  background-color: $notice-default-background-color;
+  border: $notice-border-width solid var(--notice-default-border-color);
+  background-color: var(--notice-default-background-color);
 
   &.is-filled {
     border-color: transparent;
     color: white;
-    background-color: $notice-default-filled-background-color;
+    background-color: var(--notice-default-filled-background-color);
   }
 
-  @each $name, $color in (
-    "warning": map-get($secondary-colors, "yellow"),
-    "danger": darken(map-get($secondary-colors, "red"), 2.5%),
-    "success": lighten(map-get($secondary-colors, "green"), 7.5%),
-    "info": lighten(map-get($secondary-colors, "teal"), 5%),
-  ) {
+  @each $name, $color in $notice-type-colors {
     &.is-#{$name} {
-      border-color: lighten($color, 15%);
-      background-color: lighten($color, 35%);
+      border-color: var(--notice-#{$name}-border-color);
+      background-color: var(--notice-#{$name}-background-color);
     }
     &.is-#{$name}.is-filled {
-      border-color: transparent;
-      background-color: darken($color, 25%);
+      border-color: var(--notice-filled-#{$name}-border-color);
+      background-color: var(--notice-filled-#{$name}-background-color);
     }
   }
 

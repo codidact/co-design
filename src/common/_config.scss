@@ -68,15 +68,32 @@ $color-gradient-stops: (
 
 $primary-color: #4B68FF !default;
 $secondary-colors: (
+  "danger": #EB5959,
+  "warning": #FDD835,
+  "success": #2ECC71,
+  "info": #58a09a,
+
+  // deprecated
   "red": #eb5959,
   "teal": #58a09a,
   "yellow": #FDD835,
   "green": #2ECC71
 ) !default;
+
+$danger-color: map-get($secondary-colors, "danger");
+$warning-color: map-get($secondary-colors, "warning");
+$success-color: map-get($secondary-colors, "success");
+$info-color: map-get($secondary-colors, "info");
+
 $tertiary-color: #78909C !default;
 
+/* Links */
 $link-color: #2980B9 !default;
-$quote-color: #7f8C8D !default;
+$link-hover-color: darken($link-color, 20%) !default;
+$link-active-color: darken($link-color, 20%) !default;
+$link-muted-color: darken($tertiary-color, 5%) !default;
+$link-hover-muted-color: darken($tertiary-color, 25%) !default;
+$link-type-colors: $secondary-colors;
 
 $box-shadow-color: #cccccc !default;
 
@@ -91,6 +108,7 @@ $code-padding-x: 1 !default;
 $code-block-padding: 2 !default;
 $code-block-max-height: 60em !default;
 
+$quote-color: #7f8C8D !default;
 $quote-margin-y: 1 !default;
 $quote-margin-x: 0 !default;
 $quote-padding-y: 2 !default;
@@ -130,8 +148,13 @@ $badge-tag-padding-y: 1 !default; // in padding units
 $badge-tag-font-weight: 400 !default;
 $badge-tag-color: darken($primary-color, 35%) !default;
 $badge-tag-background-color: lighten($primary-color, 30%) !default;
-$badge-tag-master-background-color: darken($primary-color, 30%) !default;
+$badge-tag-filled-color: white !default;
+$badge-tag-filled-background-color: darken($primary-color, 30%) !default;
 $badge-tag-border-radius: 3px !default;
+
+$badge-tag-a-hover-background-color: darken($badge-tag-background-color, 5%) !default;
+$badge-tag-filled-a-hover-color: white !default;
+$badge-tag-filled-a-hover-background-color: darken($badge-tag-filled-background-color, 5%) !default;
 
 $badge-tag-alternative-colors: map-merge($secondary-colors, ('muted': $tertiary-color));
 
@@ -157,7 +180,7 @@ $badge-role-color: white !default;
 $badge-role-border-radius: 2px !default;
 
 $badge-role-muted-background-color: lighten($tertiary-color, 30%) !default;
-$badge-role-muted-color:darken($tertiary-color, 30%) !default;
+$badge-role-muted-color: darken($tertiary-color, 30%) !default;
 
 $badge-tl-font-size: 14px !default;
 $badge-tl-min-width: 20px !default;
@@ -169,12 +192,14 @@ $badge-tl-background-color: darken($primary-color, 20%) !default;
 $badge-tl-color: white !default;
 
 $badge-tl-muted-background-color: lighten($tertiary-color, 30%) !default;
-$badge-tl-muted-color:darken($tertiary-color, 30%) !default;
+$badge-tl-muted-color: darken($tertiary-color, 30%) !default;
 
 /* Buttons */
 $button-primary-color: $primary-color !default;
-$button-danger-color: map-get($secondary-colors, "red") !default;
+$button-danger-color: map-get($secondary-colors, "danger") !default;
 $button-muted-color: $tertiary-color !default;
+
+$button-type-colors: map-merge($secondary-colors, ('muted': $button-muted-color, 'primary': $button-primary-color));
 
 $button-icon-only-default-color: $tertiary-color !default;
 
@@ -365,21 +390,21 @@ $header-breakpoint: 850px;
 
 /** .is-dark header **/
 
-$header-color__dark: #ffffff !default;
-$header-shadow__dark: 0 3px 2px 0 rgba(0, 0, 0, 0.2) !default;
+$header-dark-color: #ffffff !default;
+$header-dark-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.2) !default;
 
-$header-link-hover-shadow__dark: 0 2px 4px 1px rgba(0, 0, 0, 0.5) !default;
+$header-dark-link-hover-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.5) !default;
 
-$header-item-color__dark: rgba(255, 255, 255, 0.65) !default;
-$header-item-active-color__dark: $header-color__dark !default;
-$header-item-background-color__dark: transparent !default;
-$header-item-active-background-color__dark: transparent !default;
+$header-dark-item-color: rgba(255, 255, 255, 0.65) !default;
+$header-dark-item-active-color: $header-dark-color !default;
+$header-dark-item-background-color: transparent !default;
+$header-dark-item-active-background-color: transparent !default;
 
-$header-alert-background-color__dark: white !default;
-$header-alert-color__dark: darken($primary-color, 20%) !default;
+$header-dark-alert-background-color: white !default;
+$header-dark-alert-color: darken($primary-color, 20%) !default;
 
-$header-bars-color__dark: rgba(255, 255, 255, 0.65) !default;
-$header-bars-active-color__dark: rgba(255, 255, 255, 0.85) !default;
+$header-dark-bars-color: rgba(255, 255, 255, 0.65) !default;
+$header-dark-bars-active-color: rgba(255, 255, 255, 0.85) !default;
 
 /* Footer */
 $footer-padding: 4 !default; // in padding units
@@ -441,6 +466,12 @@ $notice-default-border-color: lighten($tertiary-color, 20%) !default;
 $notice-default-background-color: lighten($tertiary-color, 40%) !default;
 $notice-default-filled-background-color: darken($tertiary-color, 40%) !default;
 
+$notice-type-colors: (
+   "warning": map-get($secondary-colors, "warning"),
+   "danger": darken(map-get($secondary-colors, "danger"), 2.5%),
+   "success": lighten(map-get($secondary-colors, "success"), 7.5%),
+   "info": lighten(map-get($secondary-colors, "info"), 5%)
+);
 
 /* Tabs */
 $tabs-padding: 0 !default;
